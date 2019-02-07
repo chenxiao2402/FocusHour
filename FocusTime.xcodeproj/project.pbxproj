@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleSlider.swift */; };
+		5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */; };
 		5C62456B220834D600AAFD66 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456A220834D600AAFD66 /* CircularProgressBar.swift */; };
 		5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */; };
 		5C80BF482207D98000691E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80BF472207D98000691E98 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5C374A79220934870059EF2C /* CircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
+		5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		5C62456A220834D600AAFD66 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		5C80BF442207D98000691E98 /* FocusTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			children = (
 				5C374A79220934870059EF2C /* CircleSlider.swift */,
 				5C62456A220834D600AAFD66 /* CircularProgressBar.swift */,
+				5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */,
 				5C80BF4A2207D98000691E98 /* ViewController.swift in Sources */,
+				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */,
 				5C80BF482207D98000691E98 /* AppDelegate.swift in Sources */,
 				5C62456B220834D600AAFD66 /* CircularProgressBar.swift in Sources */,
