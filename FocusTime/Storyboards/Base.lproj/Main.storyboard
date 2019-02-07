@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SetTimeViewController" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-4q-iQd" customClass="CircleSlider" customModule="FocusTime" customModuleProvider="target">
-                                <rect key="frame" x="57" y="248" width="300" height="400"/>
+                                <rect key="frame" x="80" y="96" width="160" height="288"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="59q-He-cQ9"/>
-                                    <constraint firstAttribute="width" constant="300" id="D2m-mJ-mJp"/>
+                                    <constraint firstAttribute="width" secondItem="ahF-4q-iQd" secondAttribute="height" multiplier="5:9" id="80I-3F-1fi"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="tDZ-k0-vwg"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -31,6 +31,8 @@
                         <constraints>
                             <constraint firstItem="ahF-4q-iQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AB1-Sk-UEQ"/>
                             <constraint firstItem="ahF-4q-iQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xi0-mg-q0W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="80" id="tBR-if-Fhf"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="80" id="zEY-SS-kp1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

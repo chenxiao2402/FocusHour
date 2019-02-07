@@ -21,8 +21,6 @@ extension CGPoint {
         let cos = (circleCenter.y - self.y) / self.distance(to: circleCenter)
         let TWO_PI: CGFloat = CGFloat(2 * Double.pi)
         let angle = sin>=0 ? acos(cos) : TWO_PI - acos(cos)
-        let angle360 = angle / TWO_PI * 360
-        print("angle is: \(angle360) of 360")
         return angle
     }
 }

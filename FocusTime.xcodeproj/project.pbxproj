@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleSlider.swift */; };
 		5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */; };
-		5C593692220C2B0000E7F5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C593691220C2B0000E7F5CF /* Assets.xcassets */; };
+		5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593697220C2C3B00E7F5CF /* AppDelegate.swift */; };
+		5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593698220C2C3B00E7F5CF /* ViewController.swift */; };
+		5C59369C220C2D5600E7F5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C59369B220C2D5600E7F5CF /* Assets.xcassets */; };
 		5C62456B220834D600AAFD66 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456A220834D600AAFD66 /* CircularProgressBar.swift */; };
 		5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */; };
 		5C80BF4D2207D98000691E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C80BF4B2207D98000691E98 /* Main.storyboard */; };
@@ -30,7 +32,9 @@
 /* Begin PBXFileReference section */
 		5C374A79220934870059EF2C /* CircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
 		5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
-		5C593691220C2B0000E7F5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C593697220C2C3B00E7F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C593698220C2C3B00E7F5CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C59369B220C2D5600E7F5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C62456A220834D600AAFD66 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		5C80BF442207D98000691E98 /* FocusTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C593696220C2C2B00E7F5CF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5C593697220C2C3B00E7F5CF /* AppDelegate.swift */,
+				5C593698220C2C3B00E7F5CF /* ViewController.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		5C80BF3B2207D98000691E98 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +94,11 @@
 		5C80BF462207D98000691E98 /* FocusTime */ = {
 			isa = PBXGroup;
 			children = (
-				5C80BF6B2207DEE800691E98 /* Resources */,
+				5C593696220C2C2B00E7F5CF /* SupportingFiles */,
 				5C80BF6A2207DEDC00691E98 /* Storyboards */,
 				5C80BF692207DED400691E98 /* Controllers */,
 				5C80BF682207DEC500691E98 /* Tools */,
-				5C593691220C2B0000E7F5CF /* Assets.xcassets */,
+				5C59369B220C2D5600E7F5CF /* Assets.xcassets */,
 				5C80BF532207D98100691E98 /* Info.plist */,
 			);
 			path = FocusTime;
@@ -125,13 +138,6 @@
 				5C80BF4B2207D98000691E98 /* Main.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		5C80BF6B2207DEE800691E98 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C80BF522207D98100691E98 /* LaunchScreen.storyboard in Resources */,
-				5C593692220C2B0000E7F5CF /* Assets.xcassets in Resources */,
+				5C59369C220C2D5600E7F5CF /* Assets.xcassets in Resources */,
 				5C80BF4D2207D98000691E98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,9 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */,
 				5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */,
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */,
+				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 				5C62456B220834D600AAFD66 /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
