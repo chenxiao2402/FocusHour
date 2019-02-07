@@ -164,7 +164,7 @@ class CircleSlider: UIView {
 extension CircleSlider {
     func getImageBy(time: CGFloat) -> UIImage? {
         let timeRange = [0, 20, 50, 80, 110]
-        let imageList = ["level1-leaves", "level2-grass", "level3-flower", "level4-tree", "level5-forest"]
+        let imageList = ["level1-leaves", "level2-grass", "level3-bamboo", "level4-tree", "level5-forest"]
         
         var imageName = imageList[0]
         for (i, timeBoundry) in timeRange.enumerated() {
