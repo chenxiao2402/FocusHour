@@ -12,10 +12,14 @@ class SetTimeViewController: ViewController {
     
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var timeSetter: CircleTimeSetter!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var startButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackgroundImage()
+    }
+    
+    private func setBackgroundImage() {
         UIGraphicsBeginImageContext(view.frame.size)
         getRandomBackgroundImage()?.draw(in: self.view.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -23,20 +27,14 @@ class SetTimeViewController: ViewController {
         view.backgroundColor = UIColor.init(patternImage: image!)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     @IBAction func startButtonTapped(_ sender: Any) {
         print(timeSetter.focusMinutes)
     }
 }
 
 extension SetTimeViewController {
-    func getRandomBackgroundImage() -> UIImage? {
-        let imageNum = 8 // 参见Assets.xcassets中的BackgroundImage文件夹
+    private func getRandomBackgroundImage() -> UIImage? {
+        let imageNum = 7 // 参见Assets.xcassets中的BackgroundImage文件夹
         let index = Int(arc4random()) % imageNum
         return UIImage(named: "background-\(index)")
     }

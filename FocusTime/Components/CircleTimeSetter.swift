@@ -14,7 +14,7 @@ class CircleTimeSetter: CircleSlider {
         super.setup()
         alphaAngle = TEN_MIN_ANGLE
         self.backgroundColor = UIColor.clear
-        thumbView.backgroundColor = ColorEnum.getColor(name: .DarkGrassGreen)
+        thumbView.backgroundColor = ColorEnum.getColor(name: .AppleGreen)
         thumbView.isUserInteractionEnabled = false //不加这一句的话，小圆点会盖住下面的UIView，导致CircleSlider.touchesMoved失效..
         iconView.isUserInteractionEnabled = false
     }

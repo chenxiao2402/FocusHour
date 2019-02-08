@@ -28,16 +28,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F37-A6-ydT">
                                 <rect key="frame" x="0.0" y="413" width="320" height="67"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="CustomButton" customModule="FocusTime" customModuleProvider="target">
                                         <rect key="frame" x="85" y="3.5" width="150" height="60"/>
-                                        <color key="backgroundColor" red="0.86097276210784912" green="0.98241609334945679" blue="0.54108721017837524" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="iuT-5e-fM2"/>
                                             <constraint firstAttribute="width" constant="150" id="wUk-4B-zu5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="但是过分的">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <state key="normal" title="Focus Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ux-A4-bmj"/>
@@ -66,7 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="aLr-iI-K9l"/>
-                        <outlet property="startButton" destination="yhx-5g-aHH" id="acy-HU-GmZ"/>
+                        <outlet property="startButton" destination="yhx-5g-aHH" id="2MG-PA-ohc"/>
                         <outlet property="timeSetter" destination="ahF-4q-iQd" id="cIB-f7-hOf"/>
                     </connections>
                 </viewController>

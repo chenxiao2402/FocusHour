@@ -23,15 +23,14 @@ class CircleSlider: UIView {
     var drawCenter: CGPoint!       //绘制圆的圆心
     var currentPoint: CGPoint!        //滑块目前所在的位置
 
-    
+    var loadProgress: CGFloat = 0.0
+    var focusMinutes: Int = 0
     var alphaAngle: CGFloat = 0.0 { // 移动点相对于起始点顺时针扫过的角度(弧度)
         didSet {
             loadProgress = alphaAngle / TWO_PI
             focusMinutes = Int(loadProgress * 120.0)
         }
     }
-    var loadProgress: CGFloat = 0.0
-    var focusMinutes: Int = 0
     
     var thumbView = UIView()  // slider上的那个滑块（小圆点）
     var iconView = UIImageView() // 展示你要“种植”的植物的区域，位于圆形slider中间
