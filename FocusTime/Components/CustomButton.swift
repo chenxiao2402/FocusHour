@@ -37,12 +37,10 @@ class CustomButton: UIButton {
     
     @objc private func changeBackgroundColor() {
         layer.backgroundColor = ColorEnum.getColor(name: .DarkEmerald).cgColor
-        self.setNeedsDisplay()
     }
     
     @objc private func resetBackgroundColor() {
         layer.backgroundColor = ColorEnum.getColor(name: .Emerald).cgColor
-        self.setNeedsDisplay()
     }
 
 }
