@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Time View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SetTimeViewController" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-4q-iQd" customClass="CircleTimeSetter" customModule="FocusTime" customModuleProvider="target">
+                                <rect key="frame" x="64" y="67" width="192" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ahF-4q-iQd" secondAttribute="height" multiplier="5:9" id="80I-3F-1fi"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="tDZ-k0-vwg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F37-A6-ydT">
+                                <rect key="frame" x="0.0" y="413" width="320" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH">
+                                        <rect key="frame" x="85" y="3.5" width="150" height="60"/>
+                                        <color key="backgroundColor" red="0.86097276210784912" green="0.98241609334945679" blue="0.54108721017837524" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="iuT-5e-fM2"/>
+                                            <constraint firstAttribute="width" constant="150" id="wUk-4B-zu5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="但是过分的">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ux-A4-bmj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yhx-5g-aHH" firstAttribute="centerX" secondItem="F37-A6-ydT" secondAttribute="centerX" id="CtO-zX-WPy"/>
+                                    <constraint firstItem="yhx-5g-aHH" firstAttribute="centerY" secondItem="F37-A6-ydT" secondAttribute="centerY" id="DpX-YR-sF5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="F37-A6-ydT" secondAttribute="bottom" id="7e0-19-gfp"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AB1-Sk-UEQ"/>
+                            <constraint firstItem="F37-A6-ydT" firstAttribute="top" secondItem="ahF-4q-iQd" secondAttribute="bottom" id="Cp2-Tj-O6T"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IEo-ve-KOA"/>
+                            <constraint firstAttribute="bottom" secondItem="F37-A6-ydT" secondAttribute="bottom" id="LyO-xC-EBR"/>
+                            <constraint firstItem="F37-A6-ydT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MMr-dh-8L2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F37-A6-ydT" secondAttribute="trailing" id="bIy-Pm-OA3"/>
+                            <constraint firstItem="F37-A6-ydT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t4k-LE-6YI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="64" id="tBR-if-Fhf"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="64" id="zEY-SS-kp1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="aLr-iI-K9l"/>
+                        <outlet property="startButton" destination="yhx-5g-aHH" id="acy-HU-GmZ"/>
+                        <outlet property="timeSetter" destination="ahF-4q-iQd" id="cIB-f7-hOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

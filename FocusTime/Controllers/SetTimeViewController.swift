@@ -9,12 +9,18 @@
 import UIKit
 
 class SetTimeViewController: ViewController {
-
-    //@IBOutlet weak var progressBar: CircularProgressBar!
+    
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var timeSetter: CircleTimeSetter!
+    @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        UIGraphicsBeginImageContext(view.frame.size)
+        getRandomBackgroundImage()?.draw(in: self.view.bounds)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor.init(patternImage: image!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,9 +28,16 @@ class SetTimeViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc func handleTap() {
-//        progressBar.labelSize = 60
-//        progressBar.safePercent = 100
-//        progressBar.setProgress(to: 0.5, withAnimation: true)
+    
+    @IBAction func startButtonTapped(_ sender: Any) {
+        print(timeSetter.focusMinutes)
+    }
+}
+
+extension SetTimeViewController {
+    func getRandomBackgroundImage() -> UIImage? {
+        let imageNum = 8 // 参见Assets.xcassets中的BackgroundImage文件夹
+        let index = Int(arc4random()) % imageNum
+        return UIImage(named: "background-\(index)")
     }
 }
