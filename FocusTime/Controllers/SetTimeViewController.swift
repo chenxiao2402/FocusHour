@@ -11,8 +11,8 @@ import UIKit
 class SetTimeViewController: ViewController {
     
     @IBOutlet var mainView: UIView!
-    @IBOutlet weak var timeSetter: CircleTimeSetter!
-    @IBOutlet weak var startButton: CustomButton!
+    @IBOutlet weak var timeSetter: CircleSlider!
+    @IBOutlet weak var startButton: StartButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,23 @@ class SetTimeViewController: ViewController {
         view.backgroundColor = UIColor.init(patternImage: image!)
     }
     
-    @IBAction func startButtonTapped(_ sender: Any) {
-        print(timeSetter.focusMinutes)
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let timeConterController = segue.destination as? TimeCounterController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+        let totalFocusTime = timeSetter.remainingMinutes * 60
+        let background = view.backgroundColor
+        timeConterController.view.backgroundColor = background
+        timeConterController.circleTimer.remainingTime = totalFocusTime
     }
 }
 
 extension SetTimeViewController {
     private func getRandomBackgroundImage() -> UIImage? {
-        let imageNum = 7 // 参见Assets.xcassets中的BackgroundImage文件夹
+        let imageNum = 8 // 参见Assets.xcassets中的BackgroundImage文件夹
         let index = Int(arc4random()) % imageNum
         return UIImage(named: "background-\(index)")
     }

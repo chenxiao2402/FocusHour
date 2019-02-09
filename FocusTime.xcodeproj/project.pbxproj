@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5C039662220DB0EC00CC1B2D /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039661220DB0EC00CC1B2D /* ColorEnum.swift */; };
-		5C039665220DD2D900CC1B2D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039664220DD2D900CC1B2D /* UIColorExtension.swift */; };
-		5C039667220DD4C000CC1B2D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* CustomButton.swift */; };
-		5C240231220D1BC2002A1EF6 /* CircleTimeSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C240230220D1BC2002A1EF6 /* CircleTimeSetter.swift */; };
+		5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* StartButton.swift */; };
+		5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C240230220D1BC2002A1EF6 /* CircleSlider.swift */; };
 		5C240233220D2667002A1EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C240232220D2667002A1EF6 /* Main.storyboard */; };
 		5C240235220D7512002A1EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C240234220D7512002A1EF6 /* Assets.xcassets */; };
-		5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleSlider.swift */; };
+		5C374A7A220934870059EF2C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleView.swift */; };
 		5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */; };
 		5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593697220C2C3B00E7F5CF /* AppDelegate.swift */; };
 		5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593698220C2C3B00E7F5CF /* ViewController.swift */; };
 		5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */; };
 		5C80BF522207D98100691E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C80BF502207D98100691E98 /* LaunchScreen.storyboard */; };
 		5C80BF5D2207D98100691E98 /* FocusTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80BF5C2207D98100691E98 /* FocusTimeTests.swift */; };
+		5CFEA454220EA691001408E9 /* TimeCounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA453220EA691001408E9 /* TimeCounterController.swift */; };
+		5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA455220EA7D1001408E9 /* CircleTimer.swift */; };
+		5CFEA458220EA861001408E9 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA457220EA861001408E9 /* StopButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +36,11 @@
 
 /* Begin PBXFileReference section */
 		5C039661220DB0EC00CC1B2D /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
-		5C039664220DD2D900CC1B2D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		5C039666220DD4C000CC1B2D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		5C240230220D1BC2002A1EF6 /* CircleTimeSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeSetter.swift; sourceTree = "<group>"; };
+		5C039666220DD4C000CC1B2D /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		5C240230220D1BC2002A1EF6 /* CircleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
 		5C240232220D2667002A1EF6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C240234220D7512002A1EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C374A79220934870059EF2C /* CircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
+		5C374A79220934870059EF2C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		5C593697220C2C3B00E7F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C593698220C2C3B00E7F5CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +51,9 @@
 		5C80BF582207D98100691E98 /* FocusTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80BF5C2207D98100691E98 /* FocusTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimeTests.swift; sourceTree = "<group>"; };
 		5C80BF5E2207D98100691E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CFEA453220EA691001408E9 /* TimeCounterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounterController.swift; sourceTree = "<group>"; };
+		5CFEA455220EA7D1001408E9 /* CircleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimer.swift; sourceTree = "<group>"; };
+		5CFEA457220EA861001408E9 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +77,11 @@
 		5C039663220DB65D00CC1B2D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5C374A79220934870059EF2C /* CircleSlider.swift */,
-				5C240230220D1BC2002A1EF6 /* CircleTimeSetter.swift */,
-				5C039666220DD4C000CC1B2D /* CustomButton.swift */,
+				5C374A79220934870059EF2C /* CircleView.swift */,
+				5C240230220D1BC2002A1EF6 /* CircleSlider.swift */,
+				5CFEA455220EA7D1001408E9 /* CircleTimer.swift */,
+				5C039666220DD4C000CC1B2D /* StartButton.swift */,
+				5CFEA457220EA861001408E9 /* StopButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -134,7 +140,6 @@
 			children = (
 				5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */,
 				5C039661220DB0EC00CC1B2D /* ColorEnum.swift */,
-				5C039664220DD2D900CC1B2D /* UIColorExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			children = (
 				5C593698220C2C3B00E7F5CF /* ViewController.swift */,
 				5C62456C2208486E00AAFD66 /* SetTimeViewController.swift */,
+				5CFEA453220EA691001408E9 /* TimeCounterController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,12 +266,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */,
-				5C240231220D1BC2002A1EF6 /* CircleTimeSetter.swift in Sources */,
-				5C039667220DD4C000CC1B2D /* CustomButton.swift in Sources */,
+				5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */,
+				5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */,
 				5C62456D2208486E00AAFD66 /* SetTimeViewController.swift in Sources */,
-				5C039665220DD2D900CC1B2D /* UIColorExtension.swift in Sources */,
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
-				5C374A7A220934870059EF2C /* CircleSlider.swift in Sources */,
+				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
+				5CFEA454220EA691001408E9 /* TimeCounterController.swift in Sources */,
+				5C374A7A220934870059EF2C /* CircleView.swift in Sources */,
+				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
 				5C039662220DB0EC00CC1B2D /* ColorEnum.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 			);
