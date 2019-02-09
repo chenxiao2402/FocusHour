@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,21 +15,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SetTimeViewController" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-4q-iQd" customClass="CircleTimeSetter" customModule="FocusTime" customModuleProvider="target">
-                                <rect key="frame" x="64" y="67" width="192" height="346"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-4q-iQd" customClass="CircleSlider" customModule="FocusTime" customModuleProvider="target">
+                                <rect key="frame" x="72" y="208" width="270" height="480"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ahF-4q-iQd" secondAttribute="height" multiplier="5:9" id="80I-3F-1fi"/>
+                                    <constraint firstAttribute="width" secondItem="ahF-4q-iQd" secondAttribute="height" multiplier="9:16" id="80I-3F-1fi"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="tDZ-k0-vwg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F37-A6-ydT">
-                                <rect key="frame" x="0.0" y="413" width="320" height="67"/>
+                                <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="CustomButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="85" y="3.5" width="150" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="StartButton" customModule="FocusTime" customModuleProvider="target">
+                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="iuT-5e-fM2"/>
                                             <constraint firstAttribute="width" constant="150" id="wUk-4B-zu5"/>
@@ -39,7 +39,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ux-A4-bmj"/>
+                                            <segue destination="opy-dG-7Y5" kind="presentation" modalTransitionStyle="flipHorizontal" id="D07-i0-ZWj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -49,6 +49,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="F37-A6-ydT" secondAttribute="bottom" id="7e0-19-gfp"/>
                             <constraint firstItem="ahF-4q-iQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AB1-Sk-UEQ"/>
@@ -58,8 +59,8 @@
                             <constraint firstItem="F37-A6-ydT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MMr-dh-8L2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F37-A6-ydT" secondAttribute="trailing" id="bIy-Pm-OA3"/>
                             <constraint firstItem="F37-A6-ydT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t4k-LE-6YI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="64" id="tBR-if-Fhf"/>
-                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="64" id="zEY-SS-kp1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="72" id="tBR-if-Fhf"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="72" id="zEY-SS-kp1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,6 +72,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Time Counter Controller-->
+        <scene sceneID="Fz1-Zq-5WK">
+            <objects>
+                <viewController id="opy-dG-7Y5" customClass="TimeCounterController" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ioq-Rq-Anb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkd-Au-C4E" customClass="CircleTimer" customModule="FocusTime" customModuleProvider="target">
+                                <rect key="frame" x="72" y="208" width="270" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wkd-Au-C4E" secondAttribute="height" multiplier="9:16" id="grp-8P-zSt"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="kyB-zZ-f06"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-2g-uQH">
+                                <rect key="frame" x="0.0" y="688" width="414" height="208"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Rk-hMq" customClass="StopButton" customModule="FocusTime" customModuleProvider="target">
+                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="4oR-fw-545"/>
+                                            <constraint firstAttribute="height" constant="60" id="xjA-hc-pHi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="StopButtonTaspped:" destination="opy-dG-7Y5" eventType="touchUpInside" id="P9A-yR-YyM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aDb-Rk-hMq" firstAttribute="centerY" secondItem="Rbg-2g-uQH" secondAttribute="centerY" id="hNx-Bp-geN"/>
+                                    <constraint firstItem="aDb-Rk-hMq" firstAttribute="centerX" secondItem="Rbg-2g-uQH" secondAttribute="centerX" id="td5-MY-uSN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93578249219999998" green="0.67372272239999997" blue="0.61522402480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Rbg-2g-uQH" firstAttribute="centerX" secondItem="Ioq-Rq-Anb" secondAttribute="centerX" id="4su-v7-bVk"/>
+                            <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="YcK-YS-28s"/>
+                            <constraint firstItem="Rbg-2g-uQH" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" id="b3g-ZM-Hyg"/>
+                            <constraint firstItem="Wkd-Au-C4E" firstAttribute="centerX" secondItem="LWv-Oy-y7H" secondAttribute="centerX" id="eUm-aC-z8Z"/>
+                            <constraint firstItem="Wkd-Au-C4E" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" priority="750" constant="72" id="fWp-BY-HtE"/>
+                            <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Rbg-2g-uQH" secondAttribute="trailing" id="haP-dV-M1J"/>
+                            <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Wkd-Au-C4E" secondAttribute="trailing" priority="750" constant="72" id="iNB-lU-gH5"/>
+                            <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="l7P-9C-3vT"/>
+                            <constraint firstItem="Rbg-2g-uQH" firstAttribute="top" secondItem="Wkd-Au-C4E" secondAttribute="bottom" id="tLb-kl-cta"/>
+                            <constraint firstItem="Wkd-Au-C4E" firstAttribute="centerY" secondItem="Ioq-Rq-Anb" secondAttribute="centerY" id="v1W-7F-ZKB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LWv-Oy-y7H"/>
+                    </view>
+                    <connections>
+                        <outlet property="circleTimer" destination="Wkd-Au-C4E" id="9Z0-cp-MhS"/>
+                        <outlet property="mainView" destination="Ioq-Rq-Anb" id="88I-jr-bxC"/>
+                        <outlet property="stopButton" destination="aDb-Rk-hMq" id="ALR-C2-IqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yad-SE-rZE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="21"/>
         </scene>
     </scenes>
 </document>
