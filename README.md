@@ -1,10 +1,6 @@
 # FocusTime
 
-<br/>
-
-<br/>
-
-[TOC]
+Sephidator, 2019, All Rights reserved
 
 <br/>
 
