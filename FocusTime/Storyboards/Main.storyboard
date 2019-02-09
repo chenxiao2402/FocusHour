@@ -111,19 +111,44 @@
                                     <constraint firstItem="aDb-Rk-hMq" firstAttribute="centerX" secondItem="Rbg-2g-uQH" secondAttribute="centerX" id="td5-MY-uSN"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-N6-MCO">
+                                <rect key="frame" x="346" y="60" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="bSe-f1-s0y"/>
+                                    <constraint firstAttribute="width" constant="48" id="ypF-Cp-M47"/>
+                                </constraints>
+                                <state key="normal" image="music_on">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta0-wr-E55">
+                                <rect key="frame" x="20" y="60" width="48" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="6ZD-SN-dFd"/>
+                                    <constraint firstAttribute="height" constant="40" id="vYU-dq-F5r"/>
+                                </constraints>
+                                <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="returnToMainpage:" destination="opy-dG-7Y5" eventType="touchUpInside" id="vKw-fq-l2y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93578249219999998" green="0.67372272239999997" blue="0.61522402480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="fyd-N6-MCO" firstAttribute="top" secondItem="LWv-Oy-y7H" secondAttribute="top" constant="16" id="1Sg-2z-UUs"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="centerX" secondItem="Ioq-Rq-Anb" secondAttribute="centerX" id="4su-v7-bVk"/>
+                            <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="fyd-N6-MCO" secondAttribute="trailing" constant="20" id="Aj0-yE-AXi"/>
                             <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="YcK-YS-28s"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" id="b3g-ZM-Hyg"/>
                             <constraint firstItem="Wkd-Au-C4E" firstAttribute="centerX" secondItem="LWv-Oy-y7H" secondAttribute="centerX" id="eUm-aC-z8Z"/>
                             <constraint firstItem="Wkd-Au-C4E" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" priority="750" constant="72" id="fWp-BY-HtE"/>
                             <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Rbg-2g-uQH" secondAttribute="trailing" id="haP-dV-M1J"/>
                             <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Wkd-Au-C4E" secondAttribute="trailing" priority="750" constant="72" id="iNB-lU-gH5"/>
+                            <constraint firstItem="ta0-wr-E55" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" constant="20" id="iyD-Ka-qlI"/>
                             <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="l7P-9C-3vT"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="top" secondItem="Wkd-Au-C4E" secondAttribute="bottom" id="tLb-kl-cta"/>
                             <constraint firstItem="Wkd-Au-C4E" firstAttribute="centerY" secondItem="Ioq-Rq-Anb" secondAttribute="centerY" id="v1W-7F-ZKB"/>
+                            <constraint firstItem="ta0-wr-E55" firstAttribute="top" secondItem="LWv-Oy-y7H" secondAttribute="top" constant="16" id="xJ1-kc-qdn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LWv-Oy-y7H"/>
                     </view>
@@ -135,7 +160,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yad-SE-rZE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="21"/>
+            <point key="canvasLocation" x="1517" y="25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="music_on" width="384" height="384"/>
+        <image name="previous" width="512" height="432"/>
+    </resources>
 </document>

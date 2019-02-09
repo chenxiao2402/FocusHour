@@ -35,6 +35,9 @@ class TimeCounterController: ViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func returnToMainpage(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

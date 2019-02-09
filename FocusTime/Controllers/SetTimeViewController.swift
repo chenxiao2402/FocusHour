@@ -29,9 +29,7 @@ class SetTimeViewController: ViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         super.prepare(for: segue, sender: sender)
-        print("Stella!")
         
         guard let timeConterController = segue.destination as? TimeCounterController else {
             fatalError("Unexpected destination: \(segue.destination)")
