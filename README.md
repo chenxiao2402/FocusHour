@@ -28,3 +28,20 @@ App icon made by <a href="https://itunes.apple.com/cn/app/logo-maker-%E5%BF%AB%E
 Picture resources made by <a href="https://www.flaticon.com/packs/nature-31/3" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/"          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 </div>
 
+<div>
+Circle slider inspired by <a href="https://github.com/JixinZhang/ZCircleSlider/">JixinZhang</a>
+</div>
+
+<div>
+Custom UIAlertView inspired by <a href="https://medium.com/if-let-swift-programming/design-and-code-your-own-uialertview-ec3d8c000f0a">Daniel Luque</a>
+</div>
+
+<br/>
+
+<br/>
+
+## LISCENSE
+
+<div>
+<a href="http://www.wtfpl.net/">WTFPL</a>
+</div>
