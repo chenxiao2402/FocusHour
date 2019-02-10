@@ -13,9 +13,11 @@ class SetTimeViewController: ViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var timeSetter: CircleSlider!
     @IBOutlet weak var startButton: StartButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UITool.setToolButtonSize(settingsButton, ratio: 1.0)
         setBackgroundImage()
     }
     
