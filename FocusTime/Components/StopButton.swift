@@ -19,7 +19,10 @@ class StopButton: UIButton {
         setButtonStyle()
     }
     
-    private func setButtonStyle() {
+    func setButtonStyle() {
+        setTitle(NSLocalizedString("Giveup", comment: ""), for: .normal)
+        UITool.setCustomButtonSize(self)
+        
         layer.backgroundColor = UIColor.clear.cgColor
         layer.masksToBounds = true
         layer.cornerRadius = 20.0

@@ -29,13 +29,13 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="StartButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="iuT-5e-fM2"/>
-                                            <constraint firstAttribute="width" constant="150" id="wUk-4B-zu5"/>
+                                            <constraint firstAttribute="height" constant="50" id="Zrw-gR-0pc"/>
+                                            <constraint firstAttribute="width" constant="120" id="hGm-0B-W3L"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                        <state key="normal" title="Focus Start">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="F37-A6-ydT" secondAttribute="bottom" id="7e0-19-gfp"/>
                             <constraint firstItem="ahF-4q-iQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AB1-Sk-UEQ"/>
@@ -72,6 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
         <!--Time Counter Controller-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -92,17 +93,17 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Rk-hMq" customClass="StopButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="4oR-fw-545"/>
-                                            <constraint firstAttribute="height" constant="60" id="xjA-hc-pHi"/>
+                                            <constraint firstAttribute="width" constant="120" id="4oR-fw-545"/>
+                                            <constraint firstAttribute="height" constant="50" id="xjA-hc-pHi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                        <state key="normal" title="Stop">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="StopButtonTaspped:" destination="opy-dG-7Y5" eventType="touchUpInside" id="P9A-yR-YyM"/>
+                                            <action selector="StopButtonTapped:" destination="opy-dG-7Y5" eventType="touchUpInside" id="P9A-yR-YyM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -127,13 +128,13 @@
                                     <constraint firstAttribute="width" constant="48" id="6ZD-SN-dFd"/>
                                     <constraint firstAttribute="height" constant="40" id="vYU-dq-F5r"/>
                                 </constraints>
-                                <state key="normal" image="previous"/>
+                                <state key="normal" image="return"/>
                                 <connections>
                                     <action selector="returnToMainpage:" destination="opy-dG-7Y5" eventType="touchUpInside" id="vKw-fq-l2y"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93578249219999998" green="0.67372272239999997" blue="0.61522402480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fyd-N6-MCO" firstAttribute="top" secondItem="LWv-Oy-y7H" secondAttribute="top" constant="16" id="1Sg-2z-UUs"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="centerX" secondItem="Ioq-Rq-Anb" secondAttribute="centerX" id="4su-v7-bVk"/>
@@ -155,6 +156,8 @@
                     <connections>
                         <outlet property="circleTimer" destination="Wkd-Au-C4E" id="9Z0-cp-MhS"/>
                         <outlet property="mainView" destination="Ioq-Rq-Anb" id="88I-jr-bxC"/>
+                        <outlet property="musicButton" destination="fyd-N6-MCO" id="I7V-Yq-pwB"/>
+                        <outlet property="returnButton" destination="ta0-wr-E55" id="aMO-Yw-Neb"/>
                         <outlet property="stopButton" destination="aDb-Rk-hMq" id="ALR-C2-IqG"/>
                     </connections>
                 </viewController>
@@ -165,6 +168,6 @@
     </scenes>
     <resources>
         <image name="music_on" width="384" height="384"/>
-        <image name="previous" width="512" height="432"/>
+        <image name="return" width="512" height="432"/>
     </resources>
 </document>

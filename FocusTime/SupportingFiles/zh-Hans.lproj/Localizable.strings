@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  FocusTime
+
+  Created by Midrash Elucidator on 2019/2/10.
+  Copyright © 2019 Midrash Elucidator. All rights reserved.
+*/
+
+Start = "开始";
+Giveup = "放弃";
+
+GiveupAlert-Title = "放弃吗？";
+GiveupAlert-DeathMessage = "你的树会枯萎";
+GiveupAlert-Encouragement = "坚持住，你很快就能做到了";
+
+Yes = "是";
+No = "否";
+Cancel = "取消";
+
+LanguageSetting = "语言设置";
+English = "英语";
+Chinese = "中文";
+Japanese = "日语";
+
+Description = "“专注时间”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
+AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）来了解更多关于此应用的信息。";
+
+Notification-Success = "你的树长大了";
+Notification-Alert = "快点回来，不然你的树会枯萎";

@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  FocusTime
+
+  Created by Midrash Elucidator on 2019/2/10.
+  Copyright © 2019 Midrash Elucidator. All rights reserved.
+*/
+
+Start = "スタート";
+Giveup = "諦める";
+
+GiveupAlert-Title = "諦めるか?";
+GiveupAlert-DeathMessage = "あなたの木は枯れてしまう";
+GiveupAlert-Encouragement = "頑張って、もうすぐ成功する";
+
+Yes = "はい";
+No = "いいえ";
+Cancel = "キャンセル";
+
+Language = "言語設定";
+English = "英語";
+Chinese = "中国語";
+Japanese = "日本語";
+
+Description = "「フォーカス・タイム」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";
+AboutMe = "私のGithubアカウント（https://github.com/Sephidator/FocusTime）を訪問すれば、このアプリの他の情報が見られる。";
+
+Notification-Success = "あなたの木が大きくなった";
+Notification-Alert = "すぐ戻らないと、あなたの木は枯れてしまう";

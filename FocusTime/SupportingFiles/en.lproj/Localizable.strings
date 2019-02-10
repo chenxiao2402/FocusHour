@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  FocusTime
+
+  Created by Midrash Elucidator on 2019/2/10.
+  Copyright © 2019 Midrash Elucidator. All rights reserved.
+*/
+
+Start = "Start";
+Giveup = "Give up";
+
+GiveupAlert-Title = "Are you sure to Give up?";
+GiveupAlert-DeathMessage = "You tree will die";
+GiveupAlert-Encouragement = "Hold on, you will make it soon";
+
+Yes = "Yes";
+No = "No";
+Cancel = "Cancel";
+
+LanguageSetting = "LanguageSetting";
+English = "English";
+Chinese = "Chinese";
+Japanese = "Japanese";
+
+Description = "FocusTime is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.";
+AboutMe = "Check my Github account(https://github.com/Sephidator/FocusTime) to get more information about this APP.";
+
+Notification-Success = "Your tree has grown up";
+Notification-Alert = "Your tree will die if you don't come back soon";
