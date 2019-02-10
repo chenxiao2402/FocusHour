@@ -9,7 +9,6 @@
 import UIKit
 
 class CircleTimer: CircleView {
-    var timer: Timer!
     var focusTime: Int = 0  // How long you have focused
     var remainingTime: Int = 0 {  // The remainging time that you need to focus, calculated by SECONDS
         didSet {
@@ -21,18 +20,11 @@ class CircleTimer: CircleView {
     
     override func setup() {
         super.setup()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
-            self.resetTime()
-        })
     }
     
-    private func resetTime() {
-        if remainingTime > 0 {
-            remainingTime -= 1
-            focusTime += 1
-        } else {
-            timer.invalidate()
-        }
+    func resetTime() {
+        remainingTime -= 1
+        focusTime += 1
     }
     
     override func draw(_ rect: CGRect) {
