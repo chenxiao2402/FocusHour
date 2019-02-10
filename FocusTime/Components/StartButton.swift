@@ -19,10 +19,12 @@ class StartButton: UIButton {
         setButtonStyle()
     }
     
-    private func setButtonStyle() {
+    func setButtonStyle() {
+        self.setTitle(NSLocalizedString("Start", comment: ""), for: .normal)
+        UITool.setCustomButtonSize(self)
+        
         layer.backgroundColor = ColorEnum.getColor(name: .Emerald).cgColor
         layer.masksToBounds = false
-        layer.cornerRadius = 20.0
         
         layer.borderWidth = 2.0;
         layer.borderColor = UIColor.clear.cgColor

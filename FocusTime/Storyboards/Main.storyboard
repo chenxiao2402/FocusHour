@@ -29,13 +29,13 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="StartButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="iuT-5e-fM2"/>
-                                            <constraint firstAttribute="width" constant="150" id="wUk-4B-zu5"/>
+                                            <constraint firstAttribute="height" constant="50" id="Zrw-gR-0pc"/>
+                                            <constraint firstAttribute="width" constant="120" id="hGm-0B-W3L"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                        <state key="normal" title="Focus Start">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -72,6 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
         <!--Time Counter Controller-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -92,13 +93,13 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Rk-hMq" customClass="StopButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="4oR-fw-545"/>
-                                            <constraint firstAttribute="height" constant="60" id="xjA-hc-pHi"/>
+                                            <constraint firstAttribute="width" constant="120" id="4oR-fw-545"/>
+                                            <constraint firstAttribute="height" constant="50" id="xjA-hc-pHi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                        <state key="normal" title="Stop">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -155,6 +156,7 @@
                     <connections>
                         <outlet property="circleTimer" destination="Wkd-Au-C4E" id="9Z0-cp-MhS"/>
                         <outlet property="mainView" destination="Ioq-Rq-Anb" id="88I-jr-bxC"/>
+                        <outlet property="musicButton" destination="fyd-N6-MCO" id="I7V-Yq-pwB"/>
                         <outlet property="returnButton" destination="ta0-wr-E55" id="aMO-Yw-Neb"/>
                         <outlet property="stopButton" destination="aDb-Rk-hMq" id="ALR-C2-IqG"/>
                     </connections>

@@ -19,6 +19,10 @@ class SetTimeViewController: ViewController {
         setBackgroundImage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        startButton.setButtonStyle()
+    }
+    
     private func setBackgroundImage() {
         UIGraphicsBeginImageContext(view.frame.size)
         getRandomBackgroundImage()?.draw(in: self.view.bounds)
