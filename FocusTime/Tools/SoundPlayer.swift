@@ -6,7 +6,7 @@
 //  Copyright © 2019 Midrash Elucidator. All rights reserved.
 //
 
-import UIKit
+import AVFoundation
 
 class SoundPlayer: AVAudioPlayer {
 
