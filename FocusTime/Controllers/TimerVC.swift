@@ -65,6 +65,7 @@ class TimerVC: ViewController {
                 self.timer.invalidate()
                 self.returnButton.isEnabled = true
                 self.soundPlayer.stop()
+                self.setSoundButtonStyle()
         }))
         present(alert, animated: true, completion: nil)
         
@@ -80,6 +81,7 @@ class TimerVC: ViewController {
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {
+        soundPlayer.invalidate()
         dismiss(animated: true, completion: nil)
     }
     

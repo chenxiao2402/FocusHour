@@ -26,6 +26,12 @@ class SoundPlayer {
     }
     
     func stop() {
+        soundKey = .None
         audioPlayer?.stop()
+    }
+    
+    func invalidate() {
+        soundKey = .None
+        audioPlayer = nil
     }
 }
