@@ -32,4 +32,24 @@ class UITool {
         button.widthAnchor.constraint(equalToConstant: button.frame.size.width).isActive = true
         button.heightAnchor.constraint(equalToConstant: button.frame.size.height).isActive = true
     }
+    
+    static func setBackgroundImage(_ view: UIView, random: Bool) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        getBackgroundImage(random: random)?.draw(in: view.bounds)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.backgroundColor = UIColor.init(patternImage: image!)
+    }
+}
+
+extension UITool {
+    private static func getBackgroundImage(random: Bool) -> UIImage? {
+        if !random {
+            return UIImage(named: "background-0")
+        } else {
+            let imageNum = 8 // 参见Assets.xcassets中的BackgroundImage文件夹
+            let index = Int(arc4random()) % imageNum
+            return UIImage(named: "background-\(index)")
+        }
+    }
 }
