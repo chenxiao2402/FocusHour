@@ -18,6 +18,8 @@ class UITool {
             button.frame.size = CGSize(width: 120, height: 50)
             button.layer.cornerRadius = 15.0
         }
+        button.widthAnchor.constraint(equalToConstant: button.frame.size.width).isActive = true
+        button.heightAnchor.constraint(equalToConstant: button.frame.size.height).isActive = true
     }
     
     static func setToolButtonSize(_ button: UIButton, ratio: Double) {

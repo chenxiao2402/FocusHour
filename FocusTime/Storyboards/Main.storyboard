@@ -29,10 +29,10 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="StartButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
+                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Zrw-gR-0pc"/>
-                                            <constraint firstAttribute="width" constant="120" id="hGm-0B-W3L"/>
+                                            <constraint firstAttribute="height" priority="750" constant="60" id="Zrw-gR-0pc"/>
+                                            <constraint firstAttribute="width" priority="750" constant="150" id="hGm-0B-W3L"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                         <state key="normal">
@@ -48,11 +48,11 @@
                                     <constraint firstItem="yhx-5g-aHH" firstAttribute="centerY" secondItem="F37-A6-ydT" secondAttribute="centerY" id="DpX-YR-sF5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPa-04-7uE">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPa-04-7uE">
                                 <rect key="frame" x="350" y="60" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Mep-sk-20o"/>
-                                    <constraint firstAttribute="width" constant="48" id="TZy-HA-aEj"/>
+                                    <constraint firstAttribute="height" priority="750" constant="48" id="Mep-sk-20o"/>
+                                    <constraint firstAttribute="width" priority="750" constant="48" id="TZy-HA-aEj"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="settings"/>
                             </button>
@@ -104,10 +104,10 @@
                                 <rect key="frame" x="0.0" y="688" width="414" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Rk-hMq" customClass="StopButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="79" width="120" height="50"/>
+                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="4oR-fw-545"/>
-                                            <constraint firstAttribute="height" constant="50" id="xjA-hc-pHi"/>
+                                            <constraint firstAttribute="width" priority="750" constant="150" id="4oR-fw-545"/>
+                                            <constraint firstAttribute="height" priority="750" constant="60" id="xjA-hc-pHi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                         <state key="normal">
@@ -123,21 +123,21 @@
                                     <constraint firstItem="aDb-Rk-hMq" firstAttribute="centerX" secondItem="Rbg-2g-uQH" secondAttribute="centerX" id="td5-MY-uSN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-N6-MCO">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-N6-MCO">
                                 <rect key="frame" x="350" y="60" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="bSe-f1-s0y"/>
-                                    <constraint firstAttribute="width" constant="48" id="ypF-Cp-M47"/>
+                                    <constraint firstAttribute="height" priority="750" constant="48" id="bSe-f1-s0y"/>
+                                    <constraint firstAttribute="width" priority="750" constant="48" id="ypF-Cp-M47"/>
                                 </constraints>
                                 <state key="normal" image="music_on">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta0-wr-E55">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta0-wr-E55">
                                 <rect key="frame" x="16" y="60" width="48" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="6ZD-SN-dFd"/>
-                                    <constraint firstAttribute="height" constant="40" id="vYU-dq-F5r"/>
+                                    <constraint firstAttribute="width" priority="750" constant="48" id="6ZD-SN-dFd"/>
+                                    <constraint firstAttribute="height" priority="750" constant="40" id="vYU-dq-F5r"/>
                                 </constraints>
                                 <state key="normal" image="return"/>
                                 <connections>

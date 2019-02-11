@@ -22,7 +22,7 @@ class SetTimeViewController: ViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        startButton.setButtonStyle()
+        startButton.setTitle(NSLocalizedString("Start", comment: ""), for: .normal)
     }
     
     private func setBackgroundImage() {

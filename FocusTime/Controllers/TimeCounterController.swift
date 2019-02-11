@@ -37,7 +37,7 @@ class TimeCounterController: ViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        stopButton.setButtonStyle()
+        stopButton.setTitle(NSLocalizedString("Giveup", comment: ""), for: .normal)
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
