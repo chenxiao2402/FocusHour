@@ -27,3 +27,11 @@ AboutMe = "Check my Github account(https://github.com/Sephidator/FocusTime) to g
 
 Notification-Success = "Your tree has grown up";
 Notification-Alert = "Your tree will die if you don't come back soon";
+
+None = "None";
+Wind = "Autumn Wind";
+Stream = "Stream";
+Birds = "Birds";
+Insects = "Insects";
+Rain = "Spring Rain";
+Thunderstorm = "Thunderstorm";

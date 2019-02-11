@@ -12,5 +12,4 @@ enum LanguageEnum: String {
     case English = "en"
     case Chinese = "zh-Hans"
     case Japanese = "jp"
-    
 }

@@ -27,3 +27,11 @@ AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）
 
 Notification-Success = "你的树长大了";
 Notification-Alert = "快点回来，不然你的树会枯萎";
+
+None = "无";
+Wind = "秋风";
+Stream = "溪水";
+Birds = "鸟鸣";
+Insects = "虫鸣";
+Rain = "春雨";
+Thunderstorm = "雷雨";

@@ -12,19 +12,19 @@ import AVFoundation
 
 class TimerVC: ViewController {
 
-    var audioPlayer: AVAudioPlayer!
+    let soundPlayer: SoundPlayer = SoundPlayer()
     var timer: Timer!
-    @IBOutlet var mainView: UIView!
     @IBOutlet weak var circleTimer: CircleTimer!
     @IBOutlet weak var stopButton: StopButton!
     @IBOutlet weak var returnButton: UIButton!
-    @IBOutlet weak var musicButton: UIButton!
+    @IBOutlet weak var soundButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         UITool.setToolButtonSize(returnButton, ratio: 432.0 / 512.0)
-        UITool.setToolButtonSize(musicButton, ratio: 1.0)
+        UITool.setToolButtonSize(soundButton, ratio: 1.0)
+        setSoundButtonStyle()
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
@@ -43,24 +43,30 @@ class TimerVC: ViewController {
         stopButton.setTitle(NSLocalizedString("Giveup", comment: ""), for: .normal)
     }
     
+    func setSoundButtonStyle() {
+        let soundOn: Bool = soundPlayer.soundKey != .None
+        soundButton.setImage(UIImage(named: soundOn ? "sound-on" : "sound-off"), for: .normal)
+    }
+    
     @IBAction func StopButtonTapped(_ sender: Any) {
-//        let alert = UIAlertController(
-//            title: NSLocalizedString("GiveupAlert-Title", comment: ""),
-//            message: NSLocalizedString("GiveupAlert-DeathMessage", comment: ""),
-//            preferredStyle: .alert
-//        )
-//        alert.addAction(.init(
-//            title: NSLocalizedString("Cancel", comment: ""),
-//            style: .cancel
-//        ))
-//        alert.addAction(.init(
-//            title: NSLocalizedString("Yes", comment: ""),
-//            style: .destructive,
-//            handler: { (_) in
-//                self.timer.invalidate()
-//                self.returnButton.isEnabled = true
-//        }))
-//        present(alert, animated: true, completion: nil)
+        let alert = UIAlertController(
+            title: NSLocalizedString("GiveupAlert-Title", comment: ""),
+            message: NSLocalizedString("GiveupAlert-DeathMessage", comment: ""),
+            preferredStyle: .alert
+        )
+        alert.addAction(.init(
+            title: NSLocalizedString("Cancel", comment: ""),
+            style: .cancel
+        ))
+        alert.addAction(.init(
+            title: NSLocalizedString("Yes", comment: ""),
+            style: .destructive,
+            handler: { (_) in
+                self.timer.invalidate()
+                self.returnButton.isEnabled = true
+                self.soundPlayer.stop()
+        }))
+        present(alert, animated: true, completion: nil)
         
 //        let languages: NSArray = UserDefaults.standard.object(forKey: "AppleLanguages") as! NSArray
 //        print("切换之前: \(languages)")
@@ -71,24 +77,6 @@ class TimerVC: ViewController {
 //        UserDefaults.standard.synchronize()
 //        Bundle.main.onLanguage()
 //        stopButton.setButtonStyle()
-        
-        let sound = Bundle.main.path(forResource: "stream", ofType: "mp3")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-            audioPlayer.prepareToPlay()
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-        } catch {
-            print(error)
-        }
-        audioPlayer.play()
-        
-//        let AVVC: AVPlayerViewController = AVPlayerViewController()
-//        let avPlayer: AVPlayer = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "stream", ofType: "mp3")!))
-//        AVVC.player = avPlayer
-//        self.present(AVVC, animated: false) {
-//            () -> Void in
-//            AVVC.player?.play()
-//        }
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {
@@ -96,14 +84,15 @@ class TimerVC: ViewController {
     }
     
     @IBAction func showMusicSelector(_ sender: Any) {
-        guard let musicSelector = storyboard?.instantiateViewController(withIdentifier: "popoverViewController") else { return }
-        musicSelector.modalPresentationStyle = .popover
-        musicSelector.preferredContentSize = CGSize(width: 250, height: 250)
-        let popoverController = musicSelector.popoverPresentationController
+        guard let soundSelector = storyboard?.instantiateViewController(withIdentifier: "SoundSelector") as? SoundSelectorVC else { return }
+        soundSelector.modalPresentationStyle = .popover
+        soundSelector.preferredContentSize = CGSize(width: 240, height: 280)
+        soundSelector.timerVC = self
+        let popoverController = soundSelector.popoverPresentationController
         popoverController?.delegate = self
-        popoverController?.sourceView = self.musicButton
-        popoverController?.sourceRect = musicButton.bounds
-        self.present(musicSelector, animated: true)
+        popoverController?.sourceView = self.soundButton
+        popoverController?.sourceRect = soundButton.bounds
+        self.present(soundSelector, animated: true)
     }
     
 }

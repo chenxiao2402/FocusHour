@@ -8,6 +8,24 @@
 
 import AVFoundation
 
-class SoundPlayer: AVAudioPlayer {
-
+class SoundPlayer {
+    private var audioPlayer: AVAudioPlayer!
+    var soundKey: SoundEnum = .None
+    
+    func play(sound: SoundEnum) {
+        soundKey = sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: SoundEnum.getURL(sound: sound))
+            audioPlayer.numberOfLoops = -1
+            audioPlayer.prepareToPlay()
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            audioPlayer.play()
+        } catch {
+            audioPlayer = nil
+        }
+    }
+    
+    func stop() {
+        audioPlayer?.stop()
+    }
 }

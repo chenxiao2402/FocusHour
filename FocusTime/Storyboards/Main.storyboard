@@ -75,7 +75,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mainView" destination="8bC-Xf-vdC" id="aLr-iI-K9l"/>
                         <outlet property="settingsButton" destination="pPa-04-7uE" id="7JS-yB-Q1S"/>
                         <outlet property="startButton" destination="yhx-5g-aHH" id="2MG-PA-ohc"/>
                         <outlet property="timeSetter" destination="ahF-4q-iQd" id="cIB-f7-hOf"/>
@@ -85,34 +84,52 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
-        <!--Music SelectorVC-->
-        <scene sceneID="xxY-HD-0w4">
+        <!--Sound SelectorVC-->
+        <scene sceneID="cbu-rJ-TCP">
             <objects>
-                <viewController storyboardIdentifier="popoverViewController" id="n5G-ST-q3b" customClass="MusicSelectorVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pge-lc-Pp7">
+                <tableViewController storyboardIdentifier="SoundSelector" id="6Ew-d9-S1I" customClass="SoundSelectorVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R8s-3F-Pym">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-uC-OmW">
-                                <rect key="frame" x="0.0" y="44" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="S5Z-hw-u6q"/>
-                                    <constraint firstAttribute="height" constant="250" id="d04-mv-hh2"/>
-                                </constraints>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="aaz-uC-OmW" firstAttribute="top" secondItem="MQY-4D-dkN" secondAttribute="top" id="Pau-5l-ofA"/>
-                            <constraint firstItem="aaz-uC-OmW" firstAttribute="leading" secondItem="MQY-4D-dkN" secondAttribute="leading" id="Spj-mT-ck5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="MQY-4D-dkN"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IDJ-Au-SCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="Wd7-UA-BTX" customClass="TableCell" customModule="FocusTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wd7-UA-BTX" id="lDZ-JL-klt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezw-BP-Syy">
+                                            <rect key="frame" x="20" y="5" width="44" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="PQO-Tl-RfY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Ezw-BP-Syy" secondAttribute="bottom" constant="5" id="4cl-ye-gcZ"/>
+                                        <constraint firstItem="Ezw-BP-Syy" firstAttribute="leading" secondItem="lDZ-JL-klt" secondAttribute="leadingMargin" id="xDp-fH-QOI"/>
+                                        <constraint firstItem="Ezw-BP-Syy" firstAttribute="top" secondItem="lDZ-JL-klt" secondAttribute="top" constant="5" id="yCX-km-54f"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="Ezw-BP-Syy" id="h3l-po-cTv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Ew-d9-S1I" id="4JA-vW-kwg"/>
+                            <outlet property="delegate" destination="6Ew-d9-S1I" id="JKA-sL-UvA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdq-k4-g2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="-874.55357142857144"/>
+            <point key="canvasLocation" x="1584" y="-654"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -158,7 +175,7 @@
                                     <constraint firstAttribute="height" priority="750" constant="48" id="bSe-f1-s0y"/>
                                     <constraint firstAttribute="width" priority="750" constant="48" id="ypF-Cp-M47"/>
                                 </constraints>
-                                <state key="normal" image="music_on">
+                                <state key="normal" image="sound-off">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -198,9 +215,8 @@
                     </view>
                     <connections>
                         <outlet property="circleTimer" destination="Wkd-Au-C4E" id="9Z0-cp-MhS"/>
-                        <outlet property="mainView" destination="Ioq-Rq-Anb" id="88I-jr-bxC"/>
-                        <outlet property="musicButton" destination="fyd-N6-MCO" id="I7V-Yq-pwB"/>
                         <outlet property="returnButton" destination="ta0-wr-E55" id="aMO-Yw-Neb"/>
+                        <outlet property="soundButton" destination="fyd-N6-MCO" id="I7V-Yq-pwB"/>
                         <outlet property="stopButton" destination="aDb-Rk-hMq" id="ALR-C2-IqG"/>
                     </connections>
                 </viewController>
@@ -210,8 +226,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="music_on" width="384" height="384"/>
         <image name="return" width="512" height="432"/>
         <image name="settings" width="384" height="384"/>
+        <image name="sound-off" width="512" height="512"/>
     </resources>
 </document>
