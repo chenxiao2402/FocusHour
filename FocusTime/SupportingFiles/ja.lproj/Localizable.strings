@@ -17,7 +17,6 @@ Yes = "はい";
 No = "いいえ";
 Cancel = "キャンセル";
 
-
 Settings = "設定";
 SetLanguage = "言語設定";
 About = "その他";

@@ -40,7 +40,7 @@ class TimerVC: ViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        stopButton.setTitle(NSLocalizedString("Giveup", comment: ""), for: .normal)
+        stopButton.setTitle(LocalizationKey.Giveup.translate(), for: .normal)
     }
     
     func setSoundButtonStyle() {
@@ -50,16 +50,16 @@ class TimerVC: ViewController {
     
     @IBAction func StopButtonTapped(_ sender: Any) {
         let alert = UIAlertController(
-            title: NSLocalizedString("GiveupAlert-Title", comment: ""),
-            message: NSLocalizedString("GiveupAlert-DeathMessage", comment: ""),
+            title: LocalizationKey.GiveupAlertTitle.translate(),
+            message: LocalizationKey.GiveupAlertDeathMessage.translate(),
             preferredStyle: .alert
         )
         alert.addAction(.init(
-            title: NSLocalizedString("Cancel", comment: ""),
+            title: LocalizationKey.Cancel.translate(),
             style: .cancel
         ))
         alert.addAction(.init(
-            title: NSLocalizedString("Yes", comment: ""),
+            title: LocalizationKey.Yes.translate(),
             style: .destructive,
             handler: { (_) in
                 self.timer.invalidate()
@@ -69,16 +69,6 @@ class TimerVC: ViewController {
                 self.setSoundButtonStyle()
         }))
         present(alert, animated: true, completion: nil)
-        
-//        let languages: NSArray = UserDefaults.standard.object(forKey: "AppleLanguages") as! NSArray
-//        print("切换之前: \(languages)")
-//
-//        // 切换语言
-//        let newLanguages: NSArray = ["zh-Hans", "ja", "en"]
-//        UserDefaults.standard.set(newLanguages, forKey: "AppleLanguages")
-//        UserDefaults.standard.synchronize()
-//        Bundle.main.onLanguage()
-//        stopButton.setButtonStyle()
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {

@@ -15,9 +15,7 @@ enum SettingEnum: String {
 }
 
 extension SettingEnum {
-    static func getKeyList() -> [SettingEnum] {
-        return [
-            SettingEnum.SetLanguage, SettingEnum.About
-        ]
+    func translate() -> String {
+        return NSLocalizedString(self.rawValue, comment: "")
     }
 }

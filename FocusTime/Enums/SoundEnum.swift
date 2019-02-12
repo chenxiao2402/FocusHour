@@ -25,9 +25,10 @@ extension SoundEnum {
     }
     
     static func getKeyList() -> [SoundEnum] {
-        return [
-            SoundEnum.None, SoundEnum.Wind, SoundEnum.Stream, SoundEnum.Birds,
-            SoundEnum.Insects, SoundEnum.Rain, SoundEnum.Thunderstorm
-        ]
+        return [.None, .Wind, .Stream, .Birds, .Insects, .Rain, .Thunderstorm]
+    }
+    
+    func translate() -> String {
+        return NSLocalizedString(self.rawValue, comment: "")
     }
 }

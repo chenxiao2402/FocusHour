@@ -1,5 +1,5 @@
 //
-//  SettingCell.swift
+//  SetLanguageCell.swift
 //  FocusTime
 //
 //  Created by Midrash Elucidator on 2019/2/12.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class SettingCell: UITableViewCell {
+class SetLanguageCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
-    
-    var keyVlue: SettingEnum! {
+    var language: LanguageEnum! {
         didSet {
-            label.text = keyVlue.translate()
+            label.text = language.getName()
         }
     }
     
@@ -24,4 +23,7 @@ class SettingCell: UITableViewCell {
         label.textColor = UIColor.white
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        accessoryType = selected ? .checkmark : .none
+    }
 }

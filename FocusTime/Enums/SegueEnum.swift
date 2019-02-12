@@ -11,4 +11,6 @@ import Foundation
 enum SegueEnum: String {
     case ShowSettings = "ShowSettings"
     case ShowTimer = "ShowTimer"
+    case ShowAboutInfo = "ShowAboutInfo"
+    case ShowSetLanguage = "ShowSetLanguage"
 }

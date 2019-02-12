@@ -11,10 +11,9 @@ import UIKit
 class SoundSelectorCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
-    
-    var keyVlue: String! {
+    var sound: SoundEnum! {
         didSet {
-            label.text = NSLocalizedString(keyVlue, comment: "")
+            label.text = sound.translate()
         }
     }
     

@@ -21,7 +21,7 @@ class SetTimeVC: ViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        startButton.setTitle(NSLocalizedString("Start", comment: ""), for: .normal)
+        startButton.setTitle(LocalizationKey.Start.translate(), for: .normal)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
