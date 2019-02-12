@@ -47,7 +47,7 @@ extension UITool {
         if !random {
             return UIImage(named: "background-0")
         } else {
-            let imageNum = 8 // 参见Assets.xcassets中的BackgroundImage文件夹
+            let imageNum = 8
             let index = Int(arc4random()) % imageNum
             return UIImage(named: "background-\(index)")
         }

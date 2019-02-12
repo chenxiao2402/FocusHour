@@ -11,5 +11,36 @@ import Foundation
 enum LanguageEnum: String {
     case English = "en"
     case Chinese = "zh-Hans"
-    case Japanese = "jp"
+    case Japanese = "ja"
+}
+
+extension LanguageEnum {
+    static func getKeyList() -> [LanguageEnum] {
+        return [.English, .Chinese, .Japanese]
+    }
+    
+    static func getCodeNames(startWith language: LanguageEnum) -> [String] {
+        var languages = getKeyList()
+        let index = languages.firstIndex(of: language)!
+        languages.swapAt(0, index)
+        return languages.map { lang -> String in
+            return lang.rawValue
+        }
+    }
+    
+    func isSystemLanguage() -> Bool {
+        let systemLanguage: String = (UserDefaults.standard.object(forKey: "AppleLanguages") as! NSArray).firstObject as! String
+        return systemLanguage == self.rawValue
+    }
+    
+    func getName() -> String {
+        switch self {
+        case .English:
+            return "English"
+        case .Chinese:
+            return "简体中文"
+        case .Japanese:
+            return "日本語"
+        }
+    }
 }

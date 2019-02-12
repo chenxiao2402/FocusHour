@@ -17,9 +17,11 @@ Yes = "はい";
 No = "いいえ";
 Cancel = "キャンセル";
 
-Language = "言語設定";
-English = "英語";
-Chinese = "中国語";
+Settings = "設定";
+SetLanguage = "言語設定";
+About = "その他";
+English = "English";
+Chinese = "简体中文";
 Japanese = "日本語";
 
 Description = "「フォーカス・タイム」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";

@@ -15,6 +15,7 @@ class SoundSelectorVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = ColorEnum.getColor(name: .LightYellow)
         soundList = SoundEnum.getKeyList()
     }
 
@@ -27,11 +28,9 @@ class SoundSelectorVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableCell
-        cell.keyVlue = soundList[indexPath.row].rawValue
-        if timerVC.soundPlayer.soundKey == soundList[indexPath.row] {
-            cell.setSelected(true, animated: true)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SoundSelectorCell", for: indexPath) as! SoundSelectorCell
+        cell.sound = soundList[indexPath.row]
+        cell.setSelected(timerVC.soundPlayer.soundKey == soundList[indexPath.row], animated: false)
         return cell
     }
     

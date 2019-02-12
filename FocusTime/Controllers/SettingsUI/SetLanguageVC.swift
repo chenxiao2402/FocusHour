@@ -1,0 +1,46 @@
+//
+//  SetLanguageCell.swift
+//  FocusTime
+//
+//  Created by Midrash Elucidator on 2019/2/12.
+//  Copyright © 2019 Midrash Elucidator. All rights reserved.
+//
+
+import UIKit
+
+class SetLanguageVC: UITableViewController {
+
+    var languages: [LanguageEnum] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = SettingEnum.SetLanguage.translate()
+        UITool.setBackgroundImage(view, random: false)
+        languages = LanguageEnum.getKeyList()
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return languages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SetLanguageCell", for: indexPath) as! SetLanguageCell
+        let language = languages[indexPath.row]
+        cell.language = language
+        cell.setSelected(language.isSystemLanguage(), animated: false)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        LocalizationTool.setSystemLanguage(languages[indexPath.row])
+        self.navigationItem.title = SettingEnum.SetLanguage.translate()
+        for tableCell in self.tableView.visibleCells {
+            let cell = tableCell as! SetLanguageCell
+            cell.setSelected(cell.language.isSystemLanguage(), animated: true)
+        }
+    }
+}

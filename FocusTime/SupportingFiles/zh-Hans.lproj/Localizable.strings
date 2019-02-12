@@ -17,10 +17,12 @@ Yes = "是";
 No = "否";
 Cancel = "取消";
 
-LanguageSetting = "语言设置";
-English = "英语";
-Chinese = "中文";
-Japanese = "日语";
+Settings = "设置";
+SetLanguage = "设置语言";
+About = "关于";
+English = "English";
+Chinese = "简体中文";
+Japanese = "日本語";
 
 Description = "“专注时间”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
 AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）来了解更多关于此应用的信息。";

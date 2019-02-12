@@ -18,6 +18,7 @@ enum ColorEnum {
     case DarkEmerald
     case PaleGreen
     case LightGreen
+    case DimGray
 }
 
 extension ColorEnum {
@@ -40,7 +41,9 @@ extension ColorEnum {
         case .PaleGreen:
             return #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         case .LightGreen:
-            return #colorLiteral(red: 0.8000094295, green: 0.975240767, blue: 0.6687354445, alpha: 1)
+            return #colorLiteral(red: 0.8, green: 0.9764705882, blue: 0.6705882353, alpha: 1)
+        case .DimGray:
+            return #colorLiteral(red: 0.2509803922, green: 0.2509803922, blue: 0.2509803922, alpha: 1)
         }
     }
 }

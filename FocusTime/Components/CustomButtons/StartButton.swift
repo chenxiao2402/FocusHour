@@ -20,7 +20,7 @@ class StartButton: UIButton {
     }
     
     func setButtonStyle() {
-        self.setTitle(NSLocalizedString("Start", comment: ""), for: .normal)
+        self.setTitle(LocalizationKey.Start.translate(), for: .normal)
         UITool.setCustomButtonSize(self)
         
         layer.backgroundColor = ColorEnum.getColor(name: .Emerald).cgColor
