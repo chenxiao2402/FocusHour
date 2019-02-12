@@ -1,5 +1,5 @@
 //
-//  TableCell.swift
+//  SoundSelectorCell.swift
 //  FocusTime
 //
 //  Created by Midrash Elucidator on 2019/2/11.
@@ -8,34 +8,32 @@
 
 import UIKit
 
-class TableCell: UITableViewCell {
+class SoundSelectorCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
+    
     var keyVlue: String! {
         didSet {
-            setLabelText()
+            label.text = NSLocalizedString(keyVlue, comment: "")
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = ColorEnum.getColor(name: .LightYellow)
+        backgroundColor = UIColor.clear
+        label.textColor = ColorEnum.getColor(name: .DimGray)
     }
     
-    private func setLabelText() {
-        label.text = NSLocalizedString(keyVlue, comment: "")
-    }
-
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         if highlighted {
-             self.backgroundColor = ColorEnum.getColor(name: .LightGreen)
-        }
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        if selected {
-            self.backgroundColor = ColorEnum.getColor(name: .PaleGreen)
+             backgroundColor = ColorEnum.getColor(name: .LightGreen)
         }
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+            accessoryType = .checkmark
+            backgroundColor = ColorEnum.getColor(name: .PaleGreen)
+        }
+    }
 }

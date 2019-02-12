@@ -30,7 +30,7 @@ class SetTimeVC: ViewController {
         
         switch(segue.identifier ?? "") {
             
-        case "ShowTimeCounter":
+        case SegueEnum.ShowTimer.rawValue:
             guard let timeConterController = segue.destination as? TimerVC else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
@@ -38,6 +38,8 @@ class SetTimeVC: ViewController {
             let background = view.backgroundColor
             timeConterController.view.backgroundColor = background
             timeConterController.circleTimer.remainingTime = totalFocusTime
+        case SegueEnum.ShowSettings.rawValue:
+            return
         default:
             fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "")")
         }

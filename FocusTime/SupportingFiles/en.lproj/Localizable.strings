@@ -17,10 +17,12 @@ Yes = "Yes";
 No = "No";
 Cancel = "Cancel";
 
-LanguageSetting = "LanguageSetting";
+Settings = "Settings";
+SetLanguage = "Set Language";
+About = "About";
 English = "English";
-Chinese = "Chinese";
-Japanese = "Japanese";
+Chinese = "简体中文";
+Japanese = "日本語";
 
 Description = "FocusTime is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.";
 AboutMe = "Check my Github account(https://github.com/Sephidator/FocusTime) to get more information about this APP.";

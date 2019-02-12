@@ -64,7 +64,8 @@ class TimerVC: ViewController {
             handler: { (_) in
                 self.timer.invalidate()
                 self.returnButton.isEnabled = true
-                self.soundPlayer.stop()
+                self.soundPlayer.invalidate()
+                self.soundButton.isEnabled = false
                 self.setSoundButtonStyle()
         }))
         present(alert, animated: true, completion: nil)
@@ -88,7 +89,7 @@ class TimerVC: ViewController {
     @IBAction func showMusicSelector(_ sender: Any) {
         guard let soundSelector = storyboard?.instantiateViewController(withIdentifier: "SoundSelector") as? SoundSelectorVC else { return }
         soundSelector.modalPresentationStyle = .popover
-        soundSelector.preferredContentSize = CGSize(width: 240, height: 280)
+        soundSelector.preferredContentSize = CGSize(width: 200, height: 285)
         soundSelector.timerVC = self
         let popoverController = soundSelector.popoverPresentationController
         popoverController?.delegate = self
