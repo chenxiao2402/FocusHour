@@ -89,7 +89,7 @@ class TimerVC: ViewController {
     @IBAction func showMusicSelector(_ sender: Any) {
         guard let soundSelector = storyboard?.instantiateViewController(withIdentifier: "SoundSelector") as? SoundSelectorVC else { return }
         soundSelector.modalPresentationStyle = .popover
-        soundSelector.preferredContentSize = CGSize(width: 200, height: 285)
+        soundSelector.preferredContentSize = CGSize(width: 200, height: 280)
         soundSelector.timerVC = self
         let popoverController = soundSelector.popoverPresentationController
         popoverController?.delegate = self

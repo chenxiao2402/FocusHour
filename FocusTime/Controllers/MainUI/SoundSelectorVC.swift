@@ -35,12 +35,12 @@ class SoundSelectorVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        timerVC.soundPlayer.play(sound: soundList[indexPath.row])
-        timerVC.setSoundButtonStyle()
         for tableCell in self.tableView.visibleCells {
             let cell = tableCell as! SoundSelectorCell
             cell.setSelected(timerVC.soundPlayer.soundKey == cell.sound)
         }
         self.dismiss(animated: true, completion: nil)
+        timerVC.soundPlayer.play(sound: soundList[indexPath.row])
+        timerVC.setSoundButtonStyle()
     }
 }
