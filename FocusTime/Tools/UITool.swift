@@ -12,11 +12,13 @@ class UITool {
     static func setCustomButtonSize(_ button: UIButton) {
         switch UIDevice().model {
         case "iPad":
-            button.frame.size = CGSize(width: 150, height: 60)
-            button.layer.cornerRadius = 20.0
+            button.frame.size = CGSize(width: 180, height: 75)
+            button.layer.cornerRadius = 25.0
+            button.titleLabel?.font = UIFont(name: "Verdana", size: 24)
         default:
             button.frame.size = CGSize(width: 120, height: 50)
             button.layer.cornerRadius = 15.0
+            button.titleLabel?.font = UIFont(name: "Verdana", size: 18)
         }
         button.widthAnchor.constraint(equalToConstant: button.frame.size.width).isActive = true
         button.heightAnchor.constraint(equalToConstant: button.frame.size.height).isActive = true

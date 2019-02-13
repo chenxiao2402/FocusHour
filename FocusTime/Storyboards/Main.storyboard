@@ -13,16 +13,15 @@
         <!--Settings-->
         <scene sceneID="YTC-eK-sI2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OY5-Dw-Iok" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="nOU-Em-X8J" customClass="SettingsVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RRN-wG-3gb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RRN-wG-3gb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="rAl-3Q-hk5">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="50" id="wpV-RC-0ou" customClass="SettingCell" customModule="FocusTime" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="wpV-RC-0ou" customClass="SettingCell" customModule="FocusTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpV-RC-0ou" id="Nhd-4d-DwA">
@@ -53,7 +52,7 @@
                                             <segue destination="DbJ-5U-1AM" kind="show" identifier="ShowSetLanguage" id="xsM-Gf-WfH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="50" id="2uq-kU-pdi" customClass="SettingCell" customModule="FocusTime" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="2uq-kU-pdi" customClass="SettingCell" customModule="FocusTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2uq-kU-pdi" id="YXa-oh-YtN">
@@ -105,6 +104,7 @@
                         <outlet property="setLanguageCell" destination="wpV-RC-0ou" id="2Nt-S1-I9O"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OY5-Dw-Iok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1930" y="-599"/>
         </scene>
@@ -112,23 +112,20 @@
         <scene sceneID="XT4-eo-3b2">
             <objects>
                 <tableViewController id="DbJ-5U-1AM" customClass="SetLanguageVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xN9-td-I3R">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xN9-td-I3R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetLanguageCell" rowHeight="50" id="dR1-l2-HgQ" customClass="SetLanguageCell" customModule="FocusTime" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetLanguageCell" id="dR1-l2-HgQ" customClass="SetLanguageCell" customModule="FocusTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dR1-l2-HgQ" id="0jf-ZL-z1j">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dR1-l2-HgQ" id="0jf-ZL-z1j">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-bE-chG">
                                             <rect key="frame" x="20" y="5" width="44" height="39.666666666666664"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="39.670000000000002" id="eVF-yW-Qur"/>
-                                            </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
@@ -146,6 +143,7 @@
                                         <constraint firstAttribute="bottom" secondItem="H1L-bE-chG" secondAttribute="bottom" constant="5" id="k0k-28-p7d"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="label" destination="H1L-bE-chG" id="aPA-aj-a5s"/>
                                 </connections>
@@ -171,22 +169,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-4q-iQd" customClass="CircleSlider" customModule="FocusTime" customModuleProvider="target">
-                                <rect key="frame" x="72" y="208" width="270" height="480"/>
+                                <rect key="frame" x="60" y="186.66666666666669" width="294" height="522.66666666666652"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ahF-4q-iQd" secondAttribute="height" multiplier="9:16" id="80I-3F-1fi"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="tDZ-k0-vwg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F37-A6-ydT">
-                                <rect key="frame" x="0.0" y="688" width="414" height="208"/>
+                                <rect key="frame" x="0.0" y="709.33333333333337" width="414" height="186.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-5g-aHH" customClass="StartButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="132" y="63.333333333333258" width="150" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="60" id="Zrw-gR-0pc"/>
                                             <constraint firstAttribute="width" priority="750" constant="150" id="hGm-0B-W3L"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                         <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -224,8 +222,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F37-A6-ydT" secondAttribute="trailing" id="bIy-Pm-OA3"/>
                             <constraint firstItem="pPa-04-7uE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cAb-NT-Dh9"/>
                             <constraint firstItem="F37-A6-ydT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t4k-LE-6YI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="72" id="tBR-if-Fhf"/>
-                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="72" id="zEY-SS-kp1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahF-4q-iQd" secondAttribute="trailing" priority="750" constant="60" id="tBR-if-Fhf"/>
+                            <constraint firstItem="ahF-4q-iQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="60" id="zEY-SS-kp1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -243,23 +241,20 @@
         <scene sceneID="cbu-rJ-TCP">
             <objects>
                 <tableViewController storyboardIdentifier="SoundSelector" id="6Ew-d9-S1I" customClass="SoundSelectorVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R8s-3F-Pym">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R8s-3F-Pym">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundSelectorCell" rowHeight="40" id="gYU-GH-zfH" customClass="SoundSelectorCell" customModule="FocusTime" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundSelectorCell" id="gYU-GH-zfH" customClass="SoundSelectorCell" customModule="FocusTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYU-GH-zfH" id="THK-3t-Dtq">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYU-GH-zfH" id="THK-3t-Dtq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="39.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWf-sa-1cL">
                                             <rect key="frame" x="20" y="5.0000000000000018" width="44" height="29.666666666666671"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="29.670000000000002" id="stH-hK-UGg"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -295,22 +290,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkd-Au-C4E" customClass="CircleTimer" customModule="FocusTime" customModuleProvider="target">
-                                <rect key="frame" x="72" y="208" width="270" height="480"/>
+                                <rect key="frame" x="60" y="186.66666666666669" width="294" height="522.66666666666652"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wkd-Au-C4E" secondAttribute="height" multiplier="9:16" id="grp-8P-zSt"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="kyB-zZ-f06"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-2g-uQH">
-                                <rect key="frame" x="0.0" y="688" width="414" height="208"/>
+                                <rect key="frame" x="0.0" y="709.33333333333337" width="414" height="186.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-Rk-hMq" customClass="StopButton" customModule="FocusTime" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="74" width="150" height="60"/>
+                                        <rect key="frame" x="132" y="63.333333333333258" width="150" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="750" constant="150" id="4oR-fw-545"/>
                                             <constraint firstAttribute="height" priority="750" constant="60" id="xjA-hc-pHi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                         <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -357,9 +352,9 @@
                             <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="YcK-YS-28s"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" id="b3g-ZM-Hyg"/>
                             <constraint firstItem="Wkd-Au-C4E" firstAttribute="centerX" secondItem="LWv-Oy-y7H" secondAttribute="centerX" id="eUm-aC-z8Z"/>
-                            <constraint firstItem="Wkd-Au-C4E" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" priority="750" constant="72" id="fWp-BY-HtE"/>
+                            <constraint firstItem="Wkd-Au-C4E" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" priority="750" constant="60" id="fWp-BY-HtE"/>
                             <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Rbg-2g-uQH" secondAttribute="trailing" id="haP-dV-M1J"/>
-                            <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Wkd-Au-C4E" secondAttribute="trailing" priority="750" constant="72" id="iNB-lU-gH5"/>
+                            <constraint firstItem="LWv-Oy-y7H" firstAttribute="trailing" secondItem="Wkd-Au-C4E" secondAttribute="trailing" priority="750" constant="60" id="iNB-lU-gH5"/>
                             <constraint firstItem="ta0-wr-E55" firstAttribute="leading" secondItem="LWv-Oy-y7H" secondAttribute="leading" constant="16" id="iyD-Ka-qlI"/>
                             <constraint firstAttribute="bottom" secondItem="Rbg-2g-uQH" secondAttribute="bottom" id="l7P-9C-3vT"/>
                             <constraint firstItem="Rbg-2g-uQH" firstAttribute="top" secondItem="Wkd-Au-C4E" secondAttribute="bottom" id="tLb-kl-cta"/>

@@ -33,8 +33,7 @@ class TimerVC: ViewController {
                     self.returnButton.isEnabled = false
                 }
             } else {
-                self.timer.invalidate()
-                self.returnButton.isEnabled = true
+                self.end()
             }
         })
     }
@@ -49,9 +48,11 @@ class TimerVC: ViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
+        let message = circleTimer.treeHasGrownUp() ?
+            LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
         let alert = UIAlertController(
             title: LocalizationKey.GiveupAlertTitle.translate(),
-            message: LocalizationKey.GiveupAlertDeathMessage.translate(),
+            message: message,
             preferredStyle: .alert
         )
         alert.addAction(.init(
@@ -61,13 +62,8 @@ class TimerVC: ViewController {
         alert.addAction(.init(
             title: LocalizationKey.Yes.translate(),
             style: .destructive,
-            handler: { (_) in
-                self.timer.invalidate()
-                self.returnButton.isEnabled = true
-                self.soundPlayer.invalidate()
-                self.soundButton.isEnabled = false
-                self.setSoundButtonStyle()
-        }))
+            handler: { (_) in self.end() }
+        ))
         present(alert, animated: true, completion: nil)
     }
     
@@ -88,6 +84,16 @@ class TimerVC: ViewController {
         self.present(soundSelector, animated: true)
     }
     
+    func end() {
+        circleTimer.end()
+        timer.invalidate()
+        
+        returnButton.isEnabled = true
+        stopButton.isHidden = true
+        soundButton.isHidden = true
+        
+        soundPlayer.invalidate()
+    }
 }
 
 extension TimerVC: UIPopoverPresentationControllerDelegate {

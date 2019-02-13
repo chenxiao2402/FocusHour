@@ -6,34 +6,48 @@
   Copyright © 2019 Midrash Elucidator. All rights reserved.
 */
 
+
+// SetTimeView
 Start = "スタート";
+SetTimeTitle = "今すぐ集中しよう";
+
+
+// SetTimeView -> TimerView
+CountdownTitle = "一心不乱";
+Congratulations = "おめでとう";
+Encouragement = "また頑張りましょう";
+YouCanDoBetter = "お前ならもっとできる";
 Giveup = "諦める";
 
+
+// SetTimeView -> TimerView -> Alert
 GiveupAlert-Title = "諦めるか?";
 GiveupAlert-DeathMessage = "あなたの木は枯れてしまう";
-GiveupAlert-Encouragement = "頑張って、もうすぐ成功する";
-
+GiveupAlert-HoldOnMessage = "頑張って、もうすぐ成功する";
 Yes = "はい";
 No = "いいえ";
 Cancel = "キャンセル";
-
-Settings = "設定";
-SetLanguage = "言語設定";
-About = "その他";
-English = "English";
-Chinese = "简体中文";
-Japanese = "日本語";
-
-Description = "「フォーカス・タイム」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";
-AboutMe = "私のGithubアカウント（https://github.com/Sephidator/FocusTime）を訪問すれば、このアプリの他の情報が見られる。";
-
-Notification-Success = "あなたの木が大きくなった";
+Notification-Success = "木が大きくなった";
+Notification-Death = "あなたの木は枯れた";
 Notification-Alert = "すぐ戻らないと、あなたの木は枯れてしまう";
 
+
+// SetTimeView -> TimerView -> SoundSelector
 None = "なし";
 Wind = "秋風";
 Stream = "せせらぎ";
-Birds = "鳥の歌";
+Birds = "鳥の唄";
 Insects = "虫の声";
 Rain = "春雨";
 Thunderstorm = "雷雨";
+
+
+// SetTimeView -> Settings
+Settings = "設定";
+SetLanguage = "言語設定";
+About = "その他";
+
+
+// SetTimeView -> Settings -> About
+Description = "「フォーカス・タイム」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";
+AboutMe = "私のGithubアカウント（https://github.com/Sephidator/FocusTime）を訪問すれば、このアプリの他の情報が見られる。";
