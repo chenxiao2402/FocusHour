@@ -16,9 +16,9 @@ class UITool {
             button.layer.cornerRadius = 25.0
             button.titleLabel?.font = UIFont(name: "Verdana", size: 24)
         default:
-            button.frame.size = CGSize(width: 120, height: 50)
+            button.frame.size = CGSize(width: 132, height: 55)
             button.layer.cornerRadius = 15.0
-            button.titleLabel?.font = UIFont(name: "Verdana", size: 18)
+            button.titleLabel?.font = UIFont(name: "Verdana", size: 16)
         }
         button.widthAnchor.constraint(equalToConstant: button.frame.size.width).isActive = true
         button.heightAnchor.constraint(equalToConstant: button.frame.size.height).isActive = true

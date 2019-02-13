@@ -14,6 +14,7 @@ class TimerVC: ViewController {
 
     let soundPlayer: SoundPlayer = SoundPlayer()
     var timer: Timer!
+    var cancelable: Bool = true
     @IBOutlet weak var circleTimer: CircleTimer!
     @IBOutlet weak var stopButton: StopButton!
     @IBOutlet weak var returnButton: UIButton!
@@ -25,13 +26,13 @@ class TimerVC: ViewController {
         UITool.setToolButtonSize(returnButton, ratio: 432.0 / 512.0)
         UITool.setToolButtonSize(soundButton, ratio: 1.0)
         setSoundButtonStyle()
+        returnButton.isEnabled = false
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
                 self.circleTimer.resetTime()
-                if (self.circleTimer.focusTime > 10) {
-                    self.returnButton.isEnabled = false
-                }
+                self.cancelable = self.circleTimer.focusTime <= 10
+                self.setStopButtonTitle()
             } else {
                 self.end()
             }
@@ -39,7 +40,7 @@ class TimerVC: ViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        stopButton.setTitle(LocalizationKey.Giveup.translate(), for: .normal)
+        setStopButtonTitle()
     }
     
     func setSoundButtonStyle() {
@@ -47,7 +48,20 @@ class TimerVC: ViewController {
         soundButton.setImage(UIImage(named: soundOn ? "sound-on" : "sound-off"), for: .normal)
     }
     
+    func setStopButtonTitle() {
+        let title = cancelable ?
+            "\(LocalizationKey.Cancel.translate()) (\(10 - self.circleTimer.focusTime))" :
+            LocalizationKey.Giveup.translate()
+        stopButton.setTitle(title, for: .normal)
+    }
+    
     @IBAction func StopButtonTapped(_ sender: Any) {
+        if cancelable {
+            soundPlayer.invalidate()
+            dismiss(animated: true, completion: nil)
+            return
+        }
+        
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
         let alert = UIAlertController(
