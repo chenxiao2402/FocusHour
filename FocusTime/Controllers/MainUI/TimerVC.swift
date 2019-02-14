@@ -9,12 +9,20 @@
 import UIKit
 import AVKit
 import AVFoundation
+import UserNotifications
 
 class TimerVC: ViewController {
-
+    
     let soundPlayer: SoundPlayer = SoundPlayer()
-    var timer: Timer!
-    var cancelable: Bool = true
+    let backgroundTimeLimit: Int = 10
+    let cancelableTimeLimit: Int = 10
+    private var mainTimer: Timer!
+    private var cancelable: Bool = true
+    private var backgroundObserver: NSObjectProtocol?
+    private var returnObserver: NSObjectProtocol?
+    private var backgroundTimer: Timer!
+    private var backgroundTime: Int!
+    
     @IBOutlet weak var circleTimer: CircleTimer!
     @IBOutlet weak var stopButton: StopButton!
     @IBOutlet weak var returnButton: UIButton!
@@ -23,67 +31,77 @@ class TimerVC: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backgroundTime = backgroundTimeLimit
         UITool.setToolButtonSize(returnButton, ratio: 432.0 / 512.0)
         UITool.setToolButtonSize(soundButton, ratio: 1.0)
         setSoundButtonStyle()
+        setStopButtonTitle()
         returnButton.isEnabled = false
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
+        mainTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
                 self.circleTimer.resetTime()
-                self.cancelable = self.circleTimer.focusTime <= 10
+                self.cancelable = self.circleTimer.focusTime <= self.cancelableTimeLimit
                 self.setStopButtonTitle()
             } else {
                 self.end()
             }
         })
+        
+        backgroundObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.didEnterBackgroundNotification,
+            object: UIApplication.shared,
+            queue: OperationQueue.main,
+            using: { _ in
+                if !UITool.isScreenLocked() {
+                    self.backgroundCountdown()
+                }
+        })
+        
+        returnObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.didBecomeActiveNotification,
+            object: UIApplication.shared,
+            queue: OperationQueue.main,
+            using: { _ in
+                self.returnFromBackground()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setStopButtonTitle()
-    }
-    
-    func setSoundButtonStyle() {
-        let soundOn: Bool = soundPlayer.soundKey != .None
-        soundButton.setImage(UIImage(named: soundOn ? "sound-on" : "sound-off"), for: .normal)
-    }
-    
-    func setStopButtonTitle() {
-        let title = cancelable ?
-            "\(LocalizationKey.Cancel.translate()) (\(10 - self.circleTimer.focusTime))" :
-            LocalizationKey.Giveup.translate()
-        stopButton.setTitle(title, for: .normal)
+        if backgroundTime == 0 {
+            circleTimer.end() // 因为在后台不能响应界面更新，所以在出现时重新刷新
+        } else {
+            backgroundTimer?.invalidate()
+            backgroundTime = backgroundTimeLimit
+        }
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
         if cancelable {
-            soundPlayer.invalidate()
-            dismiss(animated: true, completion: nil)
-            return
+            quit()
+        } else {
+            let message = circleTimer.treeHasGrownUp() ?
+                LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
+            let alert = UIAlertController(
+                title: LocalizationKey.GiveupAlertTitle.translate(),
+                message: message,
+                preferredStyle: .alert
+            )
+            alert.addAction(.init(
+                title: LocalizationKey.Cancel.translate(),
+                style: .cancel
+                ))
+            alert.addAction(.init(
+                title: LocalizationKey.Yes.translate(),
+                style: .destructive,
+                handler: { (_) in self.end() }
+                ))
+            present(alert, animated: true, completion: nil)
         }
-        
-        let message = circleTimer.treeHasGrownUp() ?
-            LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
-        let alert = UIAlertController(
-            title: LocalizationKey.GiveupAlertTitle.translate(),
-            message: message,
-            preferredStyle: .alert
-        )
-        alert.addAction(.init(
-            title: LocalizationKey.Cancel.translate(),
-            style: .cancel
-        ))
-        alert.addAction(.init(
-            title: LocalizationKey.Yes.translate(),
-            style: .destructive,
-            handler: { (_) in self.end() }
-        ))
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {
-        soundPlayer.invalidate()
-        dismiss(animated: true, completion: nil)
+        quit()
     }
     
     @IBAction func showMusicSelector(_ sender: Any) {
@@ -97,21 +115,76 @@ class TimerVC: ViewController {
         popoverController?.sourceRect = soundButton.bounds
         self.present(soundSelector, animated: true)
     }
-    
-    func end() {
-        circleTimer.end()
-        timer.invalidate()
-        
-        returnButton.isEnabled = true
-        stopButton.isHidden = true
-        soundButton.isHidden = true
-        
-        soundPlayer.invalidate()
-    }
 }
 
 extension TimerVC: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+    
+    func setSoundButtonStyle() {
+        let soundOn: Bool = soundPlayer.soundKey != .None
+        soundButton.setImage(UIImage(named: soundOn ? "sound-on" : "sound-off"), for: .normal)
+    }
+    
+    private func setStopButtonTitle() {
+        let title = cancelable ?
+            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.focusTime))" :
+            LocalizationKey.Giveup.translate()
+        stopButton.setTitle(title, for: .normal)
+    }
+    
+    private func quit() {
+        dismiss(animated: true) {
+            self.soundPlayer.invalidate()
+            NotificationCenter.default.removeObserver(self.returnObserver!)
+        }
+    }
+    
+    private func end() {
+        circleTimer.end()
+        mainTimer?.invalidate()
+        backgroundTimer?.invalidate()
+        soundPlayer.invalidate()
+        
+        returnButton.isEnabled = true
+        stopButton.isHidden = true
+        soundButton.isHidden = true
+        
+        let message = circleTimer.treeHasGrownUp() ?
+            LocalizationKey.NotificationSuccess.translate() :
+            LocalizationKey.NotificationDeath.translate()
+        sendNotification(message)
+        NotificationCenter.default.removeObserver(self.backgroundObserver!)
+    }
+    
+    private func backgroundCountdown() {
+        sendNotification(LocalizationKey.NotificationAlert.translate())
+        backgroundTime = backgroundTimeLimit
+        backgroundTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
+            self.backgroundTime > 0 ? self.backgroundTime -= 1 : self.end()
+        })
+    }
+    
+    private func sendNotification(_ message: String) {
+        let content = UNMutableNotificationContent()
+        content.body = message
+        content.sound = UNNotificationSound.default
+        content.badge = 0
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: message, content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+    }
+    
+    private func returnFromBackground() {
+        if backgroundTime == 0 {
+            circleTimer.end() // 因为在后台不能响应界面更新，所以在出现时重新刷新
+        } else {
+            backgroundTimer?.invalidate()
+            backgroundTime = backgroundTimeLimit
+        }
     }
 }

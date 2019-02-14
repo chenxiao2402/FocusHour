@@ -12,6 +12,7 @@ class CircleView: UIView {
     let TWO_PI: CGFloat = CGFloat(2 * Double.pi)
     let HALF_PI: CGFloat = CGFloat(Double.pi / 2)
     let TEN_MIN_ANGLE: CGFloat = CGFloat(Double.pi / 6)
+    let TEN_MIN: Int = 600
     let SLIDER_BACKGROUND_COLOR: UIColor = ColorEnum.getColor(name: .LightKhaki)
     let SLIDER_PROGRESS_COLOR: UIColor = ColorEnum.getColor(name: .GrassGreen)
     

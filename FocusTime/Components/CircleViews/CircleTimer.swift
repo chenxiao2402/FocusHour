@@ -61,7 +61,7 @@ class CircleTimer: CircleView {
 
 extension CircleTimer {
     func treeHasGrownUp() -> Bool {
-        return focusTime > 600
+        return focusTime > TEN_MIN
     }
 }
 

@@ -12,6 +12,10 @@ class SoundPlayer {
     private var audioPlayer: AVAudioPlayer!
     var soundKey: SoundEnum = .None
     
+    init() {
+        play(sound: soundKey)
+    }
+    
     func play(sound: SoundEnum) {
         soundKey = sound
         do {
