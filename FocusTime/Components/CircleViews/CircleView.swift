@@ -12,6 +12,7 @@ class CircleView: UIView {
     let TWO_PI: CGFloat = CGFloat(2 * Double.pi)
     let HALF_PI: CGFloat = CGFloat(Double.pi / 2)
     let TEN_MIN_ANGLE: CGFloat = CGFloat(Double.pi / 6)
+    let TEN_MIN: Int = 600
     let SLIDER_BACKGROUND_COLOR: UIColor = ColorEnum.getColor(name: .LightKhaki)
     let SLIDER_PROGRESS_COLOR: UIColor = ColorEnum.getColor(name: .GrassGreen)
     
@@ -23,7 +24,8 @@ class CircleView: UIView {
     var remainingSeconds: Int = 0
     
     var iconView = UIImageView() // 展示你要“种植”的植物的区域，位于圆形slider中间
-    var timeLabel = UILabel() // 展示你设置的时间，位于圆形slider的下方
+    var headLabel = UILabel() // 展示提示信息，位于圆形slider的上方
+    var footLabel = UILabel() // 展示你设置的时间，位于圆形slider的下方
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,28 +37,46 @@ class CircleView: UIView {
         setup()
     }
     
+    override func draw(_ rect: CGRect) {
+        drawCenter = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
+        radius = frame.size.width / 2.0 * 0.9
+    }
+    
     func setup() {
         self.backgroundColor = UIColor.clear
     }
     
-    func drawIconView(minutes: Int) {
+    func drawIconView(_ image: UIImage?) {
         iconView.removeFromSuperview()
         iconView.frame = CGRect(x: 0, y: 0, width: radius * 1.2, height: radius * 1.2)
-        iconView.image = getImageBy(minutes: minutes)
+        iconView.image = image
         iconView.center = drawCenter
         addSubview(iconView)
     }
     
-    func drawTimeLabel() {
-        timeLabel.removeFromSuperview()
-        let fontSize = frame.size.height * 0.12
-        timeLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: fontSize)
-        timeLabel.text = timeFormat()
-        timeLabel.font = UIFont(name: "Verdana", size: fontSize)
-        timeLabel.textAlignment = NSTextAlignment.center
-        timeLabel.textColor = UIColor.white
-        timeLabel.center = CGPoint(x: frame.size.width / 2.0, y: frame.size.height - fontSize / 2)
-        addSubview(timeLabel)
+    func drawHeadLabel(_ text: String) {
+        headLabel.removeFromSuperview()
+        let fontSize: CGFloat = UIDevice().model == "iPad" ? 40.0 : 28.0
+        headLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height * 0.2)
+        headLabel.text = text
+        headLabel.font = UIFont(name: "Verdana-Bold", size: fontSize)
+        headLabel.textAlignment = NSTextAlignment.center
+        headLabel.textColor = UIColor.white
+        headLabel.center = CGPoint(x: frame.size.width / 2.0, y: headLabel.frame.size.height / 2)
+        addSubview(headLabel)
+    }
+    
+    func drawFootLabel(_ text: String, isTime: Bool) {
+        footLabel.removeFromSuperview()
+        let deviceFontSize: CGFloat = UIDevice().model == "iPad" ? 32.0 : 24.0
+        let fontSize: CGFloat = isTime ? frame.size.height * 0.12 : deviceFontSize
+        footLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: fontSize * 1.2)
+        footLabel.text = text
+        footLabel.font = UIFont(name: "Verdana", size: fontSize)
+        footLabel.textAlignment = NSTextAlignment.center
+        footLabel.textColor = UIColor.white
+        footLabel.center = CGPoint(x: frame.size.width / 2.0, y: frame.size.height * 0.9)
+        addSubview(footLabel)
     }
 }
 

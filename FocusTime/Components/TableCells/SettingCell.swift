@@ -24,4 +24,5 @@ class SettingCell: UITableViewCell {
         label.textColor = UIColor.white
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {}
 }

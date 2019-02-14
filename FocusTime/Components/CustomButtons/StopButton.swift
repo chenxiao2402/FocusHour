@@ -19,7 +19,7 @@ class StopButton: UIButton {
         setButtonStyle()
     }
     
-    func setButtonStyle() {
+    private func setButtonStyle() {
         setTitle(LocalizationKey.Giveup.translate(), for: .normal)
         UITool.setCustomButtonSize(self)
         

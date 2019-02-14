@@ -31,7 +31,7 @@ class SetLanguageVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SetLanguageCell", for: indexPath) as! SetLanguageCell
         let language = languages[indexPath.row]
         cell.language = language
-        cell.setSelected(language.isSystemLanguage(), animated: false)
+        cell.setSelected(language.isSystemLanguage())
         return cell
     }
     
@@ -40,7 +40,7 @@ class SetLanguageVC: UITableViewController {
         self.navigationItem.title = SettingEnum.SetLanguage.translate()
         for tableCell in self.tableView.visibleCells {
             let cell = tableCell as! SetLanguageCell
-            cell.setSelected(cell.language.isSystemLanguage(), animated: true)
+            cell.setSelected(cell.language.isSystemLanguage())
         }
     }
 }

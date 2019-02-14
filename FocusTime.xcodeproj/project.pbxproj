@@ -15,6 +15,8 @@
 		5C109FDB220FF9BB003D026E /* UITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FDA220FF9BB003D026E /* UITool.swift */; };
 		5C109FDF22105C6B003D026E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FDE22105C6B003D026E /* BundleExtension.swift */; };
 		5C109FE122107556003D026E /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FE022107556003D026E /* LanguageEnum.swift */; };
+		5C198F02221525ED009B8096 /* None.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C198F01221525ED009B8096 /* None.mp3 */; };
+		5C198F052215368D009B8096 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C198F042215368D009B8096 /* UserNotifications.framework */; };
 		5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C240230220D1BC2002A1EF6 /* CircleSlider.swift */; };
 		5C240235220D7512002A1EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C240234220D7512002A1EF6 /* Assets.xcassets */; };
 		5C374A7A220934870059EF2C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleView.swift */; };
@@ -71,6 +73,8 @@
 		5C109FDA220FF9BB003D026E /* UITool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITool.swift; sourceTree = "<group>"; };
 		5C109FDE22105C6B003D026E /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		5C109FE022107556003D026E /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
+		5C198F01221525ED009B8096 /* None.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = None.mp3; sourceTree = "<group>"; };
+		5C198F042215368D009B8096 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		5C240230220D1BC2002A1EF6 /* CircleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
 		5C240234220D7512002A1EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C374A79220934870059EF2C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C198F052215368D009B8096 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +139,14 @@
 				5C4885D52212890500198B49 /* CircleViews */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5C198F032215368D009B8096 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C198F042215368D009B8096 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5C3D03D52211AF210089E96A /* Enums */ = {
@@ -226,6 +239,7 @@
 				5C80BF462207D98000691E98 /* FocusTime */,
 				5C80BF5B2207D98100691E98 /* FocusTimeTests */,
 				5C80BF452207D98000691E98 /* Products */,
+				5C198F032215368D009B8096 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +307,7 @@
 		5CF2048122117A8A0091DDFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5C198F01221525ED009B8096 /* None.mp3 */,
 				5C3D03D72211AFE20089E96A /* Stream.mp3 */,
 				5CF2048622117A9A0091DDFE /* Wind.mp3 */,
 				5CF2048222117A960091DDFE /* Birds.mp3 */,
@@ -398,6 +413,7 @@
 				5C240235220D7512002A1EF6 /* Assets.xcassets in Resources */,
 				5C109FBA220FC792003D026E /* InfoPlist.strings in Resources */,
 				5C4885E62212F7D900198B49 /* Main.storyboard in Resources */,
+				5C198F02221525ED009B8096 /* None.mp3 in Resources */,
 				5CF2048C22117A9C0091DDFE /* Wind.mp3 in Resources */,
 				5C109FD7220FDE8F003D026E /* LaunchScreen.storyboard in Resources */,
 				5CF2048D22117A9C0091DDFE /* Thunderstorm.mp3 in Resources */,

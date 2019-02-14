@@ -22,14 +22,8 @@ class CircleTimer: CircleView {
         super.setup()
     }
     
-    func resetTime() {
-        remainingTime -= 1
-        focusTime += 1
-    }
-    
     override func draw(_ rect: CGRect) {
-        drawCenter = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
-        radius = frame.size.width / 2.0 * 0.9
+        super.draw(rect)
         
         let ctx = UIGraphicsGetCurrentContext();
         // 设置背景，画一个空的圆环
@@ -40,8 +34,34 @@ class CircleTimer: CircleView {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fillStroke)
         
-        drawIconView(minutes: focusTime / 60)
-        drawTimeLabel()
+        drawIconView(getImageBy(minutes: focusTime / 60))
+        drawHeadLabel(LocalizationKey.CountdownTitle.translate())
+        drawFootLabel(timeFormat(), isTime: true)
+    }
+    
+    func resetTime() {
+        remainingTime -= 1
+        focusTime += 1
+    }
+    
+    func end() {
+        if remainingTime <= 0 {
+            drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
+            drawFootLabel(LocalizationKey.Congratulations.translate(), isTime: false)
+        } else if treeHasGrownUp() {
+            drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
+            drawFootLabel(LocalizationKey.YouCanDoBetter.translate(), isTime: false)
+        } else {
+            drawIconView(UIImage(named: "bare-tree"))
+            drawHeadLabel(LocalizationKey.NotificationDeath.translate())
+            drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
+        }
+    }
+}
+
+extension CircleTimer {
+    func treeHasGrownUp() -> Bool {
+        return focusTime > TEN_MIN
     }
 }
 

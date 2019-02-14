@@ -19,7 +19,7 @@ class StartButton: UIButton {
         setButtonStyle()
     }
     
-    func setButtonStyle() {
+    private func setButtonStyle() {
         self.setTitle(LocalizationKey.Start.translate(), for: .normal)
         UITool.setCustomButtonSize(self)
         

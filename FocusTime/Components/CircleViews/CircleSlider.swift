@@ -64,8 +64,7 @@ class CircleSlider: CircleView {
     }
     
     override func draw(_ rect: CGRect) {
-        drawCenter = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
-        radius = frame.size.width / 2.0 * 0.9
+        super.draw(rect)
         
         let ctx = UIGraphicsGetCurrentContext();
         // 设置背景，画一个空的圆环
@@ -89,9 +88,10 @@ class CircleSlider: CircleView {
         ctx?.drawPath(using: CGPathDrawingMode.stroke)
         ctx?.restoreGState()
         
-        drawIconView(minutes: remainingMinutes)
+        drawIconView(getImageBy(minutes: remainingMinutes))
         drawThumbView()
-        drawTimeLabel()
+        drawHeadLabel(LocalizationKey.SetTimeTitle.translate())
+        drawFootLabel(timeFormat(), isTime: true)
     }
     
     func drawThumbView() {

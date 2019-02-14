@@ -6,30 +6,33 @@
   Copyright © 2019 Midrash Elucidator. All rights reserved.
 */
 
+
+// SetTimeView
 Start = "开始";
+SetTimeTitle = "开始专注吧";
+
+
+// SetTimeView -> TimerView
+CountdownTitle = "专心致志";
+Congratulations = "祝贺你";
+Encouragement = "下次继续努力";
+YouCanDoBetter = "你可以做得更好";
 Giveup = "放弃";
 
+
+// SetTimeView -> TimerView -> Alert
 GiveupAlert-Title = "放弃吗？";
 GiveupAlert-DeathMessage = "你的树会枯萎";
-GiveupAlert-Encouragement = "坚持住，你很快就能做到了";
-
+GiveupAlert-HoldOnMessage = "坚持住，你很快就能做到了";
 Yes = "是";
 No = "否";
 Cancel = "取消";
-
-Settings = "设置";
-SetLanguage = "设置语言";
-About = "关于";
-English = "English";
-Chinese = "简体中文";
-Japanese = "日本語";
-
-Description = "“专注时间”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
-AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）来了解更多关于此应用的信息。";
-
 Notification-Success = "你的树长大了";
+Notification-Death = "你的树枯萎了";
 Notification-Alert = "快点回来，不然你的树会枯萎";
 
+
+// SetTimeView -> TimerView -> SoundSelector
 None = "无";
 Wind = "秋风";
 Stream = "溪水";
@@ -37,3 +40,14 @@ Birds = "鸟鸣";
 Insects = "虫鸣";
 Rain = "春雨";
 Thunderstorm = "雷雨";
+
+
+// SetTimeView -> Settings
+Settings = "设置";
+SetLanguage = "设置语言";
+About = "关于";
+
+
+// SetTimeView -> Settings -> About
+Description = "“专注时间”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
+AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）来了解更多关于此应用的信息。";
