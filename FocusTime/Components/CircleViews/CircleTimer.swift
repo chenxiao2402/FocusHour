@@ -52,7 +52,7 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
             drawFootLabel(LocalizationKey.YouCanDoBetter.translate(), isTime: false)
         } else {
-            drawIconView(UIImage(named: "bare-tree"))
+            drawIconView(UIImage(named: "level0-baretree"))
             drawHeadLabel(LocalizationKey.NotificationDeath.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
