@@ -59,7 +59,7 @@ class TimerVC: ViewController {
         })
         
         returnObserver = NotificationCenter.default.addObserver(
-            forName: UIApplication.didBecomeActiveNotification,
+            forName: UIApplication.willEnterForegroundNotification,
             object: UIApplication.shared,
             queue: OperationQueue.main,
             using: { _ in
@@ -77,27 +77,37 @@ class TimerVC: ViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
-        if cancelable {
-            quit()
-        } else {
-            let message = circleTimer.treeHasGrownUp() ?
-                LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
-            let alert = UIAlertController(
-                title: LocalizationKey.GiveupAlertTitle.translate(),
-                message: message,
-                preferredStyle: .alert
-            )
-            alert.addAction(.init(
-                title: LocalizationKey.Cancel.translate(),
-                style: .cancel
-                ))
-            alert.addAction(.init(
-                title: LocalizationKey.Yes.translate(),
-                style: .destructive,
-                handler: { (_) in self.end() }
-                ))
-            present(alert, animated: true, completion: nil)
-        }
+        print(PlantRecord.loadRecords(year: 2019, month: 2))
+        let meal = PlantRecord(imgName: "图片名", minute: 233, year: 2019, month: 2, day: 4)
+        meal?.save()
+        print(PlantRecord.loadRecords(year: 2019, month: 2))
+        print()
+//        print(PlantRecord.loadRecords(year: 2018, month: 2) ?? "是NULL，我死了")
+//        let record = PlantRecord(minute: 233, imgName: "图片名", year: 2018, month: 2, day: 4)
+//        record?.save()
+//        print(PlantRecord.loadRecords(year: 2018, month: 2) ?? "人间失格")
+//
+//        if cancelable {
+//            quit()
+//        } else {
+//            let message = circleTimer.treeHasGrownUp() ?
+//                LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
+//            let alert = UIAlertController(
+//                title: LocalizationKey.GiveupAlertTitle.translate(),
+//                message: message,
+//                preferredStyle: .alert
+//            )
+//            alert.addAction(.init(
+//                title: LocalizationKey.Cancel.translate(),
+//                style: .cancel
+//                ))
+//            alert.addAction(.init(
+//                title: LocalizationKey.Yes.translate(),
+//                style: .destructive,
+//                handler: { (_) in self.end() }
+//                ))
+//            present(alert, animated: true, completion: nil)
+//        }
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {
@@ -135,10 +145,10 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     }
     
     private func quit() {
-        dismiss(animated: true) {
-            self.soundPlayer.invalidate()
-            NotificationCenter.default.removeObserver(self.returnObserver!)
-        }
+        if let observer = backgroundObserver { NotificationCenter.default.removeObserver(observer) }
+        if let observer = returnObserver { NotificationCenter.default.removeObserver(observer) }
+        self.soundPlayer.invalidate()
+        dismiss(animated: true)
     }
     
     private func end() {
@@ -161,8 +171,9 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     private func backgroundCountdown() {
         sendNotification(LocalizationKey.NotificationAlert.translate())
         backgroundTime = backgroundTimeLimit
-        backgroundTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
-            self.backgroundTime > 0 ? self.backgroundTime -= 1 : self.end()
+        backgroundTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (_) in
+            self.backgroundTime = 0
+            self.end()
         })
     }
     
