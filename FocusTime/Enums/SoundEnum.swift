@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SoundEnum: String {
+enum SoundEnum: String, CaseIterable {
     case None = "None"
     case Wind = "Wind"
     case Stream = "Stream"
@@ -25,7 +25,7 @@ extension SoundEnum {
     }
     
     static func getKeyList() -> [SoundEnum] {
-        return [.None, .Wind, .Stream, .Birds, .Insects, .Rain, .Thunderstorm]
+        return SoundEnum.allCases
     }
     
     func translate() -> String {
