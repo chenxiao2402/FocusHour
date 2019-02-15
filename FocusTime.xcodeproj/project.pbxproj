@@ -15,6 +15,8 @@
 		5C109FDB220FF9BB003D026E /* UITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FDA220FF9BB003D026E /* UITool.swift */; };
 		5C109FDF22105C6B003D026E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FDE22105C6B003D026E /* BundleExtension.swift */; };
 		5C109FE122107556003D026E /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C109FE022107556003D026E /* LanguageEnum.swift */; };
+		5C14331822169C6000C50760 /* PlantRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14331722169C6000C50760 /* PlantRecord.swift */; };
+		5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14331922169ECA00C50760 /* TimeTool.swift */; };
 		5C198F02221525ED009B8096 /* None.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C198F01221525ED009B8096 /* None.mp3 */; };
 		5C198F052215368D009B8096 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C198F042215368D009B8096 /* UserNotifications.framework */; };
 		5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C240230220D1BC2002A1EF6 /* CircleSlider.swift */; };
@@ -73,6 +75,8 @@
 		5C109FDA220FF9BB003D026E /* UITool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITool.swift; sourceTree = "<group>"; };
 		5C109FDE22105C6B003D026E /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		5C109FE022107556003D026E /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
+		5C14331722169C6000C50760 /* PlantRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRecord.swift; sourceTree = "<group>"; };
+		5C14331922169ECA00C50760 /* TimeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTool.swift; sourceTree = "<group>"; };
 		5C198F01221525ED009B8096 /* None.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = None.mp3; sourceTree = "<group>"; };
 		5C198F042215368D009B8096 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		5C240230220D1BC2002A1EF6 /* CircleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
@@ -139,6 +143,14 @@
 				5C4885D52212890500198B49 /* CircleViews */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5C14331622169C1D00C50760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C14331722169C6000C50760 /* PlantRecord.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5C198F032215368D009B8096 /* Frameworks */ = {
@@ -255,6 +267,7 @@
 		5C80BF462207D98000691E98 /* FocusTime */ = {
 			isa = PBXGroup;
 			children = (
+				5C14331622169C1D00C50760 /* Models */,
 				5C3D03D62211AF520089E96A /* Extensions */,
 				5C3D03D52211AF210089E96A /* Enums */,
 				5CF2048122117A8A0091DDFE /* Resources */,
@@ -282,6 +295,7 @@
 				5C109FDA220FF9BB003D026E /* UITool.swift */,
 				5C3D03D92211B0330089E96A /* SoundPlayer.swift */,
 				5C4885EB2213027800198B49 /* LocalizationTool.swift */,
+				5C14331922169ECA00C50760 /* TimeTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -458,6 +472,8 @@
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
 				5C4885E12212ED0200198B49 /* AboutInfoVC.swift in Sources */,
 				5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */,
+				5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */,
+				5C14331822169C6000C50760 /* PlantRecord.swift in Sources */,
 				5C374A7A220934870059EF2C /* CircleView.swift in Sources */,
 				5C109FE122107556003D026E /* LanguageEnum.swift in Sources */,
 				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
