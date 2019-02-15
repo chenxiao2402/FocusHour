@@ -79,13 +79,12 @@ extension PlantRecord {
         do {
             var records = PlantRecord.loadRecords(year: year, month: month)
             records.append(self)
-            let path = PlantRecord.ArchiveURL.appendingPathExtension("\(year)").appendingPathExtension("\(month)")
+            let url = PlantRecord.ArchiveURL.appendingPathExtension("\(year)").appendingPathExtension("\(month)")
             let data = try NSKeyedArchiver.archivedData(withRootObject: records, requiringSecureCoding: false)
-            try data.write(to: path)
+            try data.write(to: url)
         } catch {
             return
         }
-       
     }
     
     static func loadRecords(year: Int, month: Int) -> [PlantRecord] {
@@ -97,6 +96,5 @@ extension PlantRecord {
         } catch {
             return []
         }
-        
     }
 }

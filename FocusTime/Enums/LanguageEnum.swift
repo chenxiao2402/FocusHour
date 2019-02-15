@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LanguageEnum: String {
+enum LanguageEnum: String, CaseIterable  {
     case English = "en"
     case Chinese = "zh-Hans"
     case Japanese = "ja"
@@ -16,7 +16,7 @@ enum LanguageEnum: String {
 
 extension LanguageEnum {
     static func getKeyList() -> [LanguageEnum] {
-        return [.English, .Chinese, .Japanese]
+        return LanguageEnum.allCases
     }
     
     static func getCodeNames(startWith language: LanguageEnum) -> [String] {
