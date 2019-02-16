@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OY5-Dw-Iok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="-599"/>
+            <point key="canvasLocation" x="2839.130434782609" y="-599.33035714285711"/>
         </scene>
         <!--SetLanguage-->
         <scene sceneID="XT4-eo-3b2">
@@ -158,7 +158,46 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWe-Y2-UKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3100" y="-964"/>
+            <point key="canvasLocation" x="4010.144927536232" y="-964.28571428571422"/>
+        </scene>
+        <!--Achievement-->
+        <scene sceneID="Lzi-IG-GEz">
+            <objects>
+                <viewController id="5Wx-kn-3f0" customClass="AchievementVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qlX-EC-Wvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gev-P5-J0K" customClass="YearSelector" customModule="FocusTime" customModuleProvider="target">
+                                <rect key="frame" x="57" y="88" width="300" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8ue-8v-7Ok"/>
+                                    <constraint firstAttribute="height" priority="250" id="yKg-Fg-mdR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gev-P5-J0K" firstAttribute="centerX" secondItem="qlX-EC-Wvv" secondAttribute="centerX" id="Gf7-tm-KZy"/>
+                            <constraint firstItem="gev-P5-J0K" firstAttribute="top" secondItem="VVb-CA-KQD" secondAttribute="top" id="qjm-Sr-VSK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VVb-CA-KQD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Achievement" id="4qD-cy-z3X">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="i4l-b3-5Gp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="close:" destination="5Wx-kn-3f0" id="YKd-Ng-6fm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="yearSelector" destination="gev-P5-J0K" id="8vi-Jy-MM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51A-jE-hQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1107.2463768115942" y="-494.19642857142856"/>
         </scene>
         <!--Set TimeVC-->
         <scene sceneID="tne-QT-ifu">
@@ -216,6 +255,9 @@
                                     <constraint firstAttribute="width" constant="48" id="HCn-Y7-gCm"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="trophy"/>
+                                <connections>
+                                    <segue destination="JHL-Ka-43o" kind="presentation" modalTransitionStyle="partialCurl" id="o4m-ox-XBW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -246,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
         <!--Sound SelectorVC-->
         <scene sceneID="cbu-rJ-TCP">
@@ -290,7 +332,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdq-k4-g2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="526"/>
+            <point key="canvasLocation" x="2935" y="481"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -383,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yad-SE-rZE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="526"/>
+            <point key="canvasLocation" x="2143" y="481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQt-gw-7Pl">
@@ -394,7 +436,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1137254902" green="0.1960784314" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -411,7 +453,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vib-VH-4Ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="-598"/>
+            <point key="canvasLocation" x="1979.7101449275365" y="-598.66071428571422"/>
         </scene>
         <!--About-->
         <scene sceneID="6NQ-IN-fsG">
@@ -445,7 +487,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUc-7W-9dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3100" y="-299"/>
+            <point key="canvasLocation" x="4010.144927536232" y="-299.33035714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gZR-iG-xbx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JHL-Ka-43o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o22-fQ-Hye">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.19607843137254902" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Wx-kn-3f0" kind="relationship" relationship="rootViewController" id="g5G-V3-5cG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8m-6g-vGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="-494"/>
         </scene>
     </scenes>
     <resources>

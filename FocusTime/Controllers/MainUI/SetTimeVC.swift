@@ -43,10 +43,8 @@ class SetTimeVC: ViewController {
             let background = view.backgroundColor
             timeConterController.view.backgroundColor = background
             timeConterController.circleTimer.remainingTime = totalFocusTime
-        case SegueEnum.ShowSettings.rawValue:
-            return
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "")")
+            return
         }
     }
 }

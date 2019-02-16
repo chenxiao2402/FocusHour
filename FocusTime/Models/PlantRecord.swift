@@ -97,4 +97,8 @@ extension PlantRecord {
             return []
         }
     }
+    
+    static func getRecordYears() -> [Int] {
+        return [2019, 2018, 2017, 2833, 2017, 3131, 3131]
+    }
 }

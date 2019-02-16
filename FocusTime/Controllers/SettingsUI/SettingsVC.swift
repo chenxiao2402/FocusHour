@@ -15,11 +15,11 @@ class SettingsVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITool.setBackgroundImage(self.view, random: false)
+        UITool.setBackgroundImage(view, random: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = SettingEnum.Settings.translate()
+        navigationItem.title = SettingEnum.Settings.translate()
         setLanguageCell.keyVlue = SettingEnum.SetLanguage
         aboutInfoCell.keyVlue = SettingEnum.About
     }

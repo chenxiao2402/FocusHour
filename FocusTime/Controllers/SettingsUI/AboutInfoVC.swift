@@ -13,9 +13,8 @@ class AboutInfoVC: UIViewController {
     @IBOutlet weak var textArea: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         UITool.setBackgroundImage(view, random: false)
-        self.navigationItem.title = SettingEnum.About.translate()
+        navigationItem.title = SettingEnum.About.translate()
         let description = LocalizationKey.Description.translate()
         let aboutMe = LocalizationKey.AboutMe.translate()
         textArea.text = "\(description)\n\n\(aboutMe)"

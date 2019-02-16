@@ -56,10 +56,12 @@ class UITool {
 extension UITool {
     private static func getBackgroundImage(random: Bool) -> UIImage? {
         if !random {
-            return UIImage(named: "background-0")
+            return UIImage(named: "base-background")
         } else {
             let index = Int.random(in: 0..<8)
             return UIImage(named: "background-\(index)")
         }
     }
+    
+    
 }

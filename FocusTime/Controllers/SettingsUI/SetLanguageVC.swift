@@ -14,8 +14,8 @@ class SetLanguageVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = SettingEnum.SetLanguage.translate()
         UITool.setBackgroundImage(view, random: false)
+        navigationItem.title = SettingEnum.SetLanguage.translate()
         languages = LanguageEnum.getKeyList()
     }
     

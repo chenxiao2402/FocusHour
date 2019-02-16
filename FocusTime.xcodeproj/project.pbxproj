@@ -36,6 +36,8 @@
 		5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885E92213014E00198B49 /* LocalizationKey.swift */; };
 		5C4885EC2213027800198B49 /* LocalizationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885EB2213027800198B49 /* LocalizationTool.swift */; };
 		5C4885EE2213116300198B49 /* SetLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885ED2213116300198B49 /* SetLanguageCell.swift */; };
+		5C50BFD62217F11100D6E289 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C50BFD52217F11100D6E289 /* AchievementVC.swift */; };
+		5C50BFD8221802A900D6E289 /* YearSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C50BFD7221802A900D6E289 /* YearSelector.swift */; };
 		5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */; };
 		5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593697220C2C3B00E7F5CF /* AppDelegate.swift */; };
 		5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593698220C2C3B00E7F5CF /* ViewController.swift */; };
@@ -96,6 +98,8 @@
 		5C4885E92213014E00198B49 /* LocalizationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKey.swift; sourceTree = "<group>"; };
 		5C4885EB2213027800198B49 /* LocalizationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTool.swift; sourceTree = "<group>"; };
 		5C4885ED2213116300198B49 /* SetLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguageCell.swift; sourceTree = "<group>"; };
+		5C50BFD52217F11100D6E289 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
+		5C50BFD7221802A900D6E289 /* YearSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelector.swift; sourceTree = "<group>"; };
 		5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		5C593697220C2C3B00E7F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C593698220C2C3B00E7F5CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,15 @@
 			path = SettingsUI;
 			sourceTree = "<group>";
 		};
+		5C50BFD42217F0D600D6E289 /* AchievementUI */ = {
+			isa = PBXGroup;
+			children = (
+				5C50BFD52217F11100D6E289 /* AchievementVC.swift */,
+				5C50BFD7221802A900D6E289 /* YearSelector.swift */,
+			);
+			path = AchievementUI;
+			sourceTree = "<group>";
+		};
 		5C593696220C2C2B00E7F5CF /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +316,7 @@
 		5C80BF692207DED400691E98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C50BFD42217F0D600D6E289 /* AchievementUI */,
 				5C4885D922128AF900198B49 /* SettingsUI */,
 				5C4885D822128AE500198B49 /* MainUI */,
 			);
@@ -452,6 +466,7 @@
 			files = (
 				5C4885D22212863400198B49 /* SettingsVC.swift in Sources */,
 				5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */,
+				5C50BFD62217F11100D6E289 /* AchievementVC.swift in Sources */,
 				5C4885EC2213027800198B49 /* LocalizationTool.swift in Sources */,
 				5C4885DD221291AD00198B49 /* SegueEnum.swift in Sources */,
 				5C4885DB22128B7600198B49 /* SettingEnum.swift in Sources */,
@@ -467,6 +482,7 @@
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
 				5C4885DF2212965B00198B49 /* SettingCell.swift in Sources */,
+				5C50BFD8221802A900D6E289 /* YearSelector.swift in Sources */,
 				5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */,
 				5C3D03DC2211B8B60089E96A /* SoundEnum.swift in Sources */,
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
