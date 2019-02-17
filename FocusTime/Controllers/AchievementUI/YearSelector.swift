@@ -46,9 +46,10 @@ class YearSelector: UIStackView {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true
             button.widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
-            button.backgroundColor = ColorEnum.getColor(name: .ForestGreen)
-            button.layer.borderWidth = 1.0;
+            button.layer.borderWidth = 0.8
             button.layer.borderColor = UIColor.white.cgColor
+            button.backgroundColor = ColorEnum.getColor(name: .DarkSlateGray)
+            button.titleLabel?.font = UIFont(name: "Verdana", size: 20)
             button.isHidden = true
             button.setTitle("\(year)", for: .normal)
             button.addTarget(self, action: #selector(YearSelector.handleSelection(button:)), for: .touchUpInside)

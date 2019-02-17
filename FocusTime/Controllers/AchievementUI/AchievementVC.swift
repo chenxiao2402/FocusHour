@@ -12,45 +12,44 @@ class AchievementVC: UIViewController {
 
     
     @IBOutlet weak var yearSelector: YearSelector!
-    var titleButton: UIButton!
+    @IBOutlet weak var titleButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //定义渐变的颜色（从黄色渐变到橙色）
-        let topColor = #colorLiteral(red: 0.2509803922, green: 0.5294117647, blue: 0.3137254902, alpha: 1)
-        let buttomColor = #colorLiteral(red: 0.1137254902, green: 0.1882352941, blue: 0.1882352941, alpha: 1)
-        let gradientColors = [topColor.cgColor, buttomColor.cgColor]
-        
-        //定义每种颜色所在的位置
-        let gradientLocations:[NSNumber] = [0.0, 1.0]
-        
-        //创建CAGradientLayer对象并设置参数
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
-        gradientLayer.locations = gradientLocations
-        
-        //设置其CAGradientLayer对象的frame，并插入view的layer
-        gradientLayer.frame = self.view.frame
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        //UITool.setBackgroundImage(view, random: false)
+        UITool.setBackgroundImage(view, random: false)
+
         yearSelector.achievementVC = self
         
-        titleButton = UIButton.init(type: .system)
-        titleButton.tintColor = UIColor.white
-        titleButton.titleLabel?.font = UIFont(name: "Verdana", size: 20)
-        titleButton.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
-        titleButton.setTitle("My title ▼", for: .normal)
-        titleButton.addTarget(self, action: #selector(AchievementVC.layoutYearSelector), for: .touchDown)
-        self.navigationItem.titleView = titleButton;
+       
+//        titleButton = UIButton.init(type: .system)
+//        titleButton.tintColor = UIColor.white
+//        titleButton.backgroundColor = UIColor.blue
+//        titleButton.titleLabel?.font = UIFont(name: "Verdana", size: 20)
+//        titleButton.frame = CGRect(x: 0, y: 0, width: 120, height: 32)
+//        titleButton.setTitle("My title", for: .normal)
+//        titleButton.setImage(UIImage(named: "arrow-down"), for: .normal)
+        titleButton.addTarget(self, action: #selector(AchievementVC.displayYearSelector), for: .touchUpInside)
+//        let titleSize = titleButton.titleLabel?.bounds.size;
+//        let imageSize = titleButton.imageView?.bounds.size;
+//        let interval: CGFloat = 1.0;
+//
+//        print("的手机卡的撒")
+//        print(titleSize)
+//        print(imageSize)
+//
+//        titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: -90)
+//        titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageSize!.width + interval), bottom: 0, right: imageSize!.width + interval);
+//
+//
+//        self.navigationItem.titleView = titleButton;
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func layoutYearSelector() {
+    @objc func displayYearSelector() {
         yearSelector.yearButtons.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
@@ -60,8 +59,8 @@ class AchievementVC: UIViewController {
     }
     
     @objc func showAchievement(ofyear year: Int) {
-        titleButton.setTitle("\(year) ▼", for: .normal)
-        layoutYearSelector()
+        titleButton.setTitle("\(year)", for: .normal)
+        displayYearSelector()
     }
 
 }
