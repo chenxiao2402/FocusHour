@@ -18,31 +18,9 @@ class AchievementVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-
         yearSelector.achievementVC = self
-        
-       
-//        titleButton = UIButton.init(type: .system)
-//        titleButton.tintColor = UIColor.white
-//        titleButton.backgroundColor = UIColor.blue
-//        titleButton.titleLabel?.font = UIFont(name: "Verdana", size: 20)
-//        titleButton.frame = CGRect(x: 0, y: 0, width: 120, height: 32)
-//        titleButton.setTitle("My title", for: .normal)
-//        titleButton.setImage(UIImage(named: "arrow-down"), for: .normal)
+        titleButton.setTitle("\(TimeTool.getCurrentYear())", for: .normal)
         titleButton.addTarget(self, action: #selector(AchievementVC.displayYearSelector), for: .touchUpInside)
-//        let titleSize = titleButton.titleLabel?.bounds.size;
-//        let imageSize = titleButton.imageView?.bounds.size;
-//        let interval: CGFloat = 1.0;
-//
-//        print("的手机卡的撒")
-//        print(titleSize)
-//        print(imageSize)
-//
-//        titleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: -90)
-//        titleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageSize!.width + interval), bottom: 0, right: imageSize!.width + interval);
-//
-//
-//        self.navigationItem.titleView = titleButton;
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {

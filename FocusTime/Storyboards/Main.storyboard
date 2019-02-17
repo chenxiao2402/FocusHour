@@ -197,7 +197,7 @@
                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="82" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="2018" image="arrow-down">
+                            <state key="normal" image="arrow-down">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
