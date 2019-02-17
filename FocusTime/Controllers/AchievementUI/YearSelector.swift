@@ -13,7 +13,21 @@ class YearSelector: UIStackView {
 
     //MARK: Properties
     
-    @IBInspectable var buttonSize: CGSize = CGSize(width: 300, height: 50)
+    @IBInspectable var zPosition: CGFloat = 1 {
+        didSet {
+            layer.zPosition = zPosition
+        }
+    }
+    var isButtonsHidden: Bool = true {
+        didSet {
+            yearButtons.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = !button.isHidden
+                    self.layoutIfNeeded()
+                })
+            }
+        }
+    }
     let years = PlantRecord.getRecordYears()
     var yearButtons: [UIButton] = []
     var achievementVC: AchievementVC!
@@ -42,25 +56,26 @@ class YearSelector: UIStackView {
         yearButtons.removeAll()
 
         for year in PlantRecord.getRecordYears() {
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true
-            button.widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
-            button.layer.borderWidth = 0.8
-            button.layer.borderColor = UIColor.white.cgColor
-            button.backgroundColor = ColorEnum.getColor(name: .DarkSlateGray)
-            button.titleLabel?.font = UIFont(name: "Verdana", size: 20)
-            button.isHidden = true
+            let button = DropdownButton()
+            button.isHidden = isButtonsHidden
             button.setTitle("\(year)", for: .normal)
             button.addTarget(self, action: #selector(YearSelector.handleSelection(button:)), for: .touchUpInside)
-
             addArrangedSubview(button)
             yearButtons.append(button)
         }
     }
     
     @objc func handleSelection(button: UIButton) {
+        print("touched")
         let year = Int(button.titleLabel?.text ?? "0")!
         achievementVC.showAchievement(ofyear: year)
+    }
+    
+    @objc private func changeBackgroundColor() {
+        layer.opacity = 0.5
+    }
+    
+    @objc private func resetBackgroundColor() {
+        layer.opacity = 1.0
     }
 }

@@ -38,6 +38,8 @@
 		5C4885EE2213116300198B49 /* SetLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885ED2213116300198B49 /* SetLanguageCell.swift */; };
 		5C50BFD62217F11100D6E289 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C50BFD52217F11100D6E289 /* AchievementVC.swift */; };
 		5C50BFD8221802A900D6E289 /* YearSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C50BFD7221802A900D6E289 /* YearSelector.swift */; };
+		5C51FE122219AF8300C60967 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51FE112219AF8300C60967 /* CollectionViewCell.swift */; };
+		5C51FE142219C09600C60967 /* DropdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51FE132219C09600C60967 /* DropdownButton.swift */; };
 		5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */; };
 		5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593697220C2C3B00E7F5CF /* AppDelegate.swift */; };
 		5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593698220C2C3B00E7F5CF /* ViewController.swift */; };
@@ -100,6 +102,8 @@
 		5C4885ED2213116300198B49 /* SetLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguageCell.swift; sourceTree = "<group>"; };
 		5C50BFD52217F11100D6E289 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
 		5C50BFD7221802A900D6E289 /* YearSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelector.swift; sourceTree = "<group>"; };
+		5C51FE112219AF8300C60967 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5C51FE132219C09600C60967 /* DropdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownButton.swift; sourceTree = "<group>"; };
 		5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		5C593697220C2C3B00E7F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C593698220C2C3B00E7F5CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				5C039666220DD4C000CC1B2D /* StartButton.swift */,
 				5CFEA457220EA861001408E9 /* StopButton.swift */,
+				5C51FE132219C09600C60967 /* DropdownButton.swift */,
 			);
 			path = CustomButtons;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			children = (
 				5C50BFD52217F11100D6E289 /* AchievementVC.swift */,
 				5C50BFD7221802A900D6E289 /* YearSelector.swift */,
+				5C51FE112219AF8300C60967 /* CollectionViewCell.swift */,
 			);
 			path = AchievementUI;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				5C4885E82212FF9500198B49 /* SetLanguageVC.swift in Sources */,
 				5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */,
 				5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */,
+				5C51FE142219C09600C60967 /* DropdownButton.swift in Sources */,
 				5C62456D2208486E00AAFD66 /* SetTimeVC.swift in Sources */,
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
@@ -490,6 +497,7 @@
 				5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */,
 				5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */,
 				5C14331822169C6000C50760 /* PlantRecord.swift in Sources */,
+				5C51FE122219AF8300C60967 /* CollectionViewCell.swift in Sources */,
 				5C374A7A220934870059EF2C /* CircleView.swift in Sources */,
 				5C109FE122107556003D026E /* LanguageEnum.swift in Sources */,
 				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
