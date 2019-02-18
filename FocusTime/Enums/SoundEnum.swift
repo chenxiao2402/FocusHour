@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SoundEnum: String, CaseIterable {
+enum SoundEnum: String {
     case None = "None"
     case Wind = "Wind"
     case Stream = "Stream"
@@ -18,7 +18,7 @@ enum SoundEnum: String, CaseIterable {
     case Thunderstorm = "Thunderstorm"
 }
 
-extension SoundEnum {
+extension SoundEnum: CaseIterable {
     static func getURL(sound: SoundEnum) -> URL {
         let path = Bundle.main.path(forResource: sound.rawValue, ofType: "mp3")
         return URL(fileURLWithPath: path ?? "")
@@ -29,6 +29,6 @@ extension SoundEnum {
     }
     
     func translate() -> String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        return LocalizationTool.translate(self.rawValue)
     }
 }

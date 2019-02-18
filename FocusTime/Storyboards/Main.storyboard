@@ -160,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="4010.144927536232" y="-964.28571428571422"/>
         </scene>
-        <!--Achievement-->
+        <!--AchievementVC-->
         <scene sceneID="Lzi-IG-GEz">
             <objects>
                 <viewController id="5Wx-kn-3f0" customClass="AchievementVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,24 +174,64 @@
                                     <constraint firstAttribute="width" constant="300" id="8ue-8v-7Ok"/>
                                     <constraint firstAttribute="height" priority="250" id="yKg-Fg-mdR"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-Kv-100">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="32" minimumInteritemSpacing="32" id="OAZ-kx-TTH">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="32" minY="32" maxX="32" maxY="32"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="NmI-6W-B1U" customClass="AchievementCell" customModule="FocusTime" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="32" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gev-P5-J0K" firstAttribute="centerX" secondItem="qlX-EC-Wvv" secondAttribute="centerX" id="Gf7-tm-KZy"/>
+                            <constraint firstItem="VVb-CA-KQD" firstAttribute="trailing" secondItem="MeI-Kv-100" secondAttribute="trailing" id="UTe-Qv-PWt"/>
+                            <constraint firstItem="VVb-CA-KQD" firstAttribute="bottom" secondItem="MeI-Kv-100" secondAttribute="bottom" id="ZGc-BM-zm8"/>
+                            <constraint firstItem="MeI-Kv-100" firstAttribute="top" secondItem="VVb-CA-KQD" secondAttribute="top" id="aEk-bF-l0f"/>
+                            <constraint firstItem="MeI-Kv-100" firstAttribute="leading" secondItem="VVb-CA-KQD" secondAttribute="leading" id="bFi-CX-8Vv"/>
                             <constraint firstItem="gev-P5-J0K" firstAttribute="top" secondItem="VVb-CA-KQD" secondAttribute="top" id="qjm-Sr-VSK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VVb-CA-KQD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Achievement" id="4qD-cy-z3X">
+                    <navigationItem key="navigationItem" id="4qD-cy-z3X">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="i4l-b3-5Gp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="close:" destination="5Wx-kn-3f0" id="YKd-Ng-6fm"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bke-77-lW4">
+                            <rect key="frame" x="157" y="2" width="100" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="82" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="arrow-down">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="MeI-Kv-100" id="tal-A9-M97"/>
+                        <outlet property="titleButton" destination="bke-77-lW4" id="VFa-xm-Fix"/>
                         <outlet property="yearSelector" destination="gev-P5-J0K" id="8vi-Jy-MM8"/>
                     </connections>
                 </viewController>
@@ -256,7 +296,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="trophy"/>
                                 <connections>
-                                    <segue destination="JHL-Ka-43o" kind="presentation" modalTransitionStyle="partialCurl" id="o4m-ox-XBW"/>
+                                    <segue destination="JHL-Ka-43o" kind="presentation" modalTransitionStyle="crossDissolve" id="o4m-ox-XBW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -513,6 +553,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-down" width="36" height="36"/>
         <image name="return" width="512" height="432"/>
         <image name="settings" width="384" height="384"/>
         <image name="sound-off" width="512" height="512"/>

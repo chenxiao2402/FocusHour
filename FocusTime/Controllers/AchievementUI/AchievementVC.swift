@@ -10,58 +10,84 @@ import UIKit
 
 class AchievementVC: UIViewController {
 
-    
     @IBOutlet weak var yearSelector: YearSelector!
-    var titleButton: UIButton!
+    @IBOutlet weak var titleButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
+    var selectedYear: Int!
+    var textList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //定义渐变的颜色（从黄色渐变到橙色）
-        let topColor = #colorLiteral(red: 0.2509803922, green: 0.5294117647, blue: 0.3137254902, alpha: 1)
-        let buttomColor = #colorLiteral(red: 0.1137254902, green: 0.1882352941, blue: 0.1882352941, alpha: 1)
-        let gradientColors = [topColor.cgColor, buttomColor.cgColor]
-        
-        //定义每种颜色所在的位置
-        let gradientLocations:[NSNumber] = [0.0, 1.0]
-        
-        //创建CAGradientLayer对象并设置参数
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
-        gradientLayer.locations = gradientLocations
-        
-        //设置其CAGradientLayer对象的frame，并插入view的layer
-        gradientLayer.frame = self.view.frame
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        //UITool.setBackgroundImage(view, random: false)
+        UITool.setBackgroundImage(view, random: false)
         yearSelector.achievementVC = self
+        titleButton.addTarget(self, action: #selector(AchievementVC.displayYearSelector), for: .touchUpInside)
         
-        titleButton = UIButton.init(type: .system)
-        titleButton.tintColor = UIColor.white
-        titleButton.titleLabel?.font = UIFont(name: "Verdana", size: 20)
-        titleButton.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
-        titleButton.setTitle("My title ▼", for: .normal)
-        titleButton.addTarget(self, action: #selector(AchievementVC.layoutYearSelector), for: .touchDown)
-        self.navigationItem.titleView = titleButton;
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.clear
+        setCollectionLayout()
+        refreshAchievements(of: yearSelector.years.first ?? TimeTool.getCurrentYear())
+    }
+    
+    private func setCollectionLayout() {
+        // 在给layout设置itemSize的时候，需要使用view.frame.size，而不是collectionView.frame.size
+        // 虽然在storyboard中，collectionView被view完全包住（前者到后者safearea的top、leading、bottom、trailing space都是0）
+        // 但是如果在interface builder中选择view as iPhoneX，但是程序在iPhone8上运行的时候：
+        // collectionView.frame.sizew.width = 414（对应iPX的宽度）；而不是iP8的宽度375
+        // 但是最外层的view的宽度就是准确的...
+        let cellNumPerLine: CGFloat = UIDevice().model == "iPad" ? 3 : 2
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let space: CGFloat = 32
+        let width = (view.frame.size.width - space * (cellNumPerLine + 1)) / cellNumPerLine
+        let height = width * AchievementCell.ratio
+        layout.itemSize = CGSize(width: Int(width), height: Int(height))  // 最后设置宽和高的时候要取整抹零，不然零点几的宽度差会把cell挤到下一行
+    }
+    
+    private func refreshAchievements(of year: Int) {
+        titleButton.setTitle("\(year)", for: .normal)
+        selectedYear = year
+        textList.removeAll()
+        for month in MonthEnum.getKeyList() {
+            let text = "\(month.translate()) \(TimeTool.minuteFormat(of: PlantRecord.loadTotalTime(year: year, month: month.getNumber())))"
+            textList.append(text)
+        }
+        collectionView.reloadData()
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func layoutYearSelector() {
-        yearSelector.yearButtons.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            })
-        }
+    @objc func displayYearSelector() {
+        yearSelector.isButtonsHidden = !yearSelector.isButtonsHidden
+        collectionView.isUserInteractionEnabled = yearSelector.isButtonsHidden
     }
     
-    @objc func showAchievement(ofyear year: Int) {
-        titleButton.setTitle("\(year) ▼", for: .normal)
-        layoutYearSelector()
+    @objc func showAchievements(ofyear year: Int) {
+        displayYearSelector()
+        refreshAchievements(of: year)
     }
+}
 
+extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return textList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! AchievementCell
+        cell.drawCell(icon: UIImage(named: "trophy"), text: textList[indexPath.row])
+        return cell
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+//
+//    }
 }

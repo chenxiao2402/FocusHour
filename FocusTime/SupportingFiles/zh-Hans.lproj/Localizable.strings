@@ -51,3 +51,18 @@ About = "关于";
 // SetTimeView -> Settings -> About
 Description = "“专注时间”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
 AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusTime）来了解更多关于此应用的信息。";
+
+
+// SetTimeView -> Achievement
+Jan = "1月";
+Feb = "2月";
+Mar = "3月";
+Apr = "4月";
+May = "5月";
+Jun = "6月";
+Jul = "7月";
+Aug = "8月";
+Sep = "9月";
+Oct = "10月";
+Nov = "11月";
+Dec = "12月";

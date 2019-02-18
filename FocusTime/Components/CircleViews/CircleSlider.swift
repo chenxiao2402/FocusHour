@@ -88,7 +88,7 @@ class CircleSlider: CircleView {
         ctx?.drawPath(using: CGPathDrawingMode.stroke)
         ctx?.restoreGState()
         
-        drawIconView(getImageBy(minutes: remainingMinutes))
+        drawIconView(getImageBy(remainingMinutes: remainingMinutes))
         drawThumbView()
         drawHeadLabel(LocalizationKey.SetTimeTitle.translate())
         drawFootLabel(timeFormat(), isTime: true)

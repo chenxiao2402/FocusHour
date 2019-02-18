@@ -34,7 +34,7 @@ class CircleTimer: CircleView {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fillStroke)
         
-        drawIconView(getImageBy(minutes: focusTime / 60))
+        drawIconView(getImageBy(remainingMinutes: focusTime / 60))
         drawHeadLabel(LocalizationKey.CountdownTitle.translate())
         drawFootLabel(timeFormat(), isTime: true)
     }
@@ -56,12 +56,16 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationDeath.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
+        let minute = focusTime / 60
+        let imgName = getImageNameBy(focusMinutes: minute)
+        let meal = PlantRecord(imgName: imgName, minute: minute)
+        meal?.save()
     }
 }
 
 extension CircleTimer {
     func treeHasGrownUp() -> Bool {
-        return focusTime > TEN_MIN
+        return focusTime >= TEN_MIN
     }
 }
 

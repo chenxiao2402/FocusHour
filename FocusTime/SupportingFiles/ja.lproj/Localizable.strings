@@ -51,3 +51,18 @@ About = "その他";
 // SetTimeView -> Settings -> About
 Description = "「フォーカス・タイム」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";
 AboutMe = "私のGithubアカウント（https://github.com/Sephidator/FocusTime）を訪問すれば、このアプリの他の情報が見られる。";
+
+
+// SetTimeView -> Achievement
+Jan = "1月";
+Feb = "2月";
+Mar = "3月";
+Apr = "4月";
+May = "5月";
+Jun = "6月";
+Jul = "7月";
+Aug = "8月";
+Sep = "9月";
+Oct = "10月";
+Nov = "11月";
+Dec = "12月";
