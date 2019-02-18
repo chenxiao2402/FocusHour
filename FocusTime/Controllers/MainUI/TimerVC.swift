@@ -68,36 +68,27 @@ class TimerVC: ViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
-        let meal = PlantRecord(imgName: "图片名", minute: 233, year: 2018, month: 2, day: 4)
-        meal?.save()
-        let meal2 = PlantRecord(imgName: "图片da名", minute: 253, year: 2017, month: 4, day: 4)
-        meal2?.save()
-//        print(PlantRecord.loadRecords(year: 2018, month: 2) ?? "是NULL，我死了")
-//        let record = PlantRecord(minute: 233, imgName: "图片名", year: 2018, month: 2, day: 4)
-//        record?.save()
-//        print(PlantRecord.loadRecords(year: 2018, month: 2) ?? "人间失格")
-//
-//        if cancelable {
-//            quit()
-//        } else {
-//            let message = circleTimer.treeHasGrownUp() ?
-//                LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
-//            let alert = UIAlertController(
-//                title: LocalizationKey.GiveupAlertTitle.translate(),
-//                message: message,
-//                preferredStyle: .alert
-//            )
-//            alert.addAction(.init(
-//                title: LocalizationKey.Cancel.translate(),
-//                style: .cancel
-//                ))
-//            alert.addAction(.init(
-//                title: LocalizationKey.Yes.translate(),
-//                style: .destructive,
-//                handler: { (_) in self.end() }
-//                ))
-//            present(alert, animated: true, completion: nil)
-//        }
+        if !cancelable {
+            let message = circleTimer.treeHasGrownUp() ?
+                LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
+            let alert = UIAlertController(
+                title: LocalizationKey.GiveupAlertTitle.translate(),
+                message: message,
+                preferredStyle: .alert
+            )
+            alert.addAction(.init(
+                title: LocalizationKey.Cancel.translate(),
+                style: .cancel
+                ))
+            alert.addAction(.init(
+                title: LocalizationKey.Yes.translate(),
+                style: .destructive,
+                handler: { (_) in self.end() }
+                ))
+            present(alert, animated: true, completion: nil)
+        } else {
+            quit()
+        }
     }
     
     @IBAction func returnToMainpage(_ sender: Any) {

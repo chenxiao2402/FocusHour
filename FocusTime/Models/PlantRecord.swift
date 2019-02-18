@@ -51,6 +51,17 @@ class PlantRecord: NSObject, NSCoding {
         self.day = day
     }
     
+    init?(imgName: String, minute: Int) {
+        guard !imgName.isEmpty else { return nil }
+        guard minute > 0 else { return nil }
+        
+        self.imgName = imgName
+        self.minute = minute
+        self.year = TimeTool.getCurrentYear()
+        self.month = TimeTool.getCurrentMonth()
+        self.day = TimeTool.getCurrentDay()
+    }
+    
     //MARK: NSCoding
     
     func encode(with aCoder: NSCoder) {
@@ -62,7 +73,6 @@ class PlantRecord: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        
         // The name is required. If we cannot decode a name string, the initializer should fail.
         guard let imgName = aDecoder.decodeObject(forKey: PropertyKey.imgName) as? String else {
             os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)

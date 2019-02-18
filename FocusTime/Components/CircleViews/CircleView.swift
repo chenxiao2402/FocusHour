@@ -81,7 +81,7 @@ class CircleView: UIView {
 }
 
 extension CircleView {
-    func getImageBy(minutes time: Int) -> UIImage? {
+    func getImageBy(remainingMinutes time: Int) -> UIImage? {
         let timeRange = [0, 3, 6, 10, 25, 50, 75, 100, 120]
         let imageList = ["grow-bud", "grow-leaf", "grow-plant", "level1-bonsai", "level2-bamboo", "level3-tree", "level4-trees", "level5-woods", "level6-forest"]
         
@@ -92,6 +92,19 @@ extension CircleView {
             }
         }
         return UIImage(named: imageName)
+    }
+    
+    func getImageNameBy(focusMinutes time: Int) -> String {
+        let timeRange = [0, 10, 25, 50, 75, 100, 120]
+        let imageList = ["level0-baretree", "level1-bonsai", "level2-bamboo", "level3-tree", "level4-trees", "level5-woods", "level6-forest"]
+        
+        var imageName = imageList[0]
+        for (i, timeBoundry) in timeRange.enumerated() {
+            if (time >= timeBoundry) {
+                imageName = imageList[i]
+            }
+        }
+        return imageName
     }
     
     func timeFormat() -> String {
