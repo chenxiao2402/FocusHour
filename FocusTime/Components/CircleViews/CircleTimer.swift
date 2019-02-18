@@ -26,13 +26,11 @@ class CircleTimer: CircleView {
         super.draw(rect)
         
         let ctx = UIGraphicsGetCurrentContext();
-        // 设置背景，画一个空的圆环
+        // 设置背景，画圆形的背景
         ctx?.setFillColor(ColorEnum.getColor(name: .LightYellow).cgColor)
         ctx?.setShouldAntialias(true)
-        ctx?.setStrokeColor(SLIDER_BACKGROUND_COLOR.cgColor)
-        ctx?.setLineWidth(0)
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
-        ctx?.drawPath(using: CGPathDrawingMode.fillStroke)
+        ctx?.drawPath(using: CGPathDrawingMode.fill)
         
         drawIconView(getImageBy(remainingMinutes: focusTime / 60))
         drawHeadLabel(LocalizationKey.CountdownTitle.translate())

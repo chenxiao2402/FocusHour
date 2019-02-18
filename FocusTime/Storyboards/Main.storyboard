@@ -189,12 +189,15 @@
                                     <inset key="sectionInset" minX="32" minY="32" maxX="32" maxY="32"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="NmI-6W-B1U" customClass="AchievementCell" customModule="FocusTime" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AchievementCell" id="NmI-6W-B1U" customClass="AchievementCell" customModule="FocusTime" customModuleProvider="target">
                                         <rect key="frame" x="32" y="32" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="JLO-9L-8fR" kind="show" id="782-yb-Pnn"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -237,7 +240,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51A-jE-hQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107.2463768115942" y="-494.19642857142856"/>
+            <point key="canvasLocation" x="-1830" y="-494"/>
+        </scene>
+        <!--Achievement-->
+        <scene sceneID="qPr-Mn-Vq8">
+            <objects>
+                <collectionViewController id="JLO-9L-8fR" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NZh-TA-mcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tii-xF-h54">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="J1o-Qx-Ib7">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="JLO-9L-8fR" id="fCR-cH-cnc"/>
+                            <outlet property="delegate" destination="JLO-9L-8fR" id="vNQ-9Y-zTI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Achievement" id="nk7-A7-FyI"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5l-a9-SaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1830" y="311"/>
         </scene>
         <!--Set TimeVC-->
         <scene sceneID="tne-QT-ifu">
@@ -328,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+            <point key="canvasLocation" x="477" y="-101"/>
         </scene>
         <!--Sound SelectorVC-->
         <scene sceneID="cbu-rJ-TCP">
@@ -372,7 +410,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdq-k4-g2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935" y="481"/>
+            <point key="canvasLocation" x="2893" y="481"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -465,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yad-SE-rZE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="481"/>
+            <point key="canvasLocation" x="1980" y="481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQt-gw-7Pl">
@@ -527,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUc-7W-9dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4010.144927536232" y="-299.33035714285711"/>
+            <point key="canvasLocation" x="4010" y="-277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">
@@ -537,8 +575,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o22-fQ-Hye">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.11372549019607843" green="0.19607843137254902" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -549,7 +591,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8m-6g-vGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243" y="-494"/>
+            <point key="canvasLocation" x="-891" y="-494"/>
         </scene>
     </scenes>
     <resources>

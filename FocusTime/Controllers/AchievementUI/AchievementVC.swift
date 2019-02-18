@@ -14,7 +14,7 @@ class AchievementVC: UIViewController {
     @IBOutlet weak var titleButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedYear: Int!
-    var textList: [String] = []
+    var cellInfoList: [(String, Bool)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +46,12 @@ class AchievementVC: UIViewController {
     private func refreshAchievements(of year: Int) {
         titleButton.setTitle("\(year)", for: .normal)
         selectedYear = year
-        textList.removeAll()
+        cellInfoList.removeAll()
         for month in MonthEnum.getKeyList() {
-            let text = "\(month.translate()) \(TimeTool.minuteFormat(of: PlantRecord.loadTotalTime(year: year, month: month.getNumber())))"
-            textList.append(text)
+            let minutes = PlantRecord.loadTotalTime(year: year, month: month.getNumber())
+            let text = "\(month.translate()) \(TimeTool.minuteFormat(of: minutes))"
+            let interactionEnabled = minutes > 0
+            cellInfoList.append((text, interactionEnabled))
         }
         collectionView.reloadData()
     }
@@ -72,12 +74,13 @@ class AchievementVC: UIViewController {
 extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return textList.count
+        return cellInfoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! AchievementCell
-        cell.drawCell(icon: UIImage(named: "trophy"), text: textList[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCell", for: indexPath) as! AchievementCell
+        cell.drawCell(icon: UIImage(named: "trophy"), text: cellInfoList[indexPath.row].0)
+        cell.isUserInteractionEnabled = cellInfoList[indexPath.row].1
         return cell
     }
     
