@@ -196,13 +196,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                         <connections>
-                                            <segue destination="JLO-9L-8fR" kind="show" id="782-yb-Pnn"/>
+                                            <segue destination="K63-e3-bQK" kind="show" identifier="ShowAchievementDetails" id="cBX-Fi-pqF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93302534770239431" green="0.93302534770239431" blue="0.93302534770239431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gev-P5-J0K" firstAttribute="centerX" secondItem="qlX-EC-Wvv" secondAttribute="centerX" id="Gf7-tm-KZy"/>
                             <constraint firstItem="VVb-CA-KQD" firstAttribute="trailing" secondItem="MeI-Kv-100" secondAttribute="trailing" id="UTe-Qv-PWt"/>
@@ -242,40 +242,50 @@
             </objects>
             <point key="canvasLocation" x="-1830" y="-494"/>
         </scene>
-        <!--Achievement-->
-        <scene sceneID="qPr-Mn-Vq8">
+        <!--AchievementDetailVC-->
+        <scene sceneID="TPh-yr-ICS">
             <objects>
-                <collectionViewController id="JLO-9L-8fR" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NZh-TA-mcQ">
+                <viewController id="K63-e3-bQK" userLabel="AchievementDetailVC" customClass="AchievementDetailVC" customModule="FocusTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKq-Jg-aee">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tii-xF-h54">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="J1o-Qx-Ib7">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="JLO-9L-8fR" id="fCR-cH-cnc"/>
-                            <outlet property="delegate" destination="JLO-9L-8fR" id="vNQ-9Y-zTI"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Achievement" id="nk7-A7-FyI"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b5l-a9-SaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-aG-XAm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="S8g-Br-4eN">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="tow-8v-4uE" customClass="IconCell" customModule="FocusTime" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93302534770000001" green="0.93302534770000001" blue="0.93302534770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0bp-aG-XAm" firstAttribute="top" secondItem="LiC-PJ-yC6" secondAttribute="top" id="57A-bD-Ie4"/>
+                            <constraint firstItem="0bp-aG-XAm" firstAttribute="leading" secondItem="LiC-PJ-yC6" secondAttribute="leading" id="NBK-MQ-Cog"/>
+                            <constraint firstItem="LiC-PJ-yC6" firstAttribute="bottom" secondItem="0bp-aG-XAm" secondAttribute="bottom" id="p0f-0A-32t"/>
+                            <constraint firstItem="LiC-PJ-yC6" firstAttribute="trailing" secondItem="0bp-aG-XAm" secondAttribute="trailing" id="xqa-yw-dWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LiC-PJ-yC6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0bp-aG-XAm" id="ky6-a5-W2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyQ-yW-eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1830" y="311"/>
+            <point key="canvasLocation" x="-1830" y="321"/>
         </scene>
         <!--Set TimeVC-->
         <scene sceneID="tne-QT-ifu">
@@ -334,7 +344,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="trophy"/>
                                 <connections>
-                                    <segue destination="JHL-Ka-43o" kind="presentation" modalTransitionStyle="crossDissolve" id="o4m-ox-XBW"/>
+                                    <segue destination="JHL-Ka-43o" kind="presentation" identifier="ShowAchievements" modalTransitionStyle="crossDissolve" id="o4m-ox-XBW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -366,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="-101"/>
+            <point key="canvasLocation" x="454" y="-51"/>
         </scene>
         <!--Sound SelectorVC-->
         <scene sceneID="cbu-rJ-TCP">
@@ -410,7 +420,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdq-k4-g2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2893" y="481"/>
+            <point key="canvasLocation" x="3802.898550724638" y="480.80357142857139"/>
         </scene>
         <!--TimerVC-->
         <scene sceneID="Fz1-Zq-5WK">
@@ -503,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yad-SE-rZE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="481"/>
+            <point key="canvasLocation" x="2889.8550724637685" y="480.80357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQt-gw-7Pl">
@@ -565,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUc-7W-9dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4010" y="-277"/>
+            <point key="canvasLocation" x="4918.840579710145" y="-277.23214285714283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">

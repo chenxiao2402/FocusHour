@@ -54,10 +54,10 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationDeath.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
-        let minute = focusTime / 60
+        let minute = focusTime/60 > 0 ? focusTime/60 : 1
         let imgName = getImageNameBy(focusMinutes: minute)
-        let meal = PlantRecord(imgName: imgName, minute: minute)
-        meal?.save()
+        let plantRecord = PlantRecord(imgName: imgName, minute: minute)
+        plantRecord?.save()
     }
 }
 

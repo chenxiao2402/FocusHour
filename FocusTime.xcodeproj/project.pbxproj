@@ -24,6 +24,7 @@
 		5C256387221ABB6900732477 /* MonthEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C256386221ABB6900732477 /* MonthEnum.swift */; };
 		5C25638A221ACF5400732477 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C256389221ACF5400732477 /* IconCell.swift */; };
 		5C25638C221ACFC700732477 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25638B221ACFC700732477 /* CollectionCell.swift */; };
+		5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25638D221AE19C00732477 /* AchievementDetailVC.swift */; };
 		5C374A7A220934870059EF2C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleView.swift */; };
 		5C3D03D82211AFE20089E96A /* Stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C3D03D72211AFE20089E96A /* Stream.mp3 */; };
 		5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D03D92211B0330089E96A /* SoundPlayer.swift */; };
@@ -91,6 +92,7 @@
 		5C256386221ABB6900732477 /* MonthEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthEnum.swift; sourceTree = "<group>"; };
 		5C256389221ACF5400732477 /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		5C25638B221ACFC700732477 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		5C25638D221AE19C00732477 /* AchievementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
 		5C374A79220934870059EF2C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5C3D03D72211AFE20089E96A /* Stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stream.mp3; sourceTree = "<group>"; };
 		5C3D03D92211B0330089E96A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				5C50BFD52217F11100D6E289 /* AchievementVC.swift */,
 				5C50BFD7221802A900D6E289 /* YearSelector.swift */,
+				5C25638D221AE19C00732477 /* AchievementDetailVC.swift */,
 			);
 			path = AchievementUI;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				5C3D03DC2211B8B60089E96A /* SoundEnum.swift in Sources */,
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
 				5C4885E12212ED0200198B49 /* AboutInfoVC.swift in Sources */,
+				5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */,
 				5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */,
 				5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */,
 				5C14331822169C6000C50760 /* PlantRecord.swift in Sources */,

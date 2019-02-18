@@ -39,7 +39,7 @@ class PlantRecord: NSObject, NSCoding {
     
     init?(imgName: String, minute: Int, year: Int, month: Int, day: Int) {
         guard !imgName.isEmpty else { return nil }
-        guard minute > 0 else { return nil }
+        guard minute >= 0 else { return nil }
         guard year > 0 else { return nil }
         guard (month > 0) && (month <= 12) else { return nil }
         guard (day > 0) && (day <= 31) else { return nil }
@@ -53,7 +53,7 @@ class PlantRecord: NSObject, NSCoding {
     
     init?(imgName: String, minute: Int) {
         guard !imgName.isEmpty else { return nil }
-        guard minute > 0 else { return nil }
+        guard minute >= 0 else { return nil }
         
         self.imgName = imgName
         self.minute = minute

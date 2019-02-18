@@ -14,6 +14,8 @@ import UIKit
  */
 class AchievementCell: CollectionnCell {
     
+    var month: Int!
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
