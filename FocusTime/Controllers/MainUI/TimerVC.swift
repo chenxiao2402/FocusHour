@@ -67,15 +67,6 @@ class TimerVC: ViewController {
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if backgroundTime == 0 {
-            circleTimer.end() // 因为在后台不能响应界面更新，所以在出现时重新刷新
-        } else {
-            backgroundTimer?.invalidate()
-            backgroundTime = backgroundTimeLimit
-        }
-    }
-    
     @IBAction func StopButtonTapped(_ sender: Any) {
         print(PlantRecord.loadRecords(year: 2019, month: 2))
         let meal = PlantRecord(imgName: "图片名", minute: 233, year: 2019, month: 2, day: 4)
@@ -152,6 +143,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     }
     
     private func end() {
+        print(circleTimer.treeHasGrownUp())
         circleTimer.end()
         mainTimer?.invalidate()
         backgroundTimer?.invalidate()
@@ -161,9 +153,11 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
         stopButton.isHidden = true
         soundButton.isHidden = true
         
+        print(circleTimer.treeHasGrownUp())
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.NotificationSuccess.translate() :
             LocalizationKey.NotificationDeath.translate()
+        print("消息是：\(message)")
         sendNotification(message)
         NotificationCenter.default.removeObserver(self.backgroundObserver!)
     }

@@ -22,14 +22,14 @@ class YearSelector: UIStackView {
         didSet {
             yearButtons.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    button.isHidden = !button.isHidden
+                    button.isHidden = self.isButtonsHidden
                     self.layoutIfNeeded()
                 })
             }
         }
     }
     let years = PlantRecord.getRecordYears()
-    var yearButtons: [UIButton] = []
+    var yearButtons: [DropdownButton] = []
     var achievementVC: AchievementVC!
 
     

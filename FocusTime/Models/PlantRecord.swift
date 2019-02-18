@@ -22,6 +22,8 @@ class PlantRecord: NSObject, NSCoding {
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("PlantRecords")
+    static let RecordFile = "Records"
+    static let TimeFile = "TotalTime"
     
     //MARK: Types
     
@@ -75,13 +77,30 @@ class PlantRecord: NSObject, NSCoding {
 }
 
 extension PlantRecord {
+    
     func save() {
+        saveRecords()
+        updateTotalTime()
+    }
+    
+    private func saveRecords() {
         do {
             var records = PlantRecord.loadRecords(year: year, month: month)
             records.append(self)
-            let url = PlantRecord.ArchiveURL.appendingPathExtension("\(year)").appendingPathExtension("\(month)")
+            let fileURL = PlantRecord.getDirectory(year: year, month: month).appendingPathComponent(PlantRecord.RecordFile)
             let data = try NSKeyedArchiver.archivedData(withRootObject: records, requiringSecureCoding: false)
-            try data.write(to: url)
+            try data.write(to: fileURL)
+        } catch {
+            return
+        }
+    }
+    
+    private func updateTotalTime() {
+        do {
+            let totalTime = PlantRecord.loadTotalTime(year: year, month: month) + minute
+            let fileURL = PlantRecord.getDirectory(year: year, month: month).appendingPathComponent(PlantRecord.TimeFile)
+            let data = try NSKeyedArchiver.archivedData(withRootObject: totalTime, requiringSecureCoding: false)
+            try data.write(to: fileURL)
         } catch {
             return
         }
@@ -89,8 +108,8 @@ extension PlantRecord {
     
     static func loadRecords(year: Int, month: Int) -> [PlantRecord] {
         do {
-            let url = PlantRecord.ArchiveURL.appendingPathExtension("\(year)").appendingPathExtension("\(month)")
-            let fileData = try Data(contentsOf: url)
+            let fileURL = PlantRecord.getDirectory(year: year, month: month).appendingPathComponent(PlantRecord.RecordFile)
+            let fileData = try Data(contentsOf: fileURL)
             let result = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(fileData)
             return result as! [PlantRecord]
         } catch {
@@ -98,7 +117,34 @@ extension PlantRecord {
         }
     }
     
+    static func loadTotalTime(year: Int, month: Int) -> Int {
+        do {
+            let fileURL = PlantRecord.getDirectory(year: year, month: month).appendingPathComponent(PlantRecord.TimeFile)
+            let fileData = try Data(contentsOf: fileURL)
+            let result = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(fileData)
+            return result as! Int
+        } catch {
+            return 0
+        }
+    }
+    
+    static func getDirectory(year: Int, month: Int) -> URL {
+        let url = PlantRecord.ArchiveURL.appendingPathComponent("\(year)").appendingPathComponent("\(month)")
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: url.path) {
+            try! fileManager.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        }
+        return url
+    }
+    
     static func getRecordYears() -> [Int] {
-        return [2019, 2018, 2017, 2833, 2017, 3131, 3131]
+        do {
+            let fileManager = FileManager.default
+            let years = try fileManager.contentsOfDirectory(atPath: PlantRecord.ArchiveURL.path)
+            let result = years.map { year -> Int in return Int(year) ?? TimeTool.getCurrentYear()}
+            return result.count > 0 ? result : [TimeTool.getCurrentYear()]
+        } catch {
+            return [TimeTool.getCurrentYear()]
+        }
     }
 }

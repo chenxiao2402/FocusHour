@@ -27,7 +27,7 @@ class DropdownButton: UIButton {
         widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
         backgroundColor = ColorEnum.getColor(name: .DarkSlateGray)
         titleLabel?.font = UIFont(name: "Verdana", size: 20)
-        
+
         addTarget(self, action: #selector(DropdownButton.changeBackgroundColor), for: [.touchDown])
         addTarget(self, action: #selector(DropdownButton.resetBackgroundColor), for: [.touchDragExit, .touchCancel, .touchUpInside, .touchUpOutside])
     }

@@ -20,10 +20,10 @@ class AchievementVC: UIViewController {
     ]
     
     let bugerImages = [
-        UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"),
-        UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"),
-        UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"),
-        UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree"), UIImage(named: "level0-baretree")
+        UIImage(named: "trophy"), UIImage(named: "trophy"), UIImage(named: "trophy"),
+        UIImage(named: "trophy"), UIImage(named: "trophy"), UIImage(named: "trophy"),
+        UIImage(named: "trophy"), UIImage(named: "trophy"), UIImage(named: "trophy"),
+        UIImage(named: "trophy"), UIImage(named: "trophy"), UIImage(named: "trophy")
     ]
     
     
@@ -36,6 +36,23 @@ class AchievementVC: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.clear
+        
+        setLayout()
+    }
+    
+    private func setLayout() {
+        // 在给layout设置itemSize的时候，需要使用view.frame.size，而不是collectionView.frame.size
+        // 虽然在storyboard中，collectionView被view完全包住（前者到后者safearea的top、leading、bottom、trailing space都是0）
+        // 但是如果在interface builder中选择view as iPhoneX，但是程序在iPhone8上运行的时候：
+        // collectionView.frame.sizew.width = 414（对应iPX的宽度）；而不是iP8的宽度375
+        // 但是最外层的view的宽度就是准确的...
+        let cellNumPerLine: CGFloat = UIDevice().model == "iPad" ? 3 : 2
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let space: CGFloat = 32
+        let width = (view.frame.size.width - space * (cellNumPerLine + 1)) / cellNumPerLine
+        let height = width * CollectionViewCell.ratio
+        layout.itemSize = CGSize(width: Int(width), height: Int(height))  // 最后设置宽和高的时候要取整抹零，不然零点几的宽度差会把cell挤到下一行
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {
@@ -62,8 +79,21 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.hambugerLabel.text = bugers[indexPath.row]
-        cell.hambugerImageView.image = bugerImages[indexPath.row]
+//        cell.layer.borderColor = UIColor.gray.cgColor
+//        cell.layer.borderWidth = 1
+        cell.drawCell(icon: bugerImages[indexPath.row], text: bugers[indexPath.row])
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        cell?.layer.borderColor = UIColor.gray.cgColor
+//        cell?.layer.borderWidth = 3
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        cell?.layer.borderColor = UIColor.gray.cgColor
+//        cell?.layer.borderWidth = 1
+//    }
 }
