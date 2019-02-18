@@ -14,4 +14,5 @@ enum SegueEnum: String {
     case ShowAboutInfo = "ShowAboutInfo"
     case ShowSetLanguage = "ShowSetLanguage"
     case ShowAchievements = "ShowAchievements"
+    case ShowAchievementDetails = "ShowAchievementDetails"
 }

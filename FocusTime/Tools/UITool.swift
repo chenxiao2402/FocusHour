@@ -62,6 +62,4 @@ extension UITool {
             return UIImage(named: "background-\(index)")
         }
     }
-    
-    
 }
