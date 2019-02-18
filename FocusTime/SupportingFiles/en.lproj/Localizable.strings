@@ -51,3 +51,18 @@ About = "About";
 // SetTimeView -> Settings -> About
 Description = "FocusTime is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.";
 AboutMe = "Check my Github account(https://github.com/Sephidator/FocusTime) to get more information about this APP.";
+
+
+// SetTimeView -> Achievement
+Jan = "Jan";
+Feb = "Feb";
+Mar = "Mar";
+Apr = "Apr";
+May = "May";
+Jun = "Jun";
+Jul = "Jul";
+Aug = "Aug";
+Sep = "Sep";
+Oct = "Oct";
+Nov = "Nov";
+Dec = "Dec";

@@ -16,6 +16,6 @@ enum SettingEnum: String {
 
 extension SettingEnum {
     func translate() -> String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        return LocalizationTool.translate(self.rawValue)
     }
 }

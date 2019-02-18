@@ -141,7 +141,8 @@ extension PlantRecord {
         do {
             let fileManager = FileManager.default
             let years = try fileManager.contentsOfDirectory(atPath: PlantRecord.ArchiveURL.path)
-            let result = years.map { year -> Int in return Int(year) ?? TimeTool.getCurrentYear()}
+            var result = years.map { year -> Int in return Int(year) ?? TimeTool.getCurrentYear()}
+            result.sort(by: {(x, y) -> Bool in return x >= y})
             return result.count > 0 ? result : [TimeTool.getCurrentYear()]
         } catch {
             return [TimeTool.getCurrentYear()]

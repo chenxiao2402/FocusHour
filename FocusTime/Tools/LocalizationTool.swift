@@ -20,4 +20,8 @@ class LocalizationTool {
         UserDefaults.standard.synchronize()
         Bundle.main.onLanguage()
     }
+    
+    static func translate(_ text: String) -> String {
+        return NSLocalizedString(text, comment: "")
+    }
 }

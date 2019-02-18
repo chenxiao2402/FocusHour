@@ -68,11 +68,10 @@ class TimerVC: ViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
-        print(PlantRecord.loadRecords(year: 2019, month: 2))
-        let meal = PlantRecord(imgName: "图片名", minute: 233, year: 2019, month: 2, day: 4)
+        let meal = PlantRecord(imgName: "图片名", minute: 233, year: 2018, month: 2, day: 4)
         meal?.save()
-        print(PlantRecord.loadRecords(year: 2019, month: 2))
-        print()
+        let meal2 = PlantRecord(imgName: "图片da名", minute: 253, year: 2017, month: 4, day: 4)
+        meal2?.save()
 //        print(PlantRecord.loadRecords(year: 2018, month: 2) ?? "是NULL，我死了")
 //        let record = PlantRecord(minute: 233, imgName: "图片名", year: 2018, month: 2, day: 4)
 //        record?.save()
@@ -157,7 +156,6 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.NotificationSuccess.translate() :
             LocalizationKey.NotificationDeath.translate()
-        print("消息是：\(message)")
         sendNotification(message)
         NotificationCenter.default.removeObserver(self.backgroundObserver!)
     }

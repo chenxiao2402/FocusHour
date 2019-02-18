@@ -189,7 +189,7 @@
                                     <inset key="sectionInset" minX="32" minY="32" maxX="32" maxY="32"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="NmI-6W-B1U" customClass="CollectionViewCell" customModule="FocusTime" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="NmI-6W-B1U" customClass="AchievementCell" customModule="FocusTime" customModuleProvider="target">
                                         <rect key="frame" x="32" y="32" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

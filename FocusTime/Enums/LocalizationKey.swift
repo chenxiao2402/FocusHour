@@ -41,6 +41,6 @@ enum LocalizationKey: String {
 
 extension LocalizationKey {
     func translate() -> String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        return LocalizationTool.translate(self.rawValue)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  AchievementCell.swift
 //  FocusTime
 //
 //  Created by Midrash Elucidator on 2019/2/17.
@@ -12,7 +12,7 @@ import UIKit
  这个cell用于成就界面，显示月份或者某个月份当中的某个奖励
  为了渲染的效果，这个cell的宽高比为4:5
  */
-class CollectionViewCell: UICollectionViewCell {
+class AchievementCell: UICollectionViewCell {
     
     static let ratio: CGFloat = 1.1
     

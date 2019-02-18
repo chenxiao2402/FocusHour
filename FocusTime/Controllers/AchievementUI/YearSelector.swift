@@ -66,9 +66,8 @@ class YearSelector: UIStackView {
     }
     
     @objc func handleSelection(button: UIButton) {
-        print("touched")
         let year = Int(button.titleLabel?.text ?? "0")!
-        achievementVC.showAchievement(ofyear: year)
+        achievementVC.showAchievements(ofyear: year)
     }
     
     @objc private func changeBackgroundColor() {

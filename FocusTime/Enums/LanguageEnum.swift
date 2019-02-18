@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum LanguageEnum: String, CaseIterable  {
+enum LanguageEnum: String {
     case English = "en"
     case Chinese = "zh-Hans"
     case Japanese = "ja"
 }
 
-extension LanguageEnum {
+extension LanguageEnum: CaseIterable  {
     static func getKeyList() -> [LanguageEnum] {
         return LanguageEnum.allCases
     }
