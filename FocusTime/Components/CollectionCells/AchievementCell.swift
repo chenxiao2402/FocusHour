@@ -30,7 +30,7 @@ class AchievementCell: CollectionnCell {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.stroke)
         
-        drawIconView()
+        drawIconView(ratio: 1.2)
         drawFootLabel(color: strokeColor)
     }
 }

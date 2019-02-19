@@ -24,9 +24,9 @@ class CollectionnCell: UICollectionViewCell {
         radius = frame.size.width / 2.0 * 0.8
     }
     
-    func drawIconView() {
+    func drawIconView(ratio: CGFloat) {
         iconView.removeFromSuperview()
-        iconView.frame = CGRect(x: 0, y: 0, width: radius * 1.2, height: radius * 1.2)
+        iconView.frame = CGRect(x: 0, y: 0, width: radius * ratio, height: radius * ratio)
         iconView.image = icon
         iconView.center = drawCenter
         addSubview(iconView)

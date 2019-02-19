@@ -42,7 +42,7 @@ class CircleTimer: CircleView {
         focusTime += 1
     }
     
-    func end() {
+    func drawResult(needsToSave: Bool) {
         if remainingTime <= 0 {
             drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
             drawFootLabel(LocalizationKey.Congratulations.translate(), isTime: false)
@@ -54,10 +54,13 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationDeath.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
-        let minute = focusTime/60 > 0 ? focusTime/60 : 1
-        let imgName = getImageNameBy(focusMinutes: minute)
-        let plantRecord = PlantRecord(imgName: imgName, minute: minute)
-        plantRecord?.save()
+        
+        if needsToSave {
+            let minute = focusTime/60 > 0 ? focusTime/60 : 1
+            let imgName = getImageNameBy(focusMinutes: minute)
+            let plantRecord = PlantRecord(imgName: imgName, minute: minute)
+            plantRecord?.save()
+        }
     }
 }
 

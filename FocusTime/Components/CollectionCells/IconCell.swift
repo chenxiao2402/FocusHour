@@ -24,7 +24,7 @@ class IconCell: CollectionnCell {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fill)
         
-        drawIconView()
+        drawIconView(ratio: 1.4)
         drawFootLabel(color: strokeColor)
     }
 }
