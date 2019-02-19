@@ -133,8 +133,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     }
     
     private func end() {
-        print(circleTimer.treeHasGrownUp())
-        circleTimer.end()
+        circleTimer.drawResult(needsToSave: true)
         mainTimer?.invalidate()
         backgroundTimer?.invalidate()
         soundPlayer.invalidate()
@@ -143,7 +142,6 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
         stopButton.isHidden = true
         soundButton.isHidden = true
         
-        print(circleTimer.treeHasGrownUp())
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.NotificationSuccess.translate() :
             LocalizationKey.NotificationDeath.translate()
@@ -175,7 +173,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     
     private func returnFromBackground() {
         if backgroundTime == 0 {
-            circleTimer.end() // 因为在后台不能响应界面更新，所以在出现时重新刷新
+            circleTimer.drawResult(needsToSave: false) // 因为在后台不能响应界面更新，所以在出现时重新刷新
         } else {
             backgroundTimer?.invalidate()
             backgroundTime = backgroundTimeLimit

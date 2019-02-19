@@ -12,7 +12,7 @@ class LocalizationTool {
     
     static func setSystemLanguage(_ language: LanguageEnum) {
         // let languages: NSArray = UserDefaults.standard.object(forKey: "AppleLanguages") as! NSArray
-        // print("切换之前: \(languages)")
+        // print("系统语言列表: \(languages)")，哦这个注释是特意留下来的
 
         // 切换语言
         let languageCodeNames = LanguageEnum.getCodeNames(startWith: language)
