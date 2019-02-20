@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFG-RW-iHF">
+                                <rect key="frame" x="231" y="570" width="138" height="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhV-dm-nzX">
+                                <rect key="frame" x="228" y="200" width="144" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="level1-bonsai" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-9x-vTQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="dA2-ub-RKS"/>
+                                            <constraint firstAttribute="height" constant="144" id="nan-Iu-nt1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FocusHour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-4G-Ohm">
+                                        <rect key="frame" x="-17" y="158" width="178.5" height="42"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
+                                        <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OgS-9x-vTQ" secondAttribute="trailing" id="Ilh-vo-Bk1"/>
+                                    <constraint firstItem="tmW-4G-Ohm" firstAttribute="centerX" secondItem="MhV-dm-nzX" secondAttribute="centerX" id="KGz-BL-9Q2"/>
+                                    <constraint firstAttribute="height" constant="200" id="QKd-lq-pJk"/>
+                                    <constraint firstAttribute="bottom" secondItem="tmW-4G-Ohm" secondAttribute="bottom" id="Xuo-Y4-RDn"/>
+                                    <constraint firstItem="OgS-9x-vTQ" firstAttribute="top" secondItem="MhV-dm-nzX" secondAttribute="top" id="ZLW-8v-MSI"/>
+                                    <constraint firstAttribute="width" constant="144" id="cwj-Q9-E5k"/>
+                                    <constraint firstItem="OgS-9x-vTQ" firstAttribute="leading" secondItem="MhV-dm-nzX" secondAttribute="leading" id="fd2-dP-kuN"/>
+                                    <constraint firstAttribute="bottom" secondItem="tmW-4G-Ohm" secondAttribute="bottom" id="uzY-ZV-lEP"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2019 Sephidator " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-mB-oQV">
+                                <rect key="frame" x="191.5" y="556" width="217" height="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.94204837328767121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZFG-RW-iHF" secondAttribute="bottom" constant="16" id="1Y4-Ho-mNx"/>
+                            <constraint firstItem="ZFG-RW-iHF" firstAttribute="top" secondItem="9Ij-mB-oQV" secondAttribute="bottom" id="B2L-zC-7aw"/>
+                            <constraint firstItem="MhV-dm-nzX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gc9-OF-CWc"/>
+                            <constraint firstItem="ZFG-RW-iHF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N8G-Gu-woP"/>
+                            <constraint firstItem="9Ij-mB-oQV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hTi-8Z-Oxj"/>
+                            <constraint firstItem="MhV-dm-nzX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zau-pe-Shj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="level1-bonsai" width="512" height="512"/>
+    </resources>
+</document>
