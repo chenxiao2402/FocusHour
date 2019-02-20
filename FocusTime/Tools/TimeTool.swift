@@ -34,7 +34,6 @@ class TimeTool {
     
     static func minuteFormat(of minute: Int) -> String{
         let hour = minute / 60
-        let min = minute % 60
-        return hour > 0 ? "\(hour)h\(min)m" : "\(minute)m"
+        return hour > 0 ? "\(hour)\(LocalizationKey.Hour.translate())" : "\(minute)\(LocalizationKey.Minute.translate())"
     }
 }

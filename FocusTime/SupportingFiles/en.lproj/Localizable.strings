@@ -66,3 +66,5 @@ Sep = "Sep";
 Oct = "Oct";
 Nov = "Nov";
 Dec = "Dec";
+Hour = "h";
+Minute = "min";

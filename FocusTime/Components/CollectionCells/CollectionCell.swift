@@ -34,7 +34,7 @@ class CollectionnCell: UICollectionViewCell {
     
     func drawFootLabel(color: UIColor) {
         footLabel.removeFromSuperview()
-        let fontSize: CGFloat = UIDevice().model == "iPad" ? 28.0 : 20.0
+        let fontSize: CGFloat = UIDevice().model == "iPad" ? 24.0 : 18.0
         footLabel.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: fontSize * 1.2)
         footLabel.text = text
         footLabel.font = UIFont(name: "Verdana", size: fontSize)

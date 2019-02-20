@@ -61,7 +61,7 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCell", for: indexPath) as! IconCell
         let icon = UIImage(named: recordList[indexPath.row].imgName)
-        let text = "\(recordList[indexPath.row].minute)min"
+        let text = "\(recordList[indexPath.row].minute)\(LocalizationKey.Minute.translate())"
         cell.drawCell(icon: icon, text: text)
         return cell
     }

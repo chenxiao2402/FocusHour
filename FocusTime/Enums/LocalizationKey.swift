@@ -37,6 +37,20 @@ enum LocalizationKey: String {
     case About = "About"
     case Description = "Description"
     case AboutMe = "AboutMe"
+    case Jan = "Jan"
+    case Feb = "Feb"
+    case Mar = "Mar"
+    case Apr = "Apr"
+    case May = "May"
+    case Jun = "Jun"
+    case Jul = "Jul"
+    case Aug = "Aug"
+    case Sep = "Sep"
+    case Oct = "Oct"
+    case Nov = "Nov"
+    case Dec = "Dec"
+    case Hour = "Hour"
+    case Minute = "Minute"
 }
 
 extension LocalizationKey {
