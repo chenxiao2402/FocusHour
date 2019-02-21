@@ -9,7 +9,6 @@ Sephidator, 2019, All Rights reserved
 ## DESCRIPTION
 
 An iOS app that helps you focus and enjoy studying.
-Under review by Apple.....
 
 <br/>
 
