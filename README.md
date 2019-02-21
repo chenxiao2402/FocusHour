@@ -1,4 +1,4 @@
-# FocusTime
+# FocusHour
 
 Sephidator, 2019, All Rights reserved
 
@@ -8,7 +8,8 @@ Sephidator, 2019, All Rights reserved
 
 ## DESCRIPTION
 
-An iOS app that helps you focus and enjoy studying. An immature immitation of "Forest"
+An iOS app that helps you focus and enjoy studying.
+Under review by Apple.....
 
 <br/>
 
@@ -28,16 +29,7 @@ Picture resources made by <a href="https://www.flaticon.com/packs/nature-31/3" t
 Circle slider inspired by <a href="https://github.com/JixinZhang/ZCircleSlider/">JixinZhang</a>
 </div>
 
-<div>
-Custom UIAlertView inspired by <a href="https://medium.com/if-let-swift-programming/design-and-code-your-own-uialertview-ec3d8c000f0a">Daniel Luque</a>
-</div>
-
 <br/>
 
 <br/>
 
-## LISCENSE
-
-<div>
-<a href="http://www.wtfpl.net/">WTFPL</a>
-</div>
