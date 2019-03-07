@@ -6,6 +6,8 @@
 
 放下手机，专心于你的工作，等待树的成长。
 
+本应用支持针对所有iPhone设备（iPhone4及更之前的机型未知）和iPad设备的响应式设计
+
 <br/>
 
 <br/>
@@ -105,3 +107,37 @@ Picture resources made by <a href="https://www.flaticon.com/packs/nature-31/3" t
 <div>
 Circle slider inspired by <a href="https://github.com/JixinZhang/ZCircleSlider/">JixinZhang</a>
 </div>
+
+<br/>
+
+<br/>
+
+## 其他
+
+### 关于上架
+
+本应用于2月20号左右已经完成，之后向Apple Store Connect进行提交，但是因为元数据问题被拒绝
+
+多次反馈后没有合理的结果，加上这段时间以来课程作业和春招等一系列事情，所以暂时不打算管了...
+
+<br>
+
+### 运行本应用
+
+请使用mac电脑安装XCode来打开此应用
+
+本应用使用Swift4.2编写，没有使用第三方库，打开项目后可以直接在Simulator中运行
+
+如果希望安装在真实的iOS设备上，请自行申请AppleDeveloper账号
+
+<br/>
+
+### 代码细节
+
+打算近期写一篇文章来讨论编码时遇到的一系列问题
+
+正好当作面试前的准备
+
+等到写完后更新上来
+
+加油8
