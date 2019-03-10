@@ -12,7 +12,7 @@ class BundleEx: Bundle {
     override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
         if let bundle = Bundle.getLanguageBundel() {
             return bundle.localizedString(forKey: key, value: value, table: tableName)
-        }else {
+        } else {
             return super.localizedString(forKey: key, value: value, table: tableName)
         }
     }
