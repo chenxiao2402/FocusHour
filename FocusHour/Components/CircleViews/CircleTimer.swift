@@ -69,4 +69,3 @@ extension CircleTimer {
         return FocusHour >= TEN_MIN
     }
 }
-
