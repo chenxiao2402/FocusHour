@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MonthEnum: String {
+enum MonthKey: String {
     case Jan = "Jan"
     case Feb = "Feb"
     case Mar = "Mar"
@@ -23,13 +23,13 @@ enum MonthEnum: String {
     case Dec = "Dec"
 }
 
-extension MonthEnum: CaseIterable {
-    static func getKeyList() -> [MonthEnum] {
-        return MonthEnum.allCases
+extension MonthKey: CaseIterable {
+    static func getKeyList() -> [MonthKey] {
+        return MonthKey.allCases
     }
     
     func getNumber() -> Int {
-        return MonthEnum.getKeyList().firstIndex(of: self)! + 1
+        return MonthKey.getKeyList().firstIndex(of: self)! + 1
     }
     
     func translate() -> String {

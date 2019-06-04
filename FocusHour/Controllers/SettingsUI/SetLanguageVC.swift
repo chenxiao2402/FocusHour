@@ -10,13 +10,13 @@ import UIKit
 
 class SetLanguageVC: UITableViewController {
 
-    var languages: [LanguageEnum] = []
+    var languages: [LanguageKey] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-        navigationItem.title = SettingEnum.SetLanguage.translate()
-        languages = LanguageEnum.getKeyList()
+        navigationItem.title = SettingKey.SetLanguage.translate()
+        languages = LanguageKey.getKeyList()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +37,7 @@ class SetLanguageVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         LocalizationTool.setSystemLanguage(languages[indexPath.row])
-        self.navigationItem.title = SettingEnum.SetLanguage.translate()
+        self.navigationItem.title = SettingKey.SetLanguage.translate()
         for tableCell in self.tableView.visibleCells {
             let cell = tableCell as! SetLanguageCell
             cell.setSelected(cell.language.isSystemLanguage())

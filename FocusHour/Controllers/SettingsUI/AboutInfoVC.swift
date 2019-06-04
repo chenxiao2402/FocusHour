@@ -14,7 +14,7 @@ class AboutInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-        navigationItem.title = SettingEnum.About.translate()
+        navigationItem.title = SettingKey.About.translate()
         let description = LocalizationKey.Description.translate()
         let aboutMe = LocalizationKey.AboutMe.translate()
         textArea.text = "\(description)\n\n\(aboutMe)"

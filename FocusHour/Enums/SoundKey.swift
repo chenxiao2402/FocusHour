@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SoundEnum: String {
+enum SoundKey: String {
     case None = "None"
     case Wind = "Wind"
     case Stream = "Stream"
@@ -18,14 +18,14 @@ enum SoundEnum: String {
     case Thunderstorm = "Thunderstorm"
 }
 
-extension SoundEnum: CaseIterable {
-    static func getURL(sound: SoundEnum) -> URL {
+extension SoundKey: CaseIterable {
+    static func getURL(sound: SoundKey) -> URL {
         let path = Bundle.main.path(forResource: sound.rawValue, ofType: "mp3")
         return URL(fileURLWithPath: path ?? "")
     }
     
-    static func getKeyList() -> [SoundEnum] {
-        return SoundEnum.allCases
+    static func getKeyList() -> [SoundKey] {
+        return SoundKey.allCases
     }
     
     func translate() -> String {

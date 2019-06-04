@@ -11,7 +11,7 @@ import UIKit
 class SetLanguageCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
-    var language: LanguageEnum! {
+    var language: LanguageKey! {
         didSet {
             label.text = language.getName()
         }

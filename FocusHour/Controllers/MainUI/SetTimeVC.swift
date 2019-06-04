@@ -35,7 +35,7 @@ class SetTimeVC: ViewController {
         
         switch(segue.identifier ?? "") {
             
-        case SegueEnum.ShowTimer.rawValue:
+        case SegueKey.ShowTimer.rawValue:
             guard let timeConterController = segue.destination as? TimerVC else { return }
             let totalFocusHour = timeSetter.remainingMinutes * 60
             let background = view.backgroundColor

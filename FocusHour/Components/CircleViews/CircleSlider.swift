@@ -34,7 +34,7 @@ class CircleSlider: CircleView {
             ThumbTouchedRadius = 15.0
         }
         thumbRadius = ThumbNormalRadius
-        thumbView.backgroundColor = ColorEnum.getColor(name: .AppleGreen)
+        thumbView.backgroundColor = ColorKey.AppleGreen.uiColor()
         thumbView.isUserInteractionEnabled = false //不加这一句的话，小圆点会盖住下面的UIView，导致CircleSlider.touchesMoved失效..
         iconView.isUserInteractionEnabled = false
     }
@@ -68,7 +68,7 @@ class CircleSlider: CircleView {
         
         let ctx = UIGraphicsGetCurrentContext();
         // 设置背景，画一个空的圆环
-        ctx?.setFillColor(ColorEnum.getColor(name: .LightYellow).cgColor)
+        ctx?.setFillColor(ColorKey.LightYellow.uiColor().cgColor)
         ctx?.setShouldAntialias(true)
         ctx?.setStrokeColor(SLIDER_BACKGROUND_COLOR.cgColor)
         ctx?.setLineWidth(circleBorderWidth)

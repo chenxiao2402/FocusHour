@@ -23,13 +23,13 @@ class StartButton: UIButton {
         self.setTitle(LocalizationKey.Start.translate(), for: .normal)
         UITool.setCustomButtonSize(self)
         
-        layer.backgroundColor = ColorEnum.getColor(name: .Emerald).cgColor
+        layer.backgroundColor = ColorKey.Emerald.uiColor().cgColor
         layer.masksToBounds = false
         
         layer.borderWidth = 2.0;
         layer.borderColor = UIColor.clear.cgColor
         
-        layer.shadowColor = ColorEnum.getColor(name: .ForestGreen).cgColor
+        layer.shadowColor = ColorKey.ForestGreen.uiColor().cgColor
         layer.shadowOpacity = 1.0;
         layer.shadowOffset = CGSize(width: 0, height: 3)
 
@@ -38,11 +38,11 @@ class StartButton: UIButton {
     }
     
     @objc private func changeBackgroundColor() {
-        layer.backgroundColor = ColorEnum.getColor(name: .DarkEmerald).cgColor
+        layer.backgroundColor = ColorKey.DarkEmerald.uiColor().cgColor
     }
     
     @objc private func resetBackgroundColor() {
-        layer.backgroundColor = ColorEnum.getColor(name: .Emerald).cgColor
+        layer.backgroundColor = ColorKey.Emerald.uiColor().cgColor
     }
 
 }

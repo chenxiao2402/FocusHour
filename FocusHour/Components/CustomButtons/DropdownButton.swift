@@ -25,7 +25,7 @@ class DropdownButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true
         widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
-        backgroundColor = ColorEnum.getColor(name: .DarkSlateGray)
+        backgroundColor = ColorKey.DarkSlateGray.uiColor()
         titleLabel?.font = UIFont(name: "Verdana", size: 20)
 
         addTarget(self, action: #selector(DropdownButton.changeBackgroundColor), for: [.touchDown])
@@ -33,11 +33,11 @@ class DropdownButton: UIButton {
     }
     
     @objc private func changeBackgroundColor() {
-        backgroundColor = ColorEnum.getColor(name: .DarkSlateGray_Touched)
+        backgroundColor = ColorKey.DarkSlateGray_Touched.uiColor()
     }
     
     @objc private func resetBackgroundColor() {
-        backgroundColor = ColorEnum.getColor(name: .DarkSlateGray)
+        backgroundColor = ColorKey.DarkSlateGray.uiColor()
     }
     
 }

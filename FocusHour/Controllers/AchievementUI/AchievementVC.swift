@@ -47,7 +47,7 @@ class AchievementVC: UIViewController {
         selectedYear = year
         titleButton.setTitle("\(year)", for: .normal)
         cellInfoList.removeAll()
-        for month in MonthEnum.getKeyList() {
+        for month in MonthKey.getKeyList() {
             let monthNumber = month.getNumber()
             let minutes = PlantRecord.loadTotalTime(year: year, month: monthNumber)
             let text = "\(month.translate()) \(TimeTool.minuteFormat(of: minutes))"
@@ -77,7 +77,7 @@ class AchievementVC: UIViewController {
         
         switch(segue.identifier ?? "") {
             
-        case SegueEnum.ShowAchievementDetails.rawValue:
+        case SegueKey.ShowAchievementDetails.rawValue:
             guard let detailVC = segue.destination as? AchievementDetailVC else { return }
             let selectedCell = sender as! AchievementCell
             detailVC.year = selectedYear

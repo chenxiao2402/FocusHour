@@ -19,9 +19,9 @@ class SettingsVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = SettingEnum.Settings.translate()
-        setLanguageCell.keyVlue = SettingEnum.SetLanguage
-        aboutInfoCell.keyVlue = SettingEnum.About
+        navigationItem.title = SettingKey.Settings.translate()
+        setLanguageCell.keyVlue = SettingKey.SetLanguage
+        aboutInfoCell.keyVlue = SettingKey.About
     }
     
     @IBAction func close(_ sender: UIBarButtonItem) {

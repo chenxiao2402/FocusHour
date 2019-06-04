@@ -11,7 +11,7 @@ import UIKit
 class SoundSelectorCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
-    var sound: SoundEnum! {
+    var sound: SoundKey! {
         didSet {
             label.text = sound.translate()
         }
@@ -20,12 +20,12 @@ class SoundSelectorCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.clear
-        label.textColor = ColorEnum.getColor(name: .DimGray)
+        label.textColor = ColorKey.DimGray.uiColor()
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         if highlighted {
-             backgroundColor = ColorEnum.getColor(name: .LightGreen)
+             backgroundColor = ColorKey.LightGreen.uiColor()
         }
     }
     
@@ -36,7 +36,7 @@ class SoundSelectorCell: UITableViewCell {
     // 自定义的设置cell是否被选择（更改cell颜色和type）
     func setSelected(_ selected: Bool) {
         accessoryType = selected ? .checkmark : .none
-        backgroundColor = selected ? ColorEnum.getColor(name: .PaleGreen) : UIColor.clear
+        backgroundColor = selected ? ColorKey.PaleGreen.uiColor() : UIColor.clear
     }
     
     /*
@@ -55,7 +55,7 @@ class SoundSelectorCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         if selected {
             accessoryType = .checkmark
-            backgroundColor = ColorEnum.getColor(name: .PaleGreen)
+            backgroundColor = ColorKey.PaleGreen.getColor()
         } else {
             accessoryType = .detailButton
             backgroundColor = UIColor.clear

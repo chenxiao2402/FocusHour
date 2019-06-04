@@ -10,13 +10,13 @@ import UIKit
 
 class SoundSelectorVC: UITableViewController {
     
-    var soundList: [SoundEnum] = []
+    var soundList: [SoundKey] = []
     var timerVC: TimerVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = ColorEnum.getColor(name: .LightYellow)
-        soundList = SoundEnum.getKeyList()
+        view.backgroundColor = ColorKey.LightYellow.uiColor()
+        soundList = SoundKey.getKeyList()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

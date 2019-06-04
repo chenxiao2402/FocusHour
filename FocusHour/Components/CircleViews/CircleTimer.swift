@@ -27,7 +27,7 @@ class CircleTimer: CircleView {
         
         let ctx = UIGraphicsGetCurrentContext();
         // 设置背景，画圆形的背景
-        ctx?.setFillColor(ColorEnum.getColor(name: .LightYellow).cgColor)
+        ctx?.setFillColor(ColorKey.LightYellow.uiColor().cgColor)
         ctx?.setShouldAntialias(true)
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fill)

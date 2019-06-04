@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ColorEnum {
+enum ColorKey {
     case LightYellow
     case GrassGreen
     case LightKhaki
@@ -23,9 +23,9 @@ enum ColorEnum {
     case DarkSlateGray_Touched
 }
 
-extension ColorEnum {
-    static func getColor(name colorName: ColorEnum) -> UIColor {
-        switch colorName {
+extension ColorKey {
+    func uiColor() -> UIColor {
+        switch self {
         case .LightYellow:
             return #colorLiteral(red: 0.9999002814, green: 1, blue: 0.8651396632, alpha: 1)
         case .GrassGreen:

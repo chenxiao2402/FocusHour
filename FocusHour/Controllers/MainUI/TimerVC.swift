@@ -95,16 +95,18 @@ class TimerVC: ViewController {
         quit()
     }
     
-    @IBAction func showMusicSelector(_ sender: Any) {
-        guard let soundSelector = storyboard?.instantiateViewController(withIdentifier: "SoundSelector") as? SoundSelectorVC else { return }
-        soundSelector.modalPresentationStyle = .popover
-        soundSelector.preferredContentSize = CGSize(width: 200, height: 280)
-        soundSelector.timerVC = self
-        let popoverController = soundSelector.popoverPresentationController
-        popoverController?.delegate = self
-        popoverController?.sourceView = self.soundButton
-        popoverController?.sourceRect = soundButton.bounds
-        self.present(soundSelector, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch(segue.identifier ?? "") {
+        case SegueKey.ShowMusicSelector.rawValue:
+            let soundSelector = segue.destination as! SoundSelectorVC
+            let popoverController = soundSelector.popoverPresentationController
+            soundSelector.timerVC = self
+            soundSelector.preferredContentSize = CGSize(width: 200, height: 280)
+            popoverController?.delegate = self
+            popoverController?.sourceRect = soundButton.bounds
+        default:
+            return
+        }
     }
 }
 

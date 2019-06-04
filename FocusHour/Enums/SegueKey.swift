@@ -8,11 +8,12 @@
 
 import Foundation
 
-enum SegueEnum: String {
+enum SegueKey: String {
     case ShowSettings = "ShowSettings"
     case ShowTimer = "ShowTimer"
     case ShowAboutInfo = "ShowAboutInfo"
     case ShowSetLanguage = "ShowSetLanguage"
     case ShowAchievements = "ShowAchievements"
     case ShowAchievementDetails = "ShowAchievementDetails"
+    case ShowMusicSelector = "ShowMusicSelector"
 }

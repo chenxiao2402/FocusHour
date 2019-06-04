@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum SettingEnum: String {
+enum SettingKey: String {
     case Settings = "Settings"
     case SetLanguage = "SetLanguage"
     case About = "About"
 }
 
-extension SettingEnum {
+extension SettingKey {
     func translate() -> String {
         return LocalizationTool.translate(self.rawValue)
     }

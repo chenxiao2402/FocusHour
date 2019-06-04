@@ -8,18 +8,18 @@
 
 import Foundation
 
-enum LanguageEnum: String {
+enum LanguageKey: String {
     case English = "en"
     case Chinese = "zh-Hans"
     case Japanese = "ja"
 }
 
-extension LanguageEnum: CaseIterable  {
-    static func getKeyList() -> [LanguageEnum] {
-        return LanguageEnum.allCases
+extension LanguageKey: CaseIterable  {
+    static func getKeyList() -> [LanguageKey] {
+        return LanguageKey.allCases
     }
     
-    static func getCodeNames(startWith language: LanguageEnum) -> [String] {
+    static func getCodeNames(startWith language: LanguageKey) -> [String] {
         var languages = getKeyList()
         let index = languages.firstIndex(of: language)!
         languages.swapAt(0, index)

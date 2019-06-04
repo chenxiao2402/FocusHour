@@ -12,7 +12,7 @@ class SettingCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
-    var keyVlue: SettingEnum! {
+    var keyVlue: SettingKey! {
         didSet {
             label.text = keyVlue.translate()
         }

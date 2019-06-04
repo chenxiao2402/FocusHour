@@ -17,7 +17,7 @@ class IconCell: CollectionnCell {
         super.draw(rect)
         
         // 设置背景，画一个空的圆环
-        let strokeColor = ColorEnum.getColor(name: .LightYellow)
+        let strokeColor = ColorKey.LightYellow.uiColor()
         let ctx = UIGraphicsGetCurrentContext();
         ctx?.setFillColor(strokeColor.cgColor)
         ctx?.setShouldAntialias(true)

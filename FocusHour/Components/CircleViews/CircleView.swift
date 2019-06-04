@@ -13,8 +13,8 @@ class CircleView: UIView {
     let HALF_PI: CGFloat = CGFloat(Double.pi / 2)
     let TEN_MIN_ANGLE: CGFloat = CGFloat(Double.pi / 6)
     let TEN_MIN: Int = 600
-    let SLIDER_BACKGROUND_COLOR: UIColor = ColorEnum.getColor(name: .LightKhaki)
-    let SLIDER_PROGRESS_COLOR: UIColor = ColorEnum.getColor(name: .GrassGreen)
+    let SLIDER_BACKGROUND_COLOR: UIColor = ColorKey.LightKhaki.uiColor()
+    let SLIDER_PROGRESS_COLOR: UIColor = ColorKey.GrassGreen.uiColor()
     
     var radius: CGFloat = 0.0           //半径
     var drawCenter: CGPoint!       //绘制圆的圆心

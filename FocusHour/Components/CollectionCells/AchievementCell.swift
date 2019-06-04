@@ -23,7 +23,7 @@ class AchievementCell: CollectionnCell {
         let strokeColor = UIColor.white
         let circleBorderWidth: CGFloat = 5.0
         let ctx = UIGraphicsGetCurrentContext();
-        ctx?.setFillColor(ColorEnum.getColor(name: .LightYellow).cgColor)
+        ctx?.setFillColor(ColorKey.LightYellow.uiColor().cgColor)
         ctx?.setShouldAntialias(true)
         ctx?.setStrokeColor(strokeColor.cgColor)
         ctx?.setLineWidth(circleBorderWidth)
