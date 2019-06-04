@@ -25,16 +25,17 @@
 		5C25638A221ACF5400732477 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C256389221ACF5400732477 /* IconCell.swift */; };
 		5C25638C221ACFC700732477 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25638B221ACFC700732477 /* CollectionCell.swift */; };
 		5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C25638D221AE19C00732477 /* AchievementDetailVC.swift */; };
+		5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */; };
+		5C2AC04E22A6B4490012B39A /* ModeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC04D22A6B4490012B39A /* ModeTool.swift */; };
+		5C2AC05222A6CA1C0012B39A /* InfoPresenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */; };
 		5C374A7A220934870059EF2C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleView.swift */; };
 		5C3D03D82211AFE20089E96A /* Stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C3D03D72211AFE20089E96A /* Stream.mp3 */; };
 		5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D03D92211B0330089E96A /* SoundPlayer.swift */; };
 		5C3D03DC2211B8B60089E96A /* SoundKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D03DB2211B8B60089E96A /* SoundKey.swift */; };
 		5C3D03DE2211C35C0089E96A /* SoundSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D03DD2211C35C0089E96A /* SoundSelectorCell.swift */; };
 		5C4885D22212863400198B49 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885D12212863400198B49 /* SettingsVC.swift */; };
-		5C4885DB22128B7600198B49 /* SettingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885DA22128B7600198B49 /* SettingKey.swift */; };
 		5C4885DD221291AD00198B49 /* SegueKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885DC221291AD00198B49 /* SegueKey.swift */; };
-		5C4885DF2212965B00198B49 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885DE2212965B00198B49 /* SettingCell.swift */; };
-		5C4885E12212ED0200198B49 /* AboutInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885E02212ED0200198B49 /* AboutInfoVC.swift */; };
+		5C4885DF2212965B00198B49 /* SettingDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885DE2212965B00198B49 /* SettingDetailCell.swift */; };
 		5C4885E62212F7D900198B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4885E52212F7D900198B49 /* Main.storyboard */; };
 		5C4885E82212FF9500198B49 /* SetLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885E72212FF9400198B49 /* SetLanguageVC.swift */; };
 		5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4885E92213014E00198B49 /* LocalizationKey.swift */; };
@@ -93,16 +94,17 @@
 		5C256389221ACF5400732477 /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		5C25638B221ACFC700732477 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		5C25638D221AE19C00732477 /* AchievementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailVC.swift; sourceTree = "<group>"; };
+		5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSwitchCell.swift; sourceTree = "<group>"; };
+		5C2AC04D22A6B4490012B39A /* ModeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeTool.swift; sourceTree = "<group>"; };
+		5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPresenterVC.swift; sourceTree = "<group>"; };
 		5C374A79220934870059EF2C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5C3D03D72211AFE20089E96A /* Stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stream.mp3; sourceTree = "<group>"; };
 		5C3D03D92211B0330089E96A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		5C3D03DB2211B8B60089E96A /* SoundKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundKey.swift; sourceTree = "<group>"; };
 		5C3D03DD2211C35C0089E96A /* SoundSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSelectorCell.swift; sourceTree = "<group>"; };
 		5C4885D12212863400198B49 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		5C4885DA22128B7600198B49 /* SettingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingKey.swift; sourceTree = "<group>"; };
 		5C4885DC221291AD00198B49 /* SegueKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueKey.swift; sourceTree = "<group>"; };
-		5C4885DE2212965B00198B49 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		5C4885E02212ED0200198B49 /* AboutInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfoVC.swift; sourceTree = "<group>"; };
+		5C4885DE2212965B00198B49 /* SettingDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailCell.swift; sourceTree = "<group>"; };
 		5C4885E52212F7D900198B49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C4885E72212FF9400198B49 /* SetLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguageVC.swift; sourceTree = "<group>"; };
 		5C4885E92213014E00198B49 /* LocalizationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKey.swift; sourceTree = "<group>"; };
@@ -194,7 +196,6 @@
 				5C039661220DB0EC00CC1B2D /* ColorKey.swift */,
 				5C109FE022107556003D026E /* LanguageKey.swift */,
 				5C3D03DB2211B8B60089E96A /* SoundKey.swift */,
-				5C4885DA22128B7600198B49 /* SettingKey.swift */,
 				5C4885DC221291AD00198B49 /* SegueKey.swift */,
 				5C4885E92213014E00198B49 /* LocalizationKey.swift */,
 				5C256386221ABB6900732477 /* MonthKey.swift */,
@@ -235,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				5C3D03DD2211C35C0089E96A /* SoundSelectorCell.swift */,
-				5C4885DE2212965B00198B49 /* SettingCell.swift */,
+				5C4885DE2212965B00198B49 /* SettingDetailCell.swift */,
 				5C4885ED2213116300198B49 /* SetLanguageCell.swift */,
+				5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -254,8 +256,8 @@
 		5C4885D922128AF900198B49 /* SettingsUI */ = {
 			isa = PBXGroup;
 			children = (
+				5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */,
 				5C4885D12212863400198B49 /* SettingsVC.swift */,
-				5C4885E02212ED0200198B49 /* AboutInfoVC.swift */,
 				5C4885E72212FF9400198B49 /* SetLanguageVC.swift */,
 			);
 			path = SettingsUI;
@@ -331,6 +333,7 @@
 		5C80BF682207DEC500691E98 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5C2AC04D22A6B4490012B39A /* ModeTool.swift */,
 				5C109FDA220FF9BB003D026E /* UITool.swift */,
 				5C3D03D92211B0330089E96A /* SoundPlayer.swift */,
 				5C4885EB2213027800198B49 /* LocalizationTool.swift */,
@@ -497,7 +500,6 @@
 				5C50BFD62217F11100D6E289 /* AchievementVC.swift in Sources */,
 				5C4885EC2213027800198B49 /* LocalizationTool.swift in Sources */,
 				5C4885DD221291AD00198B49 /* SegueKey.swift in Sources */,
-				5C4885DB22128B7600198B49 /* SettingKey.swift in Sources */,
 				5C109FDB220FF9BB003D026E /* UITool.swift in Sources */,
 				5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */,
 				5C3D03DE2211C35C0089E96A /* SoundSelectorCell.swift in Sources */,
@@ -507,16 +509,17 @@
 				5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */,
 				5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */,
 				5C51FE142219C09600C60967 /* DropdownButton.swift in Sources */,
+				5C2AC04E22A6B4490012B39A /* ModeTool.swift in Sources */,
 				5C62456D2208486E00AAFD66 /* SetTimeVC.swift in Sources */,
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
-				5C4885DF2212965B00198B49 /* SettingCell.swift in Sources */,
+				5C2AC05222A6CA1C0012B39A /* InfoPresenterVC.swift in Sources */,
+				5C4885DF2212965B00198B49 /* SettingDetailCell.swift in Sources */,
 				5C50BFD8221802A900D6E289 /* YearSelector.swift in Sources */,
 				5C256387221ABB6900732477 /* MonthKey.swift in Sources */,
 				5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */,
 				5C3D03DC2211B8B60089E96A /* SoundKey.swift in Sources */,
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
-				5C4885E12212ED0200198B49 /* AboutInfoVC.swift in Sources */,
 				5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */,
 				5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */,
 				5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */,
@@ -526,6 +529,7 @@
 				5C109FE122107556003D026E /* LanguageKey.swift in Sources */,
 				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
 				5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */,
+				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

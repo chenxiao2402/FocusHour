@@ -45,13 +45,17 @@ Thunderstorm = "雷雨";
 // SetTimeView -> Settings
 Settings = "设置";
 SetLanguage = "设置语言";
-About = "关于";
+SetPhrase = "设置提示";
+ChangeThema = "更改主题";
 WorkingMode = "工作模式";
+NightMode = "夜间模式";
+ThisApp = "应用介绍";
+About = "关于";
 
 
 // SetTimeView -> Settings -> About
-Description = "“专注时刻”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。";
-AboutMe = "访问我的Github账号（https://github.com/Sephidator/FocusHour）来了解更多关于此应用的信息。";
+Introduction = "一款帮助你专注于自己工作的App。\n\n支持中、英、日三种语言。\n\n随机加载的漂亮纯色壁纸。\n\n\n在App中种下一棵树，放下手机并等待其成长。\n\n退出此应用的话你的树将枯萎。\n\n在成就界面查看自己种下的森林吧！";
+AboutUs = "“专注时刻”是一款帮助你专心于工作的应用。设定时间并种下树，之后放下手机并等待树长大。\n\n\n访问我的Github账号（https://github.com/Sephidator/FocusHour）来了解更多关于此应用的信息。";
 
 
 // SetTimeView -> Achievement

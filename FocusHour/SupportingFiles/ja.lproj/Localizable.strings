@@ -45,13 +45,17 @@ Thunderstorm = "雷雨";
 // SetTimeView -> Settings
 Settings = "設定";
 SetLanguage = "言語設定";
-About = "その他";
+SetPhrase = "フレイズ設定";
+ChangeThema = "テーマ変更";
 WorkingMode = "仕事モード";
+NightMode = "夜間モード";
+ThisApp = "このアプリ";
+About = "その他";
 
 
 // SetTimeView -> Settings -> About
-Description = "「フォーカス・アワー」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。";
-AboutMe = "私のGithubアカウント（https://github.com/Sephidator/FocusHour）を訪問すれば、このアプリの他の情報が見られる。";
+Introduction = "このアプリはあなたが仕事に集中できるために開発したものです。\n\n日本語、中国語、英語に対応。\n\n美しき純粋な壁紙をランダムに読み込む。\n\n\nアプリを使って君の木を植える、スマホを置けば木は成長する。\n\nこのアプリから離れるならあなたの木は枯れる。\n\n実績ページで君の森をチェックしましょう。";
+AboutUs = "「フォーカス・アワー」は、あなたを仕事に集中させるアプリです。時間を設定して木を植える。スマホを置けば木は成長する。\n\n\n私のGithubアカウント（https://github.com/Sephidator/FocusHour）を訪問すれば、このアプリの他の情報が見られる。";
 
 
 // SetTimeView -> Achievement

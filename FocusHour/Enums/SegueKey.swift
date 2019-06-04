@@ -11,6 +11,7 @@ import Foundation
 enum SegueKey: String {
     case ShowSettings = "ShowSettings"
     case ShowTimer = "ShowTimer"
+    case ShowIntroduction = "ShowIntroduction"
     case ShowAboutInfo = "ShowAboutInfo"
     case ShowSetLanguage = "ShowSetLanguage"
     case ShowAchievements = "ShowAchievements"

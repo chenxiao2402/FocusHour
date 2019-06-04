@@ -48,23 +48,25 @@ class TimerVC: ViewController {
             }
         })
         
-        backgroundObserver = NotificationCenter.default.addObserver(
-            forName: UIApplication.didEnterBackgroundNotification,
-            object: UIApplication.shared,
-            queue: OperationQueue.main,
-            using: { _ in
-                if !UITool.isScreenLocked() {
-                    self.backgroundCountdown()
-                }
-        })
-        
-        returnObserver = NotificationCenter.default.addObserver(
-            forName: UIApplication.willEnterForegroundNotification,
-            object: UIApplication.shared,
-            queue: OperationQueue.main,
-            using: { _ in
-                self.returnFromBackground()
-        })
+        if (!ModeTool.isMode(ofName: .WorkingMode)) {
+            backgroundObserver = NotificationCenter.default.addObserver(
+                forName: UIApplication.didEnterBackgroundNotification,
+                object: UIApplication.shared,
+                queue: OperationQueue.main,
+                using: { _ in
+                    if !UITool.isScreenLocked() {
+                        self.backgroundCountdown()
+                    }
+            })
+            
+            returnObserver = NotificationCenter.default.addObserver(
+                forName: UIApplication.willEnterForegroundNotification,
+                object: UIApplication.shared,
+                queue: OperationQueue.main,
+                using: { _ in
+                    self.returnFromBackground()
+            })
+        }
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
@@ -148,7 +150,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
             LocalizationKey.NotificationSuccess.translate() :
             LocalizationKey.NotificationDeath.translate()
         sendNotification(message)
-        NotificationCenter.default.removeObserver(self.backgroundObserver!)
+        if let observer = backgroundObserver { NotificationCenter.default.removeObserver(observer) }
     }
     
     private func backgroundCountdown() {

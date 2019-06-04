@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SettingCell: UITableViewCell {
+class SettingDetailCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
-    var keyVlue: SettingKey! {
+    var keyVlue: LocalizationKey! {
         didSet {
             label.text = keyVlue.translate()
         }

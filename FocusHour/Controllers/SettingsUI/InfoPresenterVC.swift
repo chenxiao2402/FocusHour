@@ -8,16 +8,17 @@
 
 import UIKit
 
-class AboutInfoVC: UIViewController {
+class InfoPresenterVC: UIViewController {
 
     @IBOutlet weak var textArea: UITextView!
+    var navTitle: String!
+    var info: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-        navigationItem.title = SettingKey.About.translate()
-        let description = LocalizationKey.Description.translate()
-        let aboutMe = LocalizationKey.AboutMe.translate()
-        textArea.text = "\(description)\n\n\(aboutMe)"
+        navigationItem.title = navTitle
+        textArea.text = info
     }
     
 

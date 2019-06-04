@@ -15,7 +15,7 @@ class SetLanguageVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-        navigationItem.title = SettingKey.SetLanguage.translate()
+        navigationItem.title = LocalizationKey.SetLanguage.translate()
         languages = LanguageKey.getKeyList()
     }
     
@@ -37,7 +37,7 @@ class SetLanguageVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         LocalizationTool.setSystemLanguage(languages[indexPath.row])
-        self.navigationItem.title = SettingKey.SetLanguage.translate()
+        self.navigationItem.title = LocalizationKey.SetLanguage.translate()
         for tableCell in self.tableView.visibleCells {
             let cell = tableCell as! SetLanguageCell
             cell.setSelected(cell.language.isSystemLanguage())

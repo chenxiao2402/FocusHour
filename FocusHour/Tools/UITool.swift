@@ -36,11 +36,18 @@ class UITool {
     }
     
     static func setBackgroundImage(_ view: UIView, random: Bool) {
-        UIGraphicsBeginImageContext(view.frame.size)
-        getBackgroundImage(random: random)?.draw(in: view.bounds)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        view.backgroundColor = UIColor.init(patternImage: image!)
+        if view is UITableView {
+            let tableView = view as! UITableView
+            let imageView = UIImageView.init(frame: view.bounds)
+            imageView.image = getBackgroundImage(random: random)
+            tableView.backgroundView = imageView
+        } else {
+            UIGraphicsBeginImageContext(view.frame.size)
+            getBackgroundImage(random: random)?.draw(in: view.bounds)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            view.backgroundColor = UIColor.init(patternImage: image!)
+        }
     }
     
     static func isScreenLocked() -> Bool{
