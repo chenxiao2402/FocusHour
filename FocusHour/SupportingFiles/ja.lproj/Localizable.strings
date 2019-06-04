@@ -46,6 +46,7 @@ Thunderstorm = "雷雨";
 Settings = "設定";
 SetLanguage = "言語設定";
 About = "その他";
+WorkingMode = "仕事モード";
 
 
 // SetTimeView -> Settings -> About

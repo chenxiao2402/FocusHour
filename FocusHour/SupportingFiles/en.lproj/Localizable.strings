@@ -46,7 +46,7 @@ Thunderstorm = "Thunderstorm";
 Settings = "Settings";
 SetLanguage = "Set Language";
 About = "About";
-
+WorkingMode = "WorkingMode";
 
 // SetTimeView -> Settings -> About
 Description = "FocusHour is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.";
