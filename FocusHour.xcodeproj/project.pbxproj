@@ -50,6 +50,8 @@
 		5C59369A220C2C3C00E7F5CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C593698220C2C3B00E7F5CF /* ViewController.swift */; };
 		5C62456D2208486E00AAFD66 /* SetTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456C2208486E00AAFD66 /* SetTimeVC.swift */; };
 		5C80BF5D2207D98100691E98 /* FocusHourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80BF5C2207D98100691E98 /* FocusHourTests.swift */; };
+		5C8BE5D822A7A32E00E5A4B5 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */; };
+		5C8BE5DA22A7A5D200E5A4B5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */; };
 		5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2047C221114870091DDFE /* SoundSelectorVC.swift */; };
 		5CF2048822117A9C0091DDFE /* Birds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF2048222117A960091DDFE /* Birds.mp3 */; };
 		5CF2048922117A9C0091DDFE /* Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CF2048322117A970091DDFE /* Rain.mp3 */; };
@@ -123,6 +125,8 @@
 		5C80BF582207D98100691E98 /* FocusHourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusHourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80BF5C2207D98100691E98 /* FocusHourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusHourTests.swift; sourceTree = "<group>"; };
 		5C80BF5E2207D98100691E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
+		5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5CF2047C221114870091DDFE /* SoundSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSelectorVC.swift; sourceTree = "<group>"; };
 		5CF2048222117A960091DDFE /* Birds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Birds.mp3; sourceTree = "<group>"; };
 		5CF2048322117A970091DDFE /* Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rain.mp3; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				5C4885E52212F7D900198B49 /* Main.storyboard */,
+				5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */,
+				5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */,
 				5C109FD6220FDE8F003D026E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -472,10 +478,12 @@
 				5C4885E62212F7D900198B49 /* Main.storyboard in Resources */,
 				5C198F02221525ED009B8096 /* None.mp3 in Resources */,
 				5CF2048C22117A9C0091DDFE /* Wind.mp3 in Resources */,
+				5C8BE5D822A7A32E00E5A4B5 /* Achievements.storyboard in Resources */,
 				5C109FD7220FDE8F003D026E /* LaunchScreen.storyboard in Resources */,
 				5CF2048D22117A9C0091DDFE /* Thunderstorm.mp3 in Resources */,
 				5CF2048922117A9C0091DDFE /* Rain.mp3 in Resources */,
 				5CF2048822117A9C0091DDFE /* Birds.mp3 in Resources */,
+				5C8BE5DA22A7A5D200E5A4B5 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
