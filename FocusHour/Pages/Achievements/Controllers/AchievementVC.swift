@@ -26,6 +26,9 @@ class AchievementVC: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.clear
         setCollectionLayout()
+        
+        PlantRecord.generateRandomRecords()
+        
         refreshAchievements(of: yearSelector.years.first ?? TimeTool.getCurrentYear())
     }
     

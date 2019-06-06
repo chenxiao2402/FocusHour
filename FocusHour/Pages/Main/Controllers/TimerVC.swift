@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import UserNotifications
 
-class TimerVC: ViewController {
+class TimerVC: UIViewController {
     
     let soundPlayer: SoundPlayer = SoundPlayer()
     let backgroundTimeLimit: Int = 10

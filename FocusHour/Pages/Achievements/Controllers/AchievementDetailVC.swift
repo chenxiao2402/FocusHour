@@ -13,18 +13,25 @@ class AchievementDetailVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var year: Int!
     var month: Int!
-    var recordList: [PlantRecord] = []
+    var recordsOfDay = Dictionary<Int, [PlantRecord]>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
-        recordList = PlantRecord.loadRecords(year: year, month: month)
-        setTitle()
+        for record in PlantRecord.loadRecords(year: year, month: month) {
+            if recordsOfDay.keys.contains(record.day) {
+                recordsOfDay[record.day]?.append(record)
+            } else {
+                recordsOfDay[record.day] = [record]
+            }
+        }
+        print(recordsOfDay)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.clear
         setCollectionLayout()
+        setTitle()
     }
     
     private func setTitle() {
@@ -54,15 +61,45 @@ class AchievementDetailVC: UIViewController {
 
 extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recordList.count
+    // 返回Section的数量
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return recordsOfDay.keys.count
     }
     
+    // 返回每个Section中cell的数量
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let keyArray = Array(recordsOfDay.keys)
+        return recordsOfDay[keyArray[section]]!.count
+    }
+    
+    // 返回自定义的cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCell", for: indexPath) as! IconCell
-        let icon = UIImage(named: recordList[indexPath.row].imgName)
-        let text = "\(recordList[indexPath.row].minute)\(LocalizationKey.Minute.translate())"
+        let day = Array(recordsOfDay.keys)[indexPath.section]
+        let record = recordsOfDay[day]![indexPath.item]
+        let icon = UIImage(named: record.imgName)
+        let text = "\(record.minute)\(LocalizationKey.Minute.translate())"
         cell.drawCell(icon: icon, text: text)
         return cell
+    }
+    
+    // 返回自定义的header
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        var reusableview:UICollectionReusableView!
+        
+        //分区头
+        if kind == UICollectionView.elementKindSectionHeader{
+            reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DateHeader", for: indexPath)
+            //设置头部标题
+//            let label = reusableview.viewWithTag(1) as! UILabel
+//            label.text = "2333333"
+        }
+        //分区尾
+        else if kind == UICollectionView.elementKindSectionFooter{
+            reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                           withReuseIdentifier: "DateFooter", for: indexPath)
+        }
+        return reusableview
     }
 }

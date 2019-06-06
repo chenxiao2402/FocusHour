@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetTimeVC: ViewController {
+class SetTimeVC: UIViewController {
     
     @IBOutlet weak var timeSetter: CircleSlider!
     @IBOutlet weak var startButton: StartButton!

@@ -67,7 +67,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="trophy"/>
                                 <connections>
-                                    <segue destination="dez-MH-nZw" kind="presentation" identifier="ShowAchievements" modalTransitionStyle="partialCurl" id="o4m-ox-XBW"/>
+                                    <segue destination="dez-MH-nZw" kind="presentation" identifier="ShowAchievements" modalTransitionStyle="crossDissolve" id="o4m-ox-XBW"/>
                                 </connections>
                             </button>
                         </subviews>
