@@ -36,4 +36,30 @@ class TimeTool {
         let hour = minute / 60
         return hour > 0 ? "\(hour)\(LocalizationKey.Hour.translate())" : "\(minute)\(LocalizationKey.Minute.translate())"
     }
+    
+    static func dateFormat(month: Int, day: Int) -> String{
+        let localizedMonth = MonthKey.getMonth(fromNumber: month)!.translate()
+        guard let systemLanguage = LanguageKey.systemLanguage() else {
+            return "\(month)-\(day)"
+        }
+        switch systemLanguage {
+        case LanguageKey.English:
+            var suffix = ""
+            switch day {
+            case 1, 21, 31:
+                suffix = "st"
+            case 2, 22:
+                suffix = "nd"
+            case 3, 23:
+                suffix = "rd"
+            default:
+                suffix = "th"
+            }
+            return "\(localizedMonth) \(day)\(suffix)"
+        case LanguageKey.Chinese:
+            return "\(localizedMonth)\(day)日"
+        case LanguageKey.Japanese:
+            return "\(localizedMonth)\(day)日"
+        }
+    }
 }

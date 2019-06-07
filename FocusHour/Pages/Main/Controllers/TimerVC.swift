@@ -70,6 +70,9 @@ class TimerVC: UIViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
+        // 随机生成数据并保存，注意正式使用的时候删掉
+        PlantRecord.generateRandomRecords()
+        
         if !cancelable {
             let message = circleTimer.treeHasGrownUp() ?
                 LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()

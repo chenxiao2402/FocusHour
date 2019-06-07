@@ -46,7 +46,7 @@ enum LocalizationKey: String {
     
     case Introduction = "Introduction"
     case AboutUs = "AboutUs"
-
+    
     case Jan = "Jan"
     case Feb = "Feb"
     case Mar = "Mar"
@@ -61,6 +61,7 @@ enum LocalizationKey: String {
     case Dec = "Dec"
     case Hour = "Hour"
     case Minute = "Minute"
+    case ARForest = "ARForest"
 }
 
 extension LocalizationKey {

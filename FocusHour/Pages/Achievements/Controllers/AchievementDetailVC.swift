@@ -8,12 +8,19 @@
 
 import UIKit
 
+
+struct Record {
+    var day: Int
+    var focusTime: [Int]
+}
+
 class AchievementDetailVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var year: Int!
     var month: Int!
     var recordsOfDay = Dictionary<Int, [PlantRecord]>()
+    var dayList: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +32,23 @@ class AchievementDetailVC: UIViewController {
                 recordsOfDay[record.day] = [record]
             }
         }
-        print(recordsOfDay)
-        
+        dayList = recordsOfDay.keys.sorted()
+
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.clear
         setCollectionLayout()
         setTitle()
+        
+        navigationItem.rightBarButtonItem?.title = LocalizationKey.ARForest.translate()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if year == TimeTool.getCurrentYear() && month == TimeTool.getCurrentMonth() {
+            let bottomOfSet = CGPoint(x: 0, y: self.collectionView.contentSize.height - self.collectionView.bounds.size.height)
+            collectionView.setContentOffset(bottomOfSet, animated: false)
+        }
     }
     
     private func setTitle() {
@@ -61,22 +78,20 @@ class AchievementDetailVC: UIViewController {
 
 extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    // 返回Section的数量
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recordsOfDay.keys.count
+    // 获取分区数
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return dayList.count
     }
     
     // 返回每个Section中cell的数量
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let keyArray = Array(recordsOfDay.keys)
-        return recordsOfDay[keyArray[section]]!.count
+        return recordsOfDay[dayList[section]]!.count
     }
     
     // 返回自定义的cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCell", for: indexPath) as! IconCell
-        let day = Array(recordsOfDay.keys)[indexPath.section]
-        let record = recordsOfDay[day]![indexPath.item]
+        let record = recordsOfDay[dayList[indexPath.section]]![indexPath.item]
         let icon = UIImage(named: record.imgName)
         let text = "\(record.minute)\(LocalizationKey.Minute.translate())"
         cell.drawCell(icon: icon, text: text)
@@ -92,8 +107,8 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
         if kind == UICollectionView.elementKindSectionHeader{
             reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DateHeader", for: indexPath)
             //设置头部标题
-//            let label = reusableview.viewWithTag(1) as! UILabel
-//            label.text = "2333333"
+            let label = reusableview.viewWithTag(1) as! UILabel
+            label.text = TimeTool.dateFormat(month: month, day: dayList[indexPath.section])
         }
         //分区尾
         else if kind == UICollectionView.elementKindSectionFooter{

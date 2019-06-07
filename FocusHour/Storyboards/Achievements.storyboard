@@ -104,13 +104,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="S8g-Br-4eN">
                                     <size key="itemSize" width="0.0" height="0.0"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
-                                    <size key="footerReferenceSize" width="50" height="20"/>
-                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <size key="headerReferenceSize" width="50" height="60"/>
+                                    <size key="footerReferenceSize" width="50" height="32"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="tow-8v-4uE" customClass="IconCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="58" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="8" y="60" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -118,29 +118,24 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="TzR-Ju-LPl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07v-zA-ENI">
-                                            <rect key="frame" x="13" y="13" width="53.5" height="24.5"/>
-                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-sB-NqH">
+                                            <rect key="frame" x="24" y="17.5" width="84.5" height="34.5"/>
+                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.40507582110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstItem="07v-zA-ENI" firstAttribute="leading" secondItem="TzR-Ju-LPl" secondAttribute="leadingMargin" constant="5" id="5Ju-9x-We3"/>
-                                        <constraint firstItem="07v-zA-ENI" firstAttribute="centerY" secondItem="TzR-Ju-LPl" secondAttribute="centerY" id="liU-XL-UYB"/>
+                                        <constraint firstItem="9xB-sB-NqH" firstAttribute="leading" secondItem="TzR-Ju-LPl" secondAttribute="leading" constant="24" id="Aia-1b-Ncr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9xB-sB-NqH" secondAttribute="bottom" id="JeA-4H-KwU"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="label" destination="07v-zA-ENI" id="BEk-Gt-Jm0"/>
-                                    </connections>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateFooter" id="iMx-la-7r5">
-                                    <rect key="frame" x="0.0" y="66" width="414" height="20"/>
+                                    <rect key="frame" x="0.0" y="60" width="414" height="32"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
@@ -153,14 +148,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LiC-PJ-yC6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C"/>
+                    <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C">
+                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="0bp-aG-XAm" id="ky6-a5-W2U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyQ-yW-eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1830" y="321"/>
+            <point key="canvasLocation" x="-1830.4347826086957" y="320.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">
@@ -190,6 +187,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AR" width="24" height="24"/>
         <image name="arrow-down" width="18" height="18"/>
     </resources>
 </document>
