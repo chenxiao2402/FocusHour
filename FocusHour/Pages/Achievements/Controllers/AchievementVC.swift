@@ -37,7 +37,7 @@ class AchievementVC: UIViewController {
         // 但是最外层的view的宽度就是准确的...
         let cellNumPerLine: CGFloat = UIDevice().model == "iPad" ? 3 : 2
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let space: CGFloat = 32
+        let space: CGFloat = 16
         let width = (view.frame.size.width - space * (cellNumPerLine + 1)) / cellNumPerLine
         let height = width * AchievementCell.ratio
         layout.itemSize = CGSize(width: Int(width), height: Int(height))  // 最后设置宽和高的时候要取整抹零，不然零点几的宽度差会把cell挤到下一行
@@ -96,10 +96,10 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCell", for: indexPath) as! AchievementCell
+        let focusMinute = PlantRecord.loadTotalTime(year: selectedYear, month: cellInfoList[indexPath.row].0)
         cell.month = cellInfoList[indexPath.row].0
-        cell.drawCell(icon: UIImage(named: "trophy"), text: cellInfoList[indexPath.row].1)
+        cell.drawCell(focusMinute: focusMinute, text: cellInfoList[indexPath.row].1)
         cell.isUserInteractionEnabled = cellInfoList[indexPath.row].2
         return cell
     }
-
 }
