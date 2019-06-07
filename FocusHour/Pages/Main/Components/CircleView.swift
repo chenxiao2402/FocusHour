@@ -82,29 +82,15 @@ class CircleView: UIView {
 
 extension CircleView {
     func getImageBy(remainingMinutes time: Int) -> UIImage? {
-        let timeRange = [0, 3, 6, 10, 25, 50, 75, 100, 120]
+        let range = [0, 3, 6, 10, 25, 50, 75, 100, 120]
         let imageList = ["grow-bud", "grow-leaf", "grow-plant", "level1-bonsai", "level2-bamboo", "level3-tree", "level4-trees", "level5-woods", "level6-forest"]
-        
-        var imageName = imageList[0]
-        for (i, timeBoundry) in timeRange.enumerated() {
-            if (time >= timeBoundry) {
-                imageName = imageList[i]
-            }
-        }
-        return UIImage(named: imageName)
+        return UIImage(named: ImageTool.getTableDrivenImage(ofTime: time, timeRange: range, imageList: imageList))
     }
     
     func getImageNameBy(focusMinutes time: Int) -> String {
-        let timeRange = [0, 10, 25, 50, 75, 100, 120]
+        let range = [0, 10, 25, 50, 75, 100, 120]
         let imageList = ["level0-baretree", "level1-bonsai", "level2-bamboo", "level3-tree", "level4-trees", "level5-woods", "level6-forest"]
-        
-        var imageName = imageList[0]
-        for (i, timeBoundry) in timeRange.enumerated() {
-            if (time >= timeBoundry) {
-                imageName = imageList[i]
-            }
-        }
-        return imageName
+        return ImageTool.getTableDrivenImage(ofTime: time, timeRange: range, imageList: imageList)
     }
     
     func timeFormat() -> String {

@@ -39,11 +39,11 @@ class UITool {
         if view is UITableView {
             let tableView = view as! UITableView
             let imageView = UIImageView.init(frame: view.bounds)
-            imageView.image = getBackgroundImage(random: random)
+            imageView.image = ImageTool.getBackgroundImage(random: random)
             tableView.backgroundView = imageView
         } else {
             UIGraphicsBeginImageContext(view.frame.size)
-            getBackgroundImage(random: random)?.draw(in: view.bounds)
+            ImageTool.getBackgroundImage(random: random)?.draw(in: view.bounds)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             view.backgroundColor = UIColor.init(patternImage: image!)
@@ -57,16 +57,5 @@ class UITool {
         // 然而上述对于brightness的操作app打开时只能进行一次，之后的更改都会没有效果（WTF）
         // 所以写成下面这样，虽然不完美，但是大多数时候能正常运行...
         return UIScreen.main.brightness == 0.0
-    }
-}
-
-extension UITool {
-    private static func getBackgroundImage(random: Bool) -> UIImage? {
-        if !random {
-            return UIImage(named: "base-background")
-        } else {
-            let index = Int.random(in: 0..<8)
-            return UIImage(named: "background-\(index)")
-        }
     }
 }
