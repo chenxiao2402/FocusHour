@@ -52,6 +52,7 @@ NightMode = "Night Mode";
 ThisApp = "This App";
 About = "About";
 
+
 // SetTimeView -> Settings -> About
 Introduction = "An app that will help you focus on your work.\n\nEnglish, Chinese, Japanese are supported.\n\nRandom beautiful pure wallpaper.\n\n\nPlant a tree, then put down your phone and wait for it to grow up.\n\nYour tree will die if you quit this app.\n\nCheck your forest in the achievement page.";
 AboutMe = "FocusHour is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.\n\n\nCheck my Github account(https://github.com/Sephidator/FocusHour) to get more information about this APP.";
@@ -72,3 +73,4 @@ Nov = "Nov";
 Dec = "Dec";
 Hour = "h";
 Minute = "min";
+ARForest = "AR Forest";

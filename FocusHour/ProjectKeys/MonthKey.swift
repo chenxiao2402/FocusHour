@@ -28,6 +28,10 @@ extension MonthKey: CaseIterable {
         return MonthKey.allCases
     }
     
+    static func getMonth(fromNumber number: Int) -> MonthKey? {
+        return number >= 1 && number <= 12 ? getKeyList()[number-1] : nil
+    }
+    
     func getNumber() -> Int {
         return MonthKey.getKeyList().firstIndex(of: self)! + 1
     }

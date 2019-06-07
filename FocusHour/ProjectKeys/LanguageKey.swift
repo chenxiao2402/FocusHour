@@ -28,9 +28,18 @@ extension LanguageKey: CaseIterable  {
         }
     }
     
+    static func systemLanguage() -> LanguageKey? {
+        for key in getKeyList() {
+            if key.isSystemLanguage() {
+                return key
+            }
+        }
+        return nil
+    }
+    
     func isSystemLanguage() -> Bool {
         let systemLanguage: String = (UserDefaults.standard.object(forKey: "AppleLanguages") as! NSArray).firstObject as! String
-        return systemLanguage == self.rawValue
+        return systemLanguage.hasPrefix(self.rawValue)
     }
     
     func getName() -> String {
