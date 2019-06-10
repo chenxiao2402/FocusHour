@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039661220DB0EC00CC1B2D /* ColorKey.swift */; };
 		5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* StartButton.swift */; };
+		5C09B33E22AE011B007C97E7 /* ArForestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09B33D22AE011B007C97E7 /* ArForestController.swift */; };
+		5C09B34022AE017D007C97E7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C09B33F22AE017D007C97E7 /* art.scnassets */; };
 		5C109FBA220FC792003D026E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C109FBC220FC792003D026E /* InfoPlist.strings */; };
 		5C109FC6220FCA26003D026E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C109FC8220FCA26003D026E /* Localizable.strings */; };
 		5C109FD7220FDE8F003D026E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C109FD6220FDE8F003D026E /* LaunchScreen.storyboard */; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		5C039661220DB0EC00CC1B2D /* ColorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKey.swift; sourceTree = "<group>"; };
 		5C039666220DD4C000CC1B2D /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		5C09B33D22AE011B007C97E7 /* ArForestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArForestController.swift; sourceTree = "<group>"; };
+		5C09B33F22AE017D007C97E7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5C109FBB220FC792003D026E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C109FBD220FC7AE003D026E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5C109FBE220FC7AF003D026E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				5C50BFD7221802A900D6E289 /* YearSelector.swift */,
 				5C25638D221AE19C00732477 /* AchievementDetailVC.swift */,
 				5C48DACF22AA0EF5000EA35A /* CollectionViewController.swift */,
+				5C09B33D22AE011B007C97E7 /* ArForestController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 		5C593696220C2C2B00E7F5CF /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5C09B33F22AE017D007C97E7 /* art.scnassets */,
 				5C593697220C2C3B00E7F5CF /* AppDelegate.swift */,
 				5C240234220D7512002A1EF6 /* Assets.xcassets */,
 				5C80BF532207D98100691E98 /* Info.plist */,
@@ -485,6 +491,7 @@
 				5C109FBA220FC792003D026E /* InfoPlist.strings in Resources */,
 				5C4885E62212F7D900198B49 /* Main.storyboard in Resources */,
 				5C198F02221525ED009B8096 /* None.mp3 in Resources */,
+				5C09B34022AE017D007C97E7 /* art.scnassets in Resources */,
 				5CF2048C22117A9C0091DDFE /* Wind.mp3 in Resources */,
 				5C8BE5D822A7A32E00E5A4B5 /* Achievements.storyboard in Resources */,
 				5C109FD7220FDE8F003D026E /* LaunchScreen.storyboard in Resources */,
@@ -546,6 +553,7 @@
 				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
 				5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */,
 				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
+				5C09B33E22AE011B007C97E7 /* ArForestController.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

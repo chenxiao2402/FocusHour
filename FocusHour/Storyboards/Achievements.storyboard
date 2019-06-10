@@ -122,8 +122,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-sB-NqH">
-                                            <rect key="frame" x="24" y="17.5" width="84.5" height="34.5"/>
-                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="28"/>
+                                            <rect key="frame" x="24" y="22.5" width="72.5" height="29.5"/>
+                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -149,7 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="LiC-PJ-yC6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C">
-                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM"/>
+                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM">
+                            <connections>
+                                <segue destination="ahK-EF-RJL" kind="showDetail" id="uze-gl-yQQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="0bp-aG-XAm" id="ky6-a5-W2U"/>
@@ -158,6 +162,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyQ-yW-eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1830.4347826086957" y="320.75892857142856"/>
+        </scene>
+        <!--Forest Controller-->
+        <scene sceneID="ifK-OZ-L58">
+            <objects>
+                <viewController id="ahK-EF-RJL" customClass="ARForestController" customModule="FocusHour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UoF-AA-59z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFu-1U-WPI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-O2-5CR">
+                                <rect key="frame" x="167" y="772" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.40507582110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bPG-Pm-mB5"/>
+                                    <constraint firstAttribute="width" constant="80" id="cag-TM-1U5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mFu-1U-WPI" firstAttribute="trailing" secondItem="pGZ-Lm-fCI" secondAttribute="trailing" id="7Pp-Uk-wTH"/>
+                            <constraint firstAttribute="bottom" secondItem="mFu-1U-WPI" secondAttribute="bottom" id="ZxJ-YW-w1e"/>
+                            <constraint firstItem="pGZ-Lm-fCI" firstAttribute="bottom" secondItem="JuN-O2-5CR" secondAttribute="bottom" constant="10" id="kRg-3v-qRH"/>
+                            <constraint firstItem="JuN-O2-5CR" firstAttribute="centerX" secondItem="UoF-AA-59z" secondAttribute="centerX" id="m07-vo-D5A"/>
+                            <constraint firstItem="mFu-1U-WPI" firstAttribute="leading" secondItem="pGZ-Lm-fCI" secondAttribute="leading" id="qAe-Ls-vEY"/>
+                            <constraint firstItem="mFu-1U-WPI" firstAttribute="top" secondItem="UoF-AA-59z" secondAttribute="top" id="sjO-uJ-QBd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pGZ-Lm-fCI"/>
+                    </view>
+                    <connections>
+                        <outlet property="ARForestView" destination="mFu-1U-WPI" id="x6M-Qr-7wY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwP-ks-jFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839.13043478260875" y="284.59821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">
