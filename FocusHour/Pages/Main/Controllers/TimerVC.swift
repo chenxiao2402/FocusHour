@@ -41,7 +41,7 @@ class TimerVC: UIViewController {
         mainTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
                 self.circleTimer.resetTime()
-                self.cancelable = self.circleTimer.FocusHour <= self.cancelableTimeLimit
+                self.cancelable = self.circleTimer.FocusTime <= self.cancelableTimeLimit
                 self.setStopButtonTitle()
             } else {
                 self.end()
@@ -127,7 +127,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     
     private func setStopButtonTitle() {
         let title = cancelable ?
-            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.FocusHour))" :
+            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.FocusTime))" :
             LocalizationKey.Giveup.translate()
         stopButton.setTitle(title, for: .normal)
     }
@@ -151,7 +151,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
         
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.NotificationSuccess.translate() :
-            LocalizationKey.NotificationDeath.translate()
+            LocalizationKey.NotificationFailure.translate()
         sendNotification(message)
         if let observer = backgroundObserver { NotificationCenter.default.removeObserver(observer) }
     }

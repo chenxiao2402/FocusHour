@@ -44,18 +44,7 @@ class TimeTool {
         }
         switch systemLanguage {
         case LanguageKey.English:
-            var suffix = ""
-            switch day {
-            case 1, 21, 31:
-                suffix = "st"
-            case 2, 22:
-                suffix = "nd"
-            case 3, 23:
-                suffix = "rd"
-            default:
-                suffix = "th"
-            }
-            return "\(localizedMonth) \(day)\(suffix)"
+            return "\(localizedMonth) \(day)"
         case LanguageKey.Chinese:
             return "\(localizedMonth)\(day)日"
         case LanguageKey.Japanese:

@@ -28,7 +28,7 @@ Yes = "はい";
 No = "いいえ";
 Cancel = "キャンセル";
 Notification-Success = "木が大きくなった";
-Notification-Death = "あなたの木は枯れた";
+Notification-Failure = "木が育てなかった";
 Notification-Alert = "すぐ戻らないと、あなたの木は枯れてしまう";
 
 

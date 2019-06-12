@@ -28,7 +28,7 @@ Yes = "Yes";
 No = "No";
 Cancel = "Cancel";
 Notification-Success = "Tree has grown";
-Notification-Death = "Your tree died";
+Notification-Failure = "Your tree didn't grow up";
 Notification-Alert = "Your tree will die if you don't come back soon";
 
 

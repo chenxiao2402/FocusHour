@@ -28,7 +28,7 @@ Yes = "是";
 No = "否";
 Cancel = "取消";
 Notification-Success = "你的树长大了";
-Notification-Death = "你的树枯萎了";
+Notification-Failure = "你的树没有长大";
 Notification-Alert = "快点回来，不然你的树会枯萎";
 
 

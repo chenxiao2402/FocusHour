@@ -9,9 +9,6 @@
 import UIKit
 
 class YearSelector: UIStackView {
-
-
-    //MARK: Properties
     
     @IBInspectable var zPosition: CGFloat = 1 {
         didSet {

@@ -9,7 +9,7 @@
 import UIKit
 
 class CircleTimer: CircleView {
-    var FocusHour: Int = 0  // How long you have focused
+    var FocusTime: Int = 0  // How long you have focused
     var remainingTime: Int = 0 {  // The remainging time that you need to focus, calculated by SECONDS
         didSet {
             remainingMinutes = remainingTime / 60
@@ -32,14 +32,14 @@ class CircleTimer: CircleView {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fill)
         
-        drawIconView(getImageBy(remainingMinutes: FocusHour / 60))
+        drawIconView(getIconImageBy(focusMinutes: FocusTime / 60))
         drawHeadLabel(LocalizationKey.CountdownTitle.translate())
         drawFootLabel(timeFormat(), isTime: true)
     }
     
     func resetTime() {
         remainingTime -= 1
-        FocusHour += 1
+        FocusTime += 1
     }
     
     func drawResult(needsToSave: Bool) {
@@ -50,14 +50,14 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
             drawFootLabel(LocalizationKey.YouCanDoBetter.translate(), isTime: false)
         } else {
-            drawIconView(UIImage(named: "level0-baretree"))
-            drawHeadLabel(LocalizationKey.NotificationDeath.translate())
+            drawIconView(UIImage(named: "BareTree"))
+            drawHeadLabel(LocalizationKey.NotificationFailure.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
         
         if needsToSave {
-            let minute = FocusHour/60 > 0 ? FocusHour/60 : 1
-            let imgName = getImageNameBy(focusMinutes: minute)
+            let minute = FocusTime/60 > 0 ? FocusTime/60 : 1
+            let imgName = getRecordImageNameBy(focusMinutes: minute)
             let plantRecord = PlantRecord(imgName: imgName, minute: minute)
             plantRecord?.save()
         }
@@ -66,6 +66,6 @@ class CircleTimer: CircleView {
 
 extension CircleTimer {
     func treeHasGrownUp() -> Bool {
-        return FocusHour >= TEN_MIN
+        return FocusTime >= TEN_MIN
     }
 }

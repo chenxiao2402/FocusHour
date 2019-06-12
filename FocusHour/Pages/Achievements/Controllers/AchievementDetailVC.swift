@@ -21,11 +21,14 @@ class AchievementDetailVC: UIViewController {
     var month: Int!
     var recordsOfDay = Dictionary<Int, [PlantRecord]>()
     var dayList: [Int] = []
+    var levelList: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UITool.setBackgroundImage(view, random: false)
         for record in PlantRecord.loadRecords(year: year, month: month) {
+            levelList.append(ImageTool.getIndex(focusMinutes: record.minute, timeRange: SystemConstant.FocusRecordRange))
+            
             if recordsOfDay.keys.contains(record.day) {
                 recordsOfDay[record.day]?.append(record)
             } else {
@@ -61,18 +64,14 @@ class AchievementDetailVC: UIViewController {
         navigationItem.titleView = titleLabel
     }
     
+    // 类似AchievementVC中的同名方法
     private func setCollectionLayout() {
-        // 在给layout设置itemSize的时候，需要使用view.frame.size，而不是collectionView.frame.size
-        // 虽然在storyboard中，collectionView被view完全包住（前者到后者safearea的top、leading、bottom、trailing space都是0）
-        // 但是如果在interface builder中选择view as iPhoneX，但是程序在iPhone8上运行的时候：
-        // collectionView.frame.sizew.width = 414（对应iPX的宽度）；而不是iP8的宽度375
-        // 但是最外层的view的宽度就是准确的...
         let cellNumPerLine: CGFloat = UIDevice().model == "iPad" ? 4 : 3
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let space: CGFloat = 8
         let width = (view.frame.size.width - space * (cellNumPerLine + 1)) / cellNumPerLine
         let height = width * IconCell.ratio
-        layout.itemSize = CGSize(width: Int(width), height: Int(height))  // 最后设置宽和高的时候要取整抹零，不然零点几的宽度差会把cell挤到下一行
+        layout.itemSize = CGSize(width: Int(width), height: Int(height))
     }
 }
 
@@ -90,10 +89,11 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
     
     // 返回自定义的cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCell", for: indexPath) as! IconCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecordCell", for: indexPath) as! RecordCell
         let record = recordsOfDay[dayList[indexPath.section]]![indexPath.item]
         let icon = UIImage(named: record.imgName)
         let text = "\(record.minute)\(LocalizationKey.Minute.translate())"
+        cell.focusMinutes = record.minute
         cell.drawCell(icon: icon, text: text)
         return cell
     }
@@ -116,5 +116,35 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
                                                                            withReuseIdentifier: "DateFooter", for: indexPath)
         }
         return reusableview
+    }
+    
+    // 处理点击事件
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? RecordCell else { return }
+        let level = ImageTool.getIndex(focusMinutes: cell.focusMinutes, timeRange: SystemConstant.FocusRecordRange)
+        if level == 0 {
+            alert(message: LocalizationKey.NotificationFailure.translate())
+        } else {
+            performSegue(withIdentifier: SegueKey.showARForest.rawValue, sender: level)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let level = sender as? Int else { return }
+        switch(segue.identifier ?? "") {
+        case SegueKey.showARForest.rawValue:
+            guard let ARForest = segue.destination as? ARForestController else { return }
+            ARForest.level = level
+        default:
+            return
+        }
+    }
+    
+    func alert(message: String) {
+        let alertController = UIAlertController(title: message, message: "", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: LocalizationKey.Yes.translate(), style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

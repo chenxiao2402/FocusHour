@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AchievementCell: IconCell {
+class MonthCell: IconCell {
+    
     var month: Int!
     
     func drawCell(focusMinute: Int, text: String) {
@@ -18,8 +19,8 @@ class AchievementCell: IconCell {
     }
     
     func getImage(ByFocusMinutePerMonth minute: Int) -> UIImage? {
-        let range = [0, 60, 300, 600, 1200, 2400, 3600]
-        let imageList = ["level0-baretree", "level1-bonsai", "level2-bamboo", "level3-tree", "level4-trees", "level5-woods", "level6-forest"]
-        return UIImage(named: ImageTool.getTableDrivenImage(ofTime: minute, timeRange: range, imageList: imageList))
+        let range = SystemConstant.MonthAchievementMinueRange
+        let series = "Achievement"
+        return UIImage(named: "\(series)-\(ImageTool.getIndex(focusMinutes: minute, timeRange: range) + 1)")
     }
 }
