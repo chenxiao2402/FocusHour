@@ -9,6 +9,7 @@
 import UIKit
 
 class ImageTool {
+    
     static func getBackgroundImage(random: Bool) -> UIImage? {
         if !random {
             return UIImage(named: "base-background")
@@ -19,12 +20,18 @@ class ImageTool {
     }
     
     static func getTableDrivenImage(ofTime time: Int, timeRange: [Int], imageList: [String]) -> String {
-        var imageName = imageList[0]
+        return imageList[getIndex(focusMinutes: time, timeRange: timeRange)]
+    }
+    
+    static func getIndex(focusMinutes: Int, timeRange: [Int]) -> Int {
+        var index = 0
         for (i, timeBoundry) in timeRange.enumerated() {
-            if (time >= timeBoundry) {
-                imageName = imageList[i]
+            if (focusMinutes >= timeBoundry) {
+                index = i
+            } else {
+                break
             }
         }
-        return imageName
+        return index
     }
 }

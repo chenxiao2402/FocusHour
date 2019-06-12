@@ -34,13 +34,12 @@ class SetTimeVC: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         switch(segue.identifier ?? "") {
-            
         case SegueKey.ShowTimer.rawValue:
-            guard let timeConterController = segue.destination as? TimerVC else { return }
+            guard let timerVC = segue.destination as? TimerVC else { return }
             let totalFocusHour = timeSetter.remainingMinutes * 60
             let background = view.backgroundColor
-            timeConterController.view.backgroundColor = background
-            timeConterController.circleTimer.remainingTime = totalFocusHour
+            timerVC.view.backgroundColor = background
+            timerVC.circleTimer.remainingTime = totalFocusHour
         default:
             return
         }

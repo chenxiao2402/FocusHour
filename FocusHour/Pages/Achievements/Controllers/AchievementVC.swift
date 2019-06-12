@@ -39,7 +39,7 @@ class AchievementVC: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let space: CGFloat = 16
         let width = (view.frame.size.width - space * (cellNumPerLine + 1)) / cellNumPerLine
-        let height = width * AchievementCell.ratio
+        let height = width * MonthCell.ratio
         layout.itemSize = CGSize(width: Int(width), height: Int(height))  // 最后设置宽和高的时候要取整抹零，不然零点几的宽度差会把cell挤到下一行
     }
     
@@ -76,10 +76,9 @@ class AchievementVC: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         switch(segue.identifier ?? "") {
-            
         case SegueKey.ShowAchievementDetails.rawValue:
             guard let detailVC = segue.destination as? AchievementDetailVC else { return }
-            let selectedCell = sender as! AchievementCell
+            let selectedCell = sender as! MonthCell
             detailVC.year = selectedYear
             detailVC.month = selectedCell.month
         default:
@@ -88,6 +87,7 @@ class AchievementVC: UIViewController {
     }
 }
 
+
 extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -95,7 +95,7 @@ extension AchievementVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCell", for: indexPath) as! AchievementCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCell", for: indexPath) as! MonthCell
         let focusMinute = PlantRecord.loadTotalTime(year: selectedYear, month: cellInfoList[indexPath.row].0)
         cell.month = cellInfoList[indexPath.row].0
         cell.drawCell(focusMinute: focusMinute, text: cellInfoList[indexPath.row].1)

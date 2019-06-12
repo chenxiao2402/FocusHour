@@ -13,24 +13,12 @@ import ARKit
 class ARForestController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARForestView: ARSCNView!
+    var level = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ARForestView.delegate = self
-        ARForestView.debugOptions = [.showWorldOrigin, .showCameras]
-        
-        let node = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-        node.position = SCNVector3(0, 0.5, -0.5)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        ARForestView.scene.rootNode.addChildNode(node)
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/mytree.scn")!
-        scene.rootNode.enumerateChildNodes({ (node, _) in
-            node.worldPosition = SCNVector3(0, -0.8, -2)
-            ARForestView.scene.rootNode.addChildNode(node)
-        })
-        
+        addForestNode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,29 +38,53 @@ class ARForestController: UIViewController, ARSCNViewDelegate {
         ARForestView.session.pause()
     }
     
-    // MARK: - ARSCNViewDelegate
-    
-    /*
-     // Override to create and configure nodes for anchors added to the view's session.
-     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-     let node = SCNNode()
-     
-     return node
-     }
-     */
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
+    @IBAction func quit(_ sender: Any) {
+        dismiss()
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+    func dismiss() {
+        dismiss(animated: true)
+    }
+}
+
+extension ARForestController {
+    
+    private func addForestNode() {
+        guard let scene = SCNScene(named: "art.scnassets/Tree-\(level).scn") else { return }
+        scene.rootNode.enumerateChildNodes({ (node, _) in
+            node.scale = SCNVector3(0.3, 0.3, 0.3)
+            node.position = SCNVector3(0, -1.5, -2)
+            ARForestView.scene.rootNode.addChildNode(node)
+        })
     }
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    private func addForestNodes() {
+//        for (i, position) in loadPositions().enumerated() {
+//            let scene = SCNScene(named: "art.scnassets/Tree-\(level).scn")!
+//            scene.rootNode.enumerateChildNodes({ (node, _) in
+//                node.scale = SCNVector3(0.3, 0.3, 0.3)
+//                node.position = position
+//                ARForestView.scene.rootNode.addChildNode(node)
+//            })
+//        }
+    }
+    
+    private func loadPositions() -> [SCNVector3] {
+        let treeNum = 3
+        let treeNumPerLine = Int(ceil(sqrt(Double(treeNum))))
+        let distanceBetweenTrees = 2.0
+        let xOffset = treeNumPerLine % 2 == 1 ? 0.0 : distanceBetweenTrees / 2
+        let zOffset = -1.0
+
+        var result: [SCNVector3] = []
+        for i in 0..<treeNum {
+            let xIndex = Double(i % treeNumPerLine)
+            let zIndex = Double(i / treeNumPerLine)
+            let y = -1.5
+            let z = -zIndex * distanceBetweenTrees + zOffset
+            let x = pow(-1.0, xIndex) * xIndex * distanceBetweenTrees + xOffset
+            result.append(SCNVector3(x, y, z))
+        }
+        return result
     }
 }

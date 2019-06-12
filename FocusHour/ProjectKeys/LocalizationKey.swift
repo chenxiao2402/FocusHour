@@ -24,7 +24,7 @@ enum LocalizationKey: String {
     case No = "No"
     case Cancel = "Cancel"
     case NotificationSuccess = "Notification-Success"
-    case NotificationDeath = "Notification-Death"
+    case NotificationFailure = "Notification-Failure"
     case NotificationAlert = "Notification-Alert"
     
     case None = "None"
@@ -61,6 +61,7 @@ enum LocalizationKey: String {
     case Dec = "Dec"
     case Hour = "Hour"
     case Minute = "Minute"
+    
     case ARForest = "ARForest"
 }
 

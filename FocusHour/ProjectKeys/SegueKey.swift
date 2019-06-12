@@ -17,4 +17,5 @@ enum SegueKey: String {
     case ShowAchievements = "ShowAchievements"
     case ShowAchievementDetails = "ShowAchievementDetails"
     case ShowMusicSelector = "ShowMusicSelector"
+    case showARForest = "ShowARForest"
 }

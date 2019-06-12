@@ -39,7 +39,7 @@
                                     <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AchievementCell" id="NmI-6W-B1U" customClass="AchievementCell" customModule="FocusHour" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AchievementCell" id="NmI-6W-B1U" customClass="MonthCell" customModule="FocusHour" customModuleProvider="target">
                                         <rect key="frame" x="16" y="16" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -109,7 +109,7 @@
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="tow-8v-4uE" customClass="IconCell" customModule="FocusHour" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecordCell" id="tow-8v-4uE" customClass="RecordCell" customModule="FocusHour" customModuleProvider="target">
                                         <rect key="frame" x="8" y="60" width="0.0" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -149,14 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="LiC-PJ-yC6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C">
-                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM">
-                            <connections>
-                                <segue destination="ahK-EF-RJL" kind="showDetail" id="uze-gl-yQQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="0bp-aG-XAm" id="ky6-a5-W2U"/>
+                        <segue destination="ahK-EF-RJL" kind="showDetail" identifier="ShowARForest" id="B4X-wU-xfF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyQ-yW-eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,21 +171,23 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFu-1U-WPI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-O2-5CR">
-                                <rect key="frame" x="167" y="772" width="80" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.40507582110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-O2-5CR">
+                                <rect key="frame" x="177" y="802" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="bPG-Pm-mB5"/>
-                                    <constraint firstAttribute="width" constant="80" id="cag-TM-1U5"/>
+                                    <constraint firstAttribute="height" constant="60" id="bPG-Pm-mB5"/>
+                                    <constraint firstAttribute="width" constant="60" id="cag-TM-1U5"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="quit"/>
+                                <connections>
+                                    <action selector="quit:" destination="ahK-EF-RJL" eventType="touchUpInside" id="b3k-uA-RRQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mFu-1U-WPI" firstAttribute="trailing" secondItem="pGZ-Lm-fCI" secondAttribute="trailing" id="7Pp-Uk-wTH"/>
+                            <constraint firstItem="pGZ-Lm-fCI" firstAttribute="bottom" secondItem="JuN-O2-5CR" secondAttribute="bottom" id="Vya-zz-4NJ"/>
                             <constraint firstAttribute="bottom" secondItem="mFu-1U-WPI" secondAttribute="bottom" id="ZxJ-YW-w1e"/>
-                            <constraint firstItem="pGZ-Lm-fCI" firstAttribute="bottom" secondItem="JuN-O2-5CR" secondAttribute="bottom" constant="10" id="kRg-3v-qRH"/>
                             <constraint firstItem="JuN-O2-5CR" firstAttribute="centerX" secondItem="UoF-AA-59z" secondAttribute="centerX" id="m07-vo-D5A"/>
                             <constraint firstItem="mFu-1U-WPI" firstAttribute="leading" secondItem="pGZ-Lm-fCI" secondAttribute="leading" id="qAe-Ls-vEY"/>
                             <constraint firstItem="mFu-1U-WPI" firstAttribute="top" secondItem="UoF-AA-59z" secondAttribute="top" id="sjO-uJ-QBd"/>
@@ -201,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwP-ks-jFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-839.13043478260875" y="284.59821428571428"/>
+            <point key="canvasLocation" x="-852" y="321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">
@@ -233,5 +232,6 @@
     <resources>
         <image name="AR" width="32" height="32"/>
         <image name="arrow-down" width="18" height="18"/>
+        <image name="quit" width="64" height="64"/>
     </resources>
 </document>
