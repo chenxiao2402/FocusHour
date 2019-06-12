@@ -82,4 +82,8 @@ fastlane/test_output
 
 iOSInjectionProject/
 
+# SCN Files. They are huge
+
+*.scn
+
 # End of https://www.gitignore.io/api/swift
