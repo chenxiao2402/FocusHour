@@ -13,7 +13,7 @@ class NightModeSettingSwitchCell: SettingSwitchCell {
     
     @IBAction override func SwitchMode(_ sender: Any) {
         super.SwitchMode(sender);
-        UserDefaults.standard.set(ModeTool.isMode(ofName: self.mode), forKey: "NightMode");
+        UserDefaults.standard.set(PreferenceTool.isMode(ofName: self.mode), forKey: "NightMode");
         (self.tableViewController as! SettingsVC).handleNightModeChange();
     }
     

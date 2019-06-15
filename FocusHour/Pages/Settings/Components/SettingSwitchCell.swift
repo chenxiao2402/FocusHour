@@ -20,7 +20,7 @@ class SettingSwitchCell: SettingDetailCell {
     }
     
     @IBAction func SwitchMode(_ sender: Any) {
-        ModeTool.switchMode(ofName: mode)
-        print(ModeTool.isMode(ofName: mode))
+        PreferenceTool.switchMode(ofName: mode)
+        print(PreferenceTool.isMode(ofName: mode))
     }
 }

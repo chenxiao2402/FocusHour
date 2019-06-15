@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhV-dm-nzX">
                                 <rect key="frame" x="135" y="348" width="144" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Achievement-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-9x-vTQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-9x-vTQ">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="dA2-ub-RKS"/>
@@ -77,6 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Achievement-1" width="256" height="256"/>
+        <image name="leaves" width="256" height="256"/>
     </resources>
 </document>

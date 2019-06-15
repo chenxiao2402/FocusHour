@@ -41,14 +41,14 @@ class TimerVC: UIViewController {
         mainTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
                 self.circleTimer.resetTime()
-                self.cancelable = self.circleTimer.FocusTime <= self.cancelableTimeLimit
+                self.cancelable = self.circleTimer.FocusSeconds <= self.cancelableTimeLimit
                 self.setStopButtonTitle()
             } else {
                 self.end()
             }
         })
         
-        if (!ModeTool.isMode(ofName: .WorkingMode)) {
+        if (!PreferenceTool.isMode(ofName: .WorkingMode)) {
             backgroundObserver = NotificationCenter.default.addObserver(
                 forName: UIApplication.didEnterBackgroundNotification,
                 object: UIApplication.shared,
@@ -127,7 +127,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     
     private func setStopButtonTitle() {
         let title = cancelable ?
-            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.FocusTime))" :
+            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.FocusSeconds))" :
             LocalizationKey.Giveup.translate()
         stopButton.setTitle(title, for: .normal)
     }
@@ -140,6 +140,10 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     }
     
     private func end() {
+        if let observer = backgroundObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        
         circleTimer.drawResult(needsToSave: true)
         mainTimer?.invalidate()
         backgroundTimer?.invalidate()
@@ -155,11 +159,7 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
         sendNotification(message)
         
         // add coins here
-        let coins = UserDefaults.standard.integer(forKey: "Coins");
-        
-        UserDefaults.standard.set(coins + 10, forKey: "Coins");
-        
-        if let observer = backgroundObserver { NotificationCenter.default.removeObserver(observer) }
+        PreferenceTool.addCoins(addNumber: circleTimer.focusMinutes)
     }
     
     private func backgroundCountdown() {

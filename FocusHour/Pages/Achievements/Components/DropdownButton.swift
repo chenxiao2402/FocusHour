@@ -39,5 +39,4 @@ class DropdownButton: UIButton {
     @objc private func resetBackgroundColor() {
         backgroundColor = ColorKey.DarkSlateGray.uiColor()
     }
-    
 }

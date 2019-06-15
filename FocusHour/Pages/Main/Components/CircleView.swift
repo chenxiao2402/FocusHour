@@ -84,7 +84,7 @@ extension CircleView {
     func getIconImageBy(focusMinutes time: Int) -> UIImage? {
         let range = SystemConstant.FocusCountdownRange
         let series = "AppleTree"
-        var imageList = ["Bud", "Leaf"]
+        var imageList = ["Bud", "YoungPlant"]
         for i in 1...5 {
             imageList.append("\(series)-\(i)")
         }

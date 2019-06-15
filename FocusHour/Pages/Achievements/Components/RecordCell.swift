@@ -11,4 +11,5 @@ import UIKit
 class RecordCell: IconCell {
     
     var focusMinutes: Int!
+    
 }
