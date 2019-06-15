@@ -19,6 +19,10 @@ class SetLanguageVC: UITableViewController {
         languages = LanguageKey.getKeyList()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
