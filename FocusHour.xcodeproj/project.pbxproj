@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */; };
 		5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */; };
+		5A671A1122B48C26004B4F20 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1022B48C26004B4F20 /* ThemeCell.swift */; };
+		5A671A1322B48CCD004B4F20 /* ThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1222B48CCD004B4F20 /* ThemeVC.swift */; };
+		5A671A1922B4B3EA004B4F20 /* ThemeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */; };
+		5A671A1B22B4D2FB004B4F20 /* ThemeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */; };
+		5A671A1D22B4E033004B4F20 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1C22B4E033004B4F20 /* UIColorTool.swift */; };
 		5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039661220DB0EC00CC1B2D /* ColorKey.swift */; };
 		5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* StartButton.swift */; };
 		5C06CB9122B091D3000CEB41 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CB9022B091D3000CEB41 /* RecordCell.swift */; };
@@ -83,6 +88,11 @@
 /* Begin PBXFileReference section */
 		5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingModeSettingSwitchCell.swift; sourceTree = "<group>"; };
+		5A671A1022B48C26004B4F20 /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
+		5A671A1222B48CCD004B4F20 /* ThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeVC.swift; sourceTree = "<group>"; };
+		5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeKey.swift; sourceTree = "<group>"; };
+		5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTool.swift; sourceTree = "<group>"; };
+		5A671A1C22B4E033004B4F20 /* UIColorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
 		5C039661220DB0EC00CC1B2D /* ColorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKey.swift; sourceTree = "<group>"; };
 		5C039666220DD4C000CC1B2D /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		5C06CB9022B091D3000CEB41 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
@@ -213,6 +223,7 @@
 				5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */,
 				5C4885D12212863400198B49 /* SettingsVC.swift */,
 				5C4885E72212FF9400198B49 /* SetLanguageVC.swift */,
+				5A671A1222B48CCD004B4F20 /* ThemeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 				5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */,
 				5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */,
 				5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */,
+				5A671A1022B48C26004B4F20 /* ThemeCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 				5C4885E92213014E00198B49 /* LocalizationKey.swift */,
 				5C256386221ABB6900732477 /* MonthKey.swift */,
 				5C2DA1C922B010260071B076 /* SystemConstant.swift */,
+				5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */,
 			);
 			path = ProjectKeys;
 			sourceTree = "<group>";
@@ -383,6 +396,8 @@
 				5C4885EB2213027800198B49 /* LocalizationTool.swift */,
 				5C14331922169ECA00C50760 /* TimeTool.swift */,
 				5CB6F5B122AABDE40093DA7D /* ImageTool.swift */,
+				5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */,
+				5A671A1C22B4E033004B4F20 /* UIColorTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -543,6 +558,7 @@
 				5C25638C221ACFC700732477 /* IconCell.swift in Sources */,
 				5C50BFD62217F11100D6E289 /* AchievementVC.swift in Sources */,
 				5C4885EC2213027800198B49 /* LocalizationTool.swift in Sources */,
+				5A671A1D22B4E033004B4F20 /* UIColorTool.swift in Sources */,
 				5C4885DD221291AD00198B49 /* SegueKey.swift in Sources */,
 				5C06CB9322B09652000CEB41 /* ARForestController.swift in Sources */,
 				5C109FDB220FF9BB003D026E /* UITool.swift in Sources */,
@@ -560,6 +576,7 @@
 				5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */,
 				5C51FE142219C09600C60967 /* DropdownButton.swift in Sources */,
 				5C2AC04E22A6B4490012B39A /* PreferenceTool.swift in Sources */,
+				5A671A1322B48CCD004B4F20 /* ThemeVC.swift in Sources */,
 				5C62456D2208486E00AAFD66 /* SetTimeVC.swift in Sources */,
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
@@ -572,6 +589,7 @@
 				5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */,
 				5C3D03DC2211B8B60089E96A /* SoundKey.swift in Sources */,
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
+				5A671A1122B48C26004B4F20 /* ThemeCell.swift in Sources */,
 				5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */,
 				5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */,
 				5C14331A22169ECA00C50760 /* TimeTool.swift in Sources */,
@@ -583,6 +601,8 @@
 				5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */,
 				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
+				5A671A1922B4B3EA004B4F20 /* ThemeKey.swift in Sources */,
+				5A671A1B22B4D2FB004B4F20 /* ThemeTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,7 @@ class ImageTool {
         }
     }
     
+    
     static func getBackgroundImageInDark() -> UIImage? {
         return UIImage(named: "background-dark-5");
     }
