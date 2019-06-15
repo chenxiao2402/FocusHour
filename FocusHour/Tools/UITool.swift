@@ -35,11 +35,15 @@ class UITool {
         button.heightAnchor.constraint(equalToConstant: button.frame.size.height).isActive = true
     }
     
-    static func setBackgroundImage(_ view: UIView, random: Bool) {
+    static func setBackgroundImage(_ view: UIView, random: Bool, nightMode: Bool = false) {
         if view is UITableView {
             let tableView = view as! UITableView
             let imageView = UIImageView.init(frame: view.bounds)
-            imageView.image = ImageTool.getBackgroundImage(random: random)
+            if nightMode == true{
+                imageView.image = ImageTool.getBackgroundImageInDark();
+            }else{
+                imageView.image = ImageTool.getBackgroundImageInLight();
+            }
             tableView.backgroundView = imageView
         } else {
             UIGraphicsBeginImageContext(view.frame.size)
@@ -49,6 +53,7 @@ class UITool {
             view.backgroundColor = UIColor.init(patternImage: image!)
         }
     }
+
     
     static func isScreenLocked() -> Bool{
         // 除了锁屏之外，用户把亮度调到最低，brightness也是0...

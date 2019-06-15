@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */; };
+		5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */; };
 		5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039661220DB0EC00CC1B2D /* ColorKey.swift */; };
 		5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* StartButton.swift */; };
 		5C06CB9122B091D3000CEB41 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CB9022B091D3000CEB41 /* RecordCell.swift */; };
@@ -77,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModeSettingSwitchCell.swift; sourceTree = "<group>"; };
+		5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5C039661220DB0EC00CC1B2D /* ColorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKey.swift; sourceTree = "<group>"; };
 		5C039666220DD4C000CC1B2D /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		5C06CB9022B091D3000CEB41 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				5C4885DE2212965B00198B49 /* SettingDetailCell.swift */,
 				5C4885ED2213116300198B49 /* SetLanguageCell.swift */,
 				5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */,
+				5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */,
+				5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				5C3D03DE2211C35C0089E96A /* SoundSelectorCell.swift in Sources */,
 				5C4885EE2213116300198B49 /* SetLanguageCell.swift in Sources */,
 				5C109FDF22105C6B003D026E /* BundleExtension.swift in Sources */,
+				5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */,
 				5C4885E82212FF9500198B49 /* SetLanguageVC.swift in Sources */,
 				5CB6F5B022AABBAB0093DA7D /* MonthCell.swift in Sources */,
 				5CB6F5B222AABDE40093DA7D /* ImageTool.swift in Sources */,
@@ -550,6 +557,7 @@
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
 				5C2AC05222A6CA1C0012B39A /* InfoPresenterVC.swift in Sources */,
+				5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */,
 				5C4885DF2212965B00198B49 /* SettingDetailCell.swift in Sources */,
 				5C50BFD8221802A900D6E289 /* YearSelector.swift in Sources */,
 				5C256387221ABB6900732477 /* MonthKey.swift in Sources */,

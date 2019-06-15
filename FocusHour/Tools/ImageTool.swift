@@ -19,6 +19,15 @@ class ImageTool {
         }
     }
     
+    static func getBackgroundImageInDark() -> UIImage? {
+        return UIImage(named: "background-dark-5");
+    }
+    
+    static func getBackgroundImageInLight() -> UIImage? {
+        return UIImage(named: "background-light-7");
+    }
+    
+    
     static func getTableDrivenImage(ofTime time: Int, timeRange: [Int], imageList: [String]) -> String {
         return imageList[getIndex(focusMinutes: time, timeRange: timeRange)]
     }

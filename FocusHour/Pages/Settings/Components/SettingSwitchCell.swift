@@ -10,10 +10,12 @@ import UIKit
 
 class SettingSwitchCell: SettingDetailCell {
     
+    var tableViewController: UITableViewController!
+    
     @IBOutlet weak var modeSwitch: UISwitch!
     var mode: AppMode! {
         didSet {
-            modeSwitch.isOn = ModeTool.isMode(ofName: mode)
+            modeSwitch.isOn = UserDefaults.standard.object(forKey: "NightMode") != nil && UserDefaults.standard.bool(forKey: "NightMode")
         }
     }
     

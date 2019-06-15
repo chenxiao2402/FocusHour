@@ -153,6 +153,12 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
             LocalizationKey.NotificationSuccess.translate() :
             LocalizationKey.NotificationFailure.translate()
         sendNotification(message)
+        
+        // add coins here
+        let coins = UserDefaults.standard.integer(forKey: "Coins");
+        
+        UserDefaults.standard.set(coins + 10, forKey: "Coins");
+        
         if let observer = backgroundObserver { NotificationCenter.default.removeObserver(observer) }
     }
     
