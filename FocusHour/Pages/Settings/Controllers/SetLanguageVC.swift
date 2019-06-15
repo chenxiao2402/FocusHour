@@ -21,9 +21,8 @@ class SetLanguageVC: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // change background image
-        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
-        UITool.setBackgroundImage(tableView, random: false, nightMode: nightMode);
-    }
+        UITool.setBackgroundImage(tableView, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

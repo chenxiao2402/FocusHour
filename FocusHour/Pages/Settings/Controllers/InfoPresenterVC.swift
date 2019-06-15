@@ -18,12 +18,11 @@ class InfoPresenterVC: UIViewController {
         super.viewDidLoad()
         navigationItem.title = navTitle
         textArea.text = info
-        
-        
         let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
         let textColor = nightMode == true ? UIColor.white : UIColor.black;
         textArea.textColor = textColor;
-        UITool.setBackgroundImage(view, random: false, nightMode: nightMode);
+        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
     }
 
 //    override func viewWillAppear(_ animated: Bool) {
