@@ -36,7 +36,6 @@ class CircleSlider: CircleView {
         thumbRadius = ThumbNormalRadius
         thumbView.backgroundColor = ColorKey.AppleGreen.uiColor()
         thumbView.isUserInteractionEnabled = false //不加这一句的话，小圆点会盖住下面的UIView，导致CircleSlider.touchesMoved失效..
-        iconView.isUserInteractionEnabled = false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

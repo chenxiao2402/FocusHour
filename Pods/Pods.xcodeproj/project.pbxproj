@@ -1,0 +1,997 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0379DC51D0F913F322EE4E664F53A36B /* CDAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D80BBCB4BFC3C7328843F7440B325A62 /* CDAlertView.bundle */; };
+		0C332850EFB366348AF91D7C3389461D /* warningFilled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF280B9D8413390302B9FF5F7275BFF /* warningFilled@3x.png */; };
+		164B95C6303F0427429C13FF67E2512F /* warningOutline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3C9741969A0373387942C9FE2315C1 /* warningOutline@1x.png */; };
+		177A46EA487255FEF53454F1E3DE2723 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34362AB719AB331AC52051AAC6A56D70 /* ImageHelper.swift */; };
+		266A9A52C031377B5426147281567C82 /* check@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539BC9A7CAC991E6514041018676B815 /* check@1x.png */; };
+		2824E7EF630403351E2B4433E9FA6417 /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD48530E24A38FC19F7BA114DECC9C2 /* check@3x.png */; };
+		28B85A863B30A3E3732B4DF7982367B8 /* notificationFilled@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C3B360057BF7E44FAA13F4FC8A35C0C /* notificationFilled@1x.png */; };
+		2BB4C67EA4058DFE60D0C4FF62945BDE /* error@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D25B546AC9E6EA614AF006CB53EFA2 /* error@1x.png */; };
+		2C20FF17FDDC4B813520D21912FE05B9 /* warningFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 173A3B53B4DD4FF84A0C4D24240DF2A8 /* warningFilled@2x.png */; };
+		30A1312C0388C086C884CCE208AD8E9A /* alarmFilled@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 085E649A56D92CCF2608EF24A83025E0 /* alarmFilled@1x.png */; };
+		3C7A206ACB47BA2A216126153C420ED2 /* notificationOutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFED446F174E9021674D7E0D8C16276 /* notificationOutline@2x.png */; };
+		50DA546C748BE6230EB23086303C7024 /* alarmOutline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 244ADE81ECBB3C5E6831E08560E022E0 /* alarmOutline@3x.png */; };
+		5142F2B1A81E2D6EBCFC82BD85EE4F8D /* notificationOutline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FEABBB74FB91D6E6FA8EA48B32125F /* notificationOutline@1x.png */; };
+		546DF80D8124EF3DA531FF5054ACBBC6 /* Pods-FocusHour-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 892105A315C01681F5A8A02281031E77 /* Pods-FocusHour-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B9DBBC67BD43F5EB40C58D1793B69F0 /* alarmFilled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67BD27371063B24BAE821F72F2819C46 /* alarmFilled@3x.png */; };
+		6BFE4A6E2F489817A4A1DCDF692EC91C /* error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31775C15101FE9DD38C4818D704B7BCA /* error@3x.png */; };
+		7731E4A6D935D3D6A4DDBDDA28AF29D8 /* alarmFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC27FCF97C429CC222B53C9DD3AF00B2 /* alarmFilled@2x.png */; };
+		785D8DA08BB47D25289C1ACED7F270EB /* CDAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C994EAC54286E6D53C6EE3F14F3C141 /* CDAlertView-dummy.m */; };
+		7F6FB5AD01234D6AFA15F96E0EDA9858 /* notificationFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB966F67694C276BE3A30ACFFE4598B8 /* notificationFilled@2x.png */; };
+		85D793A244F6E144AC81BE59B147E1A2 /* CDAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C08917CF0F1AC2F36C06973F35AF5C /* CDAlertView.swift */; };
+		9FD7DDE53F9EF82FEC5515E6D42F7475 /* CDAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF318ED1A785E201D8C7581448F03834 /* CDAlertHeaderView.swift */; };
+		A131A942A450ED5832EC3F8B8DB2E976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		A75E222F278A5352EE809FC1BBC06493 /* notificationFilled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA055A8A0B54D9683364CB5C786F541 /* notificationFilled@3x.png */; };
+		A765115992DA2ABC8EF76733AADBA0B7 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B6751CC187C9B4CF37F5D364D7FEB /* check@2x.png */; };
+		A86E5686F4B79FFF7D69E0993F398001 /* Pods-FocusHour-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF066BED1B9DCC65D82CDA98432024 /* Pods-FocusHour-dummy.m */; };
+		AA437E9D3E810A4962CADC4C1F9F6416 /* warningFilled@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E8303028F5E7B23672D322A0AF12B7 /* warningFilled@1x.png */; };
+		AD313C4C82291477115FD661EEA73FB1 /* Pods-FocusHourTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A24B843F30325DE78C0EF8557FCD82A /* Pods-FocusHourTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B027E1B008A84D6BB4DA2CBBB3EC4693 /* warningOutline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D240E0BDBD113B41228F5D9D6B1F4662 /* warningOutline@3x.png */; };
+		B5B4B4360749E1D13CF2C52D04F56064 /* CDAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3116D7732EF6E2577476CDDC011FE07D /* CDAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC5581059709CA71CD7B7B8053071669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		C1BDE4A315628192FCB22127FAFFFD47 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44AEED753785CF36A1C19CA8003C55FE /* error@2x.png */; };
+		C712A75B1D94ACE927A06DCDF934E0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		C9033BE72E56E0C3B1730FE70F0FF112 /* Pods-FocusHourTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 490725AC17BF7E30921FDC9301C83AA6 /* Pods-FocusHourTests-dummy.m */; };
+		D68184A44451F8DEEE9945879E48EA60 /* warningOutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E2511517EC25E1A0DFC85A8B837F99 /* warningOutline@2x.png */; };
+		DDA5FEC2649A4CC2E74661569A161B6F /* LayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA96531CB42360D336CB40486F946A4 /* LayoutConstraintsExtension.swift */; };
+		E36C09086F0F7569BCC42F62AB598ADB /* notificationOutline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E88A6DA2F81A7EB781AD05FEE9E6C2F0 /* notificationOutline@3x.png */; };
+		E4E96B338CE95444F85BDBC6C14D7848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		E5FE48D64B9EAB22E0EB02C089B10E56 /* alarmOutline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659DCEAF71AE721B82E39E9EA2BF0DF /* alarmOutline@1x.png */; };
+		FE9C22E35C34B8AC318CE7ED07505844 /* alarmOutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07D223EF1DFD41789E1FA97CEAB6D56 /* alarmOutline@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1020E7DF60A9EC47523310397DA87DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A4CB2E98B1432223303168AC3C51EDE;
+			remoteInfo = "Pods-FocusHour";
+		};
+		782C92C001A344F7AB7D82A33881632A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 369C26E0019831DFC30E7122499AB269;
+			remoteInfo = CDAlertView;
+		};
+		9E022DE6025B80186394648B956C2EE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BDF1191BBE4F429F08A241D8B53E2A;
+			remoteInfo = "CDAlertView-CDAlertView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		085E649A56D92CCF2608EF24A83025E0 /* alarmFilled@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmFilled@1x.png"; path = "CDAlertView/Resources/Assets/alarmFilled@1x.png"; sourceTree = "<group>"; };
+		09C08917CF0F1AC2F36C06973F35AF5C /* CDAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDAlertView.swift; path = CDAlertView/Classes/CDAlertView.swift; sourceTree = "<group>"; };
+		0DE6E4F5AD4639991AB1A1090ED4496F /* Pods-FocusHourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocusHourTests.release.xcconfig"; sourceTree = "<group>"; };
+		10581F9CC089456DEE0ECBB9B2DF7D2F /* Pods-FocusHour-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocusHour-resources.sh"; sourceTree = "<group>"; };
+		13A6EC4ADE0B55F496EEEBECAFC35638 /* CDAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDAlertView-prefix.pch"; sourceTree = "<group>"; };
+		150956BA235D7BA326E96E3A30F5A158 /* Pods-FocusHourTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FocusHourTests.modulemap"; sourceTree = "<group>"; };
+		16D25B546AC9E6EA614AF006CB53EFA2 /* error@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "error@1x.png"; path = "CDAlertView/Resources/Assets/error@1x.png"; sourceTree = "<group>"; };
+		173A3B53B4DD4FF84A0C4D24240DF2A8 /* warningFilled@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningFilled@2x.png"; path = "CDAlertView/Resources/Assets/warningFilled@2x.png"; sourceTree = "<group>"; };
+		1A24B843F30325DE78C0EF8557FCD82A /* Pods-FocusHourTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocusHourTests-umbrella.h"; sourceTree = "<group>"; };
+		244ADE81ECBB3C5E6831E08560E022E0 /* alarmOutline@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmOutline@3x.png"; path = "CDAlertView/Resources/Assets/alarmOutline@3x.png"; sourceTree = "<group>"; };
+		29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDAlertView.xcconfig; sourceTree = "<group>"; };
+		2C994EAC54286E6D53C6EE3F14F3C141 /* CDAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDAlertView-dummy.m"; sourceTree = "<group>"; };
+		2CD1CDB6151F2293BF0FECCB590116AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3116D7732EF6E2577476CDDC011FE07D /* CDAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDAlertView-umbrella.h"; sourceTree = "<group>"; };
+		31775C15101FE9DD38C4818D704B7BCA /* error@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "error@3x.png"; path = "CDAlertView/Resources/Assets/error@3x.png"; sourceTree = "<group>"; };
+		32A57C3C4B60FF16D8EFFCA2A05F2C66 /* Pods-FocusHourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocusHourTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34362AB719AB331AC52051AAC6A56D70 /* ImageHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = CDAlertView/Classes/ImageHelper.swift; sourceTree = "<group>"; };
+		3C3B360057BF7E44FAA13F4FC8A35C0C /* notificationFilled@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationFilled@1x.png"; path = "CDAlertView/Resources/Assets/notificationFilled@1x.png"; sourceTree = "<group>"; };
+		42E8303028F5E7B23672D322A0AF12B7 /* warningFilled@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningFilled@1x.png"; path = "CDAlertView/Resources/Assets/warningFilled@1x.png"; sourceTree = "<group>"; };
+		44A95BB1CEA85A26D7C2E5D2658BA531 /* Pods-FocusHour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocusHour.debug.xcconfig"; sourceTree = "<group>"; };
+		44AEED753785CF36A1C19CA8003C55FE /* error@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "error@2x.png"; path = "CDAlertView/Resources/Assets/error@2x.png"; sourceTree = "<group>"; };
+		4659DCEAF71AE721B82E39E9EA2BF0DF /* alarmOutline@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmOutline@1x.png"; path = "CDAlertView/Resources/Assets/alarmOutline@1x.png"; sourceTree = "<group>"; };
+		490725AC17BF7E30921FDC9301C83AA6 /* Pods-FocusHourTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FocusHourTests-dummy.m"; sourceTree = "<group>"; };
+		4BFED446F174E9021674D7E0D8C16276 /* notificationOutline@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationOutline@2x.png"; path = "CDAlertView/Resources/Assets/notificationOutline@2x.png"; sourceTree = "<group>"; };
+		539BC9A7CAC991E6514041018676B815 /* check@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "check@1x.png"; path = "CDAlertView/Resources/Assets/check@1x.png"; sourceTree = "<group>"; };
+		5BA96531CB42360D336CB40486F946A4 /* LayoutConstraintsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintsExtension.swift; path = CDAlertView/Classes/LayoutConstraintsExtension.swift; sourceTree = "<group>"; };
+		5F3C9741969A0373387942C9FE2315C1 /* warningOutline@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningOutline@1x.png"; path = "CDAlertView/Resources/Assets/warningOutline@1x.png"; sourceTree = "<group>"; };
+		60C89EADC9999223CFF0D4CF289637A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BD27371063B24BAE821F72F2819C46 /* alarmFilled@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmFilled@3x.png"; path = "CDAlertView/Resources/Assets/alarmFilled@3x.png"; sourceTree = "<group>"; };
+		68F5F815E7C9957B3B9F0B01EA0171EC /* Pods-FocusHour-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FocusHour-acknowledgements.plist"; sourceTree = "<group>"; };
+		6CD48530E24A38FC19F7BA114DECC9C2 /* check@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "check@3x.png"; path = "CDAlertView/Resources/Assets/check@3x.png"; sourceTree = "<group>"; };
+		80FEABBB74FB91D6E6FA8EA48B32125F /* notificationOutline@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationOutline@1x.png"; path = "CDAlertView/Resources/Assets/notificationOutline@1x.png"; sourceTree = "<group>"; };
+		846A2E58BE863BF04A1C414A2D84232F /* Pods-FocusHour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocusHour.release.xcconfig"; sourceTree = "<group>"; };
+		85E32740A82BA6FFE7F3F1D599D3D0C7 /* Pods-FocusHour-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FocusHour-acknowledgements.markdown"; sourceTree = "<group>"; };
+		871B6751CC187C9B4CF37F5D364D7FEB /* check@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "check@2x.png"; path = "CDAlertView/Resources/Assets/check@2x.png"; sourceTree = "<group>"; };
+		892105A315C01681F5A8A02281031E77 /* Pods-FocusHour-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocusHour-umbrella.h"; sourceTree = "<group>"; };
+		8C9FB8F8080ECE4894DC6DA5835ECDA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		92E9FEC22E58DE235AE8E4D86158A5ED /* Pods-FocusHour.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FocusHour.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94101C901EB616E6F17E1EC56C72EE73 /* Pods-FocusHourTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocusHourTests-frameworks.sh"; sourceTree = "<group>"; };
+		9AF280B9D8413390302B9FF5F7275BFF /* warningFilled@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningFilled@3x.png"; path = "CDAlertView/Resources/Assets/warningFilled@3x.png"; sourceTree = "<group>"; };
+		9F4F62C151D024A799E56529F1AC16F8 /* Pods-FocusHour-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocusHour-frameworks.sh"; sourceTree = "<group>"; };
+		B032AD660C472A6B68B9EC68D63C1FDC /* Pods-FocusHourTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocusHourTests-resources.sh"; sourceTree = "<group>"; };
+		BA2DCBE70F1867E972E65C1F0FDC2187 /* ResourceBundle-CDAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CDAlertView-Info.plist"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C192830D046D63B681773A840B268CDB /* Pods_FocusHourTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FocusHourTests.framework; path = "Pods-FocusHourTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2647E02B4CB2AA2C37FC139F4A77C89 /* CDAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDAlertView.framework; path = CDAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC91696D7DE5E6A80097BDA94B508405 /* Pods-FocusHourTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FocusHourTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CCBF066BED1B9DCC65D82CDA98432024 /* Pods-FocusHour-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FocusHour-dummy.m"; sourceTree = "<group>"; };
+		CDA055A8A0B54D9683364CB5C786F541 /* notificationFilled@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationFilled@3x.png"; path = "CDAlertView/Resources/Assets/notificationFilled@3x.png"; sourceTree = "<group>"; };
+		CF318ED1A785E201D8C7581448F03834 /* CDAlertHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDAlertHeaderView.swift; path = CDAlertView/Classes/CDAlertHeaderView.swift; sourceTree = "<group>"; };
+		D240E0BDBD113B41228F5D9D6B1F4662 /* warningOutline@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningOutline@3x.png"; path = "CDAlertView/Resources/Assets/warningOutline@3x.png"; sourceTree = "<group>"; };
+		D80BBCB4BFC3C7328843F7440B325A62 /* CDAlertView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CDAlertView.bundle; path = "CDAlertView-CDAlertView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E429BD552226E8A83DB67A036293F904 /* Pods-FocusHourTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FocusHourTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E6E2511517EC25E1A0DFC85A8B837F99 /* warningOutline@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningOutline@2x.png"; path = "CDAlertView/Resources/Assets/warningOutline@2x.png"; sourceTree = "<group>"; };
+		E88A6DA2F81A7EB781AD05FEE9E6C2F0 /* notificationOutline@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationOutline@3x.png"; path = "CDAlertView/Resources/Assets/notificationOutline@3x.png"; sourceTree = "<group>"; };
+		EB966F67694C276BE3A30ACFFE4598B8 /* notificationFilled@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "notificationFilled@2x.png"; path = "CDAlertView/Resources/Assets/notificationFilled@2x.png"; sourceTree = "<group>"; };
+		EC27FCF97C429CC222B53C9DD3AF00B2 /* alarmFilled@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmFilled@2x.png"; path = "CDAlertView/Resources/Assets/alarmFilled@2x.png"; sourceTree = "<group>"; };
+		F07D223EF1DFD41789E1FA97CEAB6D56 /* alarmOutline@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "alarmOutline@2x.png"; path = "CDAlertView/Resources/Assets/alarmOutline@2x.png"; sourceTree = "<group>"; };
+		F48A038BD02F622E758E58F503963186 /* Pods_FocusHour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FocusHour.framework; path = "Pods-FocusHour.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA763331731FD8AA97D52017990CFD6 /* CDAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDAlertView.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A3690781F08BF18705A55BA0A7073CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A131A942A450ED5832EC3F8B8DB2E976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB09F35E9028A21AAD943AFD9DC4C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C712A75B1D94ACE927A06DCDF934E0E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5781823FCF13DFC0D691BC350571CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5581059709CA71CD7B7B8053071669 /* Foundation.framework in Frameworks */,
+				E4E96B338CE95444F85BDBC6C14D7848 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D7A0FAD5252F09F8E7F94123D02B17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53298F771279F327C68C522CCBBD94EF /* CDAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				CF318ED1A785E201D8C7581448F03834 /* CDAlertHeaderView.swift */,
+				09C08917CF0F1AC2F36C06973F35AF5C /* CDAlertView.swift */,
+				34362AB719AB331AC52051AAC6A56D70 /* ImageHelper.swift */,
+				5BA96531CB42360D336CB40486F946A4 /* LayoutConstraintsExtension.swift */,
+				BD917A969C189B10F5F71B3C931F536A /* Resources */,
+				9B2EDCC8CC33682ACA59A52F6E76F154 /* Support Files */,
+			);
+			name = CDAlertView;
+			path = CDAlertView;
+			sourceTree = "<group>";
+		};
+		73E761A0482BB546287ECC64754DCEEC /* Pods-FocusHourTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C9FB8F8080ECE4894DC6DA5835ECDA3 /* Info.plist */,
+				150956BA235D7BA326E96E3A30F5A158 /* Pods-FocusHourTests.modulemap */,
+				E429BD552226E8A83DB67A036293F904 /* Pods-FocusHourTests-acknowledgements.markdown */,
+				CC91696D7DE5E6A80097BDA94B508405 /* Pods-FocusHourTests-acknowledgements.plist */,
+				490725AC17BF7E30921FDC9301C83AA6 /* Pods-FocusHourTests-dummy.m */,
+				94101C901EB616E6F17E1EC56C72EE73 /* Pods-FocusHourTests-frameworks.sh */,
+				B032AD660C472A6B68B9EC68D63C1FDC /* Pods-FocusHourTests-resources.sh */,
+				1A24B843F30325DE78C0EF8557FCD82A /* Pods-FocusHourTests-umbrella.h */,
+				32A57C3C4B60FF16D8EFFCA2A05F2C66 /* Pods-FocusHourTests.debug.xcconfig */,
+				0DE6E4F5AD4639991AB1A1090ED4496F /* Pods-FocusHourTests.release.xcconfig */,
+			);
+			name = "Pods-FocusHourTests";
+			path = "Target Support Files/Pods-FocusHourTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				89BB0E4A530288F1C9D4E28DE7042C54 /* Pods */,
+				C97C7631AAC11E53063809985C83D597 /* Products */,
+				DB95D29788F08ECD360AF3D68744E0D4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89BB0E4A530288F1C9D4E28DE7042C54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53298F771279F327C68C522CCBBD94EF /* CDAlertView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B2EDCC8CC33682ACA59A52F6E76F154 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAA763331731FD8AA97D52017990CFD6 /* CDAlertView.modulemap */,
+				29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */,
+				2C994EAC54286E6D53C6EE3F14F3C141 /* CDAlertView-dummy.m */,
+				13A6EC4ADE0B55F496EEEBECAFC35638 /* CDAlertView-prefix.pch */,
+				3116D7732EF6E2577476CDDC011FE07D /* CDAlertView-umbrella.h */,
+				60C89EADC9999223CFF0D4CF289637A0 /* Info.plist */,
+				BA2DCBE70F1867E972E65C1F0FDC2187 /* ResourceBundle-CDAlertView-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CDAlertView";
+			sourceTree = "<group>";
+		};
+		B98DB775DA784B87F00EDA0B8B2E7355 /* Pods-FocusHour */ = {
+			isa = PBXGroup;
+			children = (
+				2CD1CDB6151F2293BF0FECCB590116AE /* Info.plist */,
+				92E9FEC22E58DE235AE8E4D86158A5ED /* Pods-FocusHour.modulemap */,
+				85E32740A82BA6FFE7F3F1D599D3D0C7 /* Pods-FocusHour-acknowledgements.markdown */,
+				68F5F815E7C9957B3B9F0B01EA0171EC /* Pods-FocusHour-acknowledgements.plist */,
+				CCBF066BED1B9DCC65D82CDA98432024 /* Pods-FocusHour-dummy.m */,
+				9F4F62C151D024A799E56529F1AC16F8 /* Pods-FocusHour-frameworks.sh */,
+				10581F9CC089456DEE0ECBB9B2DF7D2F /* Pods-FocusHour-resources.sh */,
+				892105A315C01681F5A8A02281031E77 /* Pods-FocusHour-umbrella.h */,
+				44A95BB1CEA85A26D7C2E5D2658BA531 /* Pods-FocusHour.debug.xcconfig */,
+				846A2E58BE863BF04A1C414A2D84232F /* Pods-FocusHour.release.xcconfig */,
+			);
+			name = "Pods-FocusHour";
+			path = "Target Support Files/Pods-FocusHour";
+			sourceTree = "<group>";
+		};
+		BD917A969C189B10F5F71B3C931F536A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				085E649A56D92CCF2608EF24A83025E0 /* alarmFilled@1x.png */,
+				EC27FCF97C429CC222B53C9DD3AF00B2 /* alarmFilled@2x.png */,
+				67BD27371063B24BAE821F72F2819C46 /* alarmFilled@3x.png */,
+				4659DCEAF71AE721B82E39E9EA2BF0DF /* alarmOutline@1x.png */,
+				F07D223EF1DFD41789E1FA97CEAB6D56 /* alarmOutline@2x.png */,
+				244ADE81ECBB3C5E6831E08560E022E0 /* alarmOutline@3x.png */,
+				539BC9A7CAC991E6514041018676B815 /* check@1x.png */,
+				871B6751CC187C9B4CF37F5D364D7FEB /* check@2x.png */,
+				6CD48530E24A38FC19F7BA114DECC9C2 /* check@3x.png */,
+				16D25B546AC9E6EA614AF006CB53EFA2 /* error@1x.png */,
+				44AEED753785CF36A1C19CA8003C55FE /* error@2x.png */,
+				31775C15101FE9DD38C4818D704B7BCA /* error@3x.png */,
+				3C3B360057BF7E44FAA13F4FC8A35C0C /* notificationFilled@1x.png */,
+				EB966F67694C276BE3A30ACFFE4598B8 /* notificationFilled@2x.png */,
+				CDA055A8A0B54D9683364CB5C786F541 /* notificationFilled@3x.png */,
+				80FEABBB74FB91D6E6FA8EA48B32125F /* notificationOutline@1x.png */,
+				4BFED446F174E9021674D7E0D8C16276 /* notificationOutline@2x.png */,
+				E88A6DA2F81A7EB781AD05FEE9E6C2F0 /* notificationOutline@3x.png */,
+				42E8303028F5E7B23672D322A0AF12B7 /* warningFilled@1x.png */,
+				173A3B53B4DD4FF84A0C4D24240DF2A8 /* warningFilled@2x.png */,
+				9AF280B9D8413390302B9FF5F7275BFF /* warningFilled@3x.png */,
+				5F3C9741969A0373387942C9FE2315C1 /* warningOutline@1x.png */,
+				E6E2511517EC25E1A0DFC85A8B837F99 /* warningOutline@2x.png */,
+				D240E0BDBD113B41228F5D9D6B1F4662 /* warningOutline@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C97C7631AAC11E53063809985C83D597 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D80BBCB4BFC3C7328843F7440B325A62 /* CDAlertView.bundle */,
+				C2647E02B4CB2AA2C37FC139F4A77C89 /* CDAlertView.framework */,
+				F48A038BD02F622E758E58F503963186 /* Pods_FocusHour.framework */,
+				C192830D046D63B681773A840B268CDB /* Pods_FocusHourTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB95D29788F08ECD360AF3D68744E0D4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98DB775DA784B87F00EDA0B8B2E7355 /* Pods-FocusHour */,
+				73E761A0482BB546287ECC64754DCEEC /* Pods-FocusHourTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0EC6DADF1DCD975BF298635F16174DE8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546DF80D8124EF3DA531FF5054ACBBC6 /* Pods-FocusHour-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC09B3474FCADD5ADF737E95EE9BE04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B4B4360749E1D13CF2C52D04F56064 /* CDAlertView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F76EB50CC37952DD661DEDEE6B99ACF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD313C4C82291477115FD661EEA73FB1 /* Pods-FocusHourTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		369C26E0019831DFC30E7122499AB269 /* CDAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F7EAFBA6323B60EAD537F74FB49C1C /* Build configuration list for PBXNativeTarget "CDAlertView" */;
+			buildPhases = (
+				E5620E1094B413A427B2891CFB4E97EA /* Sources */,
+				C5781823FCF13DFC0D691BC350571CB6 /* Frameworks */,
+				4A7B66480A451A9A0F45E5FFBB662155 /* Resources */,
+				1DC09B3474FCADD5ADF737E95EE9BE04 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF1460637310CBFB3BB7F13CEEDCA24E /* PBXTargetDependency */,
+			);
+			name = CDAlertView;
+			productName = CDAlertView;
+			productReference = C2647E02B4CB2AA2C37FC139F4A77C89 /* CDAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8A4CB2E98B1432223303168AC3C51EDE /* Pods-FocusHour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23ECC4BFFC38EB13469FAD1B95222755 /* Build configuration list for PBXNativeTarget "Pods-FocusHour" */;
+			buildPhases = (
+				756FDFE4E5C3F48DDFF1ED65DE6EF842 /* Sources */,
+				4A3690781F08BF18705A55BA0A7073CC /* Frameworks */,
+				0EC6DADF1DCD975BF298635F16174DE8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D8FF6DD88250C98BA368B3AAEA51343 /* PBXTargetDependency */,
+			);
+			name = "Pods-FocusHour";
+			productName = "Pods-FocusHour";
+			productReference = F48A038BD02F622E758E58F503963186 /* Pods_FocusHour.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4BDF1191BBE4F429F08A241D8B53E2A /* CDAlertView-CDAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD56C041D949064F5CA7899644728E35 /* Build configuration list for PBXNativeTarget "CDAlertView-CDAlertView" */;
+			buildPhases = (
+				A4DE70E8AF00CFBCA3AA8D712980DD0D /* Sources */,
+				D2D7A0FAD5252F09F8E7F94123D02B17 /* Frameworks */,
+				839C13CCF7F058FD659BCE9DC1764210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CDAlertView-CDAlertView";
+			productName = "CDAlertView-CDAlertView";
+			productReference = D80BBCB4BFC3C7328843F7440B325A62 /* CDAlertView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		ED2EA1E1C12C6EB4F3B4219FE6703161 /* Pods-FocusHourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CDBC66672780F771818976F62252F2D /* Build configuration list for PBXNativeTarget "Pods-FocusHourTests" */;
+			buildPhases = (
+				0A1911CBBD6D37B407FCF48D73EEB188 /* Sources */,
+				5BB09F35E9028A21AAD943AFD9DC4C79 /* Frameworks */,
+				2F76EB50CC37952DD661DEDEE6B99ACF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D7A199035254858FDDFA6F3C8A3B2D5 /* PBXTargetDependency */,
+			);
+			name = "Pods-FocusHourTests";
+			productName = "Pods-FocusHourTests";
+			productReference = C192830D046D63B681773A840B268CDB /* Pods_FocusHourTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C97C7631AAC11E53063809985C83D597 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				369C26E0019831DFC30E7122499AB269 /* CDAlertView */,
+				C4BDF1191BBE4F429F08A241D8B53E2A /* CDAlertView-CDAlertView */,
+				8A4CB2E98B1432223303168AC3C51EDE /* Pods-FocusHour */,
+				ED2EA1E1C12C6EB4F3B4219FE6703161 /* Pods-FocusHourTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A7B66480A451A9A0F45E5FFBB662155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0379DC51D0F913F322EE4E664F53A36B /* CDAlertView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839C13CCF7F058FD659BCE9DC1764210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A1312C0388C086C884CCE208AD8E9A /* alarmFilled@1x.png in Resources */,
+				7731E4A6D935D3D6A4DDBDDA28AF29D8 /* alarmFilled@2x.png in Resources */,
+				6B9DBBC67BD43F5EB40C58D1793B69F0 /* alarmFilled@3x.png in Resources */,
+				E5FE48D64B9EAB22E0EB02C089B10E56 /* alarmOutline@1x.png in Resources */,
+				FE9C22E35C34B8AC318CE7ED07505844 /* alarmOutline@2x.png in Resources */,
+				50DA546C748BE6230EB23086303C7024 /* alarmOutline@3x.png in Resources */,
+				266A9A52C031377B5426147281567C82 /* check@1x.png in Resources */,
+				A765115992DA2ABC8EF76733AADBA0B7 /* check@2x.png in Resources */,
+				2824E7EF630403351E2B4433E9FA6417 /* check@3x.png in Resources */,
+				2BB4C67EA4058DFE60D0C4FF62945BDE /* error@1x.png in Resources */,
+				C1BDE4A315628192FCB22127FAFFFD47 /* error@2x.png in Resources */,
+				6BFE4A6E2F489817A4A1DCDF692EC91C /* error@3x.png in Resources */,
+				28B85A863B30A3E3732B4DF7982367B8 /* notificationFilled@1x.png in Resources */,
+				7F6FB5AD01234D6AFA15F96E0EDA9858 /* notificationFilled@2x.png in Resources */,
+				A75E222F278A5352EE809FC1BBC06493 /* notificationFilled@3x.png in Resources */,
+				5142F2B1A81E2D6EBCFC82BD85EE4F8D /* notificationOutline@1x.png in Resources */,
+				3C7A206ACB47BA2A216126153C420ED2 /* notificationOutline@2x.png in Resources */,
+				E36C09086F0F7569BCC42F62AB598ADB /* notificationOutline@3x.png in Resources */,
+				AA437E9D3E810A4962CADC4C1F9F6416 /* warningFilled@1x.png in Resources */,
+				2C20FF17FDDC4B813520D21912FE05B9 /* warningFilled@2x.png in Resources */,
+				0C332850EFB366348AF91D7C3389461D /* warningFilled@3x.png in Resources */,
+				164B95C6303F0427429C13FF67E2512F /* warningOutline@1x.png in Resources */,
+				D68184A44451F8DEEE9945879E48EA60 /* warningOutline@2x.png in Resources */,
+				B027E1B008A84D6BB4DA2CBBB3EC4693 /* warningOutline@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A1911CBBD6D37B407FCF48D73EEB188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9033BE72E56E0C3B1730FE70F0FF112 /* Pods-FocusHourTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		756FDFE4E5C3F48DDFF1ED65DE6EF842 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A86E5686F4B79FFF7D69E0993F398001 /* Pods-FocusHour-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DE70E8AF00CFBCA3AA8D712980DD0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5620E1094B413A427B2891CFB4E97EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD7DDE53F9EF82FEC5515E6D42F7475 /* CDAlertHeaderView.swift in Sources */,
+				785D8DA08BB47D25289C1ACED7F270EB /* CDAlertView-dummy.m in Sources */,
+				85D793A244F6E144AC81BE59B147E1A2 /* CDAlertView.swift in Sources */,
+				177A46EA487255FEF53454F1E3DE2723 /* ImageHelper.swift in Sources */,
+				DDA5FEC2649A4CC2E74661569A161B6F /* LayoutConstraintsExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D8FF6DD88250C98BA368B3AAEA51343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CDAlertView;
+			target = 369C26E0019831DFC30E7122499AB269 /* CDAlertView */;
+			targetProxy = 782C92C001A344F7AB7D82A33881632A /* PBXContainerItemProxy */;
+		};
+		1D7A199035254858FDDFA6F3C8A3B2D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FocusHour";
+			target = 8A4CB2E98B1432223303168AC3C51EDE /* Pods-FocusHour */;
+			targetProxy = 1020E7DF60A9EC47523310397DA87DA8 /* PBXContainerItemProxy */;
+		};
+		BF1460637310CBFB3BB7F13CEEDCA24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CDAlertView-CDAlertView";
+			target = C4BDF1191BBE4F429F08A241D8B53E2A /* CDAlertView-CDAlertView */;
+			targetProxy = 9E022DE6025B80186394648B956C2EE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		063198AB09B9CDB3A695432FC17AD8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2D23510CCDD402E71BD50B701C72D29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A95BB1CEA85A26D7C2E5D2658BA531 /* Pods-FocusHour.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FocusHour/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FocusHour/Pods-FocusHour.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57F509D7C26D07AB974C5FCDE832FB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846A2E58BE863BF04A1C414A2D84232F /* Pods-FocusHour.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FocusHour/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FocusHour/Pods-FocusHour.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		77B61605C05BFB36142D06B401EC1DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CDAlertView";
+				INFOPLIST_FILE = "Target Support Files/CDAlertView/ResourceBundle-CDAlertView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = CDAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		87EAC867385563488A6D8F1E74AC46B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		981FD3F85E6EF9351603B72D8462C034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A57C3C4B60FF16D8EFFCA2A05F2C66 /* Pods-FocusHourTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FocusHourTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FocusHourTests/Pods-FocusHourTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AFDAE4FA6B5E30A8E0B4F75990CCEF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE6E4F5AD4639991AB1A1090ED4496F /* Pods-FocusHourTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FocusHourTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FocusHourTests/Pods-FocusHourTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1D5D60E41B83007A84863D55DF6A051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDAlertView/CDAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CDAlertView/CDAlertView.modulemap";
+				PRODUCT_MODULE_NAME = CDAlertView;
+				PRODUCT_NAME = CDAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C0578ABD25BB818E47950F1BAE2C1733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CDAlertView";
+				INFOPLIST_FILE = "Target Support Files/CDAlertView/ResourceBundle-CDAlertView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = CDAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		D13505D76CE07FFFA9FCD8A0401B0277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F4725174C69943C794D8889BE6A9E9 /* CDAlertView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDAlertView/CDAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CDAlertView/CDAlertView.modulemap";
+				PRODUCT_MODULE_NAME = CDAlertView;
+				PRODUCT_NAME = CDAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23ECC4BFFC38EB13469FAD1B95222755 /* Build configuration list for PBXNativeTarget "Pods-FocusHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D23510CCDD402E71BD50B701C72D29D /* Debug */,
+				57F509D7C26D07AB974C5FCDE832FB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87EAC867385563488A6D8F1E74AC46B4 /* Debug */,
+				063198AB09B9CDB3A695432FC17AD8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F7EAFBA6323B60EAD537F74FB49C1C /* Build configuration list for PBXNativeTarget "CDAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D13505D76CE07FFFA9FCD8A0401B0277 /* Debug */,
+				B1D5D60E41B83007A84863D55DF6A051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CDBC66672780F771818976F62252F2D /* Build configuration list for PBXNativeTarget "Pods-FocusHourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981FD3F85E6EF9351603B72D8462C034 /* Debug */,
+				AFDAE4FA6B5E30A8E0B4F75990CCEF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD56C041D949064F5CA7899644728E35 /* Build configuration list for PBXNativeTarget "CDAlertView-CDAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77B61605C05BFB36142D06B401EC1DFB /* Debug */,
+				C0578ABD25BB818E47950F1BAE2C1733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

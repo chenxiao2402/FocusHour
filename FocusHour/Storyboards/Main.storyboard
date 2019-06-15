@@ -10,6 +10,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My View Controller-->
+        <scene sceneID="cue-29-e4y">
+            <objects>
+                <viewController storyboardIdentifier="TreeStore" id="CUZ-u4-aBq" customClass="MyViewController" customModule="FocusHour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTh-SD-ZUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuL-zt-TG7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pap-iA-FDD">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" red="1" green="0.40507582110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="7De-PI-A61"/>
+                                    <constraint firstAttribute="width" constant="240" id="vOr-a1-Hec"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZuL-zt-TG7" secondAttribute="bottom" id="I5i-oQ-ZtC"/>
+                            <constraint firstItem="pap-iA-FDD" firstAttribute="centerY" secondItem="iTh-SD-ZUc" secondAttribute="centerY" id="IGc-Ov-4aU"/>
+                            <constraint firstAttribute="trailing" secondItem="ZuL-zt-TG7" secondAttribute="trailing" id="QRI-a4-oS1"/>
+                            <constraint firstItem="ZuL-zt-TG7" firstAttribute="leading" secondItem="iTh-SD-ZUc" secondAttribute="leading" id="XtY-Pk-UYW"/>
+                            <constraint firstItem="ZuL-zt-TG7" firstAttribute="top" secondItem="iTh-SD-ZUc" secondAttribute="top" id="dqe-tL-Upc"/>
+                            <constraint firstItem="pap-iA-FDD" firstAttribute="centerX" secondItem="iTh-SD-ZUc" secondAttribute="centerX" id="iYb-0n-8m3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HCV-3y-ZnM"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="ZuL-zt-TG7" id="2IS-bW-el5"/>
+                        <outlet property="redView" destination="pap-iA-FDD" id="aNN-zt-nkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJl-Zb-gGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="101.78571428571428"/>
+        </scene>
         <!--Set TimeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>

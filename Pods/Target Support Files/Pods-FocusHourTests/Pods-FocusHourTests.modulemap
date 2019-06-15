@@ -1,0 +1,6 @@
+framework module Pods_FocusHourTests {
+  umbrella header "Pods-FocusHourTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
