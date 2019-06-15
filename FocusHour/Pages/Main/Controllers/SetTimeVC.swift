@@ -58,12 +58,10 @@ class SetTimeVC: UIViewController {
 extension SetTimeVC {
     
     @objc func showTreeStore() {
-
         let controller = storyboard!.instantiateViewController(withIdentifier: "TreeStore")
         addChild(controller)
         view.addSubview(controller.view)
         controller.didMove(toParent: self)
-
     }
     
 }

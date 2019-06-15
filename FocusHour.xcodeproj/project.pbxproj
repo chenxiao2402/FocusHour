@@ -75,7 +75,6 @@
 		5CFEA454220EA691001408E9 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA453220EA691001408E9 /* TimerVC.swift */; };
 		5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA455220EA7D1001408E9 /* CircleTimer.swift */; };
 		5CFEA458220EA861001408E9 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEA457220EA861001408E9 /* StopButton.swift */; };
-		DD2029562F76AEAC43CECC52 /* Pods_FocusHour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD192172AD3E84A0FF8823E /* Pods_FocusHour.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +89,6 @@
 
 /* Begin PBXFileReference section */
 		0F5345EB8B9B43C3A3EC9264 /* Pods_FocusHourTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusHourTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26B7E46E768270E0463C1B77 /* Pods-FocusHour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusHour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocusHour/Pods-FocusHour.debug.xcconfig"; sourceTree = "<group>"; };
-		30D80E9C4074C59C18744A76 /* Pods-FocusHourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusHourTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocusHourTests/Pods-FocusHourTests.release.xcconfig"; sourceTree = "<group>"; };
 		4DD192172AD3E84A0FF8823E /* Pods_FocusHour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusHour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingModeSettingSwitchCell.swift; sourceTree = "<group>"; };
@@ -168,8 +165,6 @@
 		5CFEA453220EA691001408E9 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		5CFEA455220EA7D1001408E9 /* CircleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimer.swift; sourceTree = "<group>"; };
 		5CFEA457220EA861001408E9 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
-		B8B2F39E969C3A033CBD0ED5 /* Pods-FocusHour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusHour.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocusHour/Pods-FocusHour.release.xcconfig"; sourceTree = "<group>"; };
-		E13F957A3C86EE579D8486D6 /* Pods-FocusHourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusHourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocusHourTests/Pods-FocusHourTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C198F052215368D009B8096 /* UserNotifications.framework in Frameworks */,
-				DD2029562F76AEAC43CECC52 /* Pods_FocusHour.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,17 +187,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45ECECF89CE65514E4AC9951 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26B7E46E768270E0463C1B77 /* Pods-FocusHour.debug.xcconfig */,
-				B8B2F39E969C3A033CBD0ED5 /* Pods-FocusHour.release.xcconfig */,
-				E13F957A3C86EE579D8486D6 /* Pods-FocusHourTests.debug.xcconfig */,
-				30D80E9C4074C59C18744A76 /* Pods-FocusHourTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5C06872922AF99B20009CCC9 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,7 +360,6 @@
 				5C80BF5B2207D98100691E98 /* FocusHourTests */,
 				5C80BF452207D98000691E98 /* Products */,
 				5C198F032215368D009B8096 /* Frameworks */,
-				45ECECF89CE65514E4AC9951 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,11 +449,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C80BF612207D98100691E98 /* Build configuration list for PBXNativeTarget "FocusHour" */;
 			buildPhases = (
-				60CB8ADBAA25910A9E731266 /* [CP] Check Pods Manifest.lock */,
 				5C80BF402207D98000691E98 /* Sources */,
 				5C80BF412207D98000691E98 /* Frameworks */,
 				5C80BF422207D98000691E98 /* Resources */,
-				8CDC43C8A40F73CAF11A4EEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -580,42 +560,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		60CB8ADBAA25910A9E731266 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FocusHour-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8CDC43C8A40F73CAF11A4EEA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FocusHour/Pods-FocusHour-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocusHour/Pods-FocusHour-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BFA07EAAD02685A29C35524A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -856,7 +800,6 @@
 		};
 		5C80BF622207D98100691E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26B7E46E768270E0463C1B77 /* Pods-FocusHour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -877,7 +820,6 @@
 		};
 		5C80BF632207D98100691E98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8B2F39E969C3A033CBD0ED5 /* Pods-FocusHour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -897,7 +839,6 @@
 		};
 		5C80BF652207D98100691E98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E13F957A3C86EE579D8486D6 /* Pods-FocusHourTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -919,7 +860,6 @@
 		};
 		5C80BF662207D98100691E98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30D80E9C4074C59C18744A76 /* Pods-FocusHourTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
