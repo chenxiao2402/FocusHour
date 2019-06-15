@@ -18,7 +18,6 @@ class AchievementVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITool.setBackgroundImage(view, random: false)
         yearSelector.achievementVC = self
         titleButton.addTarget(self, action: #selector(AchievementVC.displayYearSelector), for: .touchUpInside)
         
@@ -27,6 +26,11 @@ class AchievementVC: UIViewController {
         collectionView.backgroundColor = UIColor.clear
         setCollectionLayout()
         refreshAchievements(of: yearSelector.years.first ?? TimeTool.getCurrentYear())
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
     }
     
     private func setCollectionLayout() {

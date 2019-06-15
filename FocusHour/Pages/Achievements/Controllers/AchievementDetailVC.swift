@@ -23,9 +23,13 @@ class AchievementDetailVC: UIViewController {
     var dayList: [Int] = []
     var levelList: [Int] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITool.setBackgroundImage(view, random: false)
         for record in PlantRecord.loadRecords(year: year, month: month) {
             levelList.append(ImageTool.getIndex(focusMinutes: record.minute, timeRange: SystemConstant.FocusRecordRange))
             
