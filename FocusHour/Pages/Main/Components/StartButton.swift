@@ -26,11 +26,11 @@ class StartButton: UIButton {
         layer.backgroundColor = ColorKey.Emerald.uiColor().cgColor
         layer.masksToBounds = false
         
-        layer.borderWidth = 2.0;
+        layer.borderWidth = 2.0
         layer.borderColor = UIColor.clear.cgColor
         
         layer.shadowColor = ColorKey.ForestGreen.uiColor().cgColor
-        layer.shadowOpacity = 1.0;
+        layer.shadowOpacity = 1.0
         layer.shadowOffset = CGSize(width: 0, height: 3)
 
         self.addTarget(self, action: #selector(StartButton.changeBackgroundColor), for: [.touchDown])

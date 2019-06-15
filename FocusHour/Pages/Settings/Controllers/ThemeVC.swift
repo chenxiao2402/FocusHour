@@ -14,16 +14,11 @@ class ThemeVC: UITableViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
-        if nightMode == true{
-            themeCells = ThemeKey.getDarkTheme();
-        }else{
-            themeCells = ThemeKey.getLightTheme();
-        }
-        navigationItem.title = LocalizationKey.ChangeThema.translate();
+        themeCells = Theme.getCurrentThemeList().sorted(by: { $0.index < $1.index })
+        navigationItem.title = LocalizationKey.ChangeThema.translate()
         
-        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
+        UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
         
     }
     
@@ -31,19 +26,24 @@ class ThemeVC: UITableViewController{
         return 1
     }
     
-    func handleThemeChange(newTheme: Theme)->Void{
-        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
+    func handleThemeChange(newTheme: Theme) {
+        UITool.setBackgroundImage(view, imageName: newTheme.backgroundImage)
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: newTheme.navigationColor)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return themeCells.count;
+        return themeCells.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ThemeCell", for: indexPath) as! ThemeCell
-        cell.theme = themeCells[indexPath.row];
-        cell.controller = self;
+        cell.theme = themeCells[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let theme = themeCells[indexPath.row]
+        Theme.selectTheme(selectedTheme: theme)
+        handleThemeChange(newTheme: theme)
     }
 }

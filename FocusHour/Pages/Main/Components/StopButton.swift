@@ -27,7 +27,7 @@ class StopButton: UIButton {
         layer.masksToBounds = true
         layer.cornerRadius = 20.0
         
-        layer.borderWidth = 2.0;
+        layer.borderWidth = 2.0
         layer.borderColor = UIColor.white.cgColor
         
         self.addTarget(self, action: #selector(StopButton.changeBackgroundColor), for: [.touchDown])

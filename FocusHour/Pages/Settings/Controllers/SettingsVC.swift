@@ -22,7 +22,7 @@ class SettingsVC: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.handleNightModeChange();
+        self.handleNightModeChange()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,24 +38,13 @@ class SettingsVC: UITableViewController{
         workingModeCell.mode = .WorkingMode
         nightModeCell.mode = .NightMode
         
-        nightModeCell.tableViewController = self;
-        self.handleNightModeChange();
+        nightModeCell.tableViewController = self
+        self.handleNightModeChange()
     }
     
     func handleNightModeChange(){
-        UITool.setBackgroundImage(tableView, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
-        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
-        let labelTextColor = nightMode == true ? UIColor.white : UIColor.black;
-        
-        languageCell.label?.textColor = labelTextColor;
-        phraseCell.label?.textColor = labelTextColor;
-        themaCell.label?.textColor = labelTextColor;
-        workingModeCell.label?.textColor = labelTextColor;
-        nightModeCell.label?.textColor = labelTextColor;
-        introductionCell.label?.textColor = labelTextColor;
-        aboutCell.label?.textColor = labelTextColor;
-    
+        UITool.setBackgroundImage(tableView, imageName: Theme.getCurrentTheme().backgroundImage)
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
     }
     
     

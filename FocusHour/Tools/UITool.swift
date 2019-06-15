@@ -36,53 +36,39 @@ class UITool {
     }
     
     static func setBackgroundImage(_ view: UIView, imageName: String){
-        setBackgroundImage(view, image: UIImage(named: imageName)!);
+        setBackgroundImage(view, image: UIImage(named: imageName)!)
     }
     
     private static func setBackgroundImage(_ view: UIView, image: UIImage){
         if view is UITableView {
             let tableView = view as! UITableView
             let imageView = UIImageView.init(frame: view.bounds)
-            imageView.image = image;
+            imageView.image = image
             tableView.backgroundView = imageView
         } else {
             UIGraphicsBeginImageContext(view.frame.size)
-            image.draw(in: view.bounds);
-            let imageFromCurrentImageContext = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
+            image.draw(in: view.bounds)
+            let imageFromCurrentImageContext = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
             view.backgroundColor = UIColor.init(patternImage: imageFromCurrentImageContext!)
         }
     }
     
-    
     static func setBackgroundImage(_ view: UIView, random: Bool, nightMode: Bool = false) {
-        if nightMode == true{
-            self.setBackgroundImage(view, image: ImageTool.getBackgroundImageInDark()!);
-        }else{
-            self.setBackgroundImage(view, image: ImageTool.getBackgroundImageInLight()!);
+        let backgroundImage = UIImage(named: Theme.getCurrentTheme().backgroundImage)
+        if view is UITableView {
+            let tableView = view as! UITableView
+            let imageView = UIImageView.init(frame: view.bounds)
+            imageView.image = backgroundImage
+            tableView.backgroundView = imageView
+        } else {
+            UIGraphicsBeginImageContext(view.frame.size)
+            backgroundImage?.draw(in: view.bounds)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            view.backgroundColor = UIColor.init(patternImage: image!)
         }
-//        if view is UITableView {
-//            let tableView = view as! UITableView
-//            let imageView = UIImageView.init(frame: view.bounds)
-//            if nightMode == true{
-//                imageView.image = ImageTool.getBackgroundImageInDark();
-//            }else{
-//                imageView.image = ImageTool.getBackgroundImageInLight();
-//            }
-//            tableView.backgroundView = imageView
-//        } else {
-//            UIGraphicsBeginImageContext(view.frame.size)
-//            if nightMode == true{
-//                ImageTool.getBackgroundImageInDark()?.draw(in: view.bounds);
-//            }else{
-//                ImageTool.getBackgroundImageInLight()?.draw(in: view.bounds);
-//            }
-//            let image = UIGraphicsGetImageFromCurrentImageContext()
-//            UIGraphicsEndImageContext()
-//            view.backgroundColor = UIColor.init(patternImage: image!)
-//        }
     }
-
     
     static func isScreenLocked() -> Bool{
         // 除了锁屏之外，用户把亮度调到最低，brightness也是0...

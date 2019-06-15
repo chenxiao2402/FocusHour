@@ -12,8 +12,7 @@
 		5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */; };
 		5A671A1122B48C26004B4F20 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1022B48C26004B4F20 /* ThemeCell.swift */; };
 		5A671A1322B48CCD004B4F20 /* ThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1222B48CCD004B4F20 /* ThemeVC.swift */; };
-		5A671A1922B4B3EA004B4F20 /* ThemeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */; };
-		5A671A1B22B4D2FB004B4F20 /* ThemeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */; };
+		5A671A1922B4B3EA004B4F20 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1822B4B3EA004B4F20 /* Theme.swift */; };
 		5A671A1D22B4E033004B4F20 /* UIColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1C22B4E033004B4F20 /* UIColorTool.swift */; };
 		5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039661220DB0EC00CC1B2D /* ColorKey.swift */; };
 		5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C039666220DD4C000CC1B2D /* StartButton.swift */; };
@@ -94,8 +93,7 @@
 		5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5A671A1022B48C26004B4F20 /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
 		5A671A1222B48CCD004B4F20 /* ThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeVC.swift; sourceTree = "<group>"; };
-		5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeKey.swift; sourceTree = "<group>"; };
-		5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTool.swift; sourceTree = "<group>"; };
+		5A671A1822B4B3EA004B4F20 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5A671A1C22B4E033004B4F20 /* UIColorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTool.swift; sourceTree = "<group>"; };
 		5C039661220DB0EC00CC1B2D /* ColorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKey.swift; sourceTree = "<group>"; };
 		5C039666220DD4C000CC1B2D /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
@@ -277,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				5C14331722169C6000C50760 /* PlantRecord.swift */,
+				5A671A1822B4B3EA004B4F20 /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,7 +300,6 @@
 				5C4885E92213014E00198B49 /* LocalizationKey.swift */,
 				5C256386221ABB6900732477 /* MonthKey.swift */,
 				5C2DA1C922B010260071B076 /* SystemConstant.swift */,
-				5A671A1822B4B3EA004B4F20 /* ThemeKey.swift */,
 			);
 			path = ProjectKeys;
 			sourceTree = "<group>";
@@ -405,7 +403,6 @@
 				5C4885EB2213027800198B49 /* LocalizationTool.swift */,
 				5C14331922169ECA00C50760 /* TimeTool.swift */,
 				5CB6F5B122AABDE40093DA7D /* ImageTool.swift */,
-				5A671A1A22B4D2FB004B4F20 /* ThemeTool.swift */,
 				5A671A1C22B4E033004B4F20 /* UIColorTool.swift */,
 			);
 			path = Tools;
@@ -633,8 +630,7 @@
 				5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */,
 				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
-				5A671A1922B4B3EA004B4F20 /* ThemeKey.swift in Sources */,
-				5A671A1B22B4D2FB004B4F20 /* ThemeTool.swift in Sources */,
+				5A671A1922B4B3EA004B4F20 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

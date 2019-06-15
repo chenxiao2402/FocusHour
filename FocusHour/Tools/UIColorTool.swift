@@ -89,7 +89,7 @@ private func proceesHex(hex: String, alpha: CGFloat) -> UIColor{
     let bHex = (hHex as NSString).substring(with: range)
     
     /** 类型转换 */
-    var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+    var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0
     
     Scanner(string: rHex).scanHexInt32(&r)
     Scanner(string: gHex).scanHexInt32(&g)

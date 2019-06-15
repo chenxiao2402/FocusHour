@@ -21,8 +21,8 @@ class SetLanguageVC: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // change background image
-        UITool.setBackgroundImage(tableView, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)    }
+        UITool.setBackgroundImage(tableView, imageName: Theme.getCurrentTheme().backgroundImage)
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -36,13 +36,7 @@ class SetLanguageVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SetLanguageCell", for: indexPath) as! SetLanguageCell
         let language = languages[indexPath.row]
         cell.language = language
-        cell.setSelected(language.isSystemLanguage())
-        
-        // change label color
-        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
-        let labelTextColor = nightMode == true ? UIColor.white : UIColor.black;
-        cell.label.textColor = labelTextColor;
-        
+        cell.setSelected(language.isSystemLanguage())        
         return cell
     }
     

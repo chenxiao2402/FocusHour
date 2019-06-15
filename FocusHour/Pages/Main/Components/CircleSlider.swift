@@ -65,7 +65,7 @@ class CircleSlider: CircleView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let ctx = UIGraphicsGetCurrentContext();
+        let ctx = UIGraphicsGetCurrentContext()
         // 设置背景，画一个空的圆环
         ctx?.setFillColor(ColorKey.LightYellow.uiColor().cgColor)
         ctx?.setShouldAntialias(true)
@@ -82,8 +82,8 @@ class CircleSlider: CircleView {
         ctx?.saveGState()
         ctx?.setShouldAntialias(true)
         ctx?.setLineWidth(circleBorderWidth)
-        ctx?.setStrokeColor(SLIDER_PROGRESS_COLOR.cgColor);
-        ctx?.addPath(circlePath.cgPath);
+        ctx?.setStrokeColor(SLIDER_PROGRESS_COLOR.cgColor)
+        ctx?.addPath(circlePath.cgPath)
         ctx?.drawPath(using: CGPathDrawingMode.stroke)
         ctx?.restoreGState()
         

@@ -29,13 +29,13 @@ class SetTimeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UITool.setBackgroundImage(self.view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
+        UITool.setBackgroundImage(self.view, imageName: Theme.getCurrentTheme().backgroundImage)
         
         // timeSetter.drawHeadLabel(LocalizationKey.NotificationDeath.translate())
         // 如果调用上面那个方法会出现label只画出左边70%左右的情况，可能是因为viewWillAppear的时候获得的高度还是不保证准确的
         timeSetter.headLabel.text = LocalizationKey.SetTimeTitle.translate()
         startButton.setTitle(LocalizationKey.Start.translate(), for: .normal)
-        coinLabel.text = "\(PreferenceTool.getCoinNumber())";
+        coinLabel.text = "\(PreferenceTool.getCoinNumber())"
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

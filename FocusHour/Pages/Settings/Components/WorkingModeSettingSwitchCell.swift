@@ -12,8 +12,8 @@ class WorkingModeSettingSwitchCell: SettingSwitchCell {
     
     
     @IBAction override func SwitchMode(_ sender: Any) {
-        super.SwitchMode(sender);
-        UserDefaults.standard.set(PreferenceTool.isMode(ofName: self.mode), forKey: "WorkingMode");
+        super.SwitchMode(sender)
+        UserDefaults.standard.set(PreferenceTool.isMode(ofName: self.mode), forKey: "WorkingMode")
     }
     
 }

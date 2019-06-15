@@ -35,7 +35,7 @@ extension Bundle {
          
          别忘了Objective-C的一个关键点：object内部有一个叫做isa的变量指向它的class。
          这个变量可以被改变，而不需要重新创建。然后就可以添加新的ivar和方法了。
-         可以通过以下命令来修改一个object的class：  object_setClass(myObject, [MySubclass class]);
+         可以通过以下命令来修改一个object的class：  object_setClass(myObject, [MySubclass class])
          这可以用在Key Value Observing。当你开始observing an object时，Cocoa会创建这个object的class的subclass，
          然后将这个object的isa指向新创建的subclass。
          https://limboy.me/tech/2013/08/03/dynamic-tips-and-tricks-with-objective-c.html

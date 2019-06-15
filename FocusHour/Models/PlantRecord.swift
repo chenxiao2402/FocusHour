@@ -9,6 +9,14 @@
 import UIKit
 import os.log
 
+//MARK: Types
+struct PlantRecordProperty {
+    static let imgName = "imgName"
+    static let minute = "minute"
+    static let year = "year"
+    static let month = "month"
+    static let day = "day"
+}
 
 class PlantRecord: NSObject, NSCoding {
     
@@ -20,23 +28,11 @@ class PlantRecord: NSObject, NSCoding {
     var day: Int
     
     //MARK: Archiving Paths
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("PlantRecords")
+    static let ArchiveURL = SystemConstant.DocumentsDirectory.appendingPathComponent("PlantRecords")
     static let RecordFile = "Records"
     static let TimeFile = "TotalTime"
     
-    //MARK: Types
-    
-    struct PropertyKey {
-        static let imgName = "imgName"
-        static let minute = "minute"
-        static let year = "year"
-        static let month = "month"
-        static let day = "day"
-    }
-    
     //MARK: Initialization
-    
     init?(imgName: String, minute: Int, year: Int, month: Int, day: Int) {
         guard !imgName.isEmpty else { return nil }
         guard minute >= 0 else { return nil }
@@ -65,23 +61,23 @@ class PlantRecord: NSObject, NSCoding {
     //MARK: NSCoding
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(imgName, forKey: PropertyKey.imgName)
-        aCoder.encode(minute, forKey: PropertyKey.minute)
-        aCoder.encode(year, forKey: PropertyKey.year)
-        aCoder.encode(month, forKey: PropertyKey.month)
-        aCoder.encode(day, forKey: PropertyKey.day)
+        aCoder.encode(imgName, forKey: PlantRecordProperty.imgName)
+        aCoder.encode(minute, forKey: PlantRecordProperty.minute)
+        aCoder.encode(year, forKey: PlantRecordProperty.year)
+        aCoder.encode(month, forKey: PlantRecordProperty.month)
+        aCoder.encode(day, forKey: PlantRecordProperty.day)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         // The name is required. If we cannot decode a name string, the initializer should fail.
-        guard let imgName = aDecoder.decodeObject(forKey: PropertyKey.imgName) as? String else {
+        guard let imgName = aDecoder.decodeObject(forKey: PlantRecordProperty.imgName) as? String else {
             os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
             return nil
         }
-        let minute = aDecoder.decodeInteger(forKey: PropertyKey.minute)
-        let year = aDecoder.decodeInteger(forKey: PropertyKey.year)
-        let month = aDecoder.decodeInteger(forKey: PropertyKey.month)
-        let day = aDecoder.decodeInteger(forKey: PropertyKey.day)
+        let minute = aDecoder.decodeInteger(forKey: PlantRecordProperty.minute)
+        let year = aDecoder.decodeInteger(forKey: PlantRecordProperty.year)
+        let month = aDecoder.decodeInteger(forKey: PlantRecordProperty.month)
+        let day = aDecoder.decodeInteger(forKey: PlantRecordProperty.day)
         self.init(imgName: imgName, minute: minute, year: year, month: month, day: day)
     }
 }

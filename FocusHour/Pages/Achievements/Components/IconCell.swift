@@ -25,7 +25,7 @@ class IconCell: UICollectionViewCell {
         
         // 设置背景，画一个圆形的背景板
         let strokeColor = ColorKey.LightYellow.uiColor()
-        let ctx = UIGraphicsGetCurrentContext();
+        let ctx = UIGraphicsGetCurrentContext()
         ctx?.setFillColor(strokeColor.cgColor)
         ctx?.setShouldAntialias(true)
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)

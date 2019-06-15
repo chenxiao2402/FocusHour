@@ -31,7 +31,7 @@ class CircleTimer: CircleView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let ctx = UIGraphicsGetCurrentContext();
+        let ctx = UIGraphicsGetCurrentContext()
         // 设置背景，画圆形的背景
         ctx?.setFillColor(ColorKey.LightYellow.uiColor().cgColor)
         ctx?.setShouldAntialias(true)

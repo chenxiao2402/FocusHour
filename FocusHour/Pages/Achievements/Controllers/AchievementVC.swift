@@ -29,8 +29,8 @@ class AchievementVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UITool.setBackgroundImage(view, imageName: ThemeTool.getCurrentTheme().backgroundImageName);
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: ThemeTool.getCurrentTheme().navigationColor)
+        UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
+        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
     }
     
     private func setCollectionLayout() {

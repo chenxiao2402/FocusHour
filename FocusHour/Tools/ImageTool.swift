@@ -21,11 +21,11 @@ class ImageTool {
     
     
     static func getBackgroundImageInDark() -> UIImage? {
-        return UIImage(named: "background-dark-5");
+        return UIImage(named: "background-dark-5")
     }
     
     static func getBackgroundImageInLight() -> UIImage? {
-        return UIImage(named: "background-light-7");
+        return UIImage(named: "background-light-5")
     }
     
     
