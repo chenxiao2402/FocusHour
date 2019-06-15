@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CDAlertView
 
 class SetTimeVC: UIViewController {
 
@@ -22,14 +21,11 @@ class SetTimeVC: UIViewController {
         super.viewDidLoad()
         UITool.setToolButtonSize(achievementButton, ratio: 1.0)
         UITool.setToolButtonSize(settingsButton, ratio: 1.0)
-<<<<<<< HEAD
-=======
         UITool.setBackgroundImage(self.view, random: true)
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(SetTimeVC.showTreeStore))
         timeSetter.iconView.addGestureRecognizer(gesture)
         timeSetter.iconView.isUserInteractionEnabled = true
->>>>>>> ChenXiao
     }
     
     override func viewWillAppear(_ animated: Bool) {
