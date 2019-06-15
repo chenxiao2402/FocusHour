@@ -87,3 +87,11 @@ iOSInjectionProject/
 *.scn
 
 # End of https://www.gitignore.io/api/swift
+md_pics/.DS_Store
+FocusHour/SupportingFiles/Assets.xcassets/Background Images/.DS_Store
+FocusHour/SupportingFiles/Assets.xcassets/.DS_Store
+FocusHour/SupportingFiles/.DS_Store
+FocusHour/Pages/Settings/.DS_Store
+FocusHour/Pages/.DS_Store
+FocusHour/.DS_Store
+.DS_Store
