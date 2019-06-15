@@ -116,7 +116,7 @@
                             </tableViewSection>
                             <tableViewSection id="ykA-Xl-Soq">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="Xb6-Os-UNL" customClass="SettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="Xb6-Os-UNL" customClass="WorkingModeSettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="221" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xb6-Os-UNL" id="7hV-qG-8sv">
@@ -155,7 +155,7 @@
                                             <outlet property="modeSwitch" destination="pcH-at-N8j" id="QdA-vP-MNd"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="46R-dS-qwl" customClass="SettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="46R-dS-qwl" customClass="NightModeSettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="271" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="46R-dS-qwl" id="jZd-Sf-P58">

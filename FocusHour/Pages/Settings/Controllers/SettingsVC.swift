@@ -14,15 +14,15 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var phraseCell: SettingDetailCell!
     @IBOutlet weak var themaCell: SettingDetailCell!
     
-    @IBOutlet weak var workingModeCell: SettingSwitchCell!
-    @IBOutlet weak var nightModeCell: SettingSwitchCell!
+    @IBOutlet weak var workingModeCell: NightModeSettingSwitchCell!
+    @IBOutlet weak var nightModeCell: NightModeSettingSwitchCell!
     
     @IBOutlet weak var introductionCell: SettingDetailCell!
     @IBOutlet weak var aboutCell: SettingDetailCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITool.setBackgroundImage(tableView, random: false)
+        self.handleNightModeChange();
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,26 @@ class SettingsVC: UITableViewController {
         
         workingModeCell.mode = .WorkingMode
         nightModeCell.mode = .NightMode
+        
+        nightModeCell.tableViewController = self;
+        self.handleNightModeChange();
     }
+    
+    func handleNightModeChange(){
+        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
+        let labelTextColor = nightMode == true ? UIColor.white : UIColor.black;
+    
+        languageCell.label?.textColor = labelTextColor;
+        phraseCell.label?.textColor = labelTextColor;
+        themaCell.label?.textColor = labelTextColor;
+        workingModeCell.label?.textColor = labelTextColor;
+        nightModeCell.label?.textColor = labelTextColor;
+        introductionCell.label?.textColor = labelTextColor;
+        aboutCell.label?.textColor = labelTextColor;
+        
+        UITool.setBackgroundImage(tableView, random: false, nightMode: nightMode);
+    }
+    
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
