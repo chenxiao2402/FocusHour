@@ -14,7 +14,7 @@ class NightModeSettingSwitchCell: SettingSwitchCell {
     @IBAction override func SwitchMode(_ sender: Any) {
         super.SwitchMode(sender);
         UserDefaults.standard.set(PreferenceTool.isMode(ofName: self.mode), forKey: "NightMode");
-        let nightMode = ModeTool.isMode(ofName: self.mode);
+        let nightMode = PreferenceTool.isMode(ofName: self.mode);
         UserDefaults.standard.set(nightMode, forKey: "NightMode");
         let changeTo = nightMode == true ? ThemeKey.getDarkTheme()[0] : ThemeKey.getLightTheme()[0];
         ThemeTool.changeTheme(theme: changeTo);
