@@ -20,7 +20,9 @@ class SetLanguageVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // change background image
         let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
+        UITool.setBackgroundImage(tableView, random: false, nightMode: nightMode);
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,6 +38,12 @@ class SetLanguageVC: UITableViewController {
         let language = languages[indexPath.row]
         cell.language = language
         cell.setSelected(language.isSystemLanguage())
+        
+        // change label color
+        let nightMode = UserDefaults.standard.bool(forKey: "NightMode");
+        let labelTextColor = nightMode == true ? UIColor.white : UIColor.black;
+        cell.label.textColor = labelTextColor;
+        
         return cell
     }
     

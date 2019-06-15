@@ -47,7 +47,11 @@ class UITool {
             tableView.backgroundView = imageView
         } else {
             UIGraphicsBeginImageContext(view.frame.size)
-            ImageTool.getBackgroundImage(random: random)?.draw(in: view.bounds)
+            if nightMode == true{
+                ImageTool.getBackgroundImageInDark()?.draw(in: view.bounds);
+            }else{
+                ImageTool.getBackgroundImageInLight()?.draw(in: view.bounds);
+            }
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             view.backgroundColor = UIColor.init(patternImage: image!)
