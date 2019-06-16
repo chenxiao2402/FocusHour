@@ -46,11 +46,20 @@ Thunderstorm = "雷雨";
 Settings = "设置";
 SetLanguage = "设置语言";
 SetPhrase = "设置提示";
-ChangeThema = "更改主题";
+ChangeTheme = "更改主题";
 WorkingMode = "工作模式";
 NightMode = "夜间模式";
 ThisApp = "应用介绍";
 About = "关于";
+
+
+// SetTimeView -> Settings -> ChangeTheme
+Theme = "Theme";
+One = "One";
+Two = "Two";
+Three = "Three";
+Four = "Four";
+Five = "Five";
 
 
 // SetTimeView -> Settings -> About

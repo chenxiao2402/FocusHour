@@ -10,15 +10,19 @@ import UIKit
 
 class ThemeCell: UITableViewCell {
 
+    @IBOutlet weak var themeImageView: ThemeImageView!
+    @IBOutlet weak var themeNameLabel: UILabel!
+    
     var theme: Theme! {
         didSet {
-            themeNameLabel.text = "\(theme.index)"
+            themeNameLabel.text = theme.name
             themeImageView.image = UIImage(named: theme.backgroundImage)
         }
     }
     
-    @IBOutlet weak var themeImageView: UIImageView!
-    @IBOutlet weak var themeNameLabel: UILabel!
+    override func awakeFromNib() {
+        themeImageView.contentMode = .scaleAspectFill
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {}
 }
