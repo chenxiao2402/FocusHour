@@ -30,7 +30,7 @@ class AchievementVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
+        self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
     }
     
     private func setCollectionLayout() {

@@ -22,7 +22,7 @@ class InfoPresenterVC: UIViewController {
         let textColor = nightMode == true ? UIColor.white : UIColor.black
         textArea.textColor = textColor
         UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
+        self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
     }
 
 }

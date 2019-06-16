@@ -12,7 +12,7 @@ class SettingsVC: UITableViewController{
    
     @IBOutlet weak var languageCell: SettingDetailCell!
     @IBOutlet weak var phraseCell: SettingDetailCell!
-    @IBOutlet weak var themaCell: SettingDetailCell!
+    @IBOutlet weak var themeCell: SettingDetailCell!
     
     @IBOutlet weak var workingModeCell: NightModeSettingSwitchCell!
     @IBOutlet weak var nightModeCell: NightModeSettingSwitchCell!
@@ -29,7 +29,7 @@ class SettingsVC: UITableViewController{
         navigationItem.title = LocalizationKey.Settings.translate()
         languageCell.keyVlue = LocalizationKey.SetLanguage
         phraseCell.keyVlue = LocalizationKey.SetPhrase
-        themaCell.keyVlue = LocalizationKey.ChangeThema
+        themeCell.keyVlue = LocalizationKey.ChangeTheme
         workingModeCell.keyVlue = LocalizationKey.WorkingMode
         nightModeCell.keyVlue = LocalizationKey.NightMode
         introductionCell.keyVlue = LocalizationKey.ThisApp
@@ -44,7 +44,7 @@ class SettingsVC: UITableViewController{
     
     func handleNightModeChange(){
         UITool.setBackgroundImage(tableView, imageName: Theme.getCurrentTheme().backgroundImage)
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
+        self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
     }
     
     

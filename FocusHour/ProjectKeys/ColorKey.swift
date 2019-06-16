@@ -19,8 +19,13 @@ enum ColorKey {
     case PaleGreen
     case LightGreen
     case DimGray
-    case DarkSlateGray
-    case DarkSlateGray_Touched
+    
+    case DarkTheme
+    case LightThemeOne
+    case LightThemeTwo
+    case LightThemeThree
+    case LightThemeFour
+    case LightThemeFive
 }
 
 extension ColorKey {
@@ -46,10 +51,18 @@ extension ColorKey {
             return #colorLiteral(red: 0.8, green: 0.9764705882, blue: 0.6705882353, alpha: 1)
         case .DimGray:
             return #colorLiteral(red: 0.2509803922, green: 0.2509803922, blue: 0.2509803922, alpha: 1)
-        case .DarkSlateGray:
-            return #colorLiteral(red: 0.1843137255, green: 0.3098039216, blue: 0.3098039216, alpha: 1)
-        case .DarkSlateGray_Touched:
-            return #colorLiteral(red: 0.1172121242, green: 0.1969575882, blue: 0.197809279, alpha: 1)
+        case .DarkTheme:
+            return #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1098039216, alpha: 0.799416738)
+        case .LightThemeOne:
+            return #colorLiteral(red: 0.1764705882, green: 0.262745098, blue: 0.2666666667, alpha: 1)
+        case .LightThemeTwo:
+            return #colorLiteral(red: 0.07843137255, green: 0.2823529412, blue: 0.3921568627, alpha: 1)
+        case .LightThemeThree:
+            return #colorLiteral(red: 0.1647058824, green: 0.2274509804, blue: 0.5411764706, alpha: 1)
+        case .LightThemeFour:
+            return #colorLiteral(red: 0.2156862745, green: 0.1843137255, blue: 0.368627451, alpha: 1)
+        case .LightThemeFive:
+            return #colorLiteral(red: 0.1882352941, green: 0.2941176471, blue: 0.462745098, alpha: 1)
         }
     }
 }

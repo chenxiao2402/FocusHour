@@ -15,20 +15,20 @@ enum ThemeKey: String {
     
     static let defaultDarkThemeList : [Theme] = [
         // dark theme
-        Theme(index: 1, backgroundImage: "background-dark-0", navigationColor: "#B636B46"),
-        Theme(index: 2, backgroundImage: "background-dark-1", navigationColor: "#494E6B"),
-        Theme(index: 3, backgroundImage: "background-dark-2", navigationColor: "#414141"),
-        Theme(index: 4, backgroundImage: "background-dark-3", navigationColor: "#22252C"),
-        Theme(index: 5, backgroundImage: "background-dark-4", navigationColor: "#333A56"),
+        Theme(index: 1, backgroundImage: "background-dark-1", themeColor: ColorKey.DarkTheme.uiColor()),
+        Theme(index: 2, backgroundImage: "background-dark-2", themeColor: ColorKey.DarkTheme.uiColor()),
+        Theme(index: 3, backgroundImage: "background-dark-3", themeColor: ColorKey.DarkTheme.uiColor()),
+        Theme(index: 4, backgroundImage: "background-dark-4", themeColor: ColorKey.DarkTheme.uiColor()),
+        Theme(index: 5, backgroundImage: "background-dark-5", themeColor: ColorKey.DarkTheme.uiColor()),
     ]
     
     static let defaultLightThemeList: [Theme] = [
         // light theme
-        Theme(index: 1, backgroundImage: "background-light-0", navigationColor: "#B37D4E"),
-        Theme(index: 2, backgroundImage: "background-light-1", navigationColor: "#30415D"),
-        Theme(index: 3, backgroundImage: "background-light-2", navigationColor: "#000000"),
-        Theme(index: 4, backgroundImage: "background-light-3", navigationColor: "#6C648B"),
-        Theme(index: 5, backgroundImage: "background-light-4", navigationColor: "E626E60"),
+        Theme(index: 1, backgroundImage: "background-light-1", themeColor: ColorKey.LightThemeOne.uiColor()),
+        Theme(index: 2, backgroundImage: "background-light-2", themeColor: ColorKey.LightThemeTwo.uiColor()),
+        Theme(index: 3, backgroundImage: "background-light-3", themeColor: ColorKey.LightThemeThree.uiColor()),
+        Theme(index: 4, backgroundImage: "background-light-4", themeColor: ColorKey.LightThemeFour.uiColor()),
+        Theme(index: 5, backgroundImage: "background-light-5", themeColor: ColorKey.LightThemeFive.uiColor()),
     ]
     
     func getThemeList() -> [Theme] {
@@ -44,7 +44,7 @@ enum ThemeKey: String {
 struct ThemeProperty {
     static let index = "index"
     static let backgroundImage = "backgroundImage"
-    static let navigationColor = "navigationColor"
+    static let themeColor = "themeColor"
 }
 
 class Theme: NSObject, NSCoding {
@@ -53,12 +53,18 @@ class Theme: NSObject, NSCoding {
     
     let index: Int
     let backgroundImage: String
-    let navigationColor: String
+    let themeColor: UIColor
     
-    init(index: Int, backgroundImage: String, navigationColor: String) {
+    lazy var name: String = {
+        let indexNameList: [LocalizationKey] = [.One, .Two, .Three, .Four, .Five]
+        let indexName = indexNameList[index - 1].translate()
+        return "\(LocalizationKey.Theme.translate())\(indexName)"
+    }()
+    
+    init(index: Int, backgroundImage: String, themeColor: UIColor) {
         self.index = index
         self.backgroundImage = backgroundImage
-        self.navigationColor = navigationColor
+        self.themeColor = themeColor
     }
     
     //MARK: NSCoding
@@ -66,14 +72,14 @@ class Theme: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(index, forKey: ThemeProperty.index)
         aCoder.encode(backgroundImage, forKey: ThemeProperty.backgroundImage)
-        aCoder.encode(navigationColor, forKey: ThemeProperty.navigationColor)
+        aCoder.encode(themeColor, forKey: ThemeProperty.themeColor)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         let index = aDecoder.decodeInteger(forKey: ThemeProperty.index)
         guard let backgroundImage = aDecoder.decodeObject(forKey: ThemeProperty.backgroundImage) as? String else { return nil }
-        guard let navigationColor = aDecoder.decodeObject(forKey: ThemeProperty.navigationColor) as? String else { return nil }
-        self.init(index: index, backgroundImage: backgroundImage, navigationColor: navigationColor)
+        guard let themeColor = aDecoder.decodeObject(forKey: ThemeProperty.themeColor) as? UIColor else { return nil }
+        self.init(index: index, backgroundImage: backgroundImage, themeColor: themeColor)
     }
 }
 

@@ -38,6 +38,7 @@
 		5C2DA1CA22B010260071B076 /* SystemConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DA1C922B010260071B076 /* SystemConstant.swift */; };
 		5C2F9A9822B0FE5800201C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F9A9622B0FE5800201C7C /* Assets.xcassets */; };
 		5C2F9A9922B0FE5800201C7C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F9A9722B0FE5800201C7C /* art.scnassets */; };
+		5C34F0CC22B675C500A93B58 /* ThemeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34F0CB22B675C500A93B58 /* ThemeImageView.swift */; };
 		5C374A7A220934870059EF2C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C374A79220934870059EF2C /* CircleView.swift */; };
 		5C3D03D82211AFE20089E96A /* Stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C3D03D72211AFE20089E96A /* Stream.mp3 */; };
 		5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D03D92211B0330089E96A /* SoundPlayer.swift */; };
@@ -60,6 +61,7 @@
 		5C62456D2208486E00AAFD66 /* SetTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C62456C2208486E00AAFD66 /* SetTimeVC.swift */; };
 		5C75264922B48DC3002FC72D /* CoinLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */; };
 		5C75264B22B49197002FC72D /* CoinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75264A22B49197002FC72D /* CoinIcon.swift */; };
+		5C7CCDC322B69DFD005061EA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CCDC222B69DFD005061EA /* UIColorExtension.swift */; };
 		5C80BF5D2207D98100691E98 /* FocusHourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80BF5C2207D98100691E98 /* FocusHourTests.swift */; };
 		5C8BE5D822A7A32E00E5A4B5 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */; };
 		5C8BE5DA22A7A5D200E5A4B5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */; };
@@ -123,6 +125,7 @@
 		5C2DA1C922B010260071B076 /* SystemConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConstant.swift; sourceTree = "<group>"; };
 		5C2F9A9622B0FE5800201C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2F9A9722B0FE5800201C7C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		5C34F0CB22B675C500A93B58 /* ThemeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImageView.swift; sourceTree = "<group>"; };
 		5C374A79220934870059EF2C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5C3D03D72211AFE20089E96A /* Stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stream.mp3; sourceTree = "<group>"; };
 		5C3D03D92211B0330089E96A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		5C62456C2208486E00AAFD66 /* SetTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeVC.swift; sourceTree = "<group>"; };
 		5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLabelContainer.swift; sourceTree = "<group>"; };
 		5C75264A22B49197002FC72D /* CoinIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinIcon.swift; sourceTree = "<group>"; };
+		5C7CCDC222B69DFD005061EA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5C80BF442207D98000691E98 /* FocusHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80BF532207D98100691E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C80BF582207D98100691E98 /* FocusHourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusHourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +271,7 @@
 				5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */,
 				5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */,
 				5A671A1022B48C26004B4F20 /* ThemeCell.swift */,
+				5C34F0CB22B675C500A93B58 /* ThemeImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			children = (
 				5C593689220AF0ED00E7F5CF /* CGPointExtension.swift */,
 				5C109FDE22105C6B003D026E /* BundleExtension.swift */,
+				5C7CCDC222B69DFD005061EA /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				5C80BF532207D98100691E98 /* Info.plist */,
 				5C109FC8220FCA26003D026E /* Localizable.strings */,
 				5C109FBC220FC792003D026E /* InfoPlist.strings */,
+				5C2F9A9622B0FE5800201C7C /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -433,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				5C2F9A9722B0FE5800201C7C /* art.scnassets */,
-				5C2F9A9622B0FE5800201C7C /* Assets.xcassets */,
 				5C06872922AF99B20009CCC9 /* Sound */,
 			);
 			path = Resources;
@@ -599,6 +605,7 @@
 				5C5C91A722B4DF5400FD0DE4 /* MyViewController.swift in Sources */,
 				5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */,
 				5C4885E82212FF9500198B49 /* SetLanguageVC.swift in Sources */,
+				5C7CCDC322B69DFD005061EA /* UIColorExtension.swift in Sources */,
 				5CB6F5B022AABBAB0093DA7D /* MonthCell.swift in Sources */,
 				5CB6F5B222AABDE40093DA7D /* ImageTool.swift in Sources */,
 				5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */,
@@ -631,6 +638,7 @@
 				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 				5A671A1922B4B3EA004B4F20 /* Theme.swift in Sources */,
+				5C34F0CC22B675C500A93B58 /* ThemeImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

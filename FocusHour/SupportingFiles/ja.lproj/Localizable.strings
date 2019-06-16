@@ -46,11 +46,20 @@ Thunderstorm = "雷雨";
 Settings = "設定";
 SetLanguage = "言語設定";
 SetPhrase = "フレイズ設定";
-ChangeThema = "テーマ変更";
+ChangeTheme = "テーマ変更";
 WorkingMode = "仕事モード";
 NightMode = "夜間モード";
 ThisApp = "このアプリ";
 About = "その他";
+
+
+// SetTimeView -> Settings -> ChangeTheme
+Theme = "Theme";
+One = "One";
+Two = "Two";
+Three = "Three";
+Four = "Four";
+Five = "Five";
 
 
 // SetTimeView -> Settings -> About

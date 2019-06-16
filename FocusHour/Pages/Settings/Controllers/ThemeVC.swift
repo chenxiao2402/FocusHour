@@ -15,10 +15,10 @@ class ThemeVC: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         themeCells = Theme.getCurrentThemeList().sorted(by: { $0.index < $1.index })
-        navigationItem.title = LocalizationKey.ChangeThema.translate()
+        navigationItem.title = LocalizationKey.ChangeTheme.translate()
         
         UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: Theme.getCurrentTheme().navigationColor)
+        self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
         
     }
     
@@ -28,11 +28,16 @@ class ThemeVC: UITableViewController{
     
     func handleThemeChange(newTheme: Theme) {
         UITool.setBackgroundImage(view, imageName: newTheme.backgroundImage)
-        self.navigationController?.navigationBar.barTintColor = UIColor.ColorHex(hex: newTheme.navigationColor)
+        self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return themeCells.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let heightRatio = CGFloat(UIDevice().model == "iPad" ? 1.0 / 6.0 : 1.0 / 4.0)
+        return heightRatio * UIScreen.main.bounds.height
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

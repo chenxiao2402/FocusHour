@@ -25,7 +25,7 @@ class DropdownButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true
         widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
-        backgroundColor = ColorKey.DarkSlateGray.uiColor()
+        backgroundColor = Theme.getCurrentTheme().themeColor
         titleLabel?.font = UIFont(name: "Verdana", size: 20)
 
         addTarget(self, action: #selector(DropdownButton.changeBackgroundColor), for: [.touchDown])
@@ -33,10 +33,11 @@ class DropdownButton: UIButton {
     }
     
     @objc private func changeBackgroundColor() {
-        backgroundColor = ColorKey.DarkSlateGray_Touched.uiColor()
+        let rgba = Theme.getCurrentTheme().themeColor.cgColor.components!
+        backgroundColor = UIColor(red: rgba[0] * 0.8, green: rgba[1] * 0.8, blue: rgba[2] * 0.8, alpha: rgba[3])
     }
     
     @objc private func resetBackgroundColor() {
-        backgroundColor = ColorKey.DarkSlateGray.uiColor()
+        backgroundColor = Theme.getCurrentTheme().themeColor
     }
 }

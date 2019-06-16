@@ -46,11 +46,20 @@ Thunderstorm = "Thunderstorm";
 Settings = "Settings";
 SetLanguage = "Set Language";
 SetPhrase = "Set Phrase";
-ChangeThema = "Change Thema";
+ChangeTheme = "Change Theme";
 WorkingMode = "Working Mode";
 NightMode = "Night Mode";
 ThisApp = "This App";
 About = "About";
+
+
+// SetTimeView -> Settings -> ChangeTheme
+Theme = "Theme";
+One = "One";
+Two = "Two";
+Three = "Three";
+Four = "Four";
+Five = "Five";
 
 
 // SetTimeView -> Settings -> About
