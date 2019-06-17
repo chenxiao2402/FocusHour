@@ -68,6 +68,7 @@
 		5C8BE5DA22A7A5D200E5A4B5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */; };
 		5C98171D22B731FB00362D39 /* TreeStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98171C22B731FB00362D39 /* TreeStoreView.swift */; };
 		5C98172322B736C900362D39 /* TreeStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98172222B736C900362D39 /* TreeStoreController.swift */; };
+		5CA375AE22B755F900BC49DF /* TreeStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */; };
 		5CB6F5B022AABBAB0093DA7D /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6F5AF22AABBAB0093DA7D /* MonthCell.swift */; };
 		5CB6F5B222AABDE40093DA7D /* ImageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6F5B122AABDE40093DA7D /* ImageTool.swift */; };
 		5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2047C221114870091DDFE /* SoundSelectorVC.swift */; };
@@ -162,6 +163,7 @@
 		5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5C98171C22B731FB00362D39 /* TreeStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeStoreView.swift; sourceTree = "<group>"; };
 		5C98172222B736C900362D39 /* TreeStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeStoreController.swift; sourceTree = "<group>"; };
+		5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeStoreCell.swift; sourceTree = "<group>"; };
 		5CB6F5AF22AABBAB0093DA7D /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
 		5CB6F5B122AABDE40093DA7D /* ImageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTool.swift; sourceTree = "<group>"; };
 		5CF2047C221114870091DDFE /* SoundSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSelectorVC.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				5C75264A22B49197002FC72D /* CoinIcon.swift */,
 				5C804F9022B73F8600D956DB /* TreeIcon.swift */,
 				5C98171C22B731FB00362D39 /* TreeStoreView.swift */,
+				5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				5A671A1D22B4E033004B4F20 /* UIColorTool.swift in Sources */,
 				5C4885DD221291AD00198B49 /* SegueKey.swift in Sources */,
 				5C06CB9322B09652000CEB41 /* ARForestController.swift in Sources */,
+				5CA375AE22B755F900BC49DF /* TreeStoreCell.swift in Sources */,
 				5C109FDB220FF9BB003D026E /* UITool.swift in Sources */,
 				5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */,
 				5C2DA1CA22B010260071B076 /* SystemConstant.swift in Sources */,

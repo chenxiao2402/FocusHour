@@ -10,7 +10,11 @@
 // SetTimeView
 Start = "Start";
 SetTimeTitle = "Foucs now";
-
+PurchasePrompt = "Do you want to Buy new series?";
+Price = "Price";
+Coins = " coins";
+PurchaseSuccess = "Purchase success";
+InsufficientCoins = "Insufficient coins";
 
 // SetTimeView -> TimerView
 CountdownTitle = "Stay focused";
@@ -28,7 +32,7 @@ Yes = "Yes";
 No = "No";
 Cancel = "Cancel";
 Notification-Success = "Tree has grown";
-Notification-Failure = "Your tree didn't grow up";
+Notification-Failure = "Your tree died";
 Notification-Alert = "Your tree will die if you don't come back soon";
 
 

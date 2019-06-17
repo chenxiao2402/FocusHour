@@ -351,59 +351,99 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-ku-8uc" customClass="TreeStoreView" customModule="FocusHour" customModuleProvider="target">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <rect key="frame" x="63" y="328" width="288" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="c7r-Lw-n6E"/>
-                                    <constraint firstAttribute="height" constant="300" id="n7c-lI-bWk"/>
+                                    <constraint firstAttribute="width" constant="288" id="c7r-Lw-n6E"/>
+                                    <constraint firstAttribute="height" constant="240" id="n7c-lI-bWk"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TreeStoreCell" rowHeight="64" id="boD-3Z-kig">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="64"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TreeStoreCell" rowHeight="60" id="boD-3Z-kig" customClass="TreeStoreCell" customModule="FocusHour" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="boD-3Z-kig" id="w7U-30-iCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="63.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="boD-3Z-kig" id="w7U-30-iCN">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-oU-2tB" customClass="TreeIcon" customModule="FocusHour" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="2.3333333333333357" width="60" height="60"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3K-15-nOM">
-                                                            <rect key="frame" x="8" y="8" width="44" height="44"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="44" id="3yx-PU-cgg"/>
-                                                                <constraint firstAttribute="height" constant="44" id="Zt6-iA-klJ"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.40507582110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3K-15-nOM">
+                                                    <rect key="frame" x="16" y="6" width="48" height="48"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="87H-CZ-kgu"/>
-                                                        <constraint firstAttribute="width" constant="60" id="fWU-F9-s8v"/>
-                                                        <constraint firstItem="l3K-15-nOM" firstAttribute="centerX" secondItem="xbN-oU-2tB" secondAttribute="centerX" id="pGw-CG-oa5"/>
-                                                        <constraint firstItem="l3K-15-nOM" firstAttribute="centerY" secondItem="xbN-oU-2tB" secondAttribute="centerY" id="sFR-wr-uxM"/>
+                                                        <constraint firstAttribute="width" constant="48" id="3yx-PU-cgg"/>
+                                                        <constraint firstAttribute="height" constant="48" id="Zt6-iA-klJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-KS-VDK">
+                                                    <rect key="frame" x="248" y="18" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="jIS-Vn-LDD"/>
+                                                        <constraint firstAttribute="height" constant="24" id="vGX-tW-Y0W"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUE-mf-p3b" customClass="CoinLabelContainer" customModule="FocusHour" customModuleProvider="target">
+                                                    <rect key="frame" x="212" y="18" width="68" height="24"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="yOb-8g-X7I" customClass="CoinIcon" customModule="FocusHour" customModuleProvider="target">
+                                                            <rect key="frame" x="2" y="2" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="72O-U8-6Tx"/>
+                                                                <constraint firstAttribute="width" constant="20" id="BOH-Wf-Nba"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="zIndex">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="751" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-8o-IIt">
+                                                            <rect key="frame" x="24" y="2" width="40" height="19.666666666666668"/>
+                                                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="s9B-d3-rVt"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="zT9-8o-IIt" firstAttribute="leading" secondItem="yOb-8g-X7I" secondAttribute="trailing" constant="2" id="Edj-vK-ipo"/>
+                                                        <constraint firstItem="yOb-8g-X7I" firstAttribute="leading" secondItem="PUE-mf-p3b" secondAttribute="leading" constant="2" id="El8-Bx-kq8"/>
+                                                        <constraint firstItem="zT9-8o-IIt" firstAttribute="centerY" secondItem="PUE-mf-p3b" secondAttribute="centerY" id="Wis-o5-LG0"/>
+                                                        <constraint firstAttribute="height" constant="24" id="aUA-78-Y8I"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zT9-8o-IIt" secondAttribute="trailing" constant="4" id="lx3-x8-MGH"/>
+                                                        <constraint firstItem="yOb-8g-X7I" firstAttribute="centerY" secondItem="PUE-mf-p3b" secondAttribute="centerY" id="xk0-GY-Rel"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageRadius">
-                                                            <real key="value" value="30"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="12"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="xbN-oU-2tB" secondAttribute="bottom" constant="2" id="926-n3-Hcm"/>
-                                                <constraint firstItem="xbN-oU-2tB" firstAttribute="top" secondItem="w7U-30-iCN" secondAttribute="top" constant="2" id="WhJ-IL-mjm"/>
-                                                <constraint firstItem="xbN-oU-2tB" firstAttribute="leading" secondItem="w7U-30-iCN" secondAttribute="leading" constant="8" id="d4o-S8-dRz"/>
+                                                <constraint firstAttribute="trailing" secondItem="PUE-mf-p3b" secondAttribute="trailing" constant="8" id="93J-Tc-H9K"/>
+                                                <constraint firstItem="PUE-mf-p3b" firstAttribute="centerY" secondItem="w7U-30-iCN" secondAttribute="centerY" id="GwP-5m-sfg"/>
+                                                <constraint firstItem="qW5-KS-VDK" firstAttribute="centerY" secondItem="w7U-30-iCN" secondAttribute="centerY" id="bHt-kE-8bE"/>
+                                                <constraint firstAttribute="trailing" secondItem="qW5-KS-VDK" secondAttribute="trailing" constant="16" id="eNK-42-5yY"/>
+                                                <constraint firstItem="l3K-15-nOM" firstAttribute="leading" secondItem="w7U-30-iCN" secondAttribute="leading" constant="16" id="vai-7T-5Dr"/>
+                                                <constraint firstItem="l3K-15-nOM" firstAttribute="centerY" secondItem="w7U-30-iCN" secondAttribute="centerY" id="yGK-aw-HG0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="zT9-8o-IIt" id="UC4-ru-PGd"/>
+                                            <outlet property="priceLabelContainer" destination="PUE-mf-p3b" id="lUU-Pu-7d5"/>
+                                            <outlet property="selectedIcon" destination="qW5-KS-VDK" id="GGz-t4-f85"/>
+                                            <outlet property="treeSeriesIcon" destination="l3K-15-nOM" id="70h-nl-JbH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                        <real key="value" value="12"/>
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
@@ -432,6 +472,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checked" width="256" height="256"/>
         <image name="coin" width="256" height="256"/>
         <image name="return" width="256" height="216"/>
         <image name="settings" width="256" height="256"/>

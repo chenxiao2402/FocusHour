@@ -156,9 +156,21 @@ extension PlantRecord {
     }
     
     static func generateRandomRecords() {
+        let circleView = CircleView()
+        for year in 2017...2018 {
+            for month in 1...12 {
+                for _ in 0..<10 {
+                    let day = Int.random(in: 1...28)
+                    let minute = Int.random(in: 10...120)
+                    let imgName = circleView.getRecordImageNameBy(focusMinutes: minute)
+                    let plantRecord = PlantRecord(imgName: imgName, minute: minute, year: year, month: month, day: day)
+                    plantRecord?.save()
+                }
+            }
+        }
+        
         let year = TimeTool.getCurrentYear()
         let currentMonth = TimeTool.getCurrentMonth()
-        let circleView = CircleView()
         for month in 1...currentMonth {
             for _ in 0..<10 {
                 let day = Int.random(in: 1...28)

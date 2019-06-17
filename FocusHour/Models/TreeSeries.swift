@@ -15,10 +15,10 @@ enum TreeSeriesName: String {
     case MorningGlory = "MorningGlory"
 }
 
-enum TreeSeriesState {
-    case Selected
-    case Owned
-    case OnSale
+enum TreeSeriesState: Int {
+    case OnSale = 0
+    case Owned = 1
+    case Selected = 2
 }
 
 struct TreeSeriesProperty {
@@ -31,17 +31,23 @@ class TreeSeries: NSObject, NSCoding {
     
     static let BaseURL = SystemConstant.DocumentsDirectory.appendingPathComponent("Series")
     static let defaultList = [
-        TreeSeries(name: .AppleTree, state: .Selected, price: 0),
-        TreeSeries(name: .SquareTree, state: .OnSale, price: 400),
-        TreeSeries(name: .MorningGlory, state: .OnSale, price: 800),
-        TreeSeries(name: .Bush, state: .OnSale, price: 1200),
+        TreeSeries(seriesName: .AppleTree, seriesState: .Selected, price: 0),
+        TreeSeries(seriesName: .SquareTree, seriesState: .OnSale, price: 400),
+        TreeSeries(seriesName: .MorningGlory, seriesState: .OnSale, price: 800),
+        TreeSeries(seriesName: .Bush, seriesState: .OnSale, price: 1200),
     ]
     
-    let name: TreeSeriesName
-    let state: TreeSeriesState
+    let name: String
     let price: Int
+    var state: Int
     
-    init(name: TreeSeriesName, state: TreeSeriesState, price: Int) {
+    private init(seriesName: TreeSeriesName, seriesState: TreeSeriesState, price: Int) {
+        self.name = seriesName.rawValue
+        self.state = seriesState.rawValue
+        self.price = price
+    }
+    
+    private init(name: String, state: Int, price: Int) {
         self.name = name
         self.state = state
         self.price = price
@@ -51,13 +57,13 @@ class TreeSeries: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: TreeSeriesProperty.name)
-        aCoder.encode(state, forKey: TreeSeriesProperty.state)
         aCoder.encode(price, forKey: TreeSeriesProperty.price)
+        aCoder.encode(state, forKey: TreeSeriesProperty.state)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let name = aDecoder.decodeObject(forKey: TreeSeriesProperty.name) as? TreeSeriesName else { return nil }
-        guard let state = aDecoder.decodeObject(forKey: TreeSeriesProperty.state) as? TreeSeriesState else { return nil }
+        guard let name = aDecoder.decodeObject(forKey: TreeSeriesProperty.name) as? String else { return nil }
+        let state = aDecoder.decodeInteger(forKey: TreeSeriesProperty.state)
         let price = aDecoder.decodeInteger(forKey: TreeSeriesProperty.price)
         self.init(name: name, state: state, price: price)
     }
@@ -65,20 +71,29 @@ class TreeSeries: NSObject, NSCoding {
 
 extension TreeSeries {
     
-    static func getCurrentTreeSeries() -> Theme {
-        return getCurrentThemeList()[0]
+    static func getCurrentTreeSeries() -> TreeSeries {
+        let treeSeriesList = getTreeSeriesList()
+        for treeSeries in treeSeriesList {
+            if treeSeries.state == TreeSeriesState.Selected.rawValue {
+                return treeSeries
+            }
+        }
+        return defaultList[0]
     }
     
-    static func selectTheme(selectedTheme: Theme) {
+    static func selectTreeSeries(_ selectedSeries: TreeSeries) {
         do {
-            let themeKey = PreferenceTool.isMode(ofName: .NightMode) ? ThemeKey.DarkThemeKey : ThemeKey.LightThemeKey
-            var themeList = getThemeList(ofKey: themeKey)
-            let indexList = themeList.map({ $0.index })
-            let index = indexList.firstIndex(of: selectedTheme.index)!
-            themeList.swapAt(0, index)
+            let treeSeriesList = getTreeSeriesList()
+            for treeSeries in treeSeriesList {
+                if treeSeries.name == selectedSeries.name {
+                    treeSeries.state = TreeSeriesState.Selected.rawValue
+                } else if treeSeries.state == TreeSeriesState.Selected.rawValue {
+                    treeSeries.state = TreeSeriesState.Owned.rawValue
+                }
+            }
             
-            let url = getArchievePath(ofKey: themeKey)
-            let data = try NSKeyedArchiver.archivedData(withRootObject: themeList, requiringSecureCoding: false)
+            let url = getArchievePath()
+            let data = try NSKeyedArchiver.archivedData(withRootObject: treeSeriesList, requiringSecureCoding: false)
             try data.write(to: url)
         } catch {
             return
@@ -87,17 +102,18 @@ extension TreeSeries {
     
     static func getTreeSeriesList() -> [TreeSeries] {
         do {
-            let url = getArchievePath(ofKey: themeKey)
+            let url = getArchievePath()
             let fileData = try Data(contentsOf: url)
             let result = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(fileData)
-            return result as? [Theme] ?? themeKey.getThemeList()
+            return result as? [TreeSeries] ?? defaultList
         } catch {
-            return themeKey.getThemeList()
+            return defaultList
         }
     }
     
     private static func getArchievePath() -> URL {
         let url = TreeSeries.BaseURL.appendingPathComponent("record")
+        print(url.path)
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: TreeSeries.BaseURL.path) {
             try! fileManager.createDirectory(at: TreeSeries.BaseURL, withIntermediateDirectories: true, attributes: nil)

@@ -128,3 +128,13 @@ class CircleSlider: CircleView {
         }
     }
 }
+
+
+extension CircleSlider {
+    
+    func refreshIconView() {
+        setNeedsDisplay()
+        layoutIfNeeded()
+    }
+    
+}

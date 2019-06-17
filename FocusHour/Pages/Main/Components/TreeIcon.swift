@@ -19,6 +19,7 @@ class TreeIcon: UIView {
     }
 
     override func awakeFromNib() {
+        backgroundColor = ColorKey.LightKhaki_Transparent.uiColor()
         layer.shadowColor = backgroundColor?.cgColor
         layer.shadowOpacity = 1.0
         layer.shadowOffset = CGSize(width: 0, height: 3)

@@ -52,7 +52,7 @@ extension ARForestController {
     private func addForestNode() {
         guard let scene = SCNScene(named: "art.scnassets/Tree-\(level).scn") else { return }
         scene.rootNode.enumerateChildNodes({ (node, _) in
-            node.scale = SCNVector3(0.3, 0.3, 0.3)
+            node.scale = SCNVector3(0.25, 0.25, 0.25)
             node.position = SCNVector3(0, -1.5, -2)
             ARForestView.scene.rootNode.addChildNode(node)
         })

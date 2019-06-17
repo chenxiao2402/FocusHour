@@ -11,6 +11,12 @@ import Foundation
 enum LocalizationKey: String {
     case Start = "Start"
     case SetTimeTitle = "SetTimeTitle"
+    case PurchasePrompt = "PurchasePrompt"
+    case Price = "Price"
+    case Coins = "Coins"
+    case PurchaseSuccess = "PurchaseSuccess"
+    case InsufficientCoins = "InsufficientCoins"
+    
     case CountdownTitle = "CountdownTitle"
     case Congratulations = "Congratulations"
     case Encouragement = "Encouragement"

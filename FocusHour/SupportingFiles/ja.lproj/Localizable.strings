@@ -10,7 +10,11 @@
 // SetTimeView
 Start = "スタート";
 SetTimeTitle = "今すぐ集中しよう";
-
+PurchasePrompt = "新シリーズを購入しますか？";
+Price = "価格";
+Coins = "コイン";
+PurchaseSuccess = "購入成功";
+InsufficientCoins = "コインが不足しています";
 
 // SetTimeView -> TimerView
 CountdownTitle = "一心不乱";

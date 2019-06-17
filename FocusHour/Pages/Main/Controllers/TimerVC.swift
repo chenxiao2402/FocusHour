@@ -70,9 +70,6 @@ class TimerVC: UIViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
-        // 随机生成数据并保存，注意正式使用的时候删掉
-        PlantRecord.generateRandomRecords()
-        
         if !cancelable {
             let message = circleTimer.treeHasGrownUp() ?
                 LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
@@ -92,6 +89,8 @@ class TimerVC: UIViewController {
                 ))
             present(alert, animated: true, completion: nil)
         } else {
+            // 随机生成数据并保存，注意正式使用的时候删掉
+            PlantRecord.generateRandomRecords()
             quit()
         }
     }
@@ -158,8 +157,8 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
             LocalizationKey.NotificationFailure.translate()
         sendNotification(message)
         
-        // add coins here
-        PreferenceTool.addCoins(addNumber: circleTimer.focusMinutes)
+        // add coins here，放大了一千倍，正式使用的时候删掉
+        PreferenceTool.addCoins(addNumber: circleTimer.focusMinutes * 1000)
     }
     
     private func backgroundCountdown() {

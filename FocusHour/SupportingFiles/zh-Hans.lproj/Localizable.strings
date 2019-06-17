@@ -10,7 +10,11 @@
 // SetTimeView
 Start = "开始";
 SetTimeTitle = "开始专注吧";
-
+PurchasePrompt = "购买新的系列吗？";
+Price = "价格";
+Coins = "金币";
+PurchaseSuccess = "购买成功";
+InsufficientCoins = "金币不足";
 
 // SetTimeView -> TimerView
 CountdownTitle = "专心致志";
