@@ -60,10 +60,16 @@ class SetTimeVC: UIViewController {
 extension SetTimeVC {
     
     @objc func showTreeStore() {
-        let controller = storyboard!.instantiateViewController(withIdentifier: "TreeStore")
+        let controller = storyboard!.instantiateViewController(withIdentifier: "TreeStore") as! TreeStoreController
+        controller.setTimeVC = self
         addChild(controller)
         view.addSubview(controller.view)
         controller.didMove(toParent: self)
+    }
+    
+    func refresh() {
+        timeSetter.refreshIconView()
+        coinLabel.text = "\(PreferenceTool.getCoinNumber())"
     }
     
 }

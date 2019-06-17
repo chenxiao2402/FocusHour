@@ -92,6 +92,42 @@
             </objects>
             <point key="canvasLocation" x="-1830" y="-494"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="O0h-mj-JFs">
+            <objects>
+                <viewController id="t6F-Wf-v7K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6J7-0y-d85">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vl-ec-Gd3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARPrompt" translatesAutoresizingMaskIntoConstraints="NO" id="I3X-ER-oDf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="180"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I3X-ER-oDf" firstAttribute="leading" secondItem="OAs-96-UTq" secondAttribute="leading" id="Bu1-L2-Dzp"/>
+                            <constraint firstItem="3vl-ec-Gd3" firstAttribute="leading" secondItem="OAs-96-UTq" secondAttribute="leading" id="CG1-f8-4pM"/>
+                            <constraint firstItem="3vl-ec-Gd3" firstAttribute="trailing" secondItem="OAs-96-UTq" secondAttribute="trailing" id="Fbz-bB-5Tm"/>
+                            <constraint firstAttribute="bottom" secondItem="I3X-ER-oDf" secondAttribute="bottom" id="Qcg-BP-gVZ"/>
+                            <constraint firstItem="I3X-ER-oDf" firstAttribute="top" secondItem="6J7-0y-d85" secondAttribute="top" id="a90-bo-K1b"/>
+                            <constraint firstItem="3vl-ec-Gd3" firstAttribute="top" secondItem="6J7-0y-d85" secondAttribute="top" id="oNF-M3-0dY"/>
+                            <constraint firstAttribute="bottom" secondItem="3vl-ec-Gd3" secondAttribute="bottom" id="s59-Wq-mZO"/>
+                            <constraint firstItem="OAs-96-UTq" firstAttribute="trailing" secondItem="I3X-ER-oDf" secondAttribute="trailing" id="v2l-Bz-9v4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OAs-96-UTq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6eK-jD-b6i"/>
+                    <size key="freeformSize" width="240" height="180"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjp-mn-oG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1706" y="481"/>
+        </scene>
         <!--AchievementDetailVC-->
         <scene sceneID="TPh-yr-ICS">
             <objects>
@@ -149,16 +185,23 @@
                         <viewLayoutGuide key="safeArea" id="LiC-PJ-yC6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Achievement" id="Fr9-TF-V7C">
-                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM"/>
+                        <barButtonItem key="rightBarButtonItem" title="AR" image="AR" style="done" id="NPG-SQ-bLM">
+                            <connections>
+                                <segue destination="t6F-Wf-v7K" kind="popoverPresentation" identifier="ShowARPrompt" popoverAnchorBarButtonItem="NPG-SQ-bLM" id="lF8-jc-aax">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ARPromptButton" destination="NPG-SQ-bLM" id="7mn-zL-E5Z"/>
                         <outlet property="collectionView" destination="0bp-aG-XAm" id="ky6-a5-W2U"/>
                         <segue destination="ahK-EF-RJL" kind="showDetail" identifier="ShowARForest" id="B4X-wU-xfF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyQ-yW-eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1830.4347826086957" y="320.75892857142856"/>
+            <point key="canvasLocation" x="-920.28985507246387" y="320.75892857142856"/>
         </scene>
         <!--Forest Controller-->
         <scene sceneID="ifK-OZ-L58">
@@ -200,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwP-ks-jFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-852" y="321"/>
+            <point key="canvasLocation" x="57.971014492753625" y="320.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gZR-iG-xbx">
@@ -231,6 +274,7 @@
     </scenes>
     <resources>
         <image name="AR" width="32" height="32"/>
+        <image name="ARPrompt" width="900" height="675"/>
         <image name="arrow-down" width="18" height="18"/>
         <image name="quit" width="64" height="64"/>
     </resources>

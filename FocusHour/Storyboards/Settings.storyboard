@@ -46,32 +46,8 @@
                                             <segue destination="DbJ-5U-1AM" kind="show" identifier="ShowSetLanguage" id="xsM-Gf-WfH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="wls-fL-Afg" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="85" width="414" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wls-fL-Afg" id="tqz-9b-YsX">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Phrases" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fck-Dj-S8y">
-                                                    <rect key="frame" x="20" y="5" width="138.5" height="39.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="fck-Dj-S8y" firstAttribute="top" secondItem="tqz-9b-YsX" secondAttribute="top" constant="5" id="4rc-wQ-kHB"/>
-                                                <constraint firstAttribute="bottom" secondItem="fck-Dj-S8y" secondAttribute="bottom" constant="5" id="Teb-k2-r9D"/>
-                                                <constraint firstItem="fck-Dj-S8y" firstAttribute="leading" secondItem="tqz-9b-YsX" secondAttribute="leading" constant="20" id="iC5-Zy-8Yh"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="label" destination="fck-Dj-S8y" id="Cm5-CV-yYx"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="lri-Kb-oUp" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="135" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="85" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lri-Kb-oUp" id="MNp-ML-hHX">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
@@ -100,7 +76,7 @@
                             <tableViewSection id="ykA-Xl-Soq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="Xb6-Os-UNL" customClass="WorkingModeSettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="221" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="171" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xb6-Os-UNL" id="7hV-qG-8sv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
@@ -133,7 +109,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="46R-dS-qwl" customClass="NightModeSettingSwitchCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="271" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="221" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="46R-dS-qwl" id="jZd-Sf-P58">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
@@ -170,7 +146,7 @@
                             <tableViewSection id="mAW-9J-2Hp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="0uY-dT-ej8" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="357" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="307" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0uY-dT-ej8" id="xXV-yO-9F9">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
@@ -194,29 +170,68 @@
                                             <segue destination="QMF-WT-eMz" kind="show" identifier="ShowIntroduction" id="AWt-lu-mLk"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" id="2uq-kU-pdi" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="407" width="414" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="2uq-kU-pdi" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="357" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2uq-kU-pdi" id="YXa-oh-YtN">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pap-kJ-oJZ">
-                                                    <rect key="frame" x="20" y="5" width="78.5" height="39.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pap-kJ-oJZ">
+                                                    <rect key="frame" x="20" y="5" width="86" height="39.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoursomeSE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-1Q-COE">
+                                                    <rect key="frame" x="287.5" y="14" width="106.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="pap-kJ-oJZ" secondAttribute="bottom" constant="5" id="B0N-DR-4zI"/>
                                                 <constraint firstItem="pap-kJ-oJZ" firstAttribute="top" secondItem="YXa-oh-YtN" secondAttribute="top" constant="5" id="W6R-r5-Er8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Rge-1Q-COE" secondAttribute="trailing" id="XEP-8a-hb6"/>
+                                                <constraint firstItem="Rge-1Q-COE" firstAttribute="centerY" secondItem="YXa-oh-YtN" secondAttribute="centerY" id="jYD-Hq-Jns"/>
                                                 <constraint firstItem="pap-kJ-oJZ" firstAttribute="leading" secondItem="YXa-oh-YtN" secondAttribute="leading" constant="20" id="snD-t8-IA1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="pap-kJ-oJZ" id="HES-YU-gr9"/>
-                                            <segue destination="QMF-WT-eMz" kind="show" identifier="ShowAboutInfo" id="rRW-sP-5hq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="7YQ-iP-33f" customClass="SettingDetailCell" customModule="FocusHour" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="407" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7YQ-iP-33f" id="WjT-g3-djA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgg-jU-igZ">
+                                                    <rect key="frame" x="20" y="5" width="63.5" height="39.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7V-Ju-mDD">
+                                                    <rect key="frame" x="369.5" y="14" width="24.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qgg-jU-igZ" firstAttribute="top" secondItem="WjT-g3-djA" secondAttribute="top" constant="5" id="5PT-gc-RHq"/>
+                                                <constraint firstItem="A7V-Ju-mDD" firstAttribute="centerY" secondItem="WjT-g3-djA" secondAttribute="centerY" id="8CE-Mb-K7a"/>
+                                                <constraint firstItem="Qgg-jU-igZ" firstAttribute="leading" secondItem="WjT-g3-djA" secondAttribute="leading" constant="20" id="8De-SQ-suc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qgg-jU-igZ" secondAttribute="bottom" constant="5" id="fBU-bJ-pyc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A7V-Ju-mDD" secondAttribute="trailing" id="mq4-h6-5tR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Qgg-jU-igZ" id="WXd-9k-yoQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -236,12 +251,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="aboutCell" destination="2uq-kU-pdi" id="dsv-RJ-Rjq"/>
+                        <outlet property="developerCell" destination="2uq-kU-pdi" id="dsv-RJ-Rjq"/>
                         <outlet property="introductionCell" destination="0uY-dT-ej8" id="Inl-S7-pfi"/>
                         <outlet property="languageCell" destination="wpV-RC-0ou" id="2Nt-S1-I9O"/>
                         <outlet property="nightModeCell" destination="46R-dS-qwl" id="O3L-Ok-2Zm"/>
-                        <outlet property="phraseCell" destination="wls-fL-Afg" id="Mnb-1k-pdG"/>
                         <outlet property="themeCell" destination="lri-Kb-oUp" id="8L9-MY-9eq"/>
+                        <outlet property="versionCell" destination="7YQ-iP-33f" id="7t2-uR-uwQ"/>
                         <outlet property="workingModeCell" destination="Xb6-Os-UNL" id="wPR-sW-cf7"/>
                     </connections>
                 </tableViewController>
@@ -427,7 +442,4 @@
             <point key="canvasLocation" x="2837.68115942029" y="290.625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="AWt-lu-mLk"/>
-    </inferredMetricsTieBreakers>
 </document>

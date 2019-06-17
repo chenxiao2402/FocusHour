@@ -11,6 +11,12 @@ import Foundation
 enum LocalizationKey: String {
     case Start = "Start"
     case SetTimeTitle = "SetTimeTitle"
+    case PurchasePrompt = "PurchasePrompt"
+    case Price = "Price"
+    case Coins = "Coins"
+    case PurchaseSuccess = "PurchaseSuccess"
+    case InsufficientCoins = "InsufficientCoins"
+    
     case CountdownTitle = "CountdownTitle"
     case Congratulations = "Congratulations"
     case Encouragement = "Encouragement"
@@ -42,7 +48,9 @@ enum LocalizationKey: String {
     case WorkingMode = "WorkingMode"
     case NightMode = "NightMode"
     case ThisApp = "ThisApp"
-    case About = "About"
+    case Introduction = "Introduction"
+    case Developer = "Developer"
+    case Version = "Version"
     
     case Theme = "Theme"
     case One = "One"
@@ -50,9 +58,6 @@ enum LocalizationKey: String {
     case Three = "Three"
     case Four = "Four"
     case Five = "Five"
-    
-    case Introduction = "Introduction"
-    case AboutUs = "AboutUs"
     
     case Jan = "Jan"
     case Feb = "Feb"

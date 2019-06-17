@@ -10,7 +10,11 @@
 // SetTimeView
 Start = "Start";
 SetTimeTitle = "Foucs now";
-
+PurchasePrompt = "Do you want to Buy new series?";
+Price = "Price";
+Coins = " coins";
+PurchaseSuccess = "Purchase success";
+InsufficientCoins = "Insufficient coins";
 
 // SetTimeView -> TimerView
 CountdownTitle = "Stay focused";
@@ -28,7 +32,7 @@ Yes = "Yes";
 No = "No";
 Cancel = "Cancel";
 Notification-Success = "Tree has grown";
-Notification-Failure = "Your tree didn't grow up";
+Notification-Failure = "Your tree died";
 Notification-Alert = "Your tree will die if you don't come back soon";
 
 
@@ -50,7 +54,8 @@ ChangeTheme = "Change Theme";
 WorkingMode = "Working Mode";
 NightMode = "Night Mode";
 ThisApp = "This App";
-About = "About";
+Developer = "Developer";
+Version = "Version";
 
 
 // SetTimeView -> Settings -> ChangeTheme
@@ -63,8 +68,7 @@ Five = "Five";
 
 
 // SetTimeView -> Settings -> About
-Introduction = "An app that will help you focus on your work.\n\nEnglish, Chinese, Japanese are supported.\n\nRandom beautiful pure wallpaper.\n\n\nPlant a tree, then put down your phone and wait for it to grow up.\n\nYour tree will die if you quit this app.\n\nCheck your forest in the achievement page.";
-AboutUs = "FocusHour is an app that will help you focus on your work. You can plant a tree, then put down your phone and wait for it to grow up.\n\n\nCheck my Github account(https://github.com/Sephidator/FocusHour) to get more information about this APP.";
+Introduction = "If you want to temporarily put down your phone and focus on what’s more important in real life, you can plant a seed in FocusHour. As time goes by, this seed will gradually grow into a tree. However, if you cannot resist the temptation of using your phone and leave the app, your tree will wither.\n\nThe sense of achievement and responsibility will encourage you to stay away from your phone, and will help you make better use of your time. Stop getting distracted by your phone, make you self-motivated and get more things done.\n\nStay focused. Be present!\n\nSTAY FOCUSED\n• A interesting way to help you beat phone addiction and overcome distraction\n• Turn your focused moments into a lush forest.\n\nGET MOTIVATED\n• Earn rewards and unlock more than 10 new tree species and white noises.\n• Unlock achievements and earn extra rewards.\n• Plant AR trees on Earth.\n\nSTATISTICS\n• View detailed statistics of your time distribution.\n• Browse your weekly, monthly and even your yearly big forest.\n• Recall memories of your planting journey with our brand new Forest Timeline!\n\nIt's never to late to build up productive habits!\n\nCheck my Github account(https://github.com/Sephidator/FocusHour) to get more information about this APP.";
 
 
 // SetTimeView -> Achievement

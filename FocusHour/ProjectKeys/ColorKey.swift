@@ -12,6 +12,7 @@ enum ColorKey {
     case LightYellow
     case GrassGreen
     case LightKhaki
+    case LightKhaki_Transparent
     case AppleGreen
     case ForestGreen
     case Emerald
@@ -19,6 +20,7 @@ enum ColorKey {
     case PaleGreen
     case LightGreen
     case DimGray
+    case DarkMask
     
     case DarkTheme
     case LightThemeOne
@@ -37,6 +39,8 @@ extension ColorKey {
             return #colorLiteral(red: 0.6, green: 0.9019607843, blue: 0.3019607843, alpha: 1)
         case .LightKhaki:
             return #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.5490196078, alpha: 1)
+        case .LightKhaki_Transparent:
+            return #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.5490196078, alpha: 0.2)
         case .AppleGreen:
             return #colorLiteral(red: 0.5490196078, green: 0.9019607843, blue: 0, alpha: 1)
         case .ForestGreen:
@@ -51,6 +55,8 @@ extension ColorKey {
             return #colorLiteral(red: 0.8, green: 0.9764705882, blue: 0.6705882353, alpha: 1)
         case .DimGray:
             return #colorLiteral(red: 0.2509803922, green: 0.2509803922, blue: 0.2509803922, alpha: 1)
+        case .DarkMask:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4)
         case .DarkTheme:
             return #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1098039216, alpha: 0.799416738)
         case .LightThemeOne:

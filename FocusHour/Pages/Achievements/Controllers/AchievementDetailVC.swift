@@ -17,6 +17,8 @@ struct Record {
 class AchievementDetailVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var ARPromptButton: UIBarButtonItem!
+    
     var year: Int!
     var month: Int!
     var recordsOfDay = Dictionary<Int, [PlantRecord]>()
@@ -129,19 +131,7 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
         if level == 0 {
             alert(message: LocalizationKey.NotificationFailure.translate())
         } else {
-            performSegue(withIdentifier: SegueKey.showARForest.rawValue, sender: level)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        guard let level = sender as? Int else { return }
-        switch(segue.identifier ?? "") {
-        case SegueKey.showARForest.rawValue:
-            guard let ARForest = segue.destination as? ARForestController else { return }
-            ARForest.level = level
-        default:
-            return
+            performSegue(withIdentifier: SegueKey.ShowARForest.rawValue, sender: level)
         }
     }
     
@@ -151,4 +141,31 @@ extension AchievementDetailVC: UICollectionViewDelegate, UICollectionViewDataSou
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
     }
+}
+
+
+extension AchievementDetailVC: UIPopoverPresentationControllerDelegate {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+        case SegueKey.ShowARForest.rawValue:
+            guard let level = sender as? Int else { return }
+            guard let ARForest = segue.destination as? ARForestController else { return }
+            ARForest.level = level
+        case SegueKey.ShowARPrompt.rawValue:
+            let controller = segue.destination
+            let popoverController = controller.popoverPresentationController
+            controller.preferredContentSize = CGSize(width: 240, height: 180)
+            popoverController?.backgroundColor = UIColor.clear
+            popoverController?.delegate = self
+        default:
+            return
+        }
+    }
+    
 }
