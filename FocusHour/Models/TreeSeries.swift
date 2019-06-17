@@ -113,7 +113,6 @@ extension TreeSeries {
     
     private static func getArchievePath() -> URL {
         let url = TreeSeries.BaseURL.appendingPathComponent("record")
-        print(url.path)
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: TreeSeries.BaseURL.path) {
             try! fileManager.createDirectory(at: TreeSeries.BaseURL, withIntermediateDirectories: true, attributes: nil)

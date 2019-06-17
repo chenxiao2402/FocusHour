@@ -48,7 +48,9 @@ enum LocalizationKey: String {
     case WorkingMode = "WorkingMode"
     case NightMode = "NightMode"
     case ThisApp = "ThisApp"
-    case About = "About"
+    case Introduction = "Introduction"
+    case Developer = "Developer"
+    case Version = "Version"
     
     case Theme = "Theme"
     case One = "One"
@@ -56,9 +58,6 @@ enum LocalizationKey: String {
     case Three = "Three"
     case Four = "Four"
     case Five = "Five"
-    
-    case Introduction = "Introduction"
-    case AboutUs = "AboutUs"
     
     case Jan = "Jan"
     case Feb = "Feb"

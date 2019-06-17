@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34CDE700964571FA8F35EB0E /* Pods_FocusHourTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5345EB8B9B43C3A3EC9264 /* Pods_FocusHourTests.framework */; };
 		5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */; };
 		5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */; };
 		5A671A1122B48C26004B4F20 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A671A1022B48C26004B4F20 /* ThemeCell.swift */; };
@@ -93,8 +92,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F5345EB8B9B43C3A3EC9264 /* Pods_FocusHourTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusHourTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DD192172AD3E84A0FF8823E /* Pods_FocusHour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusHour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5B790F22B0906A005F05FA /* NightModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5A5B791122B0999F005F05FA /* WorkingModeSettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingModeSettingSwitchCell.swift; sourceTree = "<group>"; };
 		5A671A1022B48C26004B4F20 /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
@@ -190,7 +187,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CDE700964571FA8F35EB0E /* Pods_FocusHourTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				5C198F042215368D009B8096 /* UserNotifications.framework */,
-				4DD192172AD3E84A0FF8823E /* Pods_FocusHour.framework */,
-				0F5345EB8B9B43C3A3EC9264 /* Pods_FocusHourTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,7 +359,6 @@
 				5C80BF532207D98100691E98 /* Info.plist */,
 				5C109FC8220FCA26003D026E /* Localizable.strings */,
 				5C109FBC220FC792003D026E /* InfoPlist.strings */,
-				5C2F9A9622B0FE5800201C7C /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -451,6 +444,7 @@
 		5CF2048122117A8A0091DDFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5C2F9A9622B0FE5800201C7C /* Assets.xcassets */,
 				5C2F9A9722B0FE5800201C7C /* art.scnassets */,
 				5C06872922AF99B20009CCC9 /* Sound */,
 			);

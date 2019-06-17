@@ -18,11 +18,13 @@ class InfoPresenterVC: UIViewController {
         super.viewDidLoad()
         navigationItem.title = navTitle
         textArea.text = info
-        let nightMode = UserDefaults.standard.bool(forKey: "NightMode")
-        let textColor = nightMode == true ? UIColor.white : UIColor.black
-        textArea.textColor = textColor
         UITool.setBackgroundImage(view, imageName: Theme.getCurrentTheme().backgroundImage)
         self.navigationController?.navigationBar.barTintColor = Theme.getCurrentTheme().themeColor
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        textArea.setContentOffset(.zero, animated: false)
     }
 
 }

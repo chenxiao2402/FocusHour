@@ -11,14 +11,14 @@ import UIKit
 class SettingsVC: UITableViewController{
    
     @IBOutlet weak var languageCell: SettingDetailCell!
-    @IBOutlet weak var phraseCell: SettingDetailCell!
     @IBOutlet weak var themeCell: SettingDetailCell!
     
     @IBOutlet weak var workingModeCell: NightModeSettingSwitchCell!
     @IBOutlet weak var nightModeCell: NightModeSettingSwitchCell!
     
     @IBOutlet weak var introductionCell: SettingDetailCell!
-    @IBOutlet weak var aboutCell: SettingDetailCell!
+    @IBOutlet weak var developerCell: SettingDetailCell!
+    @IBOutlet weak var versionCell: SettingDetailCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ class SettingsVC: UITableViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = LocalizationKey.Settings.translate()
-        languageCell.keyVlue = LocalizationKey.SetLanguage
-        phraseCell.keyVlue = LocalizationKey.SetPhrase
-        themeCell.keyVlue = LocalizationKey.ChangeTheme
-        workingModeCell.keyVlue = LocalizationKey.WorkingMode
-        nightModeCell.keyVlue = LocalizationKey.NightMode
-        introductionCell.keyVlue = LocalizationKey.ThisApp
-        aboutCell.keyVlue = LocalizationKey.About
+        languageCell.keyVlue = .SetLanguage
+        themeCell.keyVlue = .ChangeTheme
+        workingModeCell.keyVlue = .WorkingMode
+        nightModeCell.keyVlue = .NightMode
+        introductionCell.keyVlue = .ThisApp
+        developerCell.keyVlue = .Developer
+        versionCell.keyVlue = .Version
         
         workingModeCell.mode = .WorkingMode
         nightModeCell.mode = .NightMode
@@ -59,10 +59,6 @@ class SettingsVC: UITableViewController{
             guard let infoPresenter = segue.destination as? InfoPresenterVC else { return }
             infoPresenter.navTitle = LocalizationKey.ThisApp.translate()
             infoPresenter.info = LocalizationKey.Introduction.translate()
-        case SegueKey.ShowAboutInfo.rawValue:
-            guard let infoPresenter = segue.destination as? InfoPresenterVC else { return }
-            infoPresenter.navTitle = LocalizationKey.About.translate()
-            infoPresenter.info = LocalizationKey.AboutUs.translate()
         default:
             return
         }

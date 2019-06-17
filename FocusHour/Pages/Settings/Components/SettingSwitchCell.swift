@@ -21,6 +21,5 @@ class SettingSwitchCell: SettingDetailCell {
     
     @IBAction func SwitchMode(_ sender: Any) {
         PreferenceTool.switchMode(ofName: mode)
-        print(PreferenceTool.isMode(ofName: mode))
     }
 }
