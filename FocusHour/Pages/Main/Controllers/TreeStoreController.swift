@@ -96,6 +96,7 @@ extension TreeStoreController {
         let alert = UIAlertController(
             title: title, message: message, preferredStyle: .alert
         )
+        alert.addAction(.init(title: LocalizationKey.Cancel.translate(), style: .cancel))
         let action = UIAlertAction(
             title: LocalizationKey.Yes.translate(),
             style: .default,

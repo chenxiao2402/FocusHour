@@ -19,7 +19,6 @@ class ImageTool {
         }
     }
     
-    
     static func getBackgroundImageInDark() -> UIImage? {
         return UIImage(named: "background-dark-5")
     }
@@ -28,7 +27,6 @@ class ImageTool {
         return UIImage(named: "background-light-5")
     }
     
-    
     static func getTableDrivenImage(ofTime time: Int, timeRange: [Int], imageList: [String]) -> String {
         return imageList[getIndex(focusMinutes: time, timeRange: timeRange)]
     }
@@ -36,7 +34,7 @@ class ImageTool {
     static func getIndex(focusMinutes: Int, timeRange: [Int]) -> Int {
         var index = 0
         for (i, timeBoundry) in timeRange.enumerated() {
-            if (focusMinutes >= timeBoundry) {
+            if focusMinutes >= timeBoundry {
                 index = i
             } else {
                 break

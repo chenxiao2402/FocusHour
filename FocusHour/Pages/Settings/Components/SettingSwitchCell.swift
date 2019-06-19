@@ -15,7 +15,7 @@ class SettingSwitchCell: SettingDetailCell {
     @IBOutlet weak var modeSwitch: UISwitch!
     var mode: AppMode! {
         didSet {
-            modeSwitch.isOn = UserDefaults.standard.object(forKey: "NightMode") != nil && UserDefaults.standard.bool(forKey: "NightMode")
+            modeSwitch.isOn = PreferenceTool.isMode(ofName: mode)
         }
     }
     
