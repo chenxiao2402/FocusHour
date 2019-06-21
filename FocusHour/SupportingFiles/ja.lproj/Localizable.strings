@@ -22,6 +22,7 @@ Congratulations = "おめでとう";
 Encouragement = "また頑張りましょう";
 YouCanDoBetter = "お前ならもっとできる";
 Giveup = "諦める";
+Focus = "集中";
 
 
 // SetTimeView -> TimerView -> Alert
@@ -34,6 +35,10 @@ Cancel = "キャンセル";
 Notification-Success = "木が大きくなった";
 Notification-Failure = "木が育てなかった";
 Notification-Alert = "すぐ戻らないと、あなたの木は枯れてしまう";
+CantDeleteTag = "このタグを削除できません";
+AtLeastOneTag = "最低1つのタグが必要です";
+InputTagName = "タグ名を入力";
+DuplicateTagName = "重複したタグ名";
 
 
 // SetTimeView -> TimerView -> SoundSelector
@@ -57,6 +62,7 @@ ThisApp = "このアプリ";
 About = "その他";
 Developer = "開発者";
 Version = "バージョン";
+WorkingModeInfo = "このアプリから離れても木は枯れていません。\nあなたが得たコインは半分となる。";
 
 
 // SetTimeView -> Settings -> ChangeTheme

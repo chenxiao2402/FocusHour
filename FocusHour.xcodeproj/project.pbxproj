@@ -34,7 +34,6 @@
 		5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */; };
 		5C2AC04E22A6B4490012B39A /* PreferenceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC04D22A6B4490012B39A /* PreferenceTool.swift */; };
 		5C2AC05222A6CA1C0012B39A /* InfoPresenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */; };
-		5C2DA1CA22B010260071B076 /* SystemConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DA1C922B010260071B076 /* SystemConstant.swift */; };
 		5C2F9A9822B0FE5800201C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F9A9622B0FE5800201C7C /* Assets.xcassets */; };
 		5C2F9A9922B0FE5800201C7C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F9A9722B0FE5800201C7C /* art.scnassets */; };
 		5C34F0CC22B675C500A93B58 /* ThemeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34F0CB22B675C500A93B58 /* ThemeImageView.swift */; };
@@ -60,14 +59,18 @@
 		5C75264922B48DC3002FC72D /* CoinLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */; };
 		5C75264B22B49197002FC72D /* CoinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75264A22B49197002FC72D /* CoinIcon.swift */; };
 		5C7CCDC322B69DFD005061EA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CCDC222B69DFD005061EA /* UIColorExtension.swift */; };
-		5C804F9122B73F8600D956DB /* TreeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C804F9022B73F8600D956DB /* TreeIcon.swift */; };
+		5C804F9122B73F8600D956DB /* CircleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C804F9022B73F8600D956DB /* CircleIcon.swift */; };
 		5C804F9322B7436D00D956DB /* TreeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C804F9222B7436D00D956DB /* TreeSeries.swift */; };
 		5C80BF5D2207D98100691E98 /* FocusHourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80BF5C2207D98100691E98 /* FocusHourTests.swift */; };
 		5C8BE5D822A7A32E00E5A4B5 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */; };
 		5C8BE5DA22A7A5D200E5A4B5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */; };
 		5C98171D22B731FB00362D39 /* TreeStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98171C22B731FB00362D39 /* TreeStoreView.swift */; };
-		5C98172322B736C900362D39 /* TreeStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98172222B736C900362D39 /* TreeStoreController.swift */; };
 		5CA375AE22B755F900BC49DF /* TreeStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */; };
+		5CB4ABD122BCF6000006F8D7 /* SystemConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4ABD022BCF6000006F8D7 /* SystemConstant.swift */; };
+		5CB4ABD322BCF9B20006F8D7 /* TreeStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4ABD222BCF9B20006F8D7 /* TreeStoreController.swift */; };
+		5CB4ABD822BD068B0006F8D7 /* TagSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4ABD622BD068B0006F8D7 /* TagSelectorVC.swift */; };
+		5CB4ABD922BD068B0006F8D7 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4ABD722BD068B0006F8D7 /* TagCell.swift */; };
+		5CB4ABDD22BD20730006F8D7 /* TagTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4ABDC22BD20730006F8D7 /* TagTool.swift */; };
 		5CB6F5B022AABBAB0093DA7D /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6F5AF22AABBAB0093DA7D /* MonthCell.swift */; };
 		5CB6F5B222AABDE40093DA7D /* ImageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB6F5B122AABDE40093DA7D /* ImageTool.swift */; };
 		5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2047C221114870091DDFE /* SoundSelectorVC.swift */; };
@@ -123,7 +126,6 @@
 		5C2AC04B22A6B1B00012B39A /* SettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSwitchCell.swift; sourceTree = "<group>"; };
 		5C2AC04D22A6B4490012B39A /* PreferenceTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceTool.swift; sourceTree = "<group>"; };
 		5C2AC05122A6CA1C0012B39A /* InfoPresenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPresenterVC.swift; sourceTree = "<group>"; };
-		5C2DA1C922B010260071B076 /* SystemConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConstant.swift; sourceTree = "<group>"; };
 		5C2F9A9622B0FE5800201C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2F9A9722B0FE5800201C7C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5C34F0CB22B675C500A93B58 /* ThemeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImageView.swift; sourceTree = "<group>"; };
@@ -149,7 +151,7 @@
 		5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLabelContainer.swift; sourceTree = "<group>"; };
 		5C75264A22B49197002FC72D /* CoinIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinIcon.swift; sourceTree = "<group>"; };
 		5C7CCDC222B69DFD005061EA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		5C804F9022B73F8600D956DB /* TreeIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeIcon.swift; sourceTree = "<group>"; };
+		5C804F9022B73F8600D956DB /* CircleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIcon.swift; sourceTree = "<group>"; };
 		5C804F9222B7436D00D956DB /* TreeSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSeries.swift; sourceTree = "<group>"; };
 		5C80BF442207D98000691E98 /* FocusHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80BF532207D98100691E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,8 +161,12 @@
 		5C8BE5D722A7A32E00E5A4B5 /* Achievements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
 		5C8BE5D922A7A5D200E5A4B5 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5C98171C22B731FB00362D39 /* TreeStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeStoreView.swift; sourceTree = "<group>"; };
-		5C98172222B736C900362D39 /* TreeStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeStoreController.swift; sourceTree = "<group>"; };
 		5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeStoreCell.swift; sourceTree = "<group>"; };
+		5CB4ABD022BCF6000006F8D7 /* SystemConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConstant.swift; sourceTree = "<group>"; };
+		5CB4ABD222BCF9B20006F8D7 /* TreeStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeStoreController.swift; sourceTree = "<group>"; };
+		5CB4ABD622BD068B0006F8D7 /* TagSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelectorVC.swift; sourceTree = "<group>"; };
+		5CB4ABD722BD068B0006F8D7 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		5CB4ABDC22BD20730006F8D7 /* TagTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTool.swift; sourceTree = "<group>"; };
 		5CB6F5AF22AABBAB0093DA7D /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
 		5CB6F5B122AABDE40093DA7D /* ImageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTool.swift; sourceTree = "<group>"; };
 		5CF2047C221114870091DDFE /* SoundSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSelectorVC.swift; sourceTree = "<group>"; };
@@ -243,7 +249,8 @@
 		5C0A3E4022A961C700E213AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C98172222B736C900362D39 /* TreeStoreController.swift */,
+				5CB4ABD622BD068B0006F8D7 /* TagSelectorVC.swift */,
+				5CB4ABD222BCF9B20006F8D7 /* TreeStoreController.swift */,
 				5CF2047C221114870091DDFE /* SoundSelectorVC.swift */,
 				5C62456C2208486E00AAFD66 /* SetTimeVC.swift */,
 				5CFEA453220EA691001408E9 /* TimerVC.swift */,
@@ -254,17 +261,8 @@
 		5C0A3E4122A961DD00E213AA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5C3D03DD2211C35C0089E96A /* SoundSelectorCell.swift */,
-				5C039666220DD4C000CC1B2D /* StartButton.swift */,
-				5CFEA457220EA861001408E9 /* StopButton.swift */,
-				5C374A79220934870059EF2C /* CircleView.swift */,
-				5C240230220D1BC2002A1EF6 /* CircleSlider.swift */,
-				5CFEA455220EA7D1001408E9 /* CircleTimer.swift */,
-				5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */,
-				5C75264A22B49197002FC72D /* CoinIcon.swift */,
-				5C804F9022B73F8600D956DB /* TreeIcon.swift */,
-				5C98171C22B731FB00362D39 /* TreeStoreView.swift */,
-				5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */,
+				5CB4ABD522BD06170006F8D7 /* TimerComponents */,
+				5CB4ABD422BD05E50006F8D7 /* SetTimeComponents */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -310,7 +308,7 @@
 				5C4885DC221291AD00198B49 /* SegueKey.swift */,
 				5C4885E92213014E00198B49 /* LocalizationKey.swift */,
 				5C256386221ABB6900732477 /* MonthKey.swift */,
-				5C2DA1C922B010260071B076 /* SystemConstant.swift */,
+				5CB4ABD022BCF6000006F8D7 /* SystemConstant.swift */,
 			);
 			path = ProjectKeys;
 			sourceTree = "<group>";
@@ -416,6 +414,7 @@
 				5C14331922169ECA00C50760 /* TimeTool.swift */,
 				5CB6F5B122AABDE40093DA7D /* ImageTool.swift */,
 				5A671A1C22B4E033004B4F20 /* UIColorTool.swift */,
+				5CB4ABDC22BD20730006F8D7 /* TagTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -439,6 +438,32 @@
 				5C109FD6220FDE8F003D026E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5CB4ABD422BD05E50006F8D7 /* SetTimeComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5C374A79220934870059EF2C /* CircleView.swift */,
+				5C240230220D1BC2002A1EF6 /* CircleSlider.swift */,
+				5C039666220DD4C000CC1B2D /* StartButton.swift */,
+				5C75264822B48DC3002FC72D /* CoinLabelContainer.swift */,
+				5C75264A22B49197002FC72D /* CoinIcon.swift */,
+				5C98171C22B731FB00362D39 /* TreeStoreView.swift */,
+				5CA375AD22B755F900BC49DF /* TreeStoreCell.swift */,
+			);
+			path = SetTimeComponents;
+			sourceTree = "<group>";
+		};
+		5CB4ABD522BD06170006F8D7 /* TimerComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4ABD722BD068B0006F8D7 /* TagCell.swift */,
+				5C3D03DD2211C35C0089E96A /* SoundSelectorCell.swift */,
+				5CFEA457220EA861001408E9 /* StopButton.swift */,
+				5CFEA455220EA7D1001408E9 /* CircleTimer.swift */,
+				5C804F9022B73F8600D956DB /* CircleIcon.swift */,
+			);
+			path = TimerComponents;
 			sourceTree = "<group>";
 		};
 		5CF2048122117A8A0091DDFE /* Resources */ = {
@@ -604,19 +629,20 @@
 				5CA375AE22B755F900BC49DF /* TreeStoreCell.swift in Sources */,
 				5C109FDB220FF9BB003D026E /* UITool.swift in Sources */,
 				5C3D03DA2211B0330089E96A /* SoundPlayer.swift in Sources */,
-				5C2DA1CA22B010260071B076 /* SystemConstant.swift in Sources */,
 				5C804F9322B7436D00D956DB /* TreeSeries.swift in Sources */,
 				5C75264922B48DC3002FC72D /* CoinLabelContainer.swift in Sources */,
 				5C3D03DE2211C35C0089E96A /* SoundSelectorCell.swift in Sources */,
 				5C4885EE2213116300198B49 /* SetLanguageCell.swift in Sources */,
+				5CB4ABDD22BD20730006F8D7 /* TagTool.swift in Sources */,
 				5C109FDF22105C6B003D026E /* BundleExtension.swift in Sources */,
 				5A5B791022B0906A005F05FA /* NightModeSettingSwitchCell.swift in Sources */,
-				5C804F9122B73F8600D956DB /* TreeIcon.swift in Sources */,
+				5C804F9122B73F8600D956DB /* CircleIcon.swift in Sources */,
 				5C4885E82212FF9500198B49 /* SetLanguageVC.swift in Sources */,
 				5C7CCDC322B69DFD005061EA /* UIColorExtension.swift in Sources */,
 				5CB6F5B022AABBAB0093DA7D /* MonthCell.swift in Sources */,
 				5CB6F5B222AABDE40093DA7D /* ImageTool.swift in Sources */,
 				5C240231220D1BC2002A1EF6 /* CircleSlider.swift in Sources */,
+				5CB4ABD122BCF6000006F8D7 /* SystemConstant.swift in Sources */,
 				5C039667220DD4C000CC1B2D /* StartButton.swift in Sources */,
 				5C51FE142219C09600C60967 /* DropdownButton.swift in Sources */,
 				5C2AC04E22A6B4490012B39A /* PreferenceTool.swift in Sources */,
@@ -625,6 +651,7 @@
 				5C59368A220AF0ED00E7F5CF /* CGPointExtension.swift in Sources */,
 				5C98171D22B731FB00362D39 /* TreeStoreView.swift in Sources */,
 				5CF2047D221114870091DDFE /* SoundSelectorVC.swift in Sources */,
+				5CB4ABD822BD068B0006F8D7 /* TagSelectorVC.swift in Sources */,
 				5C2AC05222A6CA1C0012B39A /* InfoPresenterVC.swift in Sources */,
 				5A5B791222B0999F005F05FA /* WorkingModeSettingSwitchCell.swift in Sources */,
 				5C4885DF2212965B00198B49 /* SettingDetailCell.swift in Sources */,
@@ -633,6 +660,7 @@
 				5C256387221ABB6900732477 /* MonthKey.swift in Sources */,
 				5C4885EA2213014E00198B49 /* LocalizationKey.swift in Sources */,
 				5C3D03DC2211B8B60089E96A /* SoundKey.swift in Sources */,
+				5CB4ABD322BCF9B20006F8D7 /* TreeStoreController.swift in Sources */,
 				5CFEA458220EA861001408E9 /* StopButton.swift in Sources */,
 				5A671A1122B48C26004B4F20 /* ThemeCell.swift in Sources */,
 				5C25638E221AE19C00732477 /* AchievementDetailVC.swift in Sources */,
@@ -642,12 +670,12 @@
 				5C374A7A220934870059EF2C /* CircleView.swift in Sources */,
 				5C109FE122107556003D026E /* LanguageKey.swift in Sources */,
 				5C06CB9122B091D3000CEB41 /* RecordCell.swift in Sources */,
-				5C98172322B736C900362D39 /* TreeStoreController.swift in Sources */,
 				5CFEA456220EA7D1001408E9 /* CircleTimer.swift in Sources */,
 				5C039662220DB0EC00CC1B2D /* ColorKey.swift in Sources */,
 				5C2AC04C22A6B1B00012B39A /* SettingSwitchCell.swift in Sources */,
 				5C593699220C2C3C00E7F5CF /* AppDelegate.swift in Sources */,
 				5A671A1922B4B3EA004B4F20 /* Theme.swift in Sources */,
+				5CB4ABD922BD068B0006F8D7 /* TagCell.swift in Sources */,
 				5C34F0CC22B675C500A93B58 /* ThemeImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

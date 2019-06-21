@@ -38,6 +38,7 @@ class SettingsVC: UITableViewController{
         workingModeCell.mode = .WorkingMode
         nightModeCell.mode = .NightMode
         
+        workingModeCell.tableViewController = self
         nightModeCell.tableViewController = self
         self.handleNightModeChange()
     }

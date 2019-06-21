@@ -11,13 +11,29 @@ import AVKit
 import AVFoundation
 import UserNotifications
 
+
+enum FocusState {
+    case Cancelable
+    case OnGoing
+    case Finished
+}
+
+
 class TimerVC: UIViewController {
     
     let soundPlayer: SoundPlayer = SoundPlayer()
     let backgroundTimeLimit: Int = 10
     let cancelableTimeLimit: Int = 10
     private var mainTimer: Timer!
-    private var cancelable: Bool = true
+    private var focusState = FocusState.Cancelable {
+        didSet {
+            let finished = focusState == .Finished
+            returnButton.isHidden = !finished
+            tagButton.isHidden = finished
+            soundButton.isHidden = finished
+            stopButton.isHidden = finished
+        }
+    }
     private var backgroundObserver: NSObjectProtocol?
     private var returnObserver: NSObjectProtocol?
     private var backgroundTimer: Timer!
@@ -27,6 +43,8 @@ class TimerVC: UIViewController {
     @IBOutlet weak var stopButton: StopButton!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet weak var tagButton: UIButton!
+    @IBOutlet weak var workingModeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +54,14 @@ class TimerVC: UIViewController {
         UITool.setToolButtonSize(soundButton, ratio: 1.0)
         setSoundButtonStyle()
         setStopButtonTitle()
-        returnButton.isEnabled = false
+        workingModeLabel.isHidden = !PreferenceTool.isMode(ofName: .WorkingMode)
+        workingModeLabel.text = LocalizationKey.WorkingMode.translate()
+        focusState = .Cancelable
         
         mainTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
             if self.circleTimer.remainingTime > 0 {
                 self.circleTimer.resetTime()
-                self.cancelable = self.circleTimer.FocusSeconds <= self.cancelableTimeLimit
+                self.focusState = self.circleTimer.focusSeconds <= self.cancelableTimeLimit ? .Cancelable : .OnGoing
                 self.setStopButtonTitle()
             } else {
                 self.end()
@@ -70,7 +90,11 @@ class TimerVC: UIViewController {
     }
     
     @IBAction func StopButtonTapped(_ sender: Any) {
-        if !cancelable {
+        if focusState == .Cancelable {
+            // 随机生成数据并保存，注意正式使用的时候删掉
+            PlantRecord.generateRandomRecords()
+            quit()
+        } else if focusState == .OnGoing {
             let message = circleTimer.treeHasGrownUp() ?
                 LocalizationKey.GiveupAlertHoldOnMessage.translate() : LocalizationKey.GiveupAlertDeathMessage.translate()
             let alert = UIAlertController(
@@ -88,10 +112,6 @@ class TimerVC: UIViewController {
                 handler: { (_) in self.end() }
                 ))
             present(alert, animated: true, completion: nil)
-        } else {
-            // 随机生成数据并保存，注意正式使用的时候删掉
-            PlantRecord.generateRandomRecords()
-            quit()
         }
     }
     
@@ -108,13 +128,21 @@ class TimerVC: UIViewController {
             soundSelector.preferredContentSize = CGSize(width: 200, height: 280)
             popoverController?.delegate = self
             popoverController?.sourceRect = soundButton.bounds
+        case SegueKey.ShowTagList.rawValue:
+            let navigation = segue.destination as! UINavigationController
+            let popoverController = navigation.popoverPresentationController
+            navigation.preferredContentSize = CGSize(width: 200, height: 280)
+            popoverController?.delegate = self
+            popoverController?.sourceRect = tagButton.bounds
         default:
             return
         }
     }
 }
 
+
 extension TimerVC: UIPopoverPresentationControllerDelegate {
+    
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
@@ -125,8 +153,8 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     }
     
     private func setStopButtonTitle() {
-        let title = cancelable ?
-            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.FocusSeconds))" :
+        let title = focusState == .Cancelable ?
+            "\(LocalizationKey.Cancel.translate()) (\(cancelableTimeLimit - self.circleTimer.focusSeconds))" :
             LocalizationKey.Giveup.translate()
         stopButton.setTitle(title, for: .normal)
     }
@@ -143,14 +171,12 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
             NotificationCenter.default.removeObserver(observer)
         }
         
-        circleTimer.drawResult(needsToSave: true)
+        circleTimer.drawResult()
+        save()
         mainTimer?.invalidate()
         backgroundTimer?.invalidate()
         soundPlayer.invalidate()
-        
-        returnButton.isEnabled = true
-        stopButton.isHidden = true
-        soundButton.isHidden = true
+        focusState = .Finished
         
         let message = circleTimer.treeHasGrownUp() ?
             LocalizationKey.NotificationSuccess.translate() :
@@ -185,10 +211,17 @@ extension TimerVC: UIPopoverPresentationControllerDelegate {
     
     private func returnFromBackground() {
         if backgroundTime == 0 {
-            circleTimer.drawResult(needsToSave: false) // 因为在后台不能响应界面更新，所以在出现时重新刷新
+            circleTimer.drawResult() // 因为在后台不能响应界面更新，所以在出现时重新刷新
         } else {
             backgroundTimer?.invalidate()
             backgroundTime = backgroundTimeLimit
         }
+    }
+    
+    private func save() {
+        let focusMinutes = circleTimer.focusMinutes
+        let imgName = circleTimer.getRecordImageNameBy(focusMinutes: focusMinutes)
+        let plantRecord = PlantRecord(imgName: imgName, minute: focusMinutes, tag: "dasfdsa")
+        plantRecord?.save()
     }
 }

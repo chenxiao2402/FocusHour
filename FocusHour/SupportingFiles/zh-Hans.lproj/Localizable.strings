@@ -16,12 +16,14 @@ Coins = "金币";
 PurchaseSuccess = "购买成功";
 InsufficientCoins = "金币不足";
 
+
 // SetTimeView -> TimerView
 CountdownTitle = "专心致志";
 Congratulations = "祝贺你";
 Encouragement = "下次继续努力";
 YouCanDoBetter = "你可以做得更好";
 Giveup = "放弃";
+Focus = "专注";
 
 
 // SetTimeView -> TimerView -> Alert
@@ -34,6 +36,10 @@ Cancel = "取消";
 Notification-Success = "你的树长大了";
 Notification-Failure = "你的树没有长大";
 Notification-Alert = "快点回来，不然你的树会枯萎";
+CantDeleteTag = "不能删除此标签";
+AtLeastOneTag = "至少要有一个标签";
+InputTagName = "请输入标签名";
+DuplicateTagName = "标签名重复";
 
 
 // SetTimeView -> TimerView -> SoundSelector
@@ -66,6 +72,7 @@ Two = "Two";
 Three = "Three";
 Four = "Four";
 Five = "Five";
+WorkingModeInfo = "离开此应用树也不会枯萎。\n完成专注获得的金币减半。";
 
 
 // SetTimeView -> Settings -> About

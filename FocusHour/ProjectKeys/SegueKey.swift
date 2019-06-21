@@ -19,4 +19,6 @@ enum SegueKey: String {
     case ShowMusicSelector = "ShowMusicSelector"
     case ShowARForest = "ShowARForest"
     case ShowARPrompt = "ShowARPrompt"
+    case ShowTreeStore = "ShowTreeStore"
+    case ShowTagList = "ShowTagList"
 }

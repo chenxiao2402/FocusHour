@@ -10,9 +10,9 @@ import UIKit
 
 class CircleTimer: CircleView {
     var focusMinutes: Int = 0
-    var FocusSeconds: Int = 0  {
+    var focusSeconds: Int = 0  {
         didSet {
-            focusMinutes = FocusSeconds/60 > 0 ? FocusSeconds/60 : 1
+            focusMinutes = focusSeconds/60 > 0 ? focusSeconds/60 : 1
         }
     }
     
@@ -38,17 +38,17 @@ class CircleTimer: CircleView {
         ctx?.addArc(center: drawCenter, radius: radius, startAngle: 0, endAngle: TWO_PI, clockwise: true)
         ctx?.drawPath(using: CGPathDrawingMode.fill)
         
-        drawIconView(getIconImageBy(focusMinutes: FocusSeconds / 60))
+        drawIconView(getIconImageBy(focusMinutes: focusSeconds / 60))
         drawHeadLabel(LocalizationKey.CountdownTitle.translate())
         drawFootLabel(timeFormat(), isTime: true)
     }
     
     func resetTime() {
         remainingTime -= 1
-        FocusSeconds += 1
+        focusSeconds += 1
     }
     
-    func drawResult(needsToSave: Bool) {
+    func drawResult() {
         if remainingTime <= 0 {
             drawHeadLabel(LocalizationKey.NotificationSuccess.translate())
             drawFootLabel(LocalizationKey.Congratulations.translate(), isTime: false)
@@ -60,12 +60,6 @@ class CircleTimer: CircleView {
             drawHeadLabel(LocalizationKey.NotificationFailure.translate())
             drawFootLabel(LocalizationKey.Encouragement.translate(), isTime: false)
         }
-        
-        if needsToSave {
-            let imgName = getRecordImageNameBy(focusMinutes: focusMinutes)
-            let plantRecord = PlantRecord(imgName: imgName, minute: focusMinutes)
-            plantRecord?.save()
-        }
     }
 }
 
@@ -73,7 +67,7 @@ class CircleTimer: CircleView {
 extension CircleTimer {
     
     func treeHasGrownUp() -> Bool {
-        return FocusSeconds >= TEN_MIN
+        return focusSeconds >= TEN_MIN
     }
     
 }

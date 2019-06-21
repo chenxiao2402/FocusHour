@@ -22,6 +22,7 @@ Congratulations = "Congratulations";
 Encouragement = "Try again next time";
 YouCanDoBetter = "You can do better";
 Giveup = "Give up";
+Focus = "Focus";
 
 
 // SetTimeView -> TimerView -> Alert
@@ -34,6 +35,10 @@ Cancel = "Cancel";
 Notification-Success = "Tree has grown";
 Notification-Failure = "Your tree died";
 Notification-Alert = "Your tree will die if you don't come back soon";
+CantDeleteTag = "Can't delete tag";
+AtLeastOneTag = "You must have one tag";
+InputTagName = "Please input tag name";
+DuplicateTagName = "Duplicate tag name";
 
 
 // SetTimeView -> TimerView -> SoundSelector
@@ -65,6 +70,7 @@ Two = "Two";
 Three = "Three";
 Four = "Four";
 Five = "Five";
+WorkingModeInfo = "Your tree will not die even you leave the app. \nYour rewards will be half.";
 
 
 // SetTimeView -> Settings -> About

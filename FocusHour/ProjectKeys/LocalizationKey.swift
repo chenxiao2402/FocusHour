@@ -22,16 +22,21 @@ enum LocalizationKey: String {
     case Encouragement = "Encouragement"
     case YouCanDoBetter = "YouCanDoBetter"
     case Giveup = "Giveup"
+    case Focus = "Focus"
+    
     case GiveupAlertTitle = "GiveupAlert-Title"
     case GiveupAlertDeathMessage = "GiveupAlert-DeathMessage"
     case GiveupAlertHoldOnMessage = "GiveupAlert-HoldOnMessage"
-    
     case Yes = "Yes"
     case No = "No"
     case Cancel = "Cancel"
     case NotificationSuccess = "Notification-Success"
     case NotificationFailure = "Notification-Failure"
     case NotificationAlert = "Notification-Alert"
+    case CantDeleteTag = "CantDeleteTag"
+    case AtLeastOneTag = "AtLeastOneTag"
+    case InputTagName = "InputTagName"
+    case DuplicateTagName = "DuplicateTagName"
     
     case None = "None"
     case Wind = "Wind"
@@ -51,6 +56,7 @@ enum LocalizationKey: String {
     case Introduction = "Introduction"
     case Developer = "Developer"
     case Version = "Version"
+    case WorkingModeInfo = "WorkingModeInfo"
     
     case Theme = "Theme"
     case One = "One"

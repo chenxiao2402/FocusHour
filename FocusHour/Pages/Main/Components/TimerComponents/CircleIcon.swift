@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class TreeIcon: UIView {
+class CircleIcon: UIView {
 
     @IBInspectable var imageRadius: CGFloat = 0 {
         didSet {
